@@ -1,0 +1,31 @@
+{
+	"name": "button",
+	"displayName": "Button",
+	"version": "1.0.0",
+	"tags": [
+		"atoms",
+		"button",
+		"link",
+		"forms",
+		"forms-extension"
+	],
+	"flag": "alpha",
+	"properties": [
+		{
+			"name": "maxSize",
+			"displayName": "Maximum size",
+			"type": "size"
+		},
+		{
+			"name": "direction",
+			"displayName": "Direction",
+			"type": "enum",
+			"required": true,
+			"default": "COLUMN",
+			"options": [
+				"COLUMN",
+				"ROW"
+			]
+		}
+	]
+}
