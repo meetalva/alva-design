@@ -10,6 +10,9 @@
 		"forms-extension"
 	],
 	"flag": "alpha",
+	"patterns": {
+		"colors": "atoms/colors"
+	},
 	"properties": [
 		{
 			"name": "name",
