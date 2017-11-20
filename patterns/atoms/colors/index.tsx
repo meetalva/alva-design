@@ -52,80 +52,31 @@ export class Color {
 const colors = {
 	black: new Color({
 		displayName: 'Black',
-		rgb: [0, 0, 0]
+		rgb: [51, 51, 51]
 	}),
-	blackAlpha70: new Color({
-		alpha: 0.7,
-		displayName: 'Black Alpha 70',
-		rgb: [0, 0, 0]
+	greenDark: new Color({
+		displayName: 'Green Dark',
+		rgb: [30, 205, 151]
 	}),
 	green: new Color({
 		displayName: 'Green',
-		rgb: [0, 153, 0]
+		rgb: [87, 218, 178]
 	}),
-	grey: new Color({
-		displayName: 'Dark Grey',
-		rgb: [76, 76, 76]
-	}),
-	grey05: new Color({
-		displayName: 'Grey 05',
-		rgb: [242, 242, 242]
-	}),
-	grey10: new Color({
-		displayName: 'Grey 10',
-		rgb: [229, 229, 229]
-	}),
-	grey15: new Color({
-		displayName: 'Grey 15',
-		rgb: [217, 217, 217]
-	}),
-	grey20: new Color({
-		displayName: 'Grey 20',
-		rgb: [204, 204, 204]
-	}),
-	grey30: new Color({
-		displayName: 'Grey 30',
-		rgb: [179, 179, 179]
-	}),
-	grey40: new Color({
-		displayName: 'Grey 40',
-		rgb: [153, 153, 153]
-	}),
-	grey50: new Color({
-		displayName: 'Grey 50',
-		rgb: [128, 128, 128]
-	}),
-	grey60: new Color({
-		displayName: 'Grey 60',
-		rgb: [102, 102, 102]
+	greenLight: new Color({
+		displayName: 'Green Light',
+		rgb: [162, 235, 212]
 	}),
 	grey70: new Color({
 		displayName: 'Grey 70',
 		rgb: [76, 76, 76]
 	}),
-	grey80: new Color({
-		displayName: 'Grey 80',
-		rgb: [51, 51, 51]
-	}),
 	grey90: new Color({
 		displayName: 'Grey 90',
 		rgb: [26, 26, 26]
 	}),
-	red: new Color({
-		displayName: 'Red',
-		rgb: [187, 10, 48]
-	}),
-	silver: new Color({
-		displayName: 'Silver',
-		rgb: [186, 180, 173]
-	}),
 	white: new Color({
 		displayName: 'White',
 		rgb: [255, 255, 255]
-	}),
-	yellow: new Color({
-		displayName: 'Yellow',
-		rgb: [255, 170, 0]
 	})
 };
 
