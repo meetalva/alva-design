@@ -5,9 +5,7 @@
 	"tags": [
 		"atoms",
 		"button",
-		"link",
-		"forms",
-		"forms-extension"
+		"link"
 	],
 	"flag": "alpha",
 	"patterns": {
