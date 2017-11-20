@@ -1,10 +1,10 @@
 {
-	"name": "button",
-	"displayName": "Button",
+	"name": "headline",
+	"displayName": "Headline",
 	"version": "1.0.0",
 	"tags": [
 		"atoms",
-		"button",
+		"headline",
 		"link",
 		"forms",
 		"forms-extension"

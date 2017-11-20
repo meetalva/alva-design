@@ -1,10 +1,10 @@
 {
-	"name": "button",
-	"displayName": "Button",
+	"name": "copy",
+	"displayName": "Copy",
 	"version": "1.0.0",
 	"tags": [
 		"atoms",
-		"button",
+		"copy",
 		"link",
 		"forms",
 		"forms-extension"

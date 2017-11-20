@@ -1,11 +1,10 @@
 {
-	"name": "button",
-	"displayName": "Button",
+	"name": "layout",
+	"displayName": "Layout",
 	"version": "1.0.0",
 	"tags": [
 		"atoms",
-		"button",
-		"link",
+		"layout",
 		"forms",
 		"forms-extension"
 	],
