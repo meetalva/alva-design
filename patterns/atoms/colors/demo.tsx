@@ -18,26 +18,15 @@ export default function ColorDemo() {
 	return (
 		<div>
 			<StyledList>
-				<ColorSwatch color={colors.white} />
 				<ColorSwatch color={colors.black} />
-				<ColorSwatch color={colors.red} />
-				<ColorSwatch color={colors.grey} />
-				<ColorSwatch color={colors.silver} />
-			</StyledList>
-			<StyledList>
-				<ColorSwatch color={colors.grey90} />
-				<ColorSwatch color={colors.grey80} />
 				<ColorSwatch color={colors.grey70} />
-				<ColorSwatch color={colors.grey50} />
-				<ColorSwatch color={colors.grey40} />
-				<ColorSwatch color={colors.grey30} />
-				<ColorSwatch color={colors.grey15} />
-				<ColorSwatch color={colors.grey10} />
-				<ColorSwatch color={colors.grey05} />
+				<ColorSwatch color={colors.grey90} />
+				<ColorSwatch color={colors.white} />
 			</StyledList>
 			<StyledList>
+				<ColorSwatch color={colors.greenDark} />
 				<ColorSwatch color={colors.green} />
-				<ColorSwatch color={colors.yellow} />
+				<ColorSwatch color={colors.greenLight} />
 			</StyledList>
 		</div>
 	);
@@ -55,15 +44,11 @@ const ColorSwatch: React.StatelessComponent<ColorSwatchProps> = (props): JSX.Ele
 	const Styles = styled.li`
 		display: flex;
 		margin: 0 48px 48px 0;
-		border: 1px solid;
-		border-color: ${isLight(props.color.rgb)
-			? colors.grey40.toString()
-			: colors.white.toString()};
 		background: ${props.color.toString('rgb')};
 		padding-bottom: 50%;
 		width: 100%;
 		${luminance(props.color.rgb) > threshold
-			? `box-shadow: 0 2px 4px ${colors.grey10.toString()};`
+			? `box-shadow: 0 2px 4px ${colors.grey70.toString()};`
 			: ''
 		}
 		color: ${contrast(props.color.rgb)};
