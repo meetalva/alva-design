@@ -1,33 +1,33 @@
 {
-   "name": "mypage",
-   "root": {
-      "src": "../../../patterns/atoms/layout",
-      "properties": {
-         "maxSize": "80%",
-         "direction": "COLUMN"
-      },
-      "children": [
-         {
-            "src": "../../../patterns/atoms/headline",
-            "properties": {
-               "name": "Heading",
-               "level": "H1"
-            }
-         },
-         {
-            "src": "../../../patterns/atoms/copy",
-            "properties": {
-               "text": "<p>Lorem ipsum dolor</p>"
-            }
-         },
-         {
-            "src": "../../../patterns/atoms/button",
-            "properties": {
-               "name": "click me",
-               "order": "PRIMARY",
-               "type": "submit"
-            }
-         }
-      ]
-   }
+	"name": "mypage",
+	"root": {
+		"src": "../../../patterns/atoms/layout",
+		"properties": {
+			"maxSize": "80%",
+			"direction": "COLUMN"
+		},
+		"children": [
+			{
+				"src": "../../../patterns/atoms/headline",
+				"properties": {
+					"name": "Heading",
+					"level": "H1"
+				}
+			},
+			{
+				"src": "../../../patterns/atoms/copy",
+				"properties": {
+					"text": "<p>Lorem ipsum dolor</p>"
+				}
+			},
+			{
+				"src": "../../../patterns/atoms/button",
+				"properties": {
+					"name": "click me",
+					"order": "PRIMARY",
+					"type": "submit"
+				}
+			}
+		]
+	}
 }
