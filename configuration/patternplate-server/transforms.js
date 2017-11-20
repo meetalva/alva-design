@@ -35,11 +35,5 @@ module.exports = {
 		opts: {
 		  automount: true
 		}
-	 },
-	'less': {
-		inFormat: 'less',
-		outFormat: 'css',
-		plugins: {},
-		opts: {}
-	}
+	 }
 };
