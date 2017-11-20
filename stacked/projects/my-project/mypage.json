@@ -1,0 +1,36 @@
+{
+   "name": "mypage",
+   "root": {
+      "src": "../../../patterns/atoms/layout",
+      "properties": {
+         "size": "L",
+         "flexdirection": "COLUMN"
+      },
+      "children": [
+         {
+            "src": "../../../patterns/atoms/headline",
+            "properties": {
+               "name": "Heading",
+               "order": "1",
+               "tagName": "h1"
+            }
+         },
+         {
+            "src": "../../../patterns/atoms/copy",
+            "properties": {
+               "name": "Lorem ipsum dolor",
+               "size": "M",
+               "tagName": "h1"
+            }
+         },
+         {
+            "src": "../../../patterns/atoms/button",
+            "properties": {
+               "name": "click me",
+               "order": "Primary",
+               "type": "submit"
+            }
+         }
+      ]
+   }
+}
