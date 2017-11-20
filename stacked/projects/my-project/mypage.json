@@ -3,31 +3,28 @@
    "root": {
       "src": "../../../patterns/atoms/layout",
       "properties": {
-         "size": "L",
-         "flexdirection": "COLUMN"
+         "maxSize": "80%",
+         "direction": "COLUMN"
       },
       "children": [
          {
             "src": "../../../patterns/atoms/headline",
             "properties": {
                "name": "Heading",
-               "order": "1",
-               "tagName": "h1"
+               "level": "H1"
             }
          },
          {
             "src": "../../../patterns/atoms/copy",
             "properties": {
-               "name": "Lorem ipsum dolor",
-               "size": "M",
-               "tagName": "h1"
+               "text": "<p>Lorem ipsum dolor</p>"
             }
          },
          {
             "src": "../../../patterns/atoms/button",
             "properties": {
                "name": "click me",
-               "order": "Primary",
+               "order": "PRIMARY",
                "type": "submit"
             }
          }

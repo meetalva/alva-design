@@ -1,0 +1,20 @@
+{
+	"name": "button",
+	"displayName": "Button",
+	"version": "1.0.0",
+	"tags": [
+		"atoms",
+		"button",
+		"link",
+		"forms",
+		"forms-extension"
+	],
+	"flag": "alpha",
+	"properties": [
+		{
+			"name": "text",
+			"displayName": "Text",
+			"type": "richtext"
+		}
+	]
+}
