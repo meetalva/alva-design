@@ -1,13 +1,16 @@
 import * as React from 'react';
-import Copy from 'Pattern';
+import Copy, { Size as CopySize } from 'Pattern';
 
 const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
-		<Copy tagName="div">
-			Lorem ipsum dolor sit,
-			consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-			invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-		</Copy>
+		<div>
+			<Copy>
+				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+			</Copy>
+			<Copy size={CopySize.S}>
+				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+			</Copy>
+		</div>
 	);
 };
 

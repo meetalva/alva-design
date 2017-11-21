@@ -1,11 +1,13 @@
 import * as React from 'react';
-import styled, {StyledComponentClass} from 'styled-components';
+import styled, {css, StyledComponentClass} from 'styled-components';
 
-import { Color } from 'colors';
+import colors, { Color } from 'colors';
+import { fonts } from 'fonts';
 
 export interface CopyProps {
   className?: string;
   color?: Color;
+  size?: Size;
   tagName?: string;
 }
 
@@ -16,6 +18,11 @@ interface CopyProxyProps {
 
 interface StyledCopyProps extends CopyProxyProps {
   color?: Color;
+}
+
+export enum Size {
+  S,
+  M
 }
 
 // The proxy component is used to rendering styled componentes with variable
@@ -30,11 +37,22 @@ const CopyProxy: React.StatelessComponent<CopyProxyProps> = (props) => {
 
 const StyledCopy: StyledComponentClass<StyledCopyProps, {}> = styled(CopyProxy)`
   margin: 0;
-  color: ${(props: StyledCopyProps) => props.color ? props.color.toString() : 'inherit'};
-`;
+  color: ${colors.black};
+  font-family: ${fonts().NORMAL_FONT};
 
-export const CopyItalic = styled.em`
-  font-style: normal;
+  ${(props: CopyProps) => {
+    switch (props.size) {
+      case Size.S:
+        return css`
+          font-size: 12px;
+        `
+      case Size.M:
+      default:
+        return css`
+          font-size: 18px;
+        `
+    }
+  }}
 `;
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
@@ -45,6 +63,7 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
       className={props.className}
       color={props.color}
       tagName={tagName}
+      size={props.size}
       >
       {props.children}
     </StyledCopy>
