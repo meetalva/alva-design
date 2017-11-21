@@ -9,7 +9,8 @@
 	],
 	"flag": "alpha",
 	"patterns": {
-		"colors": "atoms/colors"
+		"colors": "atoms/colors",
+		"fonts": "atoms/fonts"
 	},
 	"properties": [
 		{

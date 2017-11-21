@@ -9,9 +9,15 @@ export default function ButtonDemo() {
 				<Button order={Order.Primary}>
 					Primary Button
 				</Button>
+				<Button order={Order.Primary} disabled>
+					Primary Button
+				</Button>
 			</div>
 			<div>
 				<Button order={Order.Secondary}>
+					Secondary Button
+				</Button>
+				<Button order={Order.Secondary} disabled>
 					Secondary Button
 				</Button>
 			</div>

@@ -64,15 +64,15 @@ const colors = {
 	}),
 	greenLight: new Color({
 		displayName: 'Green Light',
-		rgb: [162, 235, 212]
+		rgb: [123, 226, 195]
 	}),
 	grey70: new Color({
 		displayName: 'Grey 70',
-		rgb: [76, 76, 76]
+		rgb: [179, 179, 179]
 	}),
 	grey90: new Color({
 		displayName: 'Grey 90',
-		rgb: [26, 26, 26]
+		rgb: [227, 227, 227]
 	}),
 	white: new Color({
 		displayName: 'White',
