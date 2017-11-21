@@ -4,12 +4,12 @@
 	"version": "1.0.0",
 	"tags": [
 		"atoms",
-		"copy",
-		"link",
-		"forms",
-		"forms-extension"
+		"copy"
 	],
 	"flag": "alpha",
+	"patterns": {
+		"colors": "atoms/colors"
+	},
 	"properties": [
 		{
 			"name": "text",
