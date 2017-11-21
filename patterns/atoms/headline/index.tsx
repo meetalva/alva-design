@@ -15,7 +15,7 @@ interface StyledHeadlineProps {
 }
 
 const StyledHeadline = styled.div`
-	margin: 0;
+	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	font-weight: 500;
 
