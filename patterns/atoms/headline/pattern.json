@@ -4,10 +4,7 @@
 	"version": "1.0.0",
 	"tags": [
 		"atoms",
-		"headline",
-		"link",
-		"forms",
-		"forms-extension"
+		"headline"
 	],
 	"flag": "alpha",
 	"patterns": {
