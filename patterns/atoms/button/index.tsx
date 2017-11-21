@@ -11,7 +11,7 @@ export enum Order {
 	Secondary
  }
 
- 
+
 const StyledButton = styled.button`
  	padding: 10px 20px;
 
@@ -20,12 +20,14 @@ const StyledButton = styled.button`
 		  case Order.Secondary:
 			 return css`
 				background: ${colors.white};
-				color: ${colors.greenDark};
+				border: 1px solid ${colors.green};
+				color: ${colors.green};
 			 `
 		  case Order.Primary:
 		  default:
 			return css`
-				background: ${colors.greenDark};
+				background: ${colors.green};
+				border: 1px solid ${colors.greenDark};
 				color: ${colors.white};
 			`
 		}
