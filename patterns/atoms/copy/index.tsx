@@ -6,7 +6,6 @@ import { fonts } from 'fonts';
 
 export interface CopyProps {
   className?: string;
-  color?: Color;
   size?: Size;
   tagName?: string;
 }
@@ -14,10 +13,6 @@ export interface CopyProps {
 interface CopyProxyProps {
   className?: string;
   tagName: string;
-}
-
-interface StyledCopyProps extends CopyProxyProps {
-  color?: Color;
 }
 
 export enum Size {
@@ -35,9 +30,9 @@ const CopyProxy: React.StatelessComponent<CopyProxyProps> = (props) => {
   );
 };
 
-const StyledCopy: StyledComponentClass<StyledCopyProps, {}> = styled(CopyProxy)`
+const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
   margin: 0;
-  color: ${colors.black};
+  color: ${colors.black.toString()};
   font-family: ${fonts().NORMAL_FONT};
 
   ${(props: CopyProps) => {
@@ -61,7 +56,6 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
   return (
     <StyledCopy
       className={props.className}
-      color={props.color}
       tagName={tagName}
       size={props.size}
       >
