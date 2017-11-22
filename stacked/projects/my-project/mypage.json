@@ -1,20 +1,20 @@
 {
 	"name": "mypage",
 	"root": {
-		"patternSrc": "patterns/atoms/layout",
+		"patternSrc": "atoms/layout",
 		"properties": {
 			"maxSize": "80%",
 			"direction": "COLUMN"
 		},
 		"children": [
 			{
-				"patternSrc": "patterns/atoms/copy",
+				"patternSrc": "atoms/copy",
 				"properties": {
 					"text": "<p>Lorem ipsum dolor</p>"
 				}
 			},
 			{
-				"patternSrc": "patterns/atoms/button",
+				"patternSrc": "atoms/button",
 				"properties": {
 					"name": "click me",
 					"order": "PRIMARY",
