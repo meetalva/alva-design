@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "patternplate start",
 		"console": "patternplate console",
-		"build-commonjs": "npm run console build-commonjs"
+		"build": "npm run console build-commonjs",
+		"stacked": "./node_modules/.bin/electron ../stacked"
 	},
 	"repository": {
 		"type": "git",
@@ -40,6 +41,7 @@
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
 		"styled-components": "^2.1.1",
+		"stacked": "file:../stacked",
 		"ts-node": "^3.3.0"
 	}
 }
