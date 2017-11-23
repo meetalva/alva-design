@@ -30,7 +30,7 @@
 		"patternplate-transform-react-mount": "~0.1.2",
 		"patternplate-transform-react-to-markup": "1.1.0-1",
 		"patternplate-transform-styled-components": "^1.0.1",
-		"patternplate-transform-typescript": "^0.7.2",
+		"patternplate-transform-typescript": "^0.7.3",
 		"typescript": "^2.6.1",
 		"typescript-patternplate-resolver": "0.1.0"
 	},
