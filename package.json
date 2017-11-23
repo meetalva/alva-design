@@ -6,8 +6,7 @@
 	"scripts": {
 		"start": "patternplate start",
 		"console": "patternplate console",
-		"build": "npm run console build-commonjs",
-		"stacked": "./node_modules/.bin/electron ../stacked"
+		"build": "npm run console build-commonjs"
 	},
 	"repository": {
 		"type": "git",
