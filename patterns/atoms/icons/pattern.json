@@ -1,0 +1,33 @@
+{
+	"name": "icons",
+	"displayName": "Icons",
+	"version": "1.0.0",
+	"tags": [
+		"atoms"
+	],
+	"flag": "alpha",
+	"patterns": {
+		"colors": "atoms/colors",
+		"headline": "atoms/headline"
+	},
+	"properties": [
+		{
+			"name": "name",
+			"displayName": "Name",
+			"type": "string",
+			"required": true
+		},
+		{
+			"name": "color",
+			"displayName": "Color",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "size",
+			"displayName": "Size",
+			"type": "integer",
+			"required": false
+		}
+	]
+}
