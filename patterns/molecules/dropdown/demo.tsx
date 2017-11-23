@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { IconName, IconRegistry } from 'icons';
 import DropdownItem from 'dropdown-item';
 import Dropdown from 'Pattern';
 
@@ -38,6 +39,7 @@ export default class DropdownDemo extends React.Component<null, DropdownDemoStat
 				<DropdownItem>Option 3</DropdownItem>
 				<DropdownItem>Option 4</DropdownItem>
 			</Dropdown>
+			<IconRegistry names={IconName} />
 		</div>
     );
   }

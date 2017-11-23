@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import colors from 'colors';
 import { fonts } from 'fonts';
+import { Icon, IconName, Size as IconSize } from 'icons';
 
 export interface DropdownProps {
 	open?: boolean;
@@ -35,11 +36,12 @@ const StyledDropdown = styled.div`
 const StyledText = styled.div`
 	display: flex;
 	justify-content: space-between;
-	padding: 17px 22px;
+	align-items: center;
+	padding: 13px 22px;
 `;
 
-const StyledIcon = styled.div`
-	color: ${colors.greenDark.toString()};
+const StyledIcon = styled(Icon)`
+	fill: ${colors.greenDark.toString()};
 	${(props: StyledIconProps) => props.open
 		? 'transform: rotate(180deg);'
 		: 'transform: rotate(0deg);'
@@ -62,11 +64,7 @@ const Dropdown: React.StatelessComponent<DropdownProps> = (props): JSX.Element =
 		>
 			<StyledText>
 				{props.text}
-				<StyledIcon
-					open={props.open}
-				>
-					V
-				</StyledIcon>
+				<StyledIcon name={IconName.ArrowDown} size={IconSize.XS} open={props.open} />
 			</StyledText>
 			<StyledFlyout
 				open={props.open}

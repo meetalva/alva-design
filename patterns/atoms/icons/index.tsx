@@ -37,10 +37,10 @@ interface IconRegistrySymbolProps {
 const icons: { readonly [key: string]: JSX.Element[][] | JSX.Element[] } = {
 	[IconName.ArrowDown]: [
 		[
-			<path key="arrow-down" d="M0 0h12L6 8"/>
+			<path key="arrow-down" d="M12 15.5l6.06217783-7H5.93782217"/>
 		],
 		[
-			<path key="arrow-down" d="M0 0h12L6 8"/>
+			<path key="arrow-down" d="M24 31l12.12435565-14h-24.2487113"/>
 		]
 	]
 };

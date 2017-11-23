@@ -8,6 +8,10 @@ const StyledDropdownItem = styled.div`
 	padding: 17px 22px;
 	border-top: 1px solid ${colors.grey70.toString() };
 	font-family: ${fonts().NORMAL_FONT};
+
+	&:hover {
+		color: ${colors.black.toString()};
+	}
 `;
 
 
