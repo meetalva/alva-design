@@ -1,0 +1,17 @@
+{
+	"name": "rich",
+	"displayName": "Rich",
+	"version": "1.0.0",
+	"tags": [
+		"atoms",
+		"rich"
+	],
+	"flag": "alpha",
+	"properties": [
+		{
+			"name": "content",
+			"displayName": "Content",
+			"type": "richtext"
+		}
+	]
+}
