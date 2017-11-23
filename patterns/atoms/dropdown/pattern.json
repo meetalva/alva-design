@@ -1,0 +1,24 @@
+{
+	"name": "dropdown",
+	"displayName": "Dropdown",
+	"version": "1.0.0",
+	"tags": [
+		"atoms",
+		"dropdown"
+	],
+	"flag": "alpha",
+	"patterns": {
+		"colors": "atoms/colors",
+		"dropdown-item": "atoms/dropdown-item",
+		"fonts": "atoms/fonts"
+	},
+	"properties": [
+		{
+			"name": "text",
+			"displayName": "Text",
+			"type": "string",
+			"required": true,
+			"max-length": 200
+		}
+	]
+}
