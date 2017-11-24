@@ -1,0 +1,41 @@
+{
+	"name": "space",
+	"displayName": "Space",
+	"version": "1.0.0",
+	"tags": [
+		"atoms",
+		"space"
+	],
+	"flag": "alpha",
+	"properties": [
+		{
+			"name": "name",
+			"displayName": "Name",
+			"type": "string",
+			"required": true,
+			"max-length": 200
+		},
+		{
+			"name": "order",
+			"displayName": "Order",
+			"type": "enum",
+			"required": true,
+			"default": "SECONDARY",
+			"options": [
+				"PRIMARY",
+				"SECONDARY"
+			]
+		},
+		{
+			"name": "type",
+			"displayName": "Type",
+			"type": "enum",
+			"required": true,
+			"default": "BUTTON",
+			"options": [
+				"BUTTON",
+				"SUBMIT"
+			]
+		}
+	]
+}

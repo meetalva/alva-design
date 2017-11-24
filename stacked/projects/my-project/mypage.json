@@ -18,7 +18,14 @@
 						"order": 1,
 						"tagName": "h1"
 					},
-					"headlineText": "Kickstart your product with Stacked!"
+					"headlineText": "Kickstart your products with Stacked!"
+				}
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/space",
+				"properties": {
+					"size": "large"
 				}
 			},
 			{
@@ -37,6 +44,13 @@
 			},
 			{
 				"_type": "pattern",
+				"patternSrc": "atoms/space",
+				"properties": {
+					"size": "large"
+				}
+			},
+			{
+				"_type": "pattern",
 				"patternSrc": "atoms/headline",
 				"properties": {
 					"tagName": "h2",
@@ -51,11 +65,25 @@
 			},
 			{
 				"_type": "pattern",
+				"patternSrc": "atoms/space",
+				"properties": {
+					"size": "large"
+				}
+			},
+			{
+				"_type": "pattern",
 				"patternSrc": "atoms/button",
 				"properties": {
 					"order": "Primary"
 				},
 				"children": ["Get started now!"]
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/space",
+				"properties": {
+					"size": "x-small"
+				}
 			},
 			{
 				"_type": "pattern",
