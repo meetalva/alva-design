@@ -1,13 +1,15 @@
-# Design Kit
+# Stacked example style guide
+
+An example styleguide and design project for the Stacked app.
+
+See https://github.com/stackedapp/stacked for details.
 
 Kickstart your idea with stacked and this complementary design kit. Get your product out and rapidly iterate your inovations.
 
----------------
+## Source-based installation ##
 
-## Installation ##
+* Clone this repository.
+* npm i
+* npm run build
 
-### Install stacked example ###
-
-```node
-git clone git@github.com:stackedapp/stacked-example.git
-```
+To start Stacked, clone https://github.com/stackedapp/stacked and follow its build instructions.
