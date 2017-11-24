@@ -6,7 +6,7 @@ Kickstart your idea with stacked and this complementary design kit. Get your pro
 
 ## Installation ##
 
-### Install meetsy ###
+### Install stacked example ###
 
 ```node
 git clone git@github.com:stackedapp/stacked-example.git
