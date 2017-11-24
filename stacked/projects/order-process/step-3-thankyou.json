@@ -1,0 +1,29 @@
+{
+	"name": "mypage",
+	"root": {
+		"_type": "pattern",
+		"patternSrc": "atoms/layout",
+		"properties": {
+			"maxSize": "80%",
+			"direction": "COLUMN"
+		},
+		"children": [
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/richtext",
+				"properties": {
+					"content": "<p>Lorem <b>ipsum</b> dolor</p>"
+				}
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/button",
+				"properties": {
+					"name": "click me",
+					"order": "PRIMARY",
+					"type": "submit"
+				}
+			}
+		]
+	}
+}
