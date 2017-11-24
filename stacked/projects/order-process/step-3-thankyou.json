@@ -10,6 +10,14 @@
 		"children": [
 			{
 				"_type": "pattern",
+				"patternSrc": "atoms/headline",
+				"properties": {
+					"tagName": "h1"
+				},
+				"children": ["I am a healine"]
+			},
+			{
+				"_type": "pattern",
 				"patternSrc": "atoms/richtext",
 				"properties": {
 					"content": "<p>Lorem <b>ipsum</b> dolor</p>"
@@ -19,10 +27,10 @@
 				"_type": "pattern",
 				"patternSrc": "atoms/button",
 				"properties": {
-					"name": "click me",
 					"order": "PRIMARY",
 					"type": "submit"
-				}
+				},
+				"children": ["click me"]
 			}
 		]
 	}

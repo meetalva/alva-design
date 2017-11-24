@@ -19,10 +19,10 @@
 				"_type": "pattern",
 				"patternSrc": "atoms/button",
 				"properties": {
-					"name": "click me",
 					"order": "PRIMARY",
 					"type": "submit"
-				}
+				},
+				"children": ["click me"]
 			}
 		]
 	}

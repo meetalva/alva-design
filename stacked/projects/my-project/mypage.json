@@ -10,6 +10,24 @@
 		"children": [
 			{
 				"_type": "pattern",
+				"patternSrc": "atoms/headline",
+				"properties": {
+					"tagName": "h1",
+					"order": 1
+				},
+				"children": ["I am a headline"]
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/headline",
+				"properties": {
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": ["I am a subline"]
+			},
+			{
+				"_type": "pattern",
 				"patternSrc": "atoms/richtext",
 				"properties": {
 					"content": "<p>Lorem <b>ipsum</b> dolor</p>"
@@ -19,10 +37,10 @@
 				"_type": "pattern",
 				"patternSrc": "atoms/button",
 				"properties": {
-					"name": "click me",
 					"order": "PRIMARY",
 					"type": "submit"
-				}
+				},
+				"children": ["click me"]
 			}
 		]
 	}
