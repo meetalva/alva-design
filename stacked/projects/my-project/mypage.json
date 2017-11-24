@@ -10,12 +10,16 @@
 		"children": [
 			{
 				"_type": "pattern",
-				"patternSrc": "atoms/headline",
+				"patternSrc": "molecules/teaser",
 				"properties": {
-					"tagName": "h1",
-					"order": 1
-				},
-				"children": ["I am a headline"]
+					"buttonLabel": "Start now!",
+					"copyText": "Stacked enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
+					"headline": {
+						"order": 1,
+						"tagName": "h1"
+					},
+					"headlineText": "Kickstart your product with Stacked!"
+				}
 			},
 			{
 				"_type": "pattern",
@@ -24,23 +28,42 @@
 					"tagName": "h2",
 					"order": 2
 				},
-				"children": ["I am a subline"]
+				"children": ["Stacked enables design and developer collaboration"]
 			},
 			{
 				"_type": "pattern",
-				"patternSrc": "atoms/richtext",
+				"patternSrc": "atoms/copy",
+				"children": ["Lorem ipsum dolor sit"]
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/headline",
 				"properties": {
-					"content": "<p>Lorem <b>ipsum</b> dolor</p>"
-				}
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": ["Stacked enables future-proof development"]
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/copy",
+				"children": ["Lorem ipsum dolor sit"]
 			},
 			{
 				"_type": "pattern",
 				"patternSrc": "atoms/button",
 				"properties": {
-					"order": "PRIMARY",
-					"type": "submit"
+					"order": "Primary"
 				},
-				"children": ["click me"]
+				"children": ["Get started now!"]
+			},
+			{
+				"_type": "pattern",
+				"patternSrc": "atoms/button",
+				"properties": {
+					"order": "Secondary"
+				},
+				"children": ["Get started a little bit later!"]
 			}
 		]
 	}
