@@ -7,6 +7,7 @@ export interface LayoutProps {
 
 const StyledLayout = styled.div`
 	display: flex;
+	align-items: flex-start;
 
 	${(props: LayoutProps) => {
 		switch (props.direction) {
