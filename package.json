@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
-        "build": "tsc --sourceMap --declaration"
+        "build": "tsc --outDir lib/patterns --sourceMap --declaration"
     },
     "repository": {
         "type": "git",
