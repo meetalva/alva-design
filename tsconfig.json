@@ -17,7 +17,8 @@
 	  "noImplicitThis": true,
 	  "noImplicitUseStrict": false,
 	  "noUnusedLocals": true,
-	  "noUnusedParameters": false,
+		"noUnusedParameters": false,
+		"outDir": "./lib",
 	  "preserveConstEnums": true,
 	  "pretty": true,
 	  "removeComments": true,
@@ -25,12 +26,7 @@
 	  "strictNullChecks": true,
 	  "target": "es5",
 	  "watch": false,
-	  "jsx": "react",
-	  "plugins": [
-		 {
-			"name": "typescript-patternplate-resolver"
-		 }
-	  ]
+	  "jsx": "react"
 	},
 	"exclude": [
 	  "./node_modules"

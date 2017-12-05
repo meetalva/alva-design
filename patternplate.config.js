@@ -1,8 +1,8 @@
 module.exports = {
   docs: ["docs/**/*.md"],
-  entry: ["components.bundle.js"],
-  render: "@patternplate/render-react/render",
-  mount: "@patternplate/render-react/mount",
+  entry: ["lib/**/demo.js"],
+  render: "@patternplate/render-styled-components/render",
+  mount: "@patternplate/render-styled-components/mount",
   ui: {
     title: "@patternplate/components"
   }
