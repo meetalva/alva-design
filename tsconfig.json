@@ -26,7 +26,6 @@
 	  "target": "es5",
 	  "watch": false,
 	  "jsx": "react",
-	  "noEmit": true,
 	  "plugins": [
 		 {
 			"name": "typescript-patternplate-resolver"

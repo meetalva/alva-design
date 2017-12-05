@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Headline from 'Pattern';
+import Headline from './index';
 
 const HeadlineDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (

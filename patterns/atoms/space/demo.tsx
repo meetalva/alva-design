@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Space from 'Pattern';
+import Space from './index';
 
 export default function ButtonDemo() {
 	return (

@@ -1,7 +1,6 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { HeadlineProps } from 'headline';
-import Teaser from 'Pattern';
+import { HeadlineProps } from '../../atoms/headline';
+import Teaser from './index';
 
 const headline: HeadlineProps = {
 	order: 2,

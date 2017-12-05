@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import colors from 'colors';
-import { fonts } from 'fonts';
-import { Icon, IconName, Size as IconSize } from 'icons';
+import colors from '../../atoms/colors';
+import { fonts } from '../../atoms/fonts';
+import { Icon, IconName, Size as IconSize } from '../../atoms/icons';
 
 export interface DropdownProps {
 	open?: boolean;

@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "patternplate start",
-		"console": "patternplate console",
+		"start": "patternplate-build && patternplate start",
+		"patternplate-build": "webpack -w",
 		"build": "npm run console build-commonjs"
 	},
 	"repository": {
@@ -18,27 +18,24 @@
 		"url": "https://github.com/stackedapp/stacked-example/issues"
 	},
 	"devDependencies": {
+		"@patternplate/cli": "^2.0.0-4",
+		"@patternplate/render-react": "^2.0.0-4",
 		"@types/node": "^8.0.53",
 		"@types/react": "15.6.1",
 		"@types/react-dom": "^15.5.4",
 		"babel-preset-es2015": "6.14.0",
 		"babel-preset-react": "6.11.1",
-		"patternplate": "1.7.4",
-		"patternplate-transform-browserify": "^1.1.0",
-		"patternplate-transform-react": "^1.1.2",
-		"patternplate-transform-react-mount": "~0.1.2",
-		"patternplate-transform-typescript": "^0.7.3",
-		"typescript": "^2.6.1",
-		"typescript-patternplate-resolver": "0.1.0"
+		"source-map-loader": "^0.2.3",
+		"ts-loader": "^3.2.0",
+		"typescript": "^2.6.2"
 	},
 	"dependencies": {
-		"patternplate-transform-react-to-markup": "^1.2.0-0",
-		"patternplate-transform-resolve-imports": "^1.0.0",
-		"patternplate-transform-styled-components": "^1.1.0-0",
+		"@patternplate/webpack-entry": "^2.0.0-4",
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
 		"styled-components": "^2.1.1",
 		"ts-node": "^3.3.0",
-		"tslib": "^1.7.0"
+		"tslib": "^1.7.0",
+		"webpack": "^3.10.0"
 	}
 }

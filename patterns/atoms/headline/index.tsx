@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled, { css, StyledComponentClass } from 'styled-components';
-import { fonts } from 'fonts';
-import colors from 'colors';
+import { fonts } from '../fonts';
 
 export interface HeadlineProps {
 	className?: string;
