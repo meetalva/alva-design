@@ -1,98 +1,101 @@
 {
-	"name": "mypage",
-	"root": {
-		"_type": "pattern",
-		"patternSrc": "atoms/layout",
-		"properties": {
-			"maxSize": "80%",
-			"direction": "COLUMN"
-		},
-		"children": [
-			{
-				"_type": "pattern",
-				"patternSrc": "molecules/teaser",
-				"properties": {
-					"buttonLabel": "Start now!",
-					"copyText": "Stacked enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
-					"headline": {
-						"order": 1,
-						"tagName": "h1"
-					},
-					"headlineText": "Kickstart your products with Stacked!"
-				}
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/headline",
-				"properties": {
-					"tagName": "h2",
-					"order": 2
-				},
-				"children": ["Stacked enables design and developer collaboration"]
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/copy",
-				"children": ["Lorem ipsum dolor sit"]
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/headline",
-				"properties": {
-					"tagName": "h2",
-					"order": 2
-				},
-				"children": ["Stacked enables future-proof development"]
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/copy",
-				"children": ["Lorem ipsum dolor sit"]
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/button",
-				"properties": {
-					"order": "Primary"
-				},
-				"children": ["Get started now!"]
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/space",
-				"properties": {
-					"size": "x-small"
-				}
-			},
-			{
-				"_type": "pattern",
-				"patternSrc": "atoms/button",
-				"properties": {
-					"order": "Secondary"
-				},
-				"children": ["Get started a little bit later!"]
-			}
-		]
-	}
+  "name": "mypage",
+  "root": {
+    "_type": "pattern",
+    "pattern": "atoms/layout",
+    "properties": {
+      "maxSize": "80%",
+      "direction": "COLUMN"
+    },
+    "children": [
+      {
+        "_type": "pattern",
+        "pattern": "molecules/teaser",
+        "properties": {
+          "buttonLabel": "Start now!",
+          "copyText":
+            "Stacked enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
+          "headline": {
+            "_type": "pattern",
+            "pattern": "atoms/headline",
+            "order": 1,
+            "tagName": "h1"
+          },
+          "headlineText": "Kickstart your products with Stacked!"
+        }
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/space",
+        "properties": {
+          "size": "large"
+        }
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/headline",
+        "properties": {
+          "tagName": "h2",
+          "order": 2
+        },
+        "children": ["Stacked enables design and developer collaboration"]
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/copy",
+        "children": ["Lorem ipsum dolor sit"]
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/space",
+        "properties": {
+          "size": "large"
+        }
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/headline",
+        "properties": {
+          "tagName": "h2",
+          "order": 2
+        },
+        "children": ["Stacked enables future-proof development"]
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/copy",
+        "children": ["Lorem ipsum dolor sit"]
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/space",
+        "properties": {
+          "size": "large"
+        }
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/button",
+        "properties": {
+          "order": "Primary"
+        },
+        "children": ["Get started now!"]
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/space",
+        "properties": {
+          "size": "x-small"
+        }
+      },
+      {
+        "_type": "pattern",
+        "pattern": "atoms/button",
+        "properties": {
+          "order": "Secondary"
+        },
+        "children": ["Get started a little bit later!"]
+      }
+    ]
+  }
 }
