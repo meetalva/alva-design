@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DropdownItem from 'Pattern';
+import DropdownItem from './index';
 
 const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { IconName, IconRegistry } from 'icons';
-import DropdownItem from 'dropdown-item';
-import Dropdown from 'Pattern';
+import { IconName, IconRegistry } from '../../atoms/icons';
+import DropdownItem from '../../atoms/dropdown-item';
+import Dropdown from './index';
 
 export interface DropdownDemoState {
   dropdownOpen?: boolean;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import colors from 'colors';
-import {fonts} from 'fonts';
+import colors from '../colors';
+import {fonts} from '../fonts';
 
 export interface ButtonProps {
 	disabled?: boolean;

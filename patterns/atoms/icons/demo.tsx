@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Headline from 'headline';
+import Headline from '../headline';
 
-import {reduce, Icon, IconName, IconRegistry, Size as IconSize} from 'Pattern';
+import {reduce, Icon, IconName, IconRegistry, Size as IconSize} from './index';
 
 const StyledDemoIconList = styled.ul`
   box-sizing: border-box;

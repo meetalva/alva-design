@@ -1,10 +1,9 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
-import Button, {Order} from 'button';
-import colors from 'colors';
-import Copy, { Size as CopySize, CopyProps } from 'copy';
-import Headline, { HeadlineProps } from 'headline';
-import Image from 'image';
+import styled from 'styled-components';
+import Button, {Order} from '../../atoms/button';
+import colors from '../../atoms/colors';
+import Copy, { Size as CopySize } from '../../atoms/copy';
+import Headline, { HeadlineProps } from '../../atoms/headline';
 
 export interface TeaserProps {
 	buttonLabel: string;

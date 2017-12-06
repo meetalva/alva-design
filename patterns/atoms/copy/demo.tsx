@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Copy, { Size as CopySize } from 'Pattern';
+import Copy, { Size as CopySize } from './index';
 
 const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (

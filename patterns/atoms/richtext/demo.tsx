@@ -1,5 +1,5 @@
 import * as React from 'react';
-import RichText from 'Pattern';
+import RichText from './index';
 
 const RichTextDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (

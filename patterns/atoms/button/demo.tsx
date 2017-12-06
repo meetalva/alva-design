@@ -1,6 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import Button, { Order } from 'Pattern';
+import Button, { Order } from './index';
 
 export default function ButtonDemo() {
 	return (
