@@ -1,48 +1,14 @@
 {
-	"name": "teaser",
-	"displayName": "Teaser",
-	"version": "1.0.0",
-	"tags": [
-		"molecules",
-		"teaser"
-	],
-	"flag": "alpha",
-	"patterns": {
-		"button": "atoms/button",
-		"colors": "atoms/colors",
-		"copy": "atoms/copy",
-		"headline": "atoms/headline",
-		"image": "atoms/image"
-	},
-	"properties": [
-		{
-			"name": "name",
-			"displayName": "Name",
-			"type": "string",
-			"required": true,
-			"max-length": 200
-		},
-		{
-			"name": "order",
-			"displayName": "Order",
-			"type": "enum",
-			"required": true,
-			"default": "SECONDARY",
-			"options": [
-				"PRIMARY",
-				"SECONDARY"
-			]
-		},
-		{
-			"name": "type",
-			"displayName": "Type",
-			"type": "enum",
-			"required": true,
-			"default": "BUTTON",
-			"options": [
-				"BUTTON",
-				"SUBMIT"
-			]
-		}
-	]
+  "name": "teaser",
+  "displayName": "Teaser",
+  "version": "1.0.0",
+  "tags": ["molecules", "teaser"],
+  "flag": "alpha",
+  "patterns": {
+    "button": "atoms/button",
+    "colors": "atoms/colors",
+    "copy": "atoms/copy",
+    "headline": "atoms/headline",
+    "image": "atoms/image"
+  }
 }
