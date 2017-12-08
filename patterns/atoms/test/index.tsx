@@ -2,12 +2,24 @@ import * as React from "react";
 import { ButtonProps } from "../../atoms/button";
 
 export enum MyEnum {
+  /**
+   * @name "Option 1"
+   */
   OPTION1,
-  OPTION2 = "Option 2",
-  OPTION3 = 42
+  /**
+   * @name "Option 2"
+   */
+  OPTION2,
+  /**
+   * @name "Option 3"
+   */
+  OPTION3
 }
 
 export interface TestProps {
+  /**
+   * @name My aweome string
+   */
   myString: string;
   myStrings: string[];
   myOptionalString?: string;

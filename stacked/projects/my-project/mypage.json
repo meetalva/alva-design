@@ -16,8 +16,6 @@
           "copyText":
             "Stacked enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
           "headline": {
-            "_type": "pattern",
-            "pattern": "atoms/headline",
             "order": 1,
             "tagName": "h1"
           },
