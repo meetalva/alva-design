@@ -5,7 +5,7 @@ import {fonts} from '../fonts';
 
 export interface ButtonProps {
 	disabled?: boolean;
-	order?: Order | string;
+	order?: Order;
 
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
@@ -26,7 +26,6 @@ const StyledButton = styled.button`
 	${(props: ButtonProps) => {
 		switch (props.order) {
 			case Order.Secondary:
-			case "Secondary":
 				return css`
 					background: ${colors.white.toString()};
 					border: 1px solid ${colors.green.toString()};
@@ -40,9 +39,8 @@ const StyledButton = styled.button`
 						color: ${colors.grey70.toString()};
 					}
 				`
-		  case Order.Primary:
-			case "Primary":
-		  default:
+			case Order.Primary:
+			default:
 				return css`
 					background: ${colors.green.toString()};
 					border: 1px solid ${colors.greenDark.toString()};
