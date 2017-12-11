@@ -1,85 +1,97 @@
 {
-  "name": "mypage",
-  "root": {
-    "_type": "pattern",
-    "pattern": "atoms/layout",
-    "properties": {
-      "maxSize": "80%",
-      "direction": "COLUMN"
-    },
-    "children": [
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/headline",
-        "properties": {
-          "tagName": "h2",
-          "order": 2
-        },
-        "children": ["Page 2"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/copy",
-        "children": ["Lorem ipsum dolor sit"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/headline",
-        "properties": {
-          "tagName": "h2",
-          "order": 2
-        },
-        "children": ["Stacked enables future-proof development"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/copy",
-        "children": ["Lorem ipsum dolor sit"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/button",
-        "properties": {
-          "order": "Primary"
-        },
-        "children": ["Get started now!"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "x-small"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/button",
-        "properties": {
-          "order": "Secondary"
-        },
-        "children": ["Get started a little bit later!"]
-      }
-    ]
-  }
+	"name": "mypage2",
+	"root": {
+		"_type": "pattern",
+		"pattern": "atoms/layout",
+		"properties": {
+			"maxSize": "80%",
+			"direction": "COLUMN"
+		},
+		"children": [
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/headline",
+				"properties": {
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": [
+					"Page 2"
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/copy",
+				"children": [
+					"Lorem ipsum dolor sit"
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/headline",
+				"properties": {
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": [
+					"Stacked enables future-proof development"
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/copy",
+				"children": [
+					"Lorem ipsum dolor sit"
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/button",
+				"properties": {
+					"order": "Primary"
+				},
+				"children": [
+					"Get started now!"
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "x-small"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/button",
+				"properties": {
+					"order": "Secondary"
+				},
+				"children": [
+					"Get started a little bit later!"
+				]
+			}
+		]
+	}
 }
