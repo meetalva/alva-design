@@ -1,10 +1,10 @@
-# Stacked example style guide
+# Bulb UI Kit
 
-An example styleguide and design project for the Stacked app.
+Bulb is an exemplary UI Kit to showcase the possibilities of Alva.
 
-See https://github.com/stackedapp/stacked for details.
+See https://github.com/meetalva/alva for details.
 
-Kickstart your idea with stacked and this complementary design kit. Get your product out and rapidly iterate your inovations.
+Kickstart your idea with Alva and this complementary UI Kit. Get your product out and rapidly iterate your inovations.
 
 ## Source-based installation ##
 
@@ -12,4 +12,4 @@ Kickstart your idea with stacked and this complementary design kit. Get your pro
 * npm i
 * npm run build
 
-To start Stacked, clone https://github.com/stackedapp/stacked and follow its build instructions.
+To start Alva, clone https://github.com/meetalva/alva and follow its build instructions.
