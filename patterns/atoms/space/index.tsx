@@ -2,7 +2,15 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 
 export interface SpaceProps {
-	size?: string;
+	size?: Size;
+}
+
+export enum Size {
+	XSmall,
+	Small,
+	Base,
+	Large,
+	XLarge
 }
 
 const StyledSpace = styled.div`
@@ -10,30 +18,31 @@ const StyledSpace = styled.div`
 
 	${(props: SpaceProps) => {
 		switch (props.size) {
-			case "x-small":
+			case Size.XSmall:
 				return css`
 					height: 8px;
 					width: 8px;
-					}
 				`
-			case "small":
+			case Size.Small:
 				return css`
 					height: 16px;
 					width: 16px;
-					}
 				`
-			case "base":
+			case Size.Base:
 			default:
 				return css`
 					height: 32px;
 					width: 16px;
-					}
 				`
-			case "large":
+			case Size.Large:
 				return css`
 					height: 64px;
 					width: 16px;
-					}
+				`
+			case Size.XLarge:
+				return css`
+					height: 128px;
+					width: 16px;
 				`
 			}
 	}}
