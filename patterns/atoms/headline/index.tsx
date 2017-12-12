@@ -24,6 +24,7 @@ export interface HeadlineProps {
 interface StyledHeadlineProps {
 	className?: string;
 	order?: 1 | 2 | 3;
+	textAlign?: TextAlign;
 }
 
 export enum TextAlign {
@@ -54,6 +55,7 @@ const StyledHeadline = styled.div`
 				return css`
 					font-size: 52px;
 					line-height: 60px;
+					font-weight: 700;
 				`;
 		}
 	}};

@@ -3,12 +3,13 @@ import styled, { css } from 'styled-components';
 
 export interface LayoutProps {
 	direction?: 'horizontal' | 'vertical';
+	maxWidth?: string;
 }
 
 const StyledLayout = styled.div`
 	display: flex;
-	width: 80%;
 	margin: 0 auto;
+	max-width: ${(props: LayoutProps) => props.maxWidth || "none"};
 
 	${(props: LayoutProps) => {
 		switch (props.direction) {
@@ -27,7 +28,7 @@ const StyledLayout = styled.div`
 
 const Layout: React.StatelessComponent<LayoutProps> = (props) => {
 	return (
-		<StyledLayout>
+		<StyledLayout maxWidth={props.maxWidth}>
 			{props.children}
 		</StyledLayout>
 	);

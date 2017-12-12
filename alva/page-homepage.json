@@ -4,104 +4,154 @@
     "_type": "pattern",
     "pattern": "atoms/layout",
 		"properties": {
-			"direction": "vertical"
+			"direction": "vertical",
+			"maxWidth": "80%"
 		},
-    "children": [
+		"children": [
 			{
-        "_type": "pattern",
-        "pattern": "atoms/headline",
-        "properties": {
-          "tagName": "h1",
-          "order": 1
-        },
-        "children": ["Meet Alva"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "molecules/teaser",
-        "properties": {
-          "buttonLabel": "Start now!",
-          "copyText":
-            "Alva enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
-          "headline": {
-            "order": 2,
-            "tagName": "h2"
-          },
-          "headlineText": "Kickstart your products with Alva!"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/headline",
-        "properties": {
-          "tagName": "h2",
-          "order": 2
-        },
-        "children": ["Alva enables design and developer collaboration"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/copy",
-        "children": ["Lorem ipsum dolor sit"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/headline",
-        "properties": {
-          "tagName": "h2",
-          "order": 2
-        },
-        "children": ["Alva enables future-proof development"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/copy",
-        "children": ["Lorem ipsum dolor sit"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "large"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/button",
-        "properties": {
-          "order": "Primary"
-        },
-        "children": ["Get started now!"]
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/space",
-        "properties": {
-          "size": "x-small"
-        }
-      },
-      {
-        "_type": "pattern",
-        "pattern": "atoms/button",
-        "properties": {
-          "order": "Secondary"
-        },
-        "children": ["Get started a little bit later!"]
-      }
-    ]
-  }
+				"_type": "pattern",
+				"pattern": "atoms/layout",
+				"properties": {
+					"direction": "vertical",
+					"maxWidth": "600px"
+				},
+					"children": [
+					{
+						"_type": "pattern",
+						"pattern": "atoms/space",
+						"properties": {
+							"size": "XLarge"
+						}
+					},
+					{
+						"_type": "pattern",
+						"pattern": "atoms/headline",
+						"properties": {
+							"tagName": "h1",
+							"order": 1,
+							"textAlign": "Center"
+						},
+						"children": ["Meet Alva"]
+					},
+					{
+						"_type": "pattern",
+						"pattern": "atoms/copy",
+						"properties": {
+							"textAlign": "Center"
+						},
+						"children": ["Alva is a radically new design tool that enables cross-functional teams to design digital products."]
+					},
+					{
+						"_type": "pattern",
+						"pattern": "atoms/space",
+						"properties": {
+							"size": "Base"
+						}
+					},
+					{
+						"_type": "pattern",
+						"pattern": "atoms/copy",
+						"properties": {
+							"textAlign": "Center",
+							"size": "Small"
+						},
+						"children": ["First alpha release available by end of december"]
+					}
+				]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "XLarge"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "molecules/teaser",
+				"properties": {
+					"buttonLabel": "Start now!",
+					"copyText":
+					"Alva enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
+					"headline": {
+						"order": 2,
+						"tagName": "h2"
+					},
+					"headlineText": "Kickstart your products with Alva!"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "Large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/headline",
+				"properties": {
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": ["Alva enables design and developer collaboration"]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/copy",
+				"children": ["Lorem ipsum dolor sit"]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "Large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/headline",
+				"properties": {
+					"tagName": "h2",
+					"order": 2
+				},
+				"children": ["Alva enables future-proof development"]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/copy",
+				"children": ["Lorem ipsum dolor sit"]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "Large"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/button",
+				"properties": {
+					"order": "Primary"
+				},
+				"children": ["Get started now!"]
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/space",
+				"properties": {
+					"size": "XSmall"
+				}
+			},
+			{
+				"_type": "pattern",
+				"pattern": "atoms/button",
+				"properties": {
+					"order": "Secondary"
+				},
+				"children": ["Get started a little bit later!"]
+			}
+		]
+	}
 }

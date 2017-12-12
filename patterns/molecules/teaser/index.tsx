@@ -37,7 +37,7 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 				{props.headlineText}
 			</StyledHeadline>
 			<StyledCopy
-				size={CopySize.M}
+				size={CopySize.Medium}
 				>
 				{props.copyText}
 			</StyledCopy>
