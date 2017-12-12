@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Headline from './index';
+import Headline, {TextAlign} from './index';
 
 const HeadlineDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
@@ -11,6 +11,9 @@ const HeadlineDemo: React.StatelessComponent<void> = (): JSX.Element => {
 				Headline Order 2
 			</Headline>
 			<Headline order={3}>
+				Headline Order 3
+			</Headline>
+			<Headline order={3} textAlign={TextAlign.Center}>
 				Headline Order 3
 			</Headline>
 		</div>

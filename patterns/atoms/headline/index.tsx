@@ -15,11 +15,21 @@ export interface HeadlineProps {
 	 * @name Tag name
 	 */
 	tagName?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div";
+	/**
+	 * @name Text Align
+	 */
+	textAlign?: TextAlign;
 }
 
 interface StyledHeadlineProps {
 	className?: string;
 	order?: 1 | 2 | 3;
+}
+
+export enum TextAlign {
+	Left,
+	Center,
+	Right
 }
 
 const StyledHeadline = styled.div`
@@ -47,6 +57,24 @@ const StyledHeadline = styled.div`
 				`;
 		}
 	}};
+
+	${(props: HeadlineProps) => {
+		switch (props.textAlign) {
+			case TextAlign.Center:
+				return css`
+					text-align: center;
+				`
+			case TextAlign.Right:
+				return css`
+					text-align: right;
+				`
+			case TextAlign.Left:
+			default:
+				return css`
+					text-align: left;
+				`
+		}
+  }};
 `;
 
 const Headline: React.StatelessComponent<HeadlineProps> = props => {
@@ -57,7 +85,7 @@ const Headline: React.StatelessComponent<HeadlineProps> = props => {
 	> = StyledHeadline.withComponent(tagName);
 
 	return (
-		<Component className={props.className} order={props.order}>
+		<Component className={props.className} order={props.order} textAlign={props.textAlign}>
 			{props.children}
 		</Component>
 	);

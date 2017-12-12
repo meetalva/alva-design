@@ -5,12 +5,12 @@
 			"name": "Meet Alva",
 			"pages": [
 				{
-					"id": "get-started",
-					"name": "Get started!"
-				},
-				{
 					"id": "homepage",
 					"name": "Homepage"
+				},
+				{
+					"id": "get-started",
+					"name": "Get started!"
 				}
 			]
 		},
