@@ -3,23 +3,31 @@
   "root": {
     "_type": "pattern",
     "pattern": "atoms/layout",
-    "properties": {
-      "maxSize": "80%",
-      "direction": "COLUMN"
-    },
+		"properties": {
+			"direction": "vertical"
+		},
     "children": [
+			{
+        "_type": "pattern",
+        "pattern": "atoms/headline",
+        "properties": {
+          "tagName": "h1",
+          "order": 1
+        },
+        "children": ["Meet Alva"]
+      },
       {
         "_type": "pattern",
         "pattern": "molecules/teaser",
         "properties": {
           "buttonLabel": "Start now!",
           "copyText":
-            "Stacked enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
+            "Alva enables cross-functional teams to design contextual digital experiences with code-based ecosystems.",
           "headline": {
-            "order": 1,
-            "tagName": "h1"
+            "order": 2,
+            "tagName": "h2"
           },
-          "headlineText": "Kickstart your products with Stacked!"
+          "headlineText": "Kickstart your products with Alva!"
         }
       },
       {
@@ -36,7 +44,7 @@
           "tagName": "h2",
           "order": 2
         },
-        "children": ["Stacked enables design and developer collaboration"]
+        "children": ["Alva enables design and developer collaboration"]
       },
       {
         "_type": "pattern",
@@ -57,7 +65,7 @@
           "tagName": "h2",
           "order": 2
         },
-        "children": ["Stacked enables future-proof development"]
+        "children": ["Alva enables future-proof development"]
       },
       {
         "_type": "pattern",
