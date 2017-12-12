@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled, {css, StyledComponentClass} from 'styled-components';
 
-import colors from '../colors';
 import { fonts } from '../fonts';
 
 export interface CopyProps {
@@ -43,7 +42,6 @@ const CopyProxy: React.StatelessComponent<CopyProxyProps> = (props) => {
 
 const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
   margin: 0;
-  color: ${colors.black.toString()};
   font-family: ${fonts().NORMAL_FONT};
 
   ${(props: CopyProps) => {
@@ -71,9 +69,12 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 					text-align: right;
 				`
 			case TextAlign.Left:
-			default:
 				return css`
 					text-align: left;
+				`
+			default:
+				return css`
+					text-align: inherit;
 				`
 		}
   }};

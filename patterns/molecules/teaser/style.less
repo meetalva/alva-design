@@ -1,0 +1,137 @@
+// out: ./style.css, sourcemap: true
+
+@portrait:       768px;
+@landscape:         960px;
+
+// colors
+@mainColor:       #000000;
+@textColor:       #FFFFFF;
+
+@baseFontSize:    35px;
+@smallFontSize:   12px;
+@baseLineHeight:  47px;
+@smallLineHeight: 15px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  font-family: 'Playfair Display', serif;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  font-weight: 400; // fix for font rendering on safari
+  background-color: @mainColor;
+  color: @textColor;
+}
+
+h1, p {
+  font-size: 1rem;
+  line-height: @baseLineHeight;
+  color: inherit;
+}
+
+h2, .small, small {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: @smallFontSize;
+  line-height: @smallLineHeight;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1.5;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid;
+    bottom: -2px;
+    left: 0;
+    transition: bottom .1s;
+  }
+
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 97%;
+  margin: 0 auto;
+
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin-bottom: 270px;
+
+    &:last-of-type {
+      margin-bottom: @baseLineHeight;
+    }
+
+    article {
+      &.intro, &.stations {
+        flex-basis: 66.6%;
+
+        @media screen and (max-width: @portrait) {
+          flex-basis: 100%;
+        }
+      }
+
+      &.intro {
+        p {
+          margin-bottom: @baseLineHeight;
+
+          &:last-of-type {
+            margin-bottom: none;
+          }
+        }
+      }
+
+      &.stations {
+        @media screen and (max-width: @portrait) {
+          margin-bottom: 120px;
+        }
+      }
+
+      &.clients, &.awards {
+        flex-basis: 16.6%;
+
+        @media screen and (max-width: @portrait) {
+          flex-basis: 50%;
+        }
+      }
+
+      &.awards {
+        li {
+          margin-bottom: @smallLineHeight;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: none;
+    flex-basis: 100%;
+    border-top: 2px solid;
+    padding: .3rem 0;
+  }
+}

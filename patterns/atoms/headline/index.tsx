@@ -71,9 +71,12 @@ const StyledHeadline = styled.div`
 					text-align: right;
 				`
 			case TextAlign.Left:
-			default:
 				return css`
 					text-align: left;
+				`
+			default:
+				return css`
+					text-align: inherit;
 				`
 		}
   }};

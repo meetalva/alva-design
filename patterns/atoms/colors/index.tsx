@@ -54,6 +54,10 @@ const colors = {
 		displayName: 'Black',
 		rgb: [51, 51, 51]
 	}),
+	blue: new Color({
+		displayName: 'Blue',
+		rgb: [0, 112, 214]
+	}),
 	greenDark: new Color({
 		displayName: 'Green Dark',
 		rgb: [30, 205, 151]
