@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import colors from '../colors';
 import {fonts} from '../fonts';
 
+export interface DropdownItemProps {
+	/** @name Content text */ content: string;
+}
+
 const StyledDropdownItem = styled.div`
 	display: flex;
 	padding: 17px 22px;
@@ -15,12 +19,8 @@ const StyledDropdownItem = styled.div`
 `;
 
 
-const DropdownItem: React.StatelessComponent<{}> = (props): JSX.Element => {
-	return (
-		<StyledDropdownItem>
-			{props.children}
-		</StyledDropdownItem>
-	);
+const DropdownItem: React.StatelessComponent<DropdownItemProps> = props => {
+	return <StyledDropdownItem>{props.content}</StyledDropdownItem>
 };
 
 export default DropdownItem;

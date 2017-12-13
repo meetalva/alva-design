@@ -24,15 +24,14 @@ export default class DropdownDemo extends React.Component<null, DropdownDemoStat
 					open={this.state.dropdownOpen}
 					text="Dropdown"
 				>
-					<DropdownItem>Item</DropdownItem>
-					<DropdownItem>Item</DropdownItem>
-					<DropdownItem>Item</DropdownItem>
+					<DropdownItem content={'Item'} />
+					<DropdownItem content={'Item'} />
+					<DropdownItem content={'Item'} />
 				</Dropdown>
 				<Dropdown onToggle={this.handleDropdownToggle} open={true} text="Dropdown">
-					<DropdownItem>Option 1</DropdownItem>
-					<DropdownItem>Option 2</DropdownItem>
-					<DropdownItem>Option 3</DropdownItem>
-					<DropdownItem>Option 4</DropdownItem>
+				<DropdownItem content={'Option 1'} />
+				<DropdownItem content={'Option 2'} />
+				<DropdownItem content={'Option 3'} />
 				</Dropdown>
 				<IconRegistry names={IconName} />
 			</div>
