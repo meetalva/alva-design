@@ -52,7 +52,7 @@ root:
             textAlign: Center
             size: Small
       properties:
-        direction: vertical
+        direction: VERTICAL
         maxWidth: 600px
     - _type: pattern
       pattern: atoms/space
@@ -159,5 +159,5 @@ root:
       properties:
         size: XLarge
   properties:
-    direction: vertical
+    direction: VERTICAL
     maxWidth: 80%

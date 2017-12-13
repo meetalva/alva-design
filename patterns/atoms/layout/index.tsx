@@ -1,9 +1,14 @@
-import * as React from 'react';
-import styled, { css } from 'styled-components';
+import * as React from "react";
+import styled, { css } from "styled-components";
+
+export enum Direction {
+	/** @name horizontal */ HORIZONTAL,
+	/** @name vertical */ VERTICAL
+}
 
 export interface LayoutProps {
-	direction?: 'horizontal' | 'vertical';
-	maxWidth?: string;
+	/** @name Direction */ direction?: Direction;
+	/** @name Maximum width */ maxWidth?: string;
 }
 
 const StyledLayout = styled.div`
@@ -12,26 +17,26 @@ const StyledLayout = styled.div`
 	max-width: ${(props: LayoutProps) => props.maxWidth || "none"};
 
 	${(props: LayoutProps) => {
+		console.log("layout got " + props.direction);
+		console.log("expecting " + Direction.HORIZONTAL);
+		console.log("or " + Direction.VERTICAL);
+
 		switch (props.direction) {
-			case 'horizontal':
+			case Direction.HORIZONTAL:
 				return css`
 					flex-direction: row;
-				`
-			case 'vertical':
+				`;
+			case Direction.VERTICAL:
 			default:
 				return css`
 					flex-direction: column;
-				`
+				`;
 		}
-	}}
+	}};
 `;
 
-const Layout: React.StatelessComponent<LayoutProps> = (props) => {
-	return (
-		<StyledLayout maxWidth={props.maxWidth}>
-			{props.children}
-		</StyledLayout>
-	);
+const Layout: React.StatelessComponent<LayoutProps> = props => {
+	return <StyledLayout {...props}>{props.children}</StyledLayout>;
 };
 
 export default Layout;

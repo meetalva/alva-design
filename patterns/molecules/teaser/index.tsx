@@ -1,16 +1,29 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import Button, {Order} from '../../atoms/button';
-import colors from '../../atoms/colors';
-import Copy, { Size as CopySize } from '../../atoms/copy';
-import Headline, { HeadlineProps } from '../../atoms/headline';
+import * as React from "react";
+import styled from "styled-components";
+import Button from "../../atoms/button";
+import colors from "../../atoms/colors";
+import Copy, { Size } from "../../atoms/copy";
+import Headline from "../../atoms/headline";
 
 export interface TeaserProps {
-	buttonLabel: string;
-	copyText: string;
-	headline: HeadlineProps;
-	headlineText: string;
+	/** @name Button label */ buttonLabel: string;
+	/** @name Copy text */ copyText: string;
+	/** @name Headline level */ headlineLevel: Level;
+	/** @name Headline align */ headlineAlign?: TextAlign;
+	/** @name Headline text */ headlineText: string;
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export enum Level {
+	H1,
+	H2,
+	H3
+}
+
+export enum TextAlign {
+	Left,
+	Center,
+	Right
 }
 
 const StyledTeaser = styled.div`
@@ -20,33 +33,21 @@ const StyledTeaser = styled.div`
 `;
 
 const StyledHeadline = styled(Headline)`
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 `;
 
 const StyledCopy = styled(Copy)`
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 `;
 
 const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 	return (
 		<StyledTeaser>
-			<StyledHeadline
-				tagName={props.headline.tagName}
-				order={props.headline.order}
-				>
-				{props.headlineText}
-			</StyledHeadline>
-			<StyledCopy
-				size={CopySize.Medium}
-				>
-				{props.copyText}
-			</StyledCopy>
-			<Button
-        onClick={props.onClick}
-        order={Order.Primary}
-      	>
-        {props.buttonLabel}
-      </Button>
+			<StyledHeadline level={props.headlineLevel}>{props.headlineText}</StyledHeadline>
+			<StyledCopy size={Size.Medium}>{props.copyText}</StyledCopy>
+			<Button onClick={props.onClick} primary={true}>
+				{props.buttonLabel}
+			</Button>
 		</StyledTeaser>
 	);
 };

@@ -1,13 +1,14 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import colors from '../../atoms/colors';
-import Copy, { Size as CopySize } from '../../atoms/copy';
-import Headline, { HeadlineProps } from '../../atoms/headline';
+import * as React from "react";
+import styled from "styled-components";
+import colors from "../../atoms/colors";
+import Copy, { Size as CopySize } from "../../atoms/copy";
+import Headline, { Level, TextAlign } from "../../atoms/headline";
 
 export interface TeaserProps {
-	copyText: string;
-	headline: HeadlineProps;
-	headlineText: string;
+	/** @name Copy text */ copyText: string;
+	/** @name Headline level */ headlineLevel: Level;
+	/** @name Headline align */ headlineAlign?: TextAlign;
+	/** @name Headline text */ headlineText: string;
 }
 
 const StyledHero = styled.div`
@@ -20,17 +21,10 @@ const StyledHero = styled.div`
 const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 	return (
 		<StyledHero>
-			<Headline
-				tagName={props.headline.tagName}
-				order={props.headline.order}
-				>
+			<Headline level={props.headlineLevel} textAlign={props.headlineAlign}>
 				{props.headlineText}
 			</Headline>
-			<Copy
-				size={CopySize.Medium}
-				>
-				{props.copyText}
-			</Copy>
+			<Copy size={CopySize.Medium}>{props.copyText}</Copy>
 		</StyledHero>
 	);
 };

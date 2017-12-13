@@ -3,28 +3,15 @@ import styled, { css, StyledComponentClass } from "styled-components";
 import { fonts } from "../fonts";
 
 export interface HeadlineProps {
-	/**
-	 * @name CSS class
-	 */
-	className?: string;
-	/**
-	 * @name Order
-	 */
-	order?: 1 | 2 | 3;
-	/**
-	 * @name Tag name
-	 */
-	tagName?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div";
-	/**
-	 * @name Text Align
-	 */
-	textAlign?: TextAlign;
+	/** @name CSS class */ className?: string;
+	/** @name Level */ level: Level;
+	/** @name Text align */ textAlign?: TextAlign;
 }
 
-interface StyledHeadlineProps {
-	className?: string;
-	order?: 1 | 2 | 3;
-	textAlign?: TextAlign;
+export enum Level {
+	H1,
+	H2,
+	H3
 }
 
 export enum TextAlign {
@@ -39,18 +26,18 @@ const StyledHeadline = styled.div`
 	font-weight: 500;
 
 	${(props: HeadlineProps) => {
-		switch (props.order) {
-			case 3:
+		switch (props.level) {
+			case Level.H3:
 				return css`
 					font-size: 24px;
 					line-height: 30px;
 				`;
-			case 2:
+			case Level.H2:
 				return css`
 					font-size: 38px;
 					line-height: 45px;
 				`;
-			case 1:
+			case Level.H1:
 			default:
 				return css`
 					font-size: 52px;
@@ -65,35 +52,42 @@ const StyledHeadline = styled.div`
 			case TextAlign.Center:
 				return css`
 					text-align: center;
-				`
+				`;
 			case TextAlign.Right:
 				return css`
 					text-align: right;
-				`
+				`;
 			case TextAlign.Left:
 				return css`
 					text-align: left;
-				`
+				`;
 			default:
 				return css`
 					text-align: inherit;
-				`
+				`;
 		}
-  }};
+	}};
 `;
 
 const Headline: React.StatelessComponent<HeadlineProps> = props => {
-	const tagName = props.tagName === undefined ? "div" : props.tagName;
+	let tagName: string = "h1";
+	switch (props.level) {
+		case Level.H3:
+			tagName = "h3";
+			break;
+		case Level.H2:
+			tagName = "h2";
+			break;
+		case Level.H1:
+			tagName = "h1";
+			break;
+	}
 	const Component: StyledComponentClass<
-		StyledHeadlineProps,
+		HeadlineProps,
 		HeadlineProps
-	> = StyledHeadline.withComponent(tagName);
+	> = StyledHeadline.withComponent(tagName as keyof JSX.IntrinsicElements);
 
-	return (
-		<Component className={props.className} order={props.order} textAlign={props.textAlign}>
-			{props.children}
-		</Component>
-	);
+	return <Component {...props}>{props.children}</Component>;
 };
 
 export default Headline;

@@ -1,22 +1,22 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import colors from '../../atoms/colors';
-import { fonts } from '../../atoms/fonts';
-import { Icon, IconName, Size as IconSize } from '../../atoms/icons';
+import * as React from "react";
+import styled from "styled-components";
+import colors from "../../atoms/colors";
+import { fonts } from "../../atoms/fonts";
+import { Icon, IconName, IconSize } from "../../atoms/icons";
 
 export interface DropdownProps {
-	open?: boolean;
-	text: string;
+	/** @name Open */ open: boolean;
+	/** @name Text */ text: string;
 
 	onToggle(event: React.MouseEvent<HTMLElement>): void;
 }
 
 interface StyledIconProps {
-	open?: boolean;
+	open: boolean;
 }
 
 interface StyledFlyoutProps {
-	open?: boolean;
+	open: boolean;
 }
 
 const StyledDropdown = styled.div`
@@ -30,7 +30,7 @@ const StyledDropdown = styled.div`
 	color: ${colors.grey70.toString()};
 	font-family: ${fonts().NORMAL_FONT};
 	font-size: 16px;
-	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .25);
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 `;
 
 const StyledText = styled.div`
@@ -42,35 +42,24 @@ const StyledText = styled.div`
 
 const StyledIcon = styled(Icon)`
 	fill: ${colors.greenDark.toString()};
-	${(props: StyledIconProps) => props.open
-		? 'transform: rotate(180deg);'
-		: 'transform: rotate(0deg);'
-	}
+	${(props: StyledIconProps) =>
+		props.open ? "transform: rotate(180deg);" : "transform: rotate(0deg);"};
 `;
 
 const StyledFlyout = styled.div`
-	${(props: StyledFlyoutProps) => props.open
-		? 'display: flex;'
-		: 'display: none;'
-	}
-	flex-basis: 100%;
+	${(props: StyledFlyoutProps) =>
+		props.open ? "display: flex;" : "display: none;"} flex-basis: 100%;
 	flex-direction: column;
 `;
 
 const Dropdown: React.StatelessComponent<DropdownProps> = (props): JSX.Element => {
 	return (
-		<StyledDropdown
-			onClick={props.onToggle}
-		>
+		<StyledDropdown onClick={props.onToggle}>
 			<StyledText>
 				{props.text}
 				<StyledIcon name={IconName.ArrowDown} size={IconSize.XS} open={props.open} />
 			</StyledText>
-			<StyledFlyout
-				open={props.open}
-			>
-				{props.children}
-			</StyledFlyout>
+			<StyledFlyout open={props.open}>{props.children}</StyledFlyout>
 		</StyledDropdown>
 	);
 };

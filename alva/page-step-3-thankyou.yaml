@@ -31,4 +31,4 @@ root:
         type: submit
   properties:
     maxSize: 80%
-    direction: COLUMN
+    direction: VERTICAL

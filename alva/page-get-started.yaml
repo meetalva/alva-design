@@ -85,4 +85,4 @@ root:
         order: Secondary
   properties:
     maxSize: 80%
-    direction: COLUMN
+    direction: HORIZONTAL
