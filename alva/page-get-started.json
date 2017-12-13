@@ -1,97 +1,88 @@
-{
-	"name": "mypage2",
-	"root": {
-		"_type": "pattern",
-		"pattern": "atoms/layout",
-		"properties": {
-			"maxSize": "80%",
-			"direction": "COLUMN"
-		},
-		"children": [
-			{
-				"_type": "pattern",
-				"pattern": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/headline",
-				"properties": {
-					"tagName": "h2",
-					"order": 2
-				},
-				"children": [
-					"Page 2"
-				]
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/copy",
-				"children": [
-					"Lorem ipsum dolor sit"
-				]
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/headline",
-				"properties": {
-					"tagName": "h2",
-					"order": 2
-				},
-				"children": [
-					"Stacked enables future-proof development"
-				]
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/copy",
-				"children": [
-					"Lorem ipsum dolor sit"
-				]
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/space",
-				"properties": {
-					"size": "large"
-				}
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/button",
-				"properties": {
-					"order": "Primary"
-				},
-				"children": [
-					"Get started now!"
-				]
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/space",
-				"properties": {
-					"size": "x-small"
-				}
-			},
-			{
-				"_type": "pattern",
-				"pattern": "atoms/button",
-				"properties": {
-					"order": "Secondary"
-				},
-				"children": [
-					"Get started a little bit later!"
-				]
-			}
-		]
-	}
-}
+name: mypage2
+root:
+  _type: pattern
+  pattern: atoms/layout
+  children:
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: large
+    - _type: pattern
+      pattern: atoms/headline
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Page 2
+      properties:
+        tagName: h2
+        order: 2
+    - _type: pattern
+      pattern: atoms/copy
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Lorem ipsum dolor sit
+      properties: {}
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: large
+    - _type: pattern
+      pattern: atoms/headline
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Stacked enables future-proof development
+      properties:
+        tagName: h2
+        order: 2
+    - _type: pattern
+      pattern: atoms/copy
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Lorem ipsum dolor sit
+      properties: {}
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: large
+    - _type: pattern
+      pattern: atoms/button
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Get started now!
+      properties:
+        order: Primary
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: x-small
+    - _type: pattern
+      pattern: atoms/button
+      children:
+        - _type: pattern
+          pattern: text
+          children: []
+          properties:
+            text: Get started a little bit later!
+      properties:
+        order: Secondary
+  properties:
+    maxSize: 80%
+    direction: COLUMN
