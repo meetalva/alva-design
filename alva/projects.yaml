@@ -1,36 +1,17 @@
-{
-	"projects": [
-		{
-			"id": "meet-alva",
-			"name": "Meet Alva",
-			"pages": [
-				{
-					"id": "homepage",
-					"name": "Homepage"
-				},
-				{
-					"id": "get-started",
-					"name": "Get started!"
-				}
-			]
-		},
-		{
-			"id": "order-process",
-			"name": "Order process",
-			"pages": [
-				{
-					"id": "step-1-start",
-					"name": "Step 1: Start"
-				},
-				{
-					"id": "step-2-confirmation",
-					"name": "Step 2: Confirmation"
-				},
-				{
-					"id": "step-3-thankyou",
-					"name": "Step 3: Thank you"
-				}
-			]
-		}
-	]
-}
+projects:
+  - id: meet-alva
+    name: Meet Alva
+    pages:
+      - id: homepage
+        name: Homepage
+      - id: get-started
+        name: Get started!
+  - id: order-process
+    name: Order process
+    pages:
+      - id: step-1-start
+        name: 'Step 1: Start'
+      - id: step-2-confirmation
+        name: 'Step 2: Confirmation'
+      - id: step-3-thankyou
+        name: 'Step 3: Thank you'
