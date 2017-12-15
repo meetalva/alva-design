@@ -4,7 +4,7 @@ import { fonts } from "../fonts";
 
 export interface HeadlineProps {
 	/** @name CSS class */ className?: string;
-	/** @name Level */ level: Level;
+	/** @name Level @default H1 */ level: Level;
 	/** @name Text align */ textAlign?: TextAlign;
 }
 
