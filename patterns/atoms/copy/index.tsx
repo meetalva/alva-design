@@ -8,6 +8,7 @@ export interface CopyProps {
 	/** @name Copy Size */ size?: Size;
 	/** @name Tag name */ tagName?: string;
 	/** @name Text Align */ textAlign?: TextAlign;
+	/** @name Text */ text?: string;
 }
 
 interface CopyProxyProps {
@@ -76,7 +77,6 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 	const tagName = props.tagName === undefined ? "p" : props.tagName;
-	const children = props.children === undefined ? "Lorem ipsum Dolor sit" : props.children;
 
 	return (
 		<StyledCopy
@@ -85,7 +85,7 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 			size={props.size}
 			textAlign={props.textAlign}
 		>
-			{children}
+			{props.text}{props.children}
 		</StyledCopy>
 	);
 };

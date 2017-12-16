@@ -6,6 +6,7 @@ export interface HeadlineProps {
 	/** @name CSS class */ className?: string;
 	/** @name Level @default H1 */ level: Level;
 	/** @name Text align */ textAlign?: TextAlign;
+	/** @name Text */ text?: string;
 }
 
 export enum Level {
@@ -87,7 +88,7 @@ const Headline: React.StatelessComponent<HeadlineProps> = props => {
 		HeadlineProps
 	> = StyledHeadline.withComponent(tagName as keyof JSX.IntrinsicElements);
 
-	return <Component {...props}>{props.children}</Component>;
+	return <Component {...props}>{props.text}{props.children}</Component>;
 };
 
 export default Headline;

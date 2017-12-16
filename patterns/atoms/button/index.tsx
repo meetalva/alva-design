@@ -9,6 +9,7 @@ import { fonts } from "../fonts";
 export interface ButtonProps {
 	/** @name Disabled */ disabled?: boolean;
 	/** @name Primary */ primary?: boolean;
+	/** @name Text */ text?: string;
 
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
@@ -60,7 +61,7 @@ const StyledButton = styled.button`
 `;
 
 const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
-	return <StyledButton {...props}>{props.children}</StyledButton>;
+	return <StyledButton {...props}>{props.text}{props.children}</StyledButton>;
 };
 
 export default Button;

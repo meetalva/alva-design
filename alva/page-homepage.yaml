@@ -4,160 +4,30 @@ root:
   pattern: atoms/layout
   children:
     - _type: pattern
-      pattern: atoms/layout
-      children:
-        - _type: pattern
-          pattern: atoms/space
-          children: []
-          properties:
-            size: XLarge
-        - _type: pattern
-          pattern: atoms/headline
-          children:
-            - _type: pattern
-              pattern: text
-              children: []
-              properties:
-                text: Meet Alva
-          properties:
-            tagName: h1
-            order: 1
-            textAlign: Center
-        - _type: pattern
-          pattern: atoms/copy
-          children:
-            - _type: pattern
-              pattern: text
-              children: []
-              properties:
-                text: >-
-                  Alva is a radically new design tool that enables
-                  cross-functional teams to design digital products.
-          properties:
-            textAlign: Center
-        - _type: pattern
-          pattern: atoms/space
-          children: []
-          properties:
-            size: Base
-        - _type: pattern
-          pattern: atoms/copy
-          children:
-            - _type: pattern
-              pattern: text
-              children: []
-              properties:
-                text: First alpha release available by end of december
-          properties:
-            textAlign: Center
-            size: Small
-      properties:
-        direction: VERTICAL
-        maxWidth: 600px
-    - _type: pattern
       pattern: atoms/space
       children: []
       properties:
-        size: XLarge
-    - _type: pattern
-      pattern: molecules/teaser
-      children: []
-      properties:
-        buttonLabel: Start now!
-        copyText: >-
-          Alva enables cross-functional teams to design contextual digital
-          experiences with code-based ecosystems.
-        headline:
-          order: 2
-          tagName: h2
-        headlineText: Kickstart your products with Alva!
-    - _type: pattern
-      pattern: atoms/space
-      children: []
-      properties:
-        size: Large
+        size: M
     - _type: pattern
       pattern: atoms/headline
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Alva enables design and developer collaboration
+      children: []
       properties:
-        tagName: h2
-        order: 2
+        text: Lorem ipsum
         textAlign: Center
     - _type: pattern
       pattern: atoms/copy
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Lorem ipsum dolor sit
+      children: []
       properties:
+        copyText: ''
+        footext: hkjhkghjkjhghjk
         textAlign: Center
-    - _type: pattern
-      pattern: atoms/space
-      children: []
-      properties:
-        size: Large
-    - _type: pattern
-      pattern: atoms/headline
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Alva enables future-proof development
-      properties:
-        tagName: h2
-        order: 2
-    - _type: pattern
-      pattern: atoms/copy
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Lorem ipsum dolor sit
-      properties: {}
-    - _type: pattern
-      pattern: atoms/space
-      children: []
-      properties:
-        size: Large
+        size: Small
+        text: Lorem doloret blablablabla
     - _type: pattern
       pattern: atoms/button
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Get started now!
-      properties:
-        order: Primary
-    - _type: pattern
-      pattern: atoms/space
       children: []
       properties:
-        size: XSmall
-    - _type: pattern
-      pattern: atoms/button
-      children:
-        - _type: pattern
-          pattern: text
-          children: []
-          properties:
-            text: Get started a little bit later!
-      properties:
-        order: Secondary
-    - _type: pattern
-      pattern: atoms/space
-      children: []
-      properties:
-        size: XLarge
+        text: asdasjjjjjjdasdasd
   properties:
     direction: VERTICAL
     maxWidth: 80%
