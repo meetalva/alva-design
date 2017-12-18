@@ -11,8 +11,8 @@ export interface ButtonProps {
 	/** @name Primary @default true */ primary?: boolean;
 	/** @name Text @default Click me! */ text?: string;
 
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @hidden */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const StyledButton = styled.button`

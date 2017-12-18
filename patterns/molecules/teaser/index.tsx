@@ -6,12 +6,12 @@ import Copy, { Size } from "../../atoms/copy";
 import Headline from "../../atoms/headline";
 
 export interface TeaserProps {
-	/** @name Button label */ buttonLabel: string;
-	/** @name Copy text */ copyText: string;
-	/** @name Headline level */ headlineLevel: Level;
-	/** @name Headline align */ headlineAlign?: TextAlign;
-	/** @name Headline text */ headlineText: string;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @name Button label @default Label */ buttonLabel: string;
+	/** @name Copy text @default Copytext */ copyText: string;
+	/** @name Headline level @default H1 */ headlineLevel: Level;
+	/** @name Headline align @default Left */ headlineAlign?: TextAlign;
+	/** @name Headline text @default Headline */ headlineText: string;
+	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export enum Level {

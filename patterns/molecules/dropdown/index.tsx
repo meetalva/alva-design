@@ -8,7 +8,7 @@ export interface DropdownProps {
 	/** @name Open */ open: boolean;
 	/** @name Text */ text: string;
 
-	onToggle(event: React.MouseEvent<HTMLElement>): void;
+	/** @hidden */ onToggle(event: React.MouseEvent<HTMLElement>): void;
 }
 
 interface StyledIconProps {
