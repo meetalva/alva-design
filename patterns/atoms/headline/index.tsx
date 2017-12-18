@@ -3,7 +3,7 @@ import styled, { css, StyledComponentClass } from "styled-components";
 import { fonts } from "../fonts";
 
 export interface HeadlineProps {
-	/** @name CSS class */ className?: string;
+	/** @name CSS class @hidden */ className?: string;
 	/** @name Level @default H1 */ level: Level;
 	/** @name Text align */ textAlign?: TextAlign;
 	/** @name Text */ text?: string;
@@ -88,7 +88,12 @@ const Headline: React.StatelessComponent<HeadlineProps> = props => {
 		HeadlineProps
 	> = StyledHeadline.withComponent(tagName as keyof JSX.IntrinsicElements);
 
-	return <Component {...props}>{props.text}{props.children}</Component>;
+	return (
+		<Component {...props}>
+			{props.text}
+			{props.children}
+		</Component>
+	);
 };
 
 export default Headline;

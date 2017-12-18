@@ -7,9 +7,9 @@ import { fonts } from "../fonts";
  * @name Button
  */
 export interface ButtonProps {
-	/** @name Disabled */ disabled?: boolean;
-	/** @name Primary */ primary?: boolean;
-	/** @name Text */ text?: string;
+	/** @name Disabled @default false */ disabled?: boolean;
+	/** @name Primary @default false */ primary?: boolean;
+	/** @name Text @default Click me! */ text?: string;
 
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
