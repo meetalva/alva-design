@@ -76,7 +76,7 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 `;
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
-	const tagName = props.tagName === undefined ? "p" : props.tagName;
+	const tagName = props.tagName ? props.tagName : "p";
 
 	return (
 		<StyledCopy
@@ -85,7 +85,8 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 			size={props.size}
 			textAlign={props.textAlign}
 		>
-			{props.text}{props.children}
+			{props.text}
+			{props.children}
 		</StyledCopy>
 	);
 };
