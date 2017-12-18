@@ -2,7 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 
 export interface SpaceProps {
-	/** @name Size */ size?: Size;
+	/** @name Size @default M */ size?: Size;
 }
 
 export enum Size {

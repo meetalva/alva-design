@@ -7,8 +7,8 @@ export enum Direction {
 }
 
 export interface LayoutProps {
-	/** @name Direction */ direction?: Direction;
-	/** @name Maximum width */ maxWidth?: string;
+	/** @name Direction @default vertical */ direction?: Direction;
+	/** @name Maximum width @default 100% */ maxWidth?: string;
 }
 
 const StyledLayout = styled.div`

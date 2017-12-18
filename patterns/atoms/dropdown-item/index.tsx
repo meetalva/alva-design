@@ -4,7 +4,7 @@ import colors from '../colors';
 import {fonts} from '../fonts';
 
 export interface DropdownItemProps {
-	/** @name Content text */ content: string;
+	/** @name Content text @default Dropdown Item */ content: string;
 }
 
 const StyledDropdownItem = styled.div`

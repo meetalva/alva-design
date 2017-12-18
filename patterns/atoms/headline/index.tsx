@@ -5,8 +5,8 @@ import { fonts } from "../fonts";
 export interface HeadlineProps {
 	/** @name CSS class @hidden */ className?: string;
 	/** @name Level @default H1 */ level: Level;
-	/** @name Text align */ textAlign?: TextAlign;
-	/** @name Text */ text?: string;
+	/** @name Text align @default Left */ textAlign?: TextAlign;
+	/** @name Text @default Lorem ipsum */ text?: string;
 }
 
 export enum Level {

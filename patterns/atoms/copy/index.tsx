@@ -4,11 +4,11 @@ import styled, { css, StyledComponentClass } from "styled-components";
 import { fonts } from "../fonts";
 
 export interface CopyProps {
-	/** @name CSS Class */ className?: string;
-	/** @name Copy Size */ size?: Size;
-	/** @name Tag name */ tagName?: string;
-	/** @name Text Align */ textAlign?: TextAlign;
-	/** @name Text */ text?: string;
+	/** @name CSS Class @hidden */ className?: string;
+	/** @name Copy Size @default Medium */ size?: Size;
+	/** @name Tag name @hidden */ tagName?: string;
+	/** @name Text Align @default Left */ textAlign?: TextAlign;
+	/** @name Text @default Enter some text */ text?: string;
 }
 
 interface CopyProxyProps {
