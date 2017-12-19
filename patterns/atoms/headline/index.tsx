@@ -7,6 +7,7 @@ export interface HeadlineProps {
 	/** @name Level @default H1 */ level: Level;
 	/** @name Text align @default Left */ textAlign?: TextAlign;
 	/** @name Text @default Lorem ipsum */ text?: string;
+	/** @name Color @default #000000 */ color?: string;
 }
 
 export enum Level {
@@ -25,6 +26,7 @@ const StyledHeadline = styled.div`
 	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	font-weight: 500;
+	color: ${(props: HeadlineProps) => props.color || "none"};
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {

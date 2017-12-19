@@ -4,30 +4,167 @@ root:
   pattern: atoms/layout
   children:
     - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: L
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H1
+                textAlign: Center
+                text: Example Designkit
+                color: '#3C526C'
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: >-
+                  This is a live view of all page elements you see in the left
+                  layer list. So you can drag them around and rearrange them.
+                color: '#627B98'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+          properties:
+            direction: VERTICAL
+            maxWidth: 75%
+            backgroundColor: ''
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: '#B6D7FF'
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: L
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: Adding new components
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Center
+                text: >-
+                  Drag a new component between two page elements or as a child
+                  of a page element on the left side.
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+          properties:
+            direction: VERTICAL
+            maxWidth: 80%
+            backgroundColor: transparent
+      properties:
+        direction: VERTICAL
+        maxWidth: 75%
+        backgroundColor: '#f2f2f2'
+    - _type: pattern
       pattern: atoms/space
       children: []
       properties:
         size: M
     - _type: pattern
-      pattern: atoms/headline
-      children: []
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: Edit the properties
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Center
+                text: >-
+                  When you selected a page element, you edit the page
+                  properties, here e.g. text, text-align and the text size.
+                  These properties are read from the real development patterns.
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+          properties:
+            direction: VERTICAL
+            maxWidth: 80%
+            backgroundColor: transparent
       properties:
-        text: Lorem ipsum
-        textAlign: Center
+        direction: VERTICAL
+        maxWidth: 75%
+        backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/copy
+      pattern: atoms/space
       children: []
       properties:
-        copyText: ''
-        footext: hkjhkghjkjhghjk
-        textAlign: Center
-        size: Small
-        text: Lorem doloret blablablabla
+        size: M
     - _type: pattern
-      pattern: atoms/button
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/button
+          children: []
+          properties:
+            disabled: false
+            primary: true
+            text: Example button!
+      properties:
+        direction: VERTICAL
+        maxWidth: 300px
+        backgroundColor: transparent
+    - _type: pattern
+      pattern: atoms/space
       children: []
       properties:
-        text: asdasjjjjjjdasdasd
+        size: XL
   properties:
     direction: VERTICAL
-    maxWidth: 80%
+    maxWidth: 100%
+    backgroundColor: ''

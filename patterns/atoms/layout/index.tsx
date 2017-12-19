@@ -9,12 +9,15 @@ export enum Direction {
 export interface LayoutProps {
 	/** @name Direction @default vertical */ direction?: Direction;
 	/** @name Maximum width @default 100% */ maxWidth?: string;
+	/** @name Background color @default transparent */ backgroundColor?: string;
 }
 
 const StyledLayout = styled.div`
 	display: flex;
 	margin: 0 auto;
+	width: 100%;
 	max-width: ${(props: LayoutProps) => props.maxWidth || "none"};
+	background-color: ${(props: LayoutProps) => props.backgroundColor || "none"};
 
 	${(props: LayoutProps) => {
 		console.log("layout got " + props.direction);
