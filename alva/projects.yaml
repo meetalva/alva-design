@@ -6,3 +6,5 @@ projects:
         name: Homepage
       - id: design-kit
         name: Design Kit
+      - id: playground
+        name: Playground

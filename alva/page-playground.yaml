@@ -1,0 +1,52 @@
+name: playground
+root:
+  _type: pattern
+  pattern: atoms/layout
+  children:
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                tagName: h2
+                order: 2
+                color: '#FFFFFF'
+                textAlign: Left
+                level: H1
+                text: Your Turn. Go wild.
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                text: ...
+                color: '#FFFFFF'
+                size: Medium
+                textAlign: Left
+          properties:
+            direction: VERTICAL
+            maxWidth: 720px
+            backgroundColor: transparent
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: '#0070D6'
+  properties:
+    maxSize: 80%
+    direction: VERTICAL
+    maxWidth: 100%
+    backgroundColor: transparent
