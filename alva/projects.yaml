@@ -6,12 +6,3 @@ projects:
         name: Homepage
       - id: design-kit
         name: Design Kit
-  - id: order-process
-    name: Order process
-    pages:
-      - id: step-1-start
-        name: 'Step 1: Start'
-      - id: step-2-confirmation
-        name: 'Step 2: Confirmation'
-      - id: step-3-thankyou
-        name: 'Step 3: Thank you'
