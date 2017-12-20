@@ -4,8 +4,8 @@ projects:
     pages:
       - id: homepage
         name: Homepage
-      - id: get-started
-        name: Get started!
+      - id: design-kit
+        name: Design Kit
   - id: order-process
     name: Order process
     pages:

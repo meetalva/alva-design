@@ -1,0 +1,355 @@
+name: designkit
+root:
+  _type: pattern
+  pattern: atoms/layout
+  children:
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/image
+              children: []
+              properties:
+                alt: ''
+                className: ''
+                src: >-
+                  http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png
+                size: 100px
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                tagName: h2
+                order: 2
+                color: '#FFFFFF'
+                textAlign: Left
+                level: H1
+                text: Design Kit
+            - _type: pattern
+              pattern: atoms/copy
+              children:
+                - _type: pattern
+                  pattern: atoms/richtext
+                  children: []
+                  properties:
+                    content: >-
+                      The integrated design kit helps you to kickstart your
+                      ideas right away. The most important components like
+                      <strong>Copy</strong>, <strong>Headlines</strong>,
+                      <strong>Buttons</strong>, <strong>Layout</strong> elements
+                      come right within Alva.
+              properties:
+                text: No own pattern library? No problem!
+                color: '#FFFFFF'
+                size: Medium
+                textAlign: Left
+          properties:
+            direction: VERTICAL
+            maxWidth: 720px
+            backgroundColor: transparent
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: '#0070D6'
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/headline
+                  children: []
+                  properties:
+                    tagName: h2
+                    order: 2
+                    color: '#0070D6'
+                    textAlign: Left
+                    level: H2
+                    text: Optimized Components
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    text: >-
+                      Components within the design kit are optimized to work
+                      best with Alva. But they follow the industry standard to
+                      work in all environments.
+                    color: ''
+                    size: Medium
+                    textAlign: Left
+              properties:
+                direction: VERTICAL
+                maxWidth: 50%
+                backgroundColor: transparent
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: XL
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: S
+                - _type: pattern
+                  pattern: atoms/button
+                  children: []
+                  properties:
+                    disabled: false
+                    primary: true
+                    text: Primary
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: S
+                - _type: pattern
+                  pattern: atoms/button
+                  children: []
+                  properties:
+                    disabled: false
+                    primary: false
+                    text: Secondary
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: S
+                - _type: pattern
+                  pattern: atoms/button
+                  children: []
+                  properties:
+                    disabled: true
+                    primary: false
+                    text: Disabled
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: S
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    size: Small
+                    textAlign: Right
+                    text: Easily define properties
+                    color: '#808080'
+              properties:
+                direction: VERTICAL
+                maxWidth: 40%
+                backgroundColor: ''
+          properties:
+            direction: HORIZONTAL
+            maxWidth: 720px
+            backgroundColor: transparent
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: transparent
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: M
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: M
+                - _type: pattern
+                  pattern: atoms/image
+                  children: []
+                  properties:
+                    alt: ''
+                    className: ''
+                    src: ../../src/resources/alva-coding.png
+                    size: ''
+              properties:
+                direction: VERTICAL
+                maxWidth: 40%
+                backgroundColor: ''
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: XL
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/headline
+                  children: []
+                  properties:
+                    tagName: h2
+                    order: 2
+                    color: '#0070D6'
+                    textAlign: Right
+                    level: H2
+                    text: Create your own!
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    text: >-
+                      Most projects rely on special components to fit their
+                      specific need. We won't limit your in your imagination,
+                      just open up your favourite code editor and go wild.
+                    color: ''
+                    size: Medium
+                    textAlign: Right
+                - _type: pattern
+                  pattern: atoms/space
+                  children: []
+                  properties:
+                    size: S
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    size: Small
+                    textAlign: Right
+                    text: >-
+                      (Alva currently supports React components written in
+                      typescript and styled components)
+                    color: '#808080'
+              properties:
+                direction: VERTICAL
+                maxWidth: 50%
+                backgroundColor: transparent
+          properties:
+            direction: HORIZONTAL
+            maxWidth: 720px
+            backgroundColor: transparent
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: XL
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: transparent
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: L
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    text: Real react based components
+                    color: '#FFFFFF'
+                    size: Medium
+                    textAlign: Center
+              properties:
+                direction: VERTICAL
+                maxWidth: 30%
+                backgroundColor: transparent
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    text: Optimized to use with Alva
+                    color: '#FFFFFF'
+                    size: Medium
+                    textAlign: Center
+              properties:
+                direction: VERTICAL
+                maxWidth: 30%
+                backgroundColor: transparent
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/layout
+              children:
+                - _type: pattern
+                  pattern: atoms/copy
+                  children: []
+                  properties:
+                    text: Create your own and extend the design kit
+                    color: '#FFFFFF'
+                    size: Medium
+                    textAlign: Center
+              properties:
+                direction: VERTICAL
+                maxWidth: 30%
+                backgroundColor: transparent
+          properties:
+            direction: HORIZONTAL
+            maxWidth: 720px
+            backgroundColor: transparent
+        - _type: pattern
+          pattern: atoms/space
+          children: []
+          properties:
+            size: L
+      properties:
+        direction: VERTICAL
+        maxWidth: 100%
+        backgroundColor: '#343D45'
+  properties:
+    maxSize: 80%
+    direction: VERTICAL
+    maxWidth: 100%
+    backgroundColor: transparent
