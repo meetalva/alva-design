@@ -10,41 +10,54 @@ root:
           pattern: atoms/space
           children: []
           properties:
-            size: L
+            size: XL
         - _type: pattern
           pattern: atoms/layout
           children:
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/image
               children: []
               properties:
-                level: H1
-                textAlign: Center
-                text: Example Designkit
-                color: '#3C526C'
-            - _type: pattern
-              pattern: atoms/headline
-              children: []
-              properties:
-                level: H3
-                textAlign: Center
-                text: >-
-                  This is a live view of all page elements you see in the left
-                  layer list. So you can drag them around and rearrange them.
-                color: '#627B98'
+                alt: ''
+                className: ''
+                src: 'https://meetalva.io/assets/images/app.png'
+                size: 100px
             - _type: pattern
               pattern: atoms/space
               children: []
               properties:
                 size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H1
+                textAlign: Left
+                text: Welcome to Alva
+                color: '#FFFFFF'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Left
+                text: >-
+                  This is a live view of all page elements you see in the left
+                  layer list.
+                color: '#FFFFFF'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: XL
           properties:
             direction: VERTICAL
-            maxWidth: 75%
+            maxWidth: 60%
             backgroundColor: ''
       properties:
         direction: VERTICAL
         maxWidth: 100%
-        backgroundColor: '#B6D7FF'
+        backgroundColor: '#0070D6'
     - _type: pattern
       pattern: atoms/space
       children: []
@@ -67,7 +80,7 @@ root:
               properties:
                 level: H3
                 textAlign: Center
-                text: Adding new components
+                text: Add new components
                 color: '#666'
             - _type: pattern
               pattern: atoms/copy
@@ -76,8 +89,8 @@ root:
                 size: Medium
                 textAlign: Center
                 text: >-
-                  Drag a new component between two page elements or as a child
-                  of a page element on the left side.
+                  Drag a new component from the left between two page elements
+                  or directly on another component in the lefthand list.
                 color: '#666'
             - _type: pattern
               pattern: atoms/space
@@ -90,7 +103,7 @@ root:
             backgroundColor: transparent
       properties:
         direction: VERTICAL
-        maxWidth: 75%
+        maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
       pattern: atoms/space
@@ -118,14 +131,21 @@ root:
                 color: '#666'
             - _type: pattern
               pattern: atoms/copy
-              children: []
+              children:
+                - _type: pattern
+                  pattern: atoms/richtext
+                  children: []
+                  properties:
+                    content: >-
+                      E.g. a <i>Copy</i> element has properties for text,
+                      text-align and text-size. These properties are read from
+                      the real development patterns.
               properties:
                 size: Medium
                 textAlign: Center
                 text: >-
-                  When you selected a page element, you edit the page
-                  properties, here e.g. text, text-align and the text size.
-                  These properties are read from the real development patterns.
+                  Selected a page element from the list and you can directly
+                  edit the properties in the right column.
                 color: '#666'
             - _type: pattern
               pattern: atoms/space
@@ -138,7 +158,7 @@ root:
             backgroundColor: transparent
       properties:
         direction: VERTICAL
-        maxWidth: 75%
+        maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
       pattern: atoms/space
@@ -149,16 +169,136 @@ root:
       pattern: atoms/layout
       children:
         - _type: pattern
-          pattern: atoms/button
-          children: []
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: Reorder page element
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Center
+                text: >-
+                  Just as you dropped new components  you can rearrange the page
+                  elements again. Grap, drag, release, peace. Easy.
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
           properties:
-            disabled: false
-            primary: true
-            text: Example button!
+            direction: VERTICAL
+            maxWidth: 80%
+            backgroundColor: transparent
       properties:
         direction: VERTICAL
-        maxWidth: 300px
-        backgroundColor: transparent
+        maxWidth: 60%
+        backgroundColor: '#f2f2f2'
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: M
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: Switch pages
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Center
+                text: Above the element list you can switch between pages.
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+          properties:
+            direction: VERTICAL
+            maxWidth: 80%
+            backgroundColor: transparent
+      properties:
+        direction: VERTICAL
+        maxWidth: 60%
+        backgroundColor: '#f2f2f2'
+    - _type: pattern
+      pattern: atoms/space
+      children: []
+      properties:
+        size: M
+    - _type: pattern
+      pattern: atoms/layout
+      children:
+        - _type: pattern
+          pattern: atoms/layout
+          children:
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+            - _type: pattern
+              pattern: atoms/headline
+              children: []
+              properties:
+                level: H3
+                textAlign: Center
+                text: Save your progress
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/copy
+              children: []
+              properties:
+                size: Medium
+                textAlign: Center
+                text: >-
+                  Nobody likes to lose hours of work. Make sure to press 'save'
+                  from time to time. Either with cmd+S or File > Save
+                color: '#666'
+            - _type: pattern
+              pattern: atoms/space
+              children: []
+              properties:
+                size: M
+          properties:
+            direction: VERTICAL
+            maxWidth: 80%
+            backgroundColor: transparent
+      properties:
+        direction: VERTICAL
+        maxWidth: 60%
+        backgroundColor: '#f2f2f2'
     - _type: pattern
       pattern: atoms/space
       children: []
