@@ -39,13 +39,7 @@ root:
                 - _type: pattern
                   pattern: atoms/richtext
                   children: []
-                  properties:
-                    content: >-
-                      The integrated design kit helps you to kickstart your
-                      ideas right away. The most important components like
-                      <strong>Copy</strong>, <strong>Headlines</strong>,
-                      <strong>Buttons</strong>, <strong>Layout</strong> elements
-                      come right within Alva.
+                  properties: {}
               properties:
                 text: No own pattern library? No problem!
                 color: '#FFFFFF'
@@ -202,7 +196,7 @@ root:
                   properties:
                     alt: ''
                     className: ''
-                    src: 'https://meetalva.io/assets/images/alva-coding.png'
+                    src: 'https://meetalva.io/images/alva-coding.png'
                     size: ''
               properties:
                 direction: VERTICAL
