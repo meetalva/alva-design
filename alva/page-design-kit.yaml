@@ -202,7 +202,7 @@ root:
                   properties:
                     alt: ''
                     className: ''
-                    src: 'https://meetalva.io/assets/images/alva-coding.png'
+                    src: 'https://meetalva.io/images/alva-coding.png'
                     size: ''
               properties:
                 direction: VERTICAL
