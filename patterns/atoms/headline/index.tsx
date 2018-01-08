@@ -27,7 +27,7 @@ const StyledHeadline = styled.div`
 	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	font-weight: 500;
-	color: ${(props: HeadlineProps) => props.color || 'none'};
+	color: ${(props: HeadlineProps) => props.color || 'inherit'};
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {
