@@ -1,7 +1,7 @@
-import * as React from "react";
-import styled, { css, StyledComponentClass } from "styled-components";
+import * as React from 'react';
+import styled, { css, StyledComponentClass } from 'styled-components';
 
-import { fonts } from "../fonts";
+import { fonts } from '../fonts';
 
 export interface CopyProps {
 	/** @name CSS Class @hidden */ className?: string;
@@ -83,11 +83,11 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 		props.uppercase
 			? `letter-spacing: 1px;
 				text-transform: uppercase;`
-			: ""};
+			: ''};
 `;
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
-	const tagName = props.tagName ? props.tagName : "p";
+	const tagName = props.tagName ? props.tagName : 'p';
 
 	return (
 		<StyledCopy
