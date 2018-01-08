@@ -96,10 +96,12 @@ const Headline: React.StatelessComponent<HeadlineProps> = props => {
 		HeadlineProps
 	> = StyledHeadline.withComponent(tagName as keyof JSX.IntrinsicElements);
 
+	const { text, children } = props;
+
 	return (
 		<Component {...props}>
-			{props.text}
-			{props.children}
+			{text}
+			{children}
 		</Component>
 	);
 };
