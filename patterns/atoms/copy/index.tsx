@@ -10,6 +10,7 @@ export interface CopyProps {
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
 	/** @name Text @default Enter some text */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
+	/** @name Uppercase @default false */ uppercase?: boolean;
 }
 
 interface CopyProxyProps {
@@ -77,6 +78,12 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 				`;
 		}
 	}};
+
+	${(props: CopyProps) =>
+		props.uppercase
+			? `letter-spacing: 1px;
+				text-transform: uppercase;`
+			: ""};
 `;
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
@@ -89,6 +96,7 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 			size={props.size}
 			textAlign={props.textAlign}
 			color={props.color}
+			uppercase={props.uppercase}
 		>
 			{props.text}
 			{props.children}

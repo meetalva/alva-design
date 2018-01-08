@@ -17,6 +17,7 @@ const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 				ut labore et dolore magna aliquyam erat, sed diam voluptua.
 			</Copy>
 			<Copy textAlign={TextAlign.Right}>Lorem</Copy>
+			<Copy uppercase>Lorem Ipsum</Copy>
 		</div>
 	);
 };
