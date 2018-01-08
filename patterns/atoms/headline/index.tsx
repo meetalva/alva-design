@@ -33,20 +33,19 @@ const StyledHeadline = styled.div`
 		switch (props.level) {
 			case Level.H3:
 				return css`
-					font-size: 24px;
-					line-height: 30px;
+					font-size: 18px;
+					line-height: 24px;
 				`;
 			case Level.H2:
 				return css`
-					font-size: 38px;
-					line-height: 45px;
+					font-size: 30px;
+					line-height: 36px;
 				`;
 			case Level.H1:
 			default:
 				return css`
-					font-size: 52px;
-					line-height: 60px;
-					font-weight: 700;
+					font-size: 42px;
+					line-height: 54px;
 				`;
 		}
 	}};
