@@ -22,28 +22,24 @@ export class Color {
 	public toString(format: 'rgb' | 'hex' = 'rgb', options?: { alpha?: number }): string {
 		const hasAlpha = options && typeof options === `object` && typeof options.alpha === `number`;
 		const alpha = options && hasAlpha ? options.alpha : undefined;
-		return !hasAlpha && format === 'hex'
-			? this.toHexString()
-			: this.toRGBString(alpha);
+		return !hasAlpha && format === 'hex' ? this.toHexString() : this.toRGBString(alpha);
 	}
 
 	public toRGBString(alpha?: number): string {
 		const a = typeof alpha === `number` ? alpha : this.alpha;
-		return a === 1
-			? `rgb(${this.rgb.join(', ')})`
-			: `rgba(${this.rgb.join(', ')}, ${a})`;
+		return a === 1 ? `rgb(${this.rgb.join(', ')})` : `rgba(${this.rgb.join(', ')}, ${a})`;
 	}
 
 	public toHexString(): string {
-		const [r, g, b] = this.rgb.map((d) => this.hexDigit(d));
+		const [r, g, b] = this.rgb.map(d => this.hexDigit(d));
 
-		return this.alpha === 1
-			? `#${r}${g}${b}`
-			: `#${r}${g}${b}${this.hexDigit(this.alpha * 255)}`;
+		return this.alpha === 1 ? `#${r}${g}${b}` : `#${r}${g}${b}${this.hexDigit(this.alpha * 255)}`;
 	}
 
 	protected hexDigit(d: number): string {
-		const digit = Math.floor(d).toString(16).slice(-2);
+		const digit = Math.floor(d)
+			.toString(16)
+			.slice(-2);
 
 		return digit.length === 2 ? digit : `0${digit}`;
 	}
@@ -57,6 +53,10 @@ const colors = {
 	blue: new Color({
 		displayName: 'Blue',
 		rgb: [0, 112, 214]
+	}),
+	blueLight: new Color({
+		displayName: 'Blue Light',
+		rgb: [73, 159, 228]
 	}),
 	greenDark: new Color({
 		displayName: 'Green Dark',
@@ -81,6 +81,10 @@ const colors = {
 	white: new Color({
 		displayName: 'White',
 		rgb: [255, 255, 255]
+	}),
+	red: new Color({
+		displayName: 'Red',
+		rgb: [215, 0, 82]
 	})
 };
 
