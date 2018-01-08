@@ -6,7 +6,7 @@ import { fonts } from "../fonts";
 export interface CopyProps {
 	/** @name CSS Class @hidden */ className?: string;
 	/** @name Copy Size @default Medium */ size?: Size;
-	/** @name Tag name @hidden */ tagName?: string;
+	/** @name Tag Name @hidden */ tagName?: string;
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
 	/** @name Text @default Enter some text */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
