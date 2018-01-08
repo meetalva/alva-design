@@ -40,7 +40,7 @@ const CopyProxy: React.StatelessComponent<CopyProxyProps> = props => {
 const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};
-	color: ${(props: CopyProps) => props.color || "none"};
+	color: ${(props: CopyProps) => props.color || 'inherit'};
 
 	${(props: CopyProps) => {
 		switch (props.size) {
