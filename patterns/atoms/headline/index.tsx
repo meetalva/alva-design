@@ -8,6 +8,7 @@ export interface HeadlineProps {
 	/** @name Text align @default Left */ textAlign?: TextAlign;
 	/** @name Text @default Lorem ipsum */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
+	/** @name Uppercase @default false */ uppercase?: boolean;
 }
 
 export enum Level {
@@ -70,6 +71,12 @@ const StyledHeadline = styled.div`
 				`;
 		}
 	}};
+
+	${(props: HeadlineProps) =>
+		props.uppercase
+			? `letter-spacing: 1px;
+				text-transform: uppercase;`
+			: ""};
 `;
 
 const Headline: React.StatelessComponent<HeadlineProps> = props => {
