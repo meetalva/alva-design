@@ -1,6 +1,6 @@
-import * as React from "react";
-import styled, { css, StyledComponentClass } from "styled-components";
-import { fonts } from "../fonts";
+import * as React from 'react';
+import styled, { css, StyledComponentClass } from 'styled-components';
+import { fonts } from '../fonts';
 
 export interface HeadlineProps {
 	/** @name CSS class @hidden */ className?: string;
@@ -27,7 +27,7 @@ const StyledHeadline = styled.div`
 	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	font-weight: 500;
-	color: ${(props: HeadlineProps) => props.color || "none"};
+	color: ${(props: HeadlineProps) => props.color || 'none'};
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {
@@ -76,20 +76,20 @@ const StyledHeadline = styled.div`
 		props.uppercase
 			? `letter-spacing: 1px;
 				text-transform: uppercase;`
-			: ""};
+			: ''};
 `;
 
 const Headline: React.StatelessComponent<HeadlineProps> = props => {
-	let tagName: string = "h1";
+	let tagName: string = 'h1';
 	switch (props.level) {
 		case Level.H3:
-			tagName = "h3";
+			tagName = 'h3';
 			break;
 		case Level.H2:
-			tagName = "h2";
+			tagName = 'h2';
 			break;
 		case Level.H1:
-			tagName = "h1";
+			tagName = 'h1';
 			break;
 	}
 	const Component: StyledComponentClass<
