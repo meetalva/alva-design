@@ -20,7 +20,7 @@ root:
               properties:
                 alt: ''
                 className: ''
-                src: 'https://meetalva.io/assets/images/app.png'
+                src: 'https://meetalva.io/images/app.png'
                 size: 100px
             - _type: pattern
               pattern: atoms/space
