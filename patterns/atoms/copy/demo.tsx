@@ -1,5 +1,5 @@
-import * as React from "react";
-import Copy, { Size as CopySize, TextAlign } from "./index";
+import * as React from 'react';
+import Copy, { Size as CopySize, TextAlign } from './index';
 
 const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
@@ -7,14 +7,14 @@ const CopyDemo: React.StatelessComponent<void> = (): JSX.Element => {
 			<Copy size={CopySize.Small}>
 				CopySize.S
 				<div />
-				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-				ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 			</Copy>
 			<Copy>
 				CopySize.M
 				<div />
-				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-				ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				Lorem ipsum dolor sit, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 			</Copy>
 			<Copy textAlign={TextAlign.Right}>Lorem</Copy>
 			<Copy uppercase>Lorem Ipsum</Copy>
