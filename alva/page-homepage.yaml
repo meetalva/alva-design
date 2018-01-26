@@ -1,4 +1,4 @@
-name: homepage
+name: Homepage
 root:
   _type: pattern
   pattern: atoms/layout

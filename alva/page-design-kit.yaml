@@ -1,4 +1,4 @@
-name: designkit
+name: Design Kit
 root:
   _type: pattern
   pattern: atoms/layout
