@@ -1,5 +1,5 @@
 {
-	"name": "stacked-example",
+	"name": "meetalva-designkit",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -11,12 +11,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/stackedapp/stacked-example.git"
+		"url": "git+https://github.com/meetalva/designkit.git"
 	},
 	"author": "",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/stackedapp/stacked-example/issues"
+		"url": "https://github.com/meetalva/designkit/issues"
 	},
 	"devDependencies": {
 		"@patternplate/cli": "^2.0.0-4",
