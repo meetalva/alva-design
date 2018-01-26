@@ -1,4 +1,4 @@
-name: playground
+name: Playground
 root:
   _type: pattern
   pattern: atoms/layout
