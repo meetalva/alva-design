@@ -1,21 +1,20 @@
-name: Homepage
 root:
   _type: pattern
-  pattern: atoms/layout
+  pattern: atoms/layout/index
   children:
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/image
+              pattern: atoms/image/index
               children: []
               properties:
                 alt: ''
@@ -23,12 +22,12 @@ root:
                 src: 'https://meetalva.io/images/app.png'
                 size: 100px
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H1
@@ -36,7 +35,7 @@ root:
                 text: Welcome to Alva
                 color: '#FFFFFF'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 size: Medium
@@ -46,7 +45,7 @@ root:
                   layer list.
                 color: '#FFFFFF'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: XL
@@ -59,23 +58,23 @@ root:
         maxWidth: 100%
         backgroundColor: '#0070D6'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: L
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H3
@@ -83,7 +82,7 @@ root:
                 text: Add new components
                 color: '#666'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 size: Medium
@@ -93,7 +92,7 @@ root:
                   or directly on another component in the lefthand list.
                 color: '#666'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
@@ -106,23 +105,23 @@ root:
         maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: M
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H3
@@ -130,16 +129,11 @@ root:
                 text: Edit the properties
                 color: '#666'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children:
                 - _type: pattern
-                  pattern: atoms/richtext
                   children: []
-                  properties:
-                    content: >-
-                      E.g. a <i>Copy</i> element has properties for text,
-                      text-align and text-size. These properties are read from
-                      the real development patterns.
+                  properties: {}
               properties:
                 size: Medium
                 textAlign: Center
@@ -148,7 +142,7 @@ root:
                   edit the properties in the right column.
                 color: '#666'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
@@ -161,23 +155,23 @@ root:
         maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: M
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H3
@@ -185,7 +179,7 @@ root:
                 text: Reorder page element
                 color: '#666'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 size: Medium
@@ -195,7 +189,7 @@ root:
                   elements again. Grap, drag, release, peace. Easy.
                 color: '#666'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
@@ -208,23 +202,23 @@ root:
         maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: M
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H3
@@ -232,7 +226,7 @@ root:
                 text: Switch pages
                 color: '#666'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 size: Medium
@@ -240,7 +234,7 @@ root:
                 text: Above the element list you can switch between pages.
                 color: '#666'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
@@ -253,23 +247,23 @@ root:
         maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: M
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 level: H3
@@ -277,7 +271,7 @@ root:
                 text: Save your progress
                 color: '#666'
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 size: Medium
@@ -287,7 +281,7 @@ root:
                   from time to time. Either with cmd+S or File > Save
                 color: '#666'
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
@@ -300,7 +294,7 @@ root:
         maxWidth: 60%
         backgroundColor: '#f2f2f2'
     - _type: pattern
-      pattern: atoms/space
+      pattern: atoms/space/index
       children: []
       properties:
         size: XL
