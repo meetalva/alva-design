@@ -1,21 +1,20 @@
-name: Design Kit
 root:
   _type: pattern
-  pattern: atoms/layout
+  pattern: atoms/layout/index
   children:
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/image
+              pattern: atoms/image/index
               children: []
               properties:
                 alt: ''
@@ -24,7 +23,7 @@ root:
                   http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png
                 size: 100px
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 tagName: h2
@@ -34,18 +33,11 @@ root:
                 level: H1
                 text: Design Kit
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children:
                 - _type: pattern
-                  pattern: atoms/richtext
                   children: []
-                  properties:
-                    content: >-
-                      The integrated design kit helps you to kickstart your
-                      ideas right away. The most important components like
-                      <strong>Copy</strong>, <strong>Headlines</strong>,
-                      <strong>Buttons</strong>, <strong>Layout</strong> elements
-                      come right within Alva.
+                  properties: {}
               properties:
                 text: No own pattern library? No problem!
                 color: '#FFFFFF'
@@ -56,7 +48,7 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
@@ -65,21 +57,21 @@ root:
         maxWidth: 100%
         backgroundColor: '#0070D6'
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/headline
+                  pattern: atoms/headline/index
                   children: []
                   properties:
                     tagName: h2
@@ -89,7 +81,7 @@ root:
                     level: H2
                     text: Optimized Components
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     text: >-
@@ -104,56 +96,56 @@ root:
                 maxWidth: 50%
                 backgroundColor: transparent
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: XL
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: S
                 - _type: pattern
-                  pattern: atoms/button
+                  pattern: atoms/button/index
                   children: []
                   properties:
                     disabled: false
                     primary: true
                     text: Primary
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: S
                 - _type: pattern
-                  pattern: atoms/button
+                  pattern: atoms/button/index
                   children: []
                   properties:
                     disabled: false
                     primary: false
                     text: Secondary
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: S
                 - _type: pattern
-                  pattern: atoms/button
+                  pattern: atoms/button/index
                   children: []
                   properties:
                     disabled: true
                     primary: false
                     text: Disabled
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: S
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     size: Small
@@ -169,7 +161,7 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
@@ -178,26 +170,26 @@ root:
         maxWidth: 100%
         backgroundColor: transparent
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: M
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: M
                 - _type: pattern
-                  pattern: atoms/image
+                  pattern: atoms/image/index
                   children: []
                   properties:
                     alt: ''
@@ -209,15 +201,15 @@ root:
                 maxWidth: 40%
                 backgroundColor: ''
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: XL
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/headline
+                  pattern: atoms/headline/index
                   children: []
                   properties:
                     tagName: h2
@@ -227,7 +219,7 @@ root:
                     level: H2
                     text: Create your own!
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     text: >-
@@ -238,12 +230,12 @@ root:
                     size: Medium
                     textAlign: Right
                 - _type: pattern
-                  pattern: atoms/space
+                  pattern: atoms/space/index
                   children: []
                   properties:
                     size: S
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     size: Small
@@ -261,7 +253,7 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
@@ -270,21 +262,21 @@ root:
         maxWidth: 100%
         backgroundColor: transparent
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: L
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     text: Real react based components
@@ -296,15 +288,15 @@ root:
                 maxWidth: 30%
                 backgroundColor: transparent
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     text: Optimized to use with Alva
@@ -316,15 +308,15 @@ root:
                 maxWidth: 30%
                 backgroundColor: transparent
             - _type: pattern
-              pattern: atoms/space
+              pattern: atoms/space/index
               children: []
               properties:
                 size: M
             - _type: pattern
-              pattern: atoms/layout
+              pattern: atoms/layout/index
               children:
                 - _type: pattern
-                  pattern: atoms/copy
+                  pattern: atoms/copy/index
                   children: []
                   properties:
                     text: Create your own and extend the design kit
@@ -340,7 +332,7 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: L

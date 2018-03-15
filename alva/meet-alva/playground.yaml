@@ -1,21 +1,20 @@
-name: Playground
 root:
   _type: pattern
-  pattern: atoms/layout
+  pattern: atoms/layout/index
   children:
     - _type: pattern
-      pattern: atoms/layout
+      pattern: atoms/layout/index
       children:
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
         - _type: pattern
-          pattern: atoms/layout
+          pattern: atoms/layout/index
           children:
             - _type: pattern
-              pattern: atoms/headline
+              pattern: atoms/headline/index
               children: []
               properties:
                 tagName: h2
@@ -25,7 +24,7 @@ root:
                 level: H1
                 text: Your Turn. Go wild.
             - _type: pattern
-              pattern: atoms/copy
+              pattern: atoms/copy/index
               children: []
               properties:
                 text: ...
@@ -37,7 +36,7 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
-          pattern: atoms/space
+          pattern: atoms/space/index
           children: []
           properties:
             size: XL
