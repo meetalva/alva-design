@@ -1,19 +1,29 @@
 root:
   _type: pattern
+  uuid: 970081c2-3d5b-49b0-82a5-cdd3790a461d
+  name: Layout
   pattern: atoms/layout/index
   children:
     - _type: pattern
+      uuid: ea0f46e9-58ba-4f83-b617-c9b1c1cf10bf
+      name: Layout
       pattern: atoms/layout/index
       children:
         - _type: pattern
+          uuid: c87e27ed-2779-496f-95a1-d9b4c155574d
+          name: Space
           pattern: atoms/space/index
           children: []
           properties:
             size: XL
         - _type: pattern
+          uuid: fcc8bdb3-60d0-48db-8f3e-a0ba1e33c03f
+          name: Layout
           pattern: atoms/layout/index
           children:
             - _type: pattern
+              uuid: f5d614f2-e6be-46a6-929a-c0c4abafdde3
+              name: Headline
               pattern: atoms/headline/index
               children: []
               properties:
@@ -24,6 +34,8 @@ root:
                 level: H1
                 text: Your Turn. Go wild.
             - _type: pattern
+              uuid: 916dd692-ba08-49e5-8148-a508348f791b
+              name: Copy
               pattern: atoms/copy/index
               children: []
               properties:
@@ -36,6 +48,8 @@ root:
             maxWidth: 720px
             backgroundColor: transparent
         - _type: pattern
+          uuid: ebf1749d-7130-4af5-b3c8-8742e9518cce
+          name: Space
           pattern: atoms/space/index
           children: []
           properties:
