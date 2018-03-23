@@ -4,7 +4,7 @@ import styled from "styled-components";
 export interface ImageProps {
 	alt?: string;
 	className?: string;
-	src?: string;
+	/** @asset */ src?: string;
 	size?: string;
 }
 
@@ -16,7 +16,7 @@ const StyledImage = styled.img`
 
 const Image: React.StatelessComponent<ImageProps> = (props): JSX.Element => {
 	return (
-		<StyledImage alt={props.alt} className={props.className} src={props.src} size={props.size}/>
+		<StyledImage alt={props.alt} className={props.className} src={props.src} size={props.size} />
 	);
 };
 
