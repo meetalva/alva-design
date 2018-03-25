@@ -1,43 +1,43 @@
 {
-	"name": "meetalva-designkit",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
-		"build": "tsc --outDir lib/patterns --sourceMap --declaration",
-		"clean": "rm -rf lib/patterns",
-		"clean-build": "npm run clean && npm run build",
-		"commit": "commit",
-		"commitmsg": "commitlint -e $GIT_PARAMS"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/meetalva/designkit.git"
-	},
-	"author": "",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/meetalva/designkit/issues"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^5.2.5",
-		"@commitlint/config-conventional": "^5.2.3",
-		"@commitlint/prompt-cli": "^5.2.5",
-		"@commitlint/travis-cli": "^5.2.5",
-		"@patternplate/cli": "^2.0.0-4",
-		"@patternplate/render-styled-components": "^2.0.0-3",
-		"@types/node": "^8.0.53",
-		"@types/react": "15.6.1",
-		"@types/react-dom": "^15.5.4",
-		"concurrently": "^3.5.1",
-		"typescript": "^2.6.2",
-		"husky": "^0.14.3"
-	},
-	"dependencies": {
-		"react": "^15.6.1",
-		"react-dom": "^15.6.1",
-		"styled-components": "^2.1.1",
-		"tslib": "^1.7.0"
-	}
+  "name": "meetalva-designkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
+    "build": "tsc --outDir lib/patterns --sourceMap --declaration",
+    "clean": "rm -rf lib/patterns",
+    "clean-build": "npm run clean && npm run build",
+    "commit": "commit",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetalva/designkit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meetalva/designkit/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^5.2.5",
+    "@commitlint/config-conventional": "^5.2.3",
+    "@commitlint/prompt-cli": "^5.2.5",
+    "@commitlint/travis-cli": "^5.2.5",
+    "@patternplate/cli": "^2.0.0-93",
+    "@patternplate/render-styled-components": "^2.0.0-93",
+    "@types/node": "^8.0.53",
+    "@types/react": "15.6.1",
+    "@types/react-dom": "^15.5.4",
+    "concurrently": "^3.5.1",
+    "husky": "^0.14.3",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.1",
+    "tslib": "^1.7.0"
+  }
 }
