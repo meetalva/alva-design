@@ -20,10 +20,6 @@ const StyledLayout = styled.div`
 	background-color: ${(props: LayoutProps) => props.backgroundColor || "none"};
 
 	${(props: LayoutProps) => {
-		console.log("layout got " + props.direction);
-		console.log("expecting " + Direction.HORIZONTAL);
-		console.log("or " + Direction.VERTICAL);
-
 		switch (props.direction) {
 			case Direction.HORIZONTAL:
 				return css`
