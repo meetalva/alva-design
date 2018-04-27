@@ -1,446 +1,722 @@
+id: 5a0a56df-d8b3-4645-aa59-8c31343fd99f
 root:
   _type: pattern
   uuid: 941b65c1-7f36-4fa7-9727-9988f8f67cb6
   name: Layout
   pattern: atoms/layout/index
-  children:
-    - _type: pattern
-      uuid: 10ae4e53-01c3-40e5-b54e-cc815cc98f2f
-      name: Layout
-      pattern: atoms/layout/index
-      children:
-        - _type: pattern
-          uuid: f6c5e8cb-40c1-4060-a8a6-b4faaa9b79ed
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: XL
-        - _type: pattern
-          uuid: a2127993-a75b-40e7-9854-1ad3f3c03d9d
-          name: Layout
-          pattern: atoms/layout/index
-          children:
+  exportName: default
+  contents:
+    default:
+      - _type: pattern
+        uuid: 10ae4e53-01c3-40e5-b54e-cc815cc98f2f
+        name: Layout
+        pattern: atoms/layout/index
+        exportName: default
+        contents:
+          default:
             - _type: pattern
-              uuid: 9c5fdb11-30f4-4cea-bd05-d9787c1703e0
-              name: Image
-              pattern: atoms/image/index
-              children: []
-              properties:
-                alt: ''
-                className: ''
-                src: >-
-                  http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png
-                size: 100px
-            - _type: pattern
-              uuid: 0897bad5-68ec-4171-a638-e5aeff4b4f0d
-              name: Headline
-              pattern: atoms/headline/index
-              children: []
-              properties:
-                tagName: h2
-                order: 2
-                color: '#FFFFFF'
-                textAlign: Left
-                level: H1
-                text: Design Kit
-            - _type: pattern
-              uuid: 0c433f92-c40e-4766-a1a4-62ce53d8c1ec
-              name: Copy
-              pattern: atoms/copy/index
-              children:
-                - _type: pattern
-                  uuid: 142c1cf9-7ef3-4809-8420-bd614f900874
-                  children: []
-                  properties: {}
-              properties:
-                text: No own pattern library? No problem!
-                color: '#FFFFFF'
-                size: Medium
-                textAlign: Left
-          properties:
-            direction: VERTICAL
-            maxWidth: 720px
-            backgroundColor: transparent
-        - _type: pattern
-          uuid: 334e6b87-ed21-4219-a95b-ad085ff49999
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: XL
-      properties:
-        direction: VERTICAL
-        maxWidth: 100%
-        backgroundColor: '#0070D6'
-    - _type: pattern
-      uuid: caec5ef6-94f0-43d6-8145-4beb87633ee6
-      name: Layout
-      pattern: atoms/layout/index
-      children:
-        - _type: pattern
-          uuid: 849fb6aa-4439-4a04-9f03-cc5dfd22cb03
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: XL
-        - _type: pattern
-          uuid: d3685936-9049-4f16-8b59-b3393b973ccb
-          name: Layout
-          pattern: atoms/layout/index
-          children:
-            - _type: pattern
-              uuid: eae04215-e0d7-44d5-a413-425f9e1b1a30
-              name: Layout
-              pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 89ac33ff-2bbf-4623-8243-929d17c01def
-                  name: Headline
-                  pattern: atoms/headline/index
-                  children: []
-                  properties:
-                    tagName: h2
-                    order: 2
-                    color: '#0070D6'
-                    textAlign: Left
-                    level: H2
-                    text: Optimized Components
-                - _type: pattern
-                  uuid: 0c412cd1-7e6f-418a-b82e-70779a580f02
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    text: >-
-                      Components within the design kit are optimized to work
-                      best with Alva. But they follow the industry standard to
-                      work in all environments.
-                    color: ''
-                    size: Medium
-                    textAlign: Left
-              properties:
-                direction: VERTICAL
-                maxWidth: 50%
-                backgroundColor: transparent
-            - _type: pattern
-              uuid: 87ef6005-ff59-4e00-9f49-159d0910ff70
+              uuid: f6c5e8cb-40c1-4060-a8a6-b4faaa9b79ed
               name: Space
               pattern: atoms/space/index
-              children: []
+              exportName: default
+              contents:
+                default: []
               properties:
                 size: XL
             - _type: pattern
-              uuid: ebe63aba-d13b-4c67-bf3e-8c4f19f6adfa
+              uuid: a2127993-a75b-40e7-9854-1ad3f3c03d9d
               name: Layout
               pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: ad96fde5-a2ff-47dd-ae1b-ee6a83d98e2b
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: S
-                - _type: pattern
-                  uuid: 37bee1b5-aa8d-46a9-90a0-af8d6a607134
-                  name: Button
-                  pattern: atoms/button/index
-                  children: []
-                  properties:
-                    disabled: false
-                    primary: true
-                    text: Primary
-                - _type: pattern
-                  uuid: f484a659-e542-44a4-be3d-7d6919955131
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: S
-                - _type: pattern
-                  uuid: d8410735-4aaa-41b5-b160-ef960329461c
-                  name: Button
-                  pattern: atoms/button/index
-                  children: []
-                  properties:
-                    disabled: false
-                    primary: false
-                    text: Secondary
-                - _type: pattern
-                  uuid: a0272161-7308-447c-9ebf-c3295e0c23a3
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: S
-                - _type: pattern
-                  uuid: fe07fe09-1f4f-4a7a-ba95-0bace4665dbd
-                  name: Button
-                  pattern: atoms/button/index
-                  children: []
-                  properties:
-                    disabled: true
-                    primary: false
-                    text: Disabled
-                - _type: pattern
-                  uuid: 3722fc19-78d3-44a9-a5f6-6de590ba5743
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: S
-                - _type: pattern
-                  uuid: f4b03ab4-bd20-4a86-bb7c-de9e3753d52a
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    size: Small
-                    textAlign: Right
-                    text: Easily define properties
-                    color: '#808080'
+              exportName: default
+              contents:
+                default:
+                  - _type: pattern
+                    uuid: 9c5fdb11-30f4-4cea-bd05-d9787c1703e0
+                    name: Image
+                    pattern: atoms/image/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      alt: ''
+                      className: ''
+                      src: >-
+                        http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png
+                      size: 100px
+                  - _type: pattern
+                    uuid: 0897bad5-68ec-4171-a638-e5aeff4b4f0d
+                    name: Headline
+                    pattern: atoms/headline/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      tagName: h2
+                      order: 2
+                      color: '#FFFFFF'
+                      textAlign: Left
+                      level: H1
+                      text: Design Kit
+                  - _type: pattern
+                    uuid: 0c433f92-c40e-4766-a1a4-62ce53d8c1ec
+                    name: Copy
+                    pattern: atoms/copy/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 142c1cf9-7ef3-4809-8420-bd614f900874
+                          exportName: default
+                          contents: {}
+                          properties: {}
+                    properties:
+                      text: No own pattern library? No problem!
+                      color: '#FFFFFF'
+                      size: Medium
+                      textAlign: Left
               properties:
                 direction: VERTICAL
-                maxWidth: 40%
-                backgroundColor: ''
-          properties:
-            direction: HORIZONTAL
-            maxWidth: 720px
-            backgroundColor: transparent
-        - _type: pattern
-          uuid: 0cf3b53f-3a72-47be-b385-bb60fa84cf93
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: XL
-      properties:
-        direction: VERTICAL
-        maxWidth: 100%
-        backgroundColor: transparent
-    - _type: pattern
-      uuid: 5f6b7361-21f4-47b1-8425-ca54193bf262
-      name: Layout
-      pattern: atoms/layout/index
-      children:
-        - _type: pattern
-          uuid: d14f0237-fecf-4384-99bc-3953b4a0d078
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: M
-        - _type: pattern
-          uuid: f74a891c-3d16-4002-aa53-88b7ecf298fd
-          name: Layout
-          pattern: atoms/layout/index
-          children:
+                maxWidth: 720px
+                backgroundColor: transparent
             - _type: pattern
-              uuid: 5060c39c-0f4a-4373-b6fa-5d618f420ed2
-              name: Layout
-              pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 0982e253-cdc3-40a9-a2b4-aa1729495046
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: M
-                - _type: pattern
-                  uuid: 1c9035ed-e096-4182-9a6a-82eb5c00d649
-                  name: Image
-                  pattern: atoms/image/index
-                  children: []
-                  properties:
-                    alt: ''
-                    className: ''
-                    src: 'https://meetalva.io/images/alva-coding.png'
-                    size: ''
-              properties:
-                direction: VERTICAL
-                maxWidth: 40%
-                backgroundColor: ''
-            - _type: pattern
-              uuid: 35b20193-a965-40bb-a743-c7b87b7d6cb9
+              uuid: 334e6b87-ed21-4219-a95b-ad085ff49999
               name: Space
               pattern: atoms/space/index
-              children: []
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: XL
+        properties:
+          direction: VERTICAL
+          maxWidth: 100%
+          backgroundColor: '#0070D6'
+      - _type: pattern
+        uuid: caec5ef6-94f0-43d6-8145-4beb87633ee6
+        name: Layout
+        pattern: atoms/layout/index
+        exportName: default
+        contents:
+          default:
+            - _type: pattern
+              uuid: 849fb6aa-4439-4a04-9f03-cc5dfd22cb03
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
               properties:
                 size: XL
             - _type: pattern
-              uuid: 809a1b53-9693-42aa-abc5-96a2d9664167
+              uuid: d3685936-9049-4f16-8b59-b3393b973ccb
               name: Layout
               pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 4daabe77-5bbb-49ef-bf59-753b326b9b34
-                  name: Headline
-                  pattern: atoms/headline/index
-                  children: []
-                  properties:
-                    tagName: h2
-                    order: 2
-                    color: '#0070D6'
-                    textAlign: Right
-                    level: H2
-                    text: Create your own!
-                - _type: pattern
-                  uuid: f03f10f9-5249-4b15-9ffc-6c38cab0b467
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    text: >-
-                      Most projects rely on special components to fit their
-                      specific need. We won't limit your in your imagination,
-                      just open up your favourite code editor and go wild.
-                    color: ''
-                    size: Medium
-                    textAlign: Right
-                - _type: pattern
-                  uuid: 3cc9044a-fe92-4025-a6e2-0508b31bff8f
-                  name: Space
-                  pattern: atoms/space/index
-                  children: []
-                  properties:
-                    size: S
-                - _type: pattern
-                  uuid: 90857826-dd0b-4b32-b91e-5718f476da1d
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    size: Small
-                    textAlign: Right
-                    text: >-
-                      (Alva currently supports React components written in
-                      typescript and styled components)
-                    color: '#808080'
+              exportName: default
+              contents:
+                default:
+                  - _type: pattern
+                    uuid: eae04215-e0d7-44d5-a413-425f9e1b1a30
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 89ac33ff-2bbf-4623-8243-929d17c01def
+                          name: Headline
+                          pattern: atoms/headline/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            tagName: h2
+                            order: 2
+                            color: '#0070D6'
+                            textAlign: Left
+                            level: H2
+                            text: Optimized Components
+                        - _type: pattern
+                          uuid: 0c412cd1-7e6f-418a-b82e-70779a580f02
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: >-
+                              Components within the design kit are optimized to
+                              work best with Alva. But they follow the industry
+                              standard to work in all environments.
+                            color: ''
+                            size: Medium
+                            textAlign: Left
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 50%
+                      backgroundColor: transparent
+                  - _type: pattern
+                    uuid: 87ef6005-ff59-4e00-9f49-159d0910ff70
+                    name: Space
+                    pattern: atoms/space/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      size: XL
+                  - _type: pattern
+                    uuid: ebe63aba-d13b-4c67-bf3e-8c4f19f6adfa
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: ad96fde5-a2ff-47dd-ae1b-ee6a83d98e2b
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: S
+                        - _type: pattern
+                          uuid: 37bee1b5-aa8d-46a9-90a0-af8d6a607134
+                          name: Button
+                          pattern: atoms/button/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            disabled: false
+                            primary: true
+                            text: Primary
+                        - _type: pattern
+                          uuid: f484a659-e542-44a4-be3d-7d6919955131
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: S
+                        - _type: pattern
+                          uuid: d8410735-4aaa-41b5-b160-ef960329461c
+                          name: Button
+                          pattern: atoms/button/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            disabled: false
+                            primary: false
+                            text: Secondary
+                        - _type: pattern
+                          uuid: a0272161-7308-447c-9ebf-c3295e0c23a3
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: S
+                        - _type: pattern
+                          uuid: fe07fe09-1f4f-4a7a-ba95-0bace4665dbd
+                          name: Button
+                          pattern: atoms/button/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            disabled: true
+                            primary: false
+                            text: Disabled
+                        - _type: pattern
+                          uuid: 3722fc19-78d3-44a9-a5f6-6de590ba5743
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: S
+                        - _type: pattern
+                          uuid: f4b03ab4-bd20-4a86-bb7c-de9e3753d52a
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: Small
+                            textAlign: Right
+                            text: Easily define properties
+                            color: '#808080'
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 40%
+                      backgroundColor: ''
               properties:
-                direction: VERTICAL
-                maxWidth: 50%
-                backgroundColor: transparent
-          properties:
-            direction: HORIZONTAL
-            maxWidth: 720px
-            backgroundColor: transparent
-        - _type: pattern
-          uuid: 4b173b34-e2c6-47fe-8c36-6b2c8b887bca
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: XL
-      properties:
-        direction: VERTICAL
-        maxWidth: 100%
-        backgroundColor: transparent
-    - _type: pattern
-      uuid: 7606b9fb-47cb-41ff-931c-9b53319a6a62
-      name: Layout
-      pattern: atoms/layout/index
-      children:
-        - _type: pattern
-          uuid: 12c93615-2ca3-42a0-b82f-7a9c4c26a6a0
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: L
-        - _type: pattern
-          uuid: 20e497ca-3710-4fd2-b898-0874eb29a825
-          name: Layout
-          pattern: atoms/layout/index
-          children:
-            - _type: pattern
-              uuid: ca7c12c8-da4c-4d15-af27-8a28161e669b
-              name: Layout
-              pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 49ba2c8b-9d22-4b9a-9edc-015d4ae6e103
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    text: Real react based components
-                    color: '#FFFFFF'
-                    size: Medium
-                    textAlign: Center
-              properties:
-                direction: VERTICAL
-                maxWidth: 30%
+                direction: HORIZONTAL
+                maxWidth: 720px
                 backgroundColor: transparent
             - _type: pattern
-              uuid: 07c73ce5-a705-462b-8cdf-4b164b3c1971
+              uuid: 0cf3b53f-3a72-47be-b385-bb60fa84cf93
               name: Space
               pattern: atoms/space/index
-              children: []
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: XL
+        properties:
+          direction: VERTICAL
+          maxWidth: 100%
+          backgroundColor: transparent
+      - _type: pattern
+        uuid: 5f6b7361-21f4-47b1-8425-ca54193bf262
+        name: Layout
+        pattern: atoms/layout/index
+        exportName: default
+        contents:
+          default:
+            - _type: pattern
+              uuid: d14f0237-fecf-4384-99bc-3953b4a0d078
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
               properties:
                 size: M
             - _type: pattern
-              uuid: 484ff02b-1757-4233-be00-985aacfae4d3
+              uuid: f74a891c-3d16-4002-aa53-88b7ecf298fd
               name: Layout
               pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 89c48671-97c2-4090-a794-09b58456e607
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    text: Optimized to use with Alva
-                    color: '#FFFFFF'
-                    size: Medium
-                    textAlign: Center
+              exportName: default
+              contents:
+                default:
+                  - _type: pattern
+                    uuid: 5060c39c-0f4a-4373-b6fa-5d618f420ed2
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 0982e253-cdc3-40a9-a2b4-aa1729495046
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: M
+                        - _type: pattern
+                          uuid: 1c9035ed-e096-4182-9a6a-82eb5c00d649
+                          name: Image
+                          pattern: atoms/image/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            alt: ''
+                            className: ''
+                            src: 'https://meetalva.io/images/alva-coding.png'
+                            size: ''
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 40%
+                      backgroundColor: ''
+                  - _type: pattern
+                    uuid: 35b20193-a965-40bb-a743-c7b87b7d6cb9
+                    name: Space
+                    pattern: atoms/space/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      size: XL
+                  - _type: pattern
+                    uuid: 809a1b53-9693-42aa-abc5-96a2d9664167
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 4daabe77-5bbb-49ef-bf59-753b326b9b34
+                          name: Headline
+                          pattern: atoms/headline/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            tagName: h2
+                            order: 2
+                            color: '#0070D6'
+                            textAlign: Right
+                            level: H2
+                            text: Create your own!
+                        - _type: pattern
+                          uuid: f03f10f9-5249-4b15-9ffc-6c38cab0b467
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: >-
+                              Most projects rely on special components to fit
+                              their specific need. We won't limit your in your
+                              imagination, just open up your favourite code
+                              editor and go wild.
+                            color: ''
+                            size: Medium
+                            textAlign: Right
+                        - _type: pattern
+                          uuid: 3cc9044a-fe92-4025-a6e2-0508b31bff8f
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: S
+                        - _type: pattern
+                          uuid: 90857826-dd0b-4b32-b91e-5718f476da1d
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: Small
+                            textAlign: Right
+                            text: >-
+                              (Alva currently supports React components written
+                              in typescript and styled components)
+                            color: '#808080'
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 50%
+                      backgroundColor: transparent
               properties:
-                direction: VERTICAL
-                maxWidth: 30%
+                direction: HORIZONTAL
+                maxWidth: 720px
                 backgroundColor: transparent
             - _type: pattern
-              uuid: 2cb5d1c1-bc11-4981-b65a-3735b30982ff
+              uuid: 4b173b34-e2c6-47fe-8c36-6b2c8b887bca
               name: Space
               pattern: atoms/space/index
-              children: []
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: XL
+        properties:
+          direction: VERTICAL
+          maxWidth: 100%
+          backgroundColor: transparent
+      - _type: pattern
+        uuid: 55e0f14e-6072-4efe-b685-ab359bce748a
+        name: Layout
+        pattern: atoms/layout/index
+        exportName: default
+        contents:
+          default:
+            - _type: pattern
+              uuid: 89ca83d0-69d2-455d-af56-0837281db624
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
               properties:
                 size: M
             - _type: pattern
-              uuid: e0a8c5a7-75ca-46a5-824d-92506eddd9f6
+              uuid: 8ad28390-2803-47b1-8bc0-b56b9954f364
               name: Layout
               pattern: atoms/layout/index
-              children:
-                - _type: pattern
-                  uuid: 130c1155-dcb6-48ce-bdac-f092a88bd13d
-                  name: Copy
-                  pattern: atoms/copy/index
-                  children: []
-                  properties:
-                    text: Create your own and extend the design kit
-                    color: '#FFFFFF'
-                    size: Medium
-                    textAlign: Center
+              exportName: default
+              contents:
+                default:
+                  - _type: pattern
+                    uuid: d9b38537-d2e5-46aa-8a61-64f6c1d1263f
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: e266a039-e44f-4677-b8a6-de1b9b64ab33
+                          name: Headline
+                          pattern: atoms/headline/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            tagName: h2
+                            order: 2
+                            color: '#0070D6'
+                            textAlign: Left
+                            level: H2
+                            text: Interaction!
+                        - _type: pattern
+                          uuid: 3af220b5-cc16-44da-9157-2e5e1c8b0f2f
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: >-
+                              Bind component events to custom actions. Switch to
+                              the next page on button press or fill a variable
+                              from user input.
+                            color: ''
+                            size: Medium
+                            textAlign: Left
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 50%
+                      backgroundColor: transparent
+                  - _type: pattern
+                    uuid: 873a0b38-c3d5-4eac-b9e0-5a9287b73083
+                    name: Space
+                    pattern: atoms/space/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      size: XL
+                  - _type: pattern
+                    uuid: 0cc5f30d-1c4f-4ae4-8de4-b233706fe578
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 7571d59b-db4d-46e9-9791-061757546ca6
+                          name: Input
+                          pattern: atoms/input/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            type: Text
+                            disabled: false
+                            labelText: 'What is your name, please?'
+                            value: '${name}'
+                            errorText: ''
+                            placeholder: Enter name
+                            onChange:
+                              _type: set-variable-event-action
+                              variable: name
+                        - _type: pattern
+                          uuid: 19def13c-0ea6-44a1-866d-a199fb4553fe
+                          name: Conditional
+                          pattern: modules/conditional/index
+                          exportName: default
+                          contents:
+                            default:
+                              - _type: pattern
+                                uuid: 5c1e3d82-f437-4c52-9aaa-208cda6c109a
+                                name: Space
+                                pattern: atoms/space/index
+                                exportName: default
+                                contents:
+                                  default: []
+                                properties:
+                                  size: M
+                              - _type: pattern
+                                uuid: 8a92049c-0215-4441-93ff-29a6e9232a85
+                                name: Copy
+                                pattern: atoms/copy/index
+                                exportName: default
+                                contents:
+                                  default: []
+                                properties:
+                                  className: ''
+                                  size: Medium
+                                  tagName: ''
+                                  textAlign: Left
+                                  text: 'Welcome to Alva, ${name}!'
+                                  color: '#000000'
+                                  uppercase: false
+                          properties:
+                            condition: '${name}'
+                        - _type: pattern
+                          uuid: be718653-3151-4759-b05d-3e911052705d
+                          name: Space
+                          pattern: atoms/space/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            size: M
+                        - _type: pattern
+                          uuid: 9fd99ad0-6fbf-4e54-89f7-080689241831
+                          name: Button
+                          pattern: atoms/button/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            disabled: false
+                            primary: true
+                            text: Open playground!
+                            onClick:
+                              _type: open-page-event-action
+                              pageId: ca608a14-abc2-4cda-979c-826618245ebf
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 40%
+                      backgroundColor: ''
               properties:
-                direction: VERTICAL
-                maxWidth: 30%
+                direction: HORIZONTAL
+                maxWidth: 720px
                 backgroundColor: transparent
-          properties:
-            direction: HORIZONTAL
-            maxWidth: 720px
-            backgroundColor: transparent
-        - _type: pattern
-          uuid: 1c016bf5-3132-4c90-a2c4-09dcb4d3b02f
-          name: Space
-          pattern: atoms/space/index
-          children: []
-          properties:
-            size: L
-      properties:
-        direction: VERTICAL
-        maxWidth: 100%
-        backgroundColor: '#343D45'
+            - _type: pattern
+              uuid: 3c888751-4ccc-4762-87c3-462c962cca6d
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: XL
+        properties:
+          direction: VERTICAL
+          maxWidth: 100%
+          backgroundColor: transparent
+      - _type: pattern
+        uuid: 7606b9fb-47cb-41ff-931c-9b53319a6a62
+        name: Layout
+        pattern: atoms/layout/index
+        exportName: default
+        contents:
+          default:
+            - _type: pattern
+              uuid: 12c93615-2ca3-42a0-b82f-7a9c4c26a6a0
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: L
+            - _type: pattern
+              uuid: 20e497ca-3710-4fd2-b898-0874eb29a825
+              name: Layout
+              pattern: atoms/layout/index
+              exportName: default
+              contents:
+                default:
+                  - _type: pattern
+                    uuid: ca7c12c8-da4c-4d15-af27-8a28161e669b
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 49ba2c8b-9d22-4b9a-9edc-015d4ae6e103
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: Real react based components
+                            color: '#FFFFFF'
+                            size: Medium
+                            textAlign: Center
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 30%
+                      backgroundColor: transparent
+                  - _type: pattern
+                    uuid: 07c73ce5-a705-462b-8cdf-4b164b3c1971
+                    name: Space
+                    pattern: atoms/space/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      size: M
+                  - _type: pattern
+                    uuid: 484ff02b-1757-4233-be00-985aacfae4d3
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 89c48671-97c2-4090-a794-09b58456e607
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: Optimized to use with Alva
+                            color: '#FFFFFF'
+                            size: Medium
+                            textAlign: Center
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 30%
+                      backgroundColor: transparent
+                  - _type: pattern
+                    uuid: 2cb5d1c1-bc11-4981-b65a-3735b30982ff
+                    name: Space
+                    pattern: atoms/space/index
+                    exportName: default
+                    contents:
+                      default: []
+                    properties:
+                      size: M
+                  - _type: pattern
+                    uuid: e0a8c5a7-75ca-46a5-824d-92506eddd9f6
+                    name: Layout
+                    pattern: atoms/layout/index
+                    exportName: default
+                    contents:
+                      default:
+                        - _type: pattern
+                          uuid: 130c1155-dcb6-48ce-bdac-f092a88bd13d
+                          name: Copy
+                          pattern: atoms/copy/index
+                          exportName: default
+                          contents:
+                            default: []
+                          properties:
+                            text: Create your own and extend the design kit
+                            color: '#FFFFFF'
+                            size: Medium
+                            textAlign: Center
+                    properties:
+                      direction: VERTICAL
+                      maxWidth: 30%
+                      backgroundColor: transparent
+              properties:
+                direction: HORIZONTAL
+                maxWidth: 720px
+                backgroundColor: transparent
+            - _type: pattern
+              uuid: 1c016bf5-3132-4c90-a2c4-09dcb4d3b02f
+              name: Space
+              pattern: atoms/space/index
+              exportName: default
+              contents:
+                default: []
+              properties:
+                size: L
+        properties:
+          direction: VERTICAL
+          maxWidth: 100%
+          backgroundColor: '#343D45'
   properties:
     maxSize: 80%
     direction: VERTICAL

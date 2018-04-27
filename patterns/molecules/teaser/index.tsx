@@ -11,7 +11,7 @@ export interface TeaserProps {
 	/** @name Headline level @default H1 */ headlineLevel: Level;
 	/** @name Headline align @default Left */ headlineAlign?: TextAlign;
 	/** @name Headline text @default Headline */ headlineText: string;
-	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @name On click */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export enum Level {

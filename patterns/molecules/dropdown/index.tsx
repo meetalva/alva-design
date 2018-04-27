@@ -7,8 +7,7 @@ import { Icon, IconName, IconSize } from "../../atoms/icons";
 export interface DropdownProps {
 	/** @name Open */ open: boolean;
 	/** @name Text */ text: string;
-
-	/** @hidden */ onToggle(event: React.MouseEvent<HTMLElement>): void;
+	/** @name On toggle */ onToggle(event: React.MouseEvent<HTMLElement>): void;
 }
 
 interface StyledIconProps {

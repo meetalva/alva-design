@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import colors from '../colors';
-import Copy from '../copy';
+import * as React from "react";
+import styled from "styled-components";
+import colors from "../colors";
+import Copy from "../copy";
 
 /**
  * @name Checkbox
@@ -13,9 +13,7 @@ export interface CheckboxProps {
 	/** @name Value @hidden */ value?: string;
 	/** @name Checked @default false */ checked?: boolean;
 	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
-		React.ChangeEvent<HTMLInputElement>
-	>;
+	/** @name On change */ onChange?: React.EventHandler<React.ChangeEvent<HTMLInputElement>>;
 }
 
 interface StyledLabelProps {
@@ -36,7 +34,7 @@ const StyledLabel = styled.label`
 	align-items: center;
 	color: ${colors.black.toString()};
 
-	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : '')};
+	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : "")};
 `;
 
 const StyledCheckboxInput = styled.input`
@@ -54,11 +52,11 @@ const StyledCheckbox = styled.div`
 	border-radius: 3px;
 
 	${(props: StyledCheckboxProps) =>
-		props.disabled ? `border-color: ${colors.grey90.toString()};` : ''};
+		props.disabled ? `border-color: ${colors.grey90.toString()};` : ""};
 `;
 
 const SyledCheckmark = styled.svg`
-	${(props: StyledCheckmarkProps) => (props.checked ? 'display: block;' : 'display: none;')};
+	${(props: StyledCheckmarkProps) => (props.checked ? "display: block;" : "display: none;")};
 	${(props: StyledCheckmarkProps) =>
 		props.disabled ? `fill: ${colors.grey90.toString()};` : `fill: ${colors.green.toString()};`};
 `;
@@ -68,10 +66,10 @@ const StyledLabelText = styled(Copy)`
 `;
 
 const Checkbox: React.StatelessComponent<CheckboxProps> = (props): JSX.Element => {
-	const { disabled, name, value, handleChange, checked, labelText } = props;
+	const { disabled, name, value, onChange, checked, labelText } = props;
 	return (
 		<StyledLabel disabled={disabled}>
-			<StyledCheckboxInput type="checkbox" name={name} value={value} onChange={handleChange} />
+			<StyledCheckboxInput type="checkbox" name={name} value={value} onChange={onChange} />
 			<StyledCheckbox disabled={disabled}>
 				{/* TODO: move svg to icons component */}
 				<SyledCheckmark

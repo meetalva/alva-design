@@ -1,21 +1,19 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import colors from '../colors';
-import Copy from '../copy';
+import * as React from "react";
+import styled from "styled-components";
+import colors from "../colors";
+import Copy from "../copy";
 
 /**
  * @name Radio
  */
 
 export interface RadioProps {
-	/** @name Label Text @default Lorem Ipsum */ labelText?: string;
-	/** @name Group Name @default radio1 */ groupName?: string;
+	/** @name Label text @default Lorem Ipsum */ labelText?: string;
+	/** @name Group name @default radio1 */ groupName?: string;
 	/** @name Value @default value */ value?: string;
 	/** @name Checked @default false */ checked?: boolean;
 	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
-		React.ChangeEvent<HTMLInputElement>
-	>;
+	/** @name On change */ onChange?: React.EventHandler<React.ChangeEvent<HTMLInputElement>>;
 }
 
 interface StyledLabelProps {
@@ -37,7 +35,7 @@ const StyledLabel = styled.label`
 	align-items: center;
 	color: ${colors.black.toString()};
 
-	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : '')};
+	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : "")};
 `;
 
 const StyledRadio = styled.div`
@@ -50,12 +48,12 @@ const StyledRadio = styled.div`
 	border-radius: 50%;
 
 	${(props: StyledRadioProps) =>
-		props.disabled ? `border-color: ${colors.grey90.toString()};` : ''};
+		props.disabled ? `border-color: ${colors.grey90.toString()};` : ""};
 
 	/* RadioIndicator */
 	::before {
-		${(props: StyledRadioProps) => (props.checked ? 'display: block;' : 'display: none;')};
-		content: '';
+		${(props: StyledRadioProps) => (props.checked ? "display: block;" : "display: none;")};
+		content: "";
 		width: 18px;
 		height: 18px;
 		border-radius: 50%;
@@ -68,10 +66,10 @@ const StyledLabelText = styled(Copy)`
 `;
 
 const Radio: React.StatelessComponent<RadioProps> = (props): JSX.Element => {
-	const { disabled, groupName, value, handleChange, checked, labelText } = props;
+	const { disabled, groupName, value, onChange, checked, labelText } = props;
 	return (
 		<StyledLabel disabled={disabled}>
-			<StyledRadioInput type="radio" name={groupName} value={value} onChange={handleChange} />
+			<StyledRadioInput type="radio" name={groupName} value={value} onChange={onChange} />
 			<StyledRadio checked={checked} disabled={disabled} />
 			{labelText && <StyledLabelText>{labelText}</StyledLabelText>}
 		</StyledLabel>

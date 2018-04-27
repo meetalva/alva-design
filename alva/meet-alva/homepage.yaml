@@ -1,20 +1,24 @@
+id: a6dd4b0f-5cf6-42d3-a5ba-f453199a44c2
 root:
   _type: pattern
   uuid: 9ee029be-81f7-43bc-a3e8-e2e90f70f48a
   name: Layout
   pattern: atoms/layout/index
+  exportName: default
   contents:
     default:
       - _type: pattern
         uuid: e974118f-1cbd-473d-bd93-9254f9ba711b
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: ee573d19-a2e8-40f3-87dc-2be47eac28f3
               name: Space
               pattern: atoms/space/index
+              exportName: default
               contents:
                 default: []
               properties:
@@ -23,12 +27,14 @@ root:
               uuid: 7ad60a00-567a-417a-9365-998e27caa952
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: 3106dc90-b71a-462e-8934-4b7da54ab781
                     name: Image
                     pattern: atoms/image/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -40,6 +46,7 @@ root:
                     uuid: ab37d402-c919-4b3d-a316-169fcee4bff7
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -48,6 +55,7 @@ root:
                     uuid: 481fc73b-7d01-4f5c-ba3c-e12ccb244ad5
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -59,6 +67,7 @@ root:
                     uuid: d2ad3421-62ea-44e8-9771-54099e15b462
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -72,6 +81,7 @@ root:
                     uuid: 7e262f75-a801-47ab-922e-1bd6ef5f20a4
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -88,6 +98,7 @@ root:
         uuid: af36dbef-635f-42e2-8299-90b7f942265b
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
@@ -96,18 +107,21 @@ root:
         uuid: 79fdb515-230c-47ea-adc4-972a3be7e9c2
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: 4335e427-e1b1-4e4b-9deb-0252d24db18e
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: 5bc4dfac-650b-4c6c-9f06-9a04bd6e82ed
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -116,6 +130,7 @@ root:
                     uuid: afd88cc9-28cf-42ab-b577-0c283f8f81cc
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -127,6 +142,7 @@ root:
                     uuid: 180ad0d6-5c50-4cd9-892e-f8d2fa94e370
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -141,6 +157,7 @@ root:
                     uuid: 09ef8b19-e7d8-4b4d-b5ee-70ac0730df0b
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -157,6 +174,7 @@ root:
         uuid: b0310bbe-c25d-40ab-9dab-b69a0bdbb9f0
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
@@ -165,18 +183,21 @@ root:
         uuid: 798b6df1-5987-4f3e-bd7a-72f4b3757a8a
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: b01d1188-f51d-4c3c-bda8-b0b41d8b5551
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: a06de2b2-712a-4271-96d8-5626bf233be9
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -185,6 +206,7 @@ root:
                     uuid: a527bb76-f147-4137-a4e9-8dd24c5fb19c
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -196,10 +218,12 @@ root:
                     uuid: cd00759d-5bee-4b34-886e-730d45fed4d9
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default:
                         - _type: pattern
                           uuid: b7f88c22-b77c-4216-a905-cfb492ccb73a
+                          exportName: default
                           contents: {}
                           properties: {}
                     properties:
@@ -213,6 +237,7 @@ root:
                     uuid: e75871f8-ce20-4339-89c8-6a51b22dd432
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -229,6 +254,7 @@ root:
         uuid: f40de86e-7f6e-4051-80d2-ae617c8d3af6
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
@@ -237,18 +263,21 @@ root:
         uuid: d1c62dfa-c037-4123-a7e7-430718b7d651
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: 407f1fdb-aca0-4066-a959-0cc085723aab
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: b18bbc77-c4dc-4850-8a4d-74f8c4cf5d42
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -257,6 +286,7 @@ root:
                     uuid: 0e9831cb-4f55-4fa7-b970-ad56f0c8ba97
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -268,6 +298,7 @@ root:
                     uuid: 7f02d771-5626-43f1-aa13-5a5030bd5f2c
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -282,6 +313,7 @@ root:
                     uuid: aae9023a-2c10-40f2-94fa-b61e87959aa8
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -298,6 +330,7 @@ root:
         uuid: b3444301-854f-41c2-ae90-1b187835a18b
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
@@ -306,18 +339,21 @@ root:
         uuid: a9c10957-5479-4adb-800e-9a48fa22f990
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: 1166d78f-027a-436f-8e69-d1692e8895a9
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: 6dc026b4-535f-4a2e-b7c7-de372ba127f7
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -326,6 +362,7 @@ root:
                     uuid: 4cb0b59e-aca4-4a20-9bc4-dec5e4ab297d
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -337,6 +374,7 @@ root:
                     uuid: 0ba394be-84e5-4994-a334-721c9636c44f
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -348,6 +386,7 @@ root:
                     uuid: 86a01c48-6f19-4af4-be02-85e10b02581b
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -364,6 +403,7 @@ root:
         uuid: 74db80f4-4281-4094-bf8d-2b3460c81c92
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
@@ -372,18 +412,21 @@ root:
         uuid: 4d4f95d3-325d-4a7e-b55f-484eea90affa
         name: Layout
         pattern: atoms/layout/index
+        exportName: default
         contents:
           default:
             - _type: pattern
               uuid: f99b7cd5-ce4a-4447-897e-6cb5c55ef95d
               name: Layout
               pattern: atoms/layout/index
+              exportName: default
               contents:
                 default:
                   - _type: pattern
                     uuid: cd25a02d-8ca2-490e-a5f2-658e53aefb1c
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -392,6 +435,7 @@ root:
                     uuid: f9652cc1-590b-4af3-96d8-4597a8189241
                     name: Headline
                     pattern: atoms/headline/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -403,6 +447,7 @@ root:
                     uuid: 3800b0f0-d1d0-4c88-9b2e-d0af24e14a04
                     name: Copy
                     pattern: atoms/copy/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -417,6 +462,7 @@ root:
                     uuid: cdf3a9ac-8f00-4805-9c85-1415fcba8d59
                     name: Space
                     pattern: atoms/space/index
+                    exportName: default
                     contents:
                       default: []
                     properties:
@@ -433,6 +479,7 @@ root:
         uuid: 7a39e81f-0aeb-4ed7-a812-425f595a2ec5
         name: Space
         pattern: atoms/space/index
+        exportName: default
         contents:
           default: []
         properties:
