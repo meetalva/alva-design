@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import Copy, { Size as CopySize } from '../copy';
-import colors from '../colors';
+import * as React from "react";
+import styled from "styled-components";
+import Copy, { Size as CopySize } from "../copy";
+import colors from "../colors";
 
 /*
 * @name Input
@@ -10,20 +10,22 @@ import colors from '../colors';
 export interface InputProps {
 	/** @name Type @default Text */ type?: Type;
 	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Label Text @default Lorem Ipsum */ labelText?: string;
-	/** @name Name @default Lorem Ipsum */ name?: string;
+	/** @name Label text @default Lorem Ipsum */ labelText?: string;
+	/** @name Name @hidden */ name?: string;
 	/** @name Value @default Lorem Ipsum */ value?: string;
-	/** @name Error Text @default Error Ipsum */ errorText?: string;
+	/** @name Error text @default Error Ipsum */ errorText?: string;
 	/** @name Placeholder @default Lorem Ipsum */ placeholder?: string;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
-		React.ChangeEvent<HTMLInputElement>
-	>;
+	/** @name On change */ onChange?: React.EventHandler<React.ChangeEvent<HTMLInputElement>>;
+}
+
+export interface InputState {
+	value: string;
 }
 
 export enum Type {
-	Text = 'text',
-	Number = 'number',
-	Email = 'email'
+	Text = "text",
+	Number = "number",
+	Email = "email"
 }
 
 const StyledLabel = styled.label`
@@ -44,7 +46,7 @@ const StyledInput = styled.input`
 	font-size: 15px;
 	color: ${colors.black.toString()};
 
-	${(props: InputProps) => (props.errorText ? `border-color: ${colors.red.toString()};` : '')};
+	${(props: InputProps) => (props.errorText ? `border-color: ${colors.red.toString()};` : "")};
 
 	:focus {
 		border-color: ${colors.blueLight.toString()};
@@ -58,25 +60,38 @@ const StyledError = styled(Copy)`
 	color: ${colors.red.toString()};
 `;
 
-const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {
-	const { labelText, type, value, name, placeholder, disabled, errorText, handleChange } = props;
-	return (
-		<StyledLabel>
-			{labelText && (
-				<StyledLabelText tagName="div" size={CopySize.Small} text={labelText} uppercase />
-			)}
-			<StyledInput
-				type={type}
-				value={value}
-				name={name}
-				placeholder={placeholder}
-				disabled={disabled}
-				errorText={errorText}
-				onChange={handleChange}
-			/>
-			{errorText && <StyledError tagName="div" size={CopySize.Small} text={errorText} />}
-		</StyledLabel>
-	);
-};
+export default class Input extends React.Component<InputProps, InputState> {
+	public constructor(props: InputProps) {
+		super(props);
+		this.state = { value: props.value || "" };
+	}
 
-export default Input;
+	private handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+		this.setState({ value: event.target.value });
+		if (this.props.onChange) {
+			this.props.onChange(event);
+		}
+	}
+
+	public render(): JSX.Element {
+		const { labelText, type, name, placeholder, disabled, errorText } = this.props;
+		const { value } = this.state;
+		return (
+			<StyledLabel>
+				{labelText && (
+					<StyledLabelText tagName="div" size={CopySize.Small} text={labelText} uppercase />
+				)}
+				<StyledInput
+					type={type || Type.Text}
+					value={value}
+					name={name}
+					placeholder={placeholder}
+					disabled={disabled}
+					errorText={errorText}
+					onChange={event => this.handleChange(event)}
+				/>
+				{errorText && <StyledError tagName="div" size={CopySize.Small} text={errorText} />}
+			</StyledLabel>
+		);
+	}
+}

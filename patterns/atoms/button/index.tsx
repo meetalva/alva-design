@@ -10,9 +10,7 @@ export interface ButtonProps {
 	/** @name Disabled @default false */ disabled?: boolean;
 	/** @name Primary @default true */ primary?: boolean;
 	/** @name Text @default Click me! */ text?: string;
-
-	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	/** @hidden */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @name On click */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const StyledButton = styled.button`
@@ -53,15 +51,20 @@ const StyledButton = styled.button`
 			`;
 		}
 	}}} ${(props: ButtonProps) =>
-			(props.onClick || props.onMouseDown) && !props.disabled
-				? css`
-						cursor: pointer;
-					`
-				: ""};
+		props.onClick && !props.disabled
+			? css`
+					cursor: pointer;
+			  `
+			: ""};
 `;
 
 const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
-	return <StyledButton {...props}>{props.text}{props.children}</StyledButton>;
+	return (
+		<StyledButton {...props}>
+			{props.text}
+			{props.children}
+		</StyledButton>
+	);
 };
 
 export default Button;
