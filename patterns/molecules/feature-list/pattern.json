@@ -1,0 +1,13 @@
+{
+  "name": "feature-list",
+  "displayName": "Feature List",
+  "version": "1.0.0",
+  "tags": ["molecules", "feature-list"],
+  "flag": "alpha",
+  "patterns": {
+    "colors": "atoms/colors",
+    "copy": "atoms/copy",
+    "headline": "atoms/headline",
+		"space": "atoms/space"
+  }
+}

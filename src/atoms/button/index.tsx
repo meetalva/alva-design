@@ -26,12 +26,12 @@ const StyledButton = styled.button`
 	${(props: ButtonProps) => {
 		if (props.primary) {
 			return css`
-				background: ${colors.green.toString()};
+				background: ${colors.blue.toString()};
 				border: 1px solid ${colors.greenDark.toString()};
 				color: ${colors.white.toString()};
 				&:hover {
 					background-color: ${colors.greenLight.toString()};
-					border-color: ${colors.green.toString()};
+					border-color: ${colors.blue.toString()};
 				}
 				&:disabled {
 					border-color: ${colors.grey70.toString()};
@@ -41,8 +41,8 @@ const StyledButton = styled.button`
 		} else {
 			return css`
 				background: ${colors.white.toString()};
-				border: 1px solid ${colors.green.toString()};
-				color: ${colors.green.toString()};
+				border: 1px solid ${colors.blue.toString()};
+				color: ${colors.blue.toString()};
 				&:hover {
 					border-color: ${colors.greenLight.toString()};
 					color: ${colors.greenLight.toString()};

@@ -52,7 +52,7 @@ const colors = {
 	}),
 	blue: new Color({
 		displayName: 'Blue',
-		rgb: [0, 112, 214]
+		rgb: [83, 3, 204]
 	}),
 	blueLight: new Color({
 		displayName: 'Blue Light',
