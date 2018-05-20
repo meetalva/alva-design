@@ -9,6 +9,7 @@ export interface DropdownProps {
 	/** @name Text */ text: string;
 
 	/** @hidden */ onToggle(event: React.MouseEvent<HTMLElement>): void;
+	children: React.ReactNode;
 }
 
 interface StyledIconProps {
