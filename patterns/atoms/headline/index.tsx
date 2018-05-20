@@ -9,6 +9,7 @@ export interface HeadlineProps {
 	/** @name Text @default Lorem ipsum */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
+	children?: React.ReactNode;
 }
 
 export enum Level {
@@ -78,32 +79,32 @@ const StyledHeadline = styled.div`
 			: ''};
 `;
 
-const Headline: React.StatelessComponent<HeadlineProps> = props => {
-	let tagName: string = 'h1';
-	switch (props.level) {
-		case Level.H3:
-			tagName = 'h3';
-			break;
-		case Level.H2:
-			tagName = 'h2';
-			break;
-		case Level.H1:
-			tagName = 'h1';
-			break;
-	}
-	const Component: StyledComponentClass<
-		HeadlineProps,
-		HeadlineProps
-	> = StyledHeadline.withComponent(tagName as keyof JSX.IntrinsicElements);
+type HeadlineComponent = StyledComponentClass<HeadlineProps, HeadlineProps>;
 
-	const { text, children } = props;
+const Headline: React.StatelessComponent<HeadlineProps> = props => {
+	const Component: HeadlineComponent = getComponent(props.level);
 
 	return (
 		<Component {...props}>
-			{text}
-			{children}
+			{props.children}
 		</Component>
 	);
 };
+
+const getComponent = (level: Level): HeadlineComponent =>  {
+	return StyledHeadline.withComponent(getTagName(level));
+}
+
+const getTagName = (level: Level): 'h1' | 'h2' | 'h3' => {
+	switch (level) {
+		case Level.H3:
+			return 'h3';
+		case Level.H2:
+			return 'h2';
+		case Level.H1:
+		default:
+			return 'h1';
+	}
+}
 
 export default Headline;

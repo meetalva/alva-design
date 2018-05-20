@@ -9,10 +9,11 @@ import { fonts } from "../fonts";
 export interface ButtonProps {
 	/** @name Disabled @default false */ disabled?: boolean;
 	/** @name Primary @default true */ primary?: boolean;
-	/** @name Text @default Click me! */ text?: string;
 
 	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	/** @hidden */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
+
+	children?: React.ReactNode;
 }
 
 const StyledButton = styled.button`
@@ -61,7 +62,7 @@ const StyledButton = styled.button`
 `;
 
 const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
-	return <StyledButton {...props}>{props.text}{props.children}</StyledButton>;
+	return <StyledButton {...props}>{props.children}</StyledButton>;
 };
 
 export default Button;

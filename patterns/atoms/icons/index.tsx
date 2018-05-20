@@ -30,6 +30,7 @@ interface StyledIconProps {
 }
 
 interface IconRegistrySymbolProps {
+	children: React.ReactNode;
 	id: string;
 	size: "small" | "large";
 }

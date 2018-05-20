@@ -10,6 +10,7 @@ export interface LayoutProps {
 	/** @name Direction @default vertical */ direction?: Direction;
 	/** @name Maximum width @default 100% */ maxWidth?: string;
 	/** @name Background color @default transparent */ backgroundColor?: string;
+	children?: React.ReactNode;
 }
 
 const StyledLayout = styled.div`

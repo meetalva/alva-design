@@ -11,6 +11,8 @@ export interface CopyProps {
 	/** @name Text @default Enter some text */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
+
+	children?: React.ReactNode;
 }
 
 interface CopyProxyProps {
