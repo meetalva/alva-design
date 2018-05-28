@@ -63,7 +63,7 @@ const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {
 	return (
 		<StyledLabel>
 			{labelText && (
-				<StyledLabelText tagName="div" size={CopySize.Small} text={labelText} uppercase />
+				<StyledLabelText tagName="div" size={CopySize.Small} uppercase>{labelText}</StyledLabelText>
 			)}
 			<StyledInput
 				type={type}
@@ -74,7 +74,7 @@ const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {
 				errorText={errorText}
 				onChange={handleChange}
 			/>
-			{errorText && <StyledError tagName="div" size={CopySize.Small} text={errorText} />}
+			{errorText && <StyledError tagName="div" size={CopySize.Small}>{errorText}</StyledError>}
 		</StyledLabel>
 	);
 };
