@@ -8,7 +8,6 @@ export interface CopyProps {
 	/** @name Copy Size @default Medium */ size?: Size;
 	/** @name Tag Name @hidden */ tagName?: string;
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
-	/** @name Text @default Enter some text */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
 
@@ -90,7 +89,7 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 
 const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 	const tagName = props.tagName ? props.tagName : 'p';
-	const { className, size, textAlign, color, uppercase, text, children } = props;
+	const { className, size, textAlign, color, uppercase, children } = props;
 	return (
 		<StyledCopy
 			className={className}
@@ -100,7 +99,6 @@ const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
 			color={color}
 			uppercase={uppercase}
 		>
-			{text}
 			{children}
 		</StyledCopy>
 	);
