@@ -6,7 +6,6 @@ export interface HeadlineProps {
 	/** @name CSS class @hidden */ className?: string;
 	/** @name Level @default H1 */ level: Level;
 	/** @name Text align @default Left */ textAlign?: TextAlign;
-	/** @name Text @default Lorem ipsum */ text?: string;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
 	children?: React.ReactNode;
