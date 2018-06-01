@@ -15,7 +15,7 @@ export interface InputProps {
 	/** @name Value @default Lorem Ipsum */ value?: string;
 	/** @name Error Text @default Error Ipsum */ errorText?: string;
 	/** @name Placeholder @default Lorem Ipsum */ placeholder?: string;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
+	/** @name Handle Change @ignore */ handleChange?: React.EventHandler<
 		React.ChangeEvent<HTMLInputElement>
 	>;
 }

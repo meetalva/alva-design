@@ -9,11 +9,11 @@ import Copy from '../copy';
 
 export interface CheckboxProps {
 	/** @name Label Text @default Lorem Ipsum */ labelText?: string;
-	/** @name Name @hidden */ name?: string;
-	/** @name Value @hidden */ value?: string;
+	/** @name Name @ignore */ name?: string;
+	/** @name Value @ignore */ value?: string;
 	/** @name Checked @default false */ checked?: boolean;
 	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
+	/** @name Handle Change @ignore */ handleChange?: React.EventHandler<
 		React.ChangeEvent<HTMLInputElement>
 	>;
 }

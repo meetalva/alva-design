@@ -3,7 +3,7 @@ import styled, { css, StyledComponentClass } from 'styled-components';
 import { fonts } from '../fonts';
 
 export interface HeadlineProps {
-	/** @name CSS class @hidden */ className?: string;
+	/** @name CSS class @ignore */ className?: string;
 	/** @name Level @default H1 */ level: Level;
 	/** @name Text align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;

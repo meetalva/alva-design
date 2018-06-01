@@ -4,9 +4,9 @@ import styled, { css, StyledComponentClass } from 'styled-components';
 import { fonts } from '../fonts';
 
 export interface CopyProps {
-	/** @name CSS Class @hidden */ className?: string;
+	/** @name CSS Class @ignore */ className?: string;
 	/** @name Copy Size @default Medium */ size?: Size;
-	/** @name Tag Name @hidden */ tagName?: string;
+	/** @name Tag Name @ignore */ tagName?: string;
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;

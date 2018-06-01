@@ -10,8 +10,8 @@ export interface ButtonProps {
 	/** @name Disabled @default false */ disabled?: boolean;
 	/** @name Primary @default true */ primary?: boolean;
 
-	/** @hidden */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	/** @hidden */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @ignore */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @ignore */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
 
 	children?: React.ReactNode;
 }

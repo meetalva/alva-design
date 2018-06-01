@@ -13,7 +13,7 @@ export interface RadioProps {
 	/** @name Value @default value */ value?: string;
 	/** @name Checked @default false */ checked?: boolean;
 	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Handle Change @hidden */ handleChange?: React.EventHandler<
+	/** @name Handle Change @ignore */ handleChange?: React.EventHandler<
 		React.ChangeEvent<HTMLInputElement>
 	>;
 }

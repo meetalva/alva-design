@@ -8,7 +8,7 @@ export interface DropdownProps {
 	/** @name Open */ open: boolean;
 	/** @name Text */ text: string;
 
-	/** @hidden */ onToggle(event: React.MouseEvent<HTMLElement>): void;
+	/** @ignore */ onToggle(event: React.MouseEvent<HTMLElement>): void;
 	children: React.ReactNode;
 }
 
