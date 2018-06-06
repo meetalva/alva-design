@@ -5,7 +5,6 @@ import colors from "../../atoms/colors";
 export interface TeaserProps {
 	/** @name Headline*/ headline: React.ReactNode;
 	/** @name Button */ button: React.ReactNode;
-	/** @ignore */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const StyledTeaser = styled.div`
