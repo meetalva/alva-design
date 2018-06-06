@@ -3,8 +3,8 @@ import styled from "styled-components";
 import colors from "../../atoms/colors";
 
 export interface TeaserProps {
-	/** @name Headline text @default Headline */ headline: React.ReactNode;
-	/** @name Button label @default Button */ button: React.ReactNode;
+	/** @name Headline*/ headline: React.ReactNode;
+	/** @name Button */ button: React.ReactNode;
 	/** @ignore */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
