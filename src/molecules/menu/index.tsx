@@ -16,11 +16,15 @@ const StyledMenu = styled.div`
 	color: ${colors.white.toString()};
 `;
 
+const StyledMenuIcon = styled(MenuIcon) `
+	margin-left: 50px;
+`;
+
 const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	return (
 		<StyledMenu>
 			{props.children}
-			<MenuIcon />
+			<StyledMenuIcon />
 		</StyledMenu>
 	);
 };
