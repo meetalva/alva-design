@@ -26,12 +26,10 @@ const StyledButton = styled.button`
 	${(props: ButtonProps) => {
 		if (props.primary) {
 			return css`
-				background: ${colors.blue.toString()};
-				border: 1px solid ${colors.greenDark.toString()};
+				background: ${colors.pink.toString()};
 				color: ${colors.white.toString()};
 				&:hover {
-					background-color: ${colors.greenLight.toString()};
-					border-color: ${colors.blue.toString()};
+					background-color: ${colors.pinkLight.toString()};
 				}
 				&:disabled {
 					border-color: ${colors.grey70.toString()};
@@ -40,12 +38,12 @@ const StyledButton = styled.button`
 			`;
 		} else {
 			return css`
-				background: ${colors.white.toString()};
-				border: 1px solid ${colors.blue.toString()};
-				color: ${colors.blue.toString()};
+				background: transparent;
+				border: 1px solid ${colors.pink.toString()};
+				color: ${colors.pink.toString()};
 				&:hover {
-					border-color: ${colors.greenLight.toString()};
-					color: ${colors.greenLight.toString()};
+					border-color: ${colors.pinkLight.toString()};
+					color: ${colors.pinkLight.toString()};
 				}
 				&:disabled {
 					border-color: ${colors.grey70.toString()};
