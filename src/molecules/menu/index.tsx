@@ -17,7 +17,11 @@ const StyledMenu = styled.div`
 `;
 
 const StyledMenuIcon = styled(MenuIcon) `
-	margin-left: 50px;
+	display: none;
+
+	@media screen and (max-width: 720px){
+		display: block;
+	}
 `;
 
 const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
