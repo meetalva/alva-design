@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import colors from "../../atoms/colors";
-import Copy, {Size} from "../../atoms/copy";
+import Copy from "../../atoms/copy";
 
 export interface HeaderProps {
 	/** @name Copy */ linkName?: string;

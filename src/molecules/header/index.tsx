@@ -1,11 +1,16 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import colors from "../../atoms/colors";
 import Image from "../../atoms/image";
 import Menu from "../../molecules/menu";
 
+/**
+ * @name Header
+ */
 export interface HeaderProps {
 	/** @asset @name Logo */ logo?: string;
+	/** @name Sticky @default false */ sticky?: boolean;
+
 	children?: React.ReactNode;
 }
 
@@ -19,6 +24,17 @@ const StyledHeader = styled.div`
 	color: ${colors.white.toString()};
 	text-align: left;
 	width: 100%;
+
+	${(props: HeaderProps) => {
+		if (props.sticky) {
+			return css`
+				position: sticky;
+				top: -1px;
+			`;
+		} else {
+			return css``;
+		}
+	}}}
 `;
 
 const StyledImage = styled(Image)`
@@ -28,7 +44,7 @@ const StyledImage = styled(Image)`
 
 const Header: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	return (
-		<StyledHeader>
+		<StyledHeader {...props}>
 			<StyledImage size="50px" src={props.logo} />
 				<Menu>
 					{props.children}
