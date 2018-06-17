@@ -23,13 +23,13 @@ const StyledHeader = styled.div`
 
 const StyledImage = styled(Image)`
 	display: block;
-	height: 40px;
+	height: 50px;
 `;
 
 const Header: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	return (
 		<StyledHeader>
-			<StyledImage size="40px" src={props.logo} />
+			<StyledImage size="50px" src={props.logo} />
 				<Menu>
 					{props.children}
 				</Menu>

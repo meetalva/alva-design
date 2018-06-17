@@ -11,7 +11,7 @@ export interface HeaderProps {
 
 const StyledMenuItem = styled(Copy)`
 	color: ${colors.white.toString()};
-	margin-left: 50px;
+	margin-left: 32px;
 	&:first-of-type {
 		margin: 0;
 	}
