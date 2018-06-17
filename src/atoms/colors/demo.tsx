@@ -20,6 +20,8 @@ export default function ColorDemo() {
 			<StyledList>
 				<ColorSwatch color={colors.pink} />
 				<ColorSwatch color={colors.pinkLight} />
+				<ColorSwatch color={colors.violet} />
+				<ColorSwatch color={colors.violetDark} />
 			</StyledList>
 			<StyledList>
 				<ColorSwatch color={colors.greenDark} />

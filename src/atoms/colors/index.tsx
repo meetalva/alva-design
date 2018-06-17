@@ -93,6 +93,14 @@ const colors = {
 	pinkLight: new Color ({
 		displayName: 'Light Pink',
 		rgb: [236, 52, 126]
+	}),
+	violet: new Color({
+		displayName: 'Violet',
+		rgb: [88, 2, 205]
+	}),
+	violetDark: new Color ({
+		displayName: 'Dark Violet',
+		rgb: [81, 0, 77]
 	})
 };
 
