@@ -4,10 +4,12 @@ import MenuElement from "../../molecules/menu-element";
 
 const HeaderDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
-		<Header>
-			<MenuElement linkName="foo" />
-			<MenuElement linkName="foo" />
-			<MenuElement linkName="foo" />
+		<Header logo="/api/static/alva-small.png">
+			<MenuElement linkName="Story" />
+			<MenuElement linkName="Learn" />
+			<MenuElement linkName="API" />
+			<MenuElement linkName="Github" />
+			<MenuElement linkName="Twitter" />
 		</Header>
 	);
 };
