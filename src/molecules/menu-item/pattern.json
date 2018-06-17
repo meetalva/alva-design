@@ -1,8 +1,8 @@
 {
-  "name": "menu-element",
-  "displayName": "Menu Element",
+  "name": "menu-item",
+  "displayName": "Menu Item",
   "version": "1.0.0",
-  "tags": ["molecules", "menu element"],
+  "tags": ["molecules", "menu item"],
   "flag": "alpha",
   "patterns": {
     "colors": "atoms/colors",
