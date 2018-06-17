@@ -48,7 +48,7 @@ export class Color {
 const colors = {
 	black: new Color({
 		displayName: 'Black',
-		rgb: [51, 51, 51]
+		rgb: [0, 0, 0]
 	}),
 	blue: new Color({
 		displayName: 'Blue',
@@ -69,6 +69,10 @@ const colors = {
 	greenLight: new Color({
 		displayName: 'Green Light',
 		rgb: [123, 226, 195]
+	}),
+	grey30: new Color({
+		displayName: 'Black',
+		rgb: [51, 51, 51]
 	}),
 	grey70: new Color({
 		displayName: 'Grey 70',
