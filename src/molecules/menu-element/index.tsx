@@ -22,7 +22,7 @@ const StyledMenuItem = styled(Copy)`
 
 const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	return (
-		<StyledMenuItem size={Size.Small}>
+		<StyledMenuItem>
 			{props.linkName}
 		</StyledMenuItem>
 	);

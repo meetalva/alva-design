@@ -24,7 +24,7 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 			<Headline level={props.headlineLevel} textAlign={props.headlineAlign}>
 				{props.headlineText}
 			</Headline>
-			<Copy size={CopySize.Medium}>{props.copyText}</Copy>
+			<Copy size={CopySize.Default}>{props.copyText}</Copy>
 		</StyledHero>
 	);
 };

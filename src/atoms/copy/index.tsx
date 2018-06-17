@@ -5,7 +5,7 @@ import { fonts } from '../fonts';
 
 export interface CopyProps {
 	/** @name CSS Class @ignore */ className?: string;
-	/** @name Copy Size @default Medium */ size?: Size;
+	/** @name Copy Size @default Default */ size?: Size;
 	/** @name Tag Name @ignore */ tagName?: string;
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;
@@ -20,8 +20,9 @@ interface CopyProxyProps {
 }
 
 export enum Size {
+	Default,
 	Small,
-	Medium
+	Large
 }
 
 export enum TextAlign {
@@ -47,11 +48,16 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 		switch (props.size) {
 			case Size.Small:
 				return css`
-					font-size: 14px;
+					font-size: 12px;
 					line-height: 18px;
 				`;
-			case Size.Medium:
+			case Size.Default:
 			default:
+				return css`
+					font-size: 16px;
+					line-height: 22px;
+				`;
+			case Size.Large:
 				return css`
 					font-size: 24px;
 					line-height: 36px;
