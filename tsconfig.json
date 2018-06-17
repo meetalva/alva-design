@@ -9,7 +9,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
-		"noImplicitAny": true,
+		"noImplicitAny": false,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
 		"noImplicitUseStrict": false,
@@ -20,7 +20,7 @@
 		"pretty": true,
 		"removeComments": false,
 		"sourceMap": true,
-		"strictNullChecks": true,
+		"strictNullChecks": false,
 		"target": "es5",
 		"watch": false,
 		"jsx": "react"
