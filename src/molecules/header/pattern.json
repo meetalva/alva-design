@@ -2,7 +2,7 @@
   "name": "header",
   "displayName": "Header",
   "version": "1.0.0",
-  "tags": ["molecules", "header"],
+  "tags": ["molecules", "header", "navigation", "menu"],
   "flag": "alpha",
   "patterns": {
     "colors": "atoms/colors",
