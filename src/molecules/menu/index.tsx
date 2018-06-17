@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import colors from "../../atoms/colors";
-import { Menu as MenuIcon } from "react-feather";
+var MenuIcon = require('react-feather/dist/icons/menu').default;
 
 export interface HeaderProps {
 	children?: React.ReactNode;
