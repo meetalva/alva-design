@@ -85,6 +85,14 @@ const colors = {
 	red: new Color({
 		displayName: 'Red',
 		rgb: [215, 0, 82]
+	}),
+	pink: new Color({
+		displayName: 'Pink',
+		rgb: [236, 3, 97]
+	}),
+	pinkLight: new Color ({
+		displayName: 'Light Pink',
+		rgb: [236, 52, 126]
 	})
 };
 
