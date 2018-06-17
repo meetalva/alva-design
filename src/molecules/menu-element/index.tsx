@@ -15,6 +15,9 @@ const StyledMenuItem = styled(Copy)`
 	&:first-of-type {
 		margin: 0;
 	}
+	@media screen and (max-width: 720px) {
+		display: none;
+	}
 `;
 
 const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
