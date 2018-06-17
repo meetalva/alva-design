@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Header from './index';
-import Copy, {Size as CopySize} from "../../atoms/copy";
+import MenuElement from "../../molecules/menu-element";
 
 const HeaderDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<Header>
-			<Copy size={CopySize.Small}>foo</Copy>
-			<Copy size={CopySize.Small}>bar</Copy>
-			<Copy size={CopySize.Small}>la</Copy>
+			<MenuElement linkName="foo" />
+			<MenuElement linkName="foo" />
+			<MenuElement linkName="foo" />
 		</Header>
 	);
 };
