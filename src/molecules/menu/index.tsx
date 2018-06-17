@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import colors from "../../atoms/colors";
-import { Menu } from "react-feather";
+import { Menu as MenuIcon } from "react-feather";
 
 export interface HeaderProps {
 	children?: React.ReactNode;
@@ -20,7 +20,7 @@ const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	return (
 		<StyledMenu>
 			{props.children}
-			<Menu />
+			<MenuIcon />
 		</StyledMenu>
 	);
 };

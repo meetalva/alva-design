@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Color } from "../colors";
 
 export enum IconName {
-	ArrowDown,
-	Menu
+	ArrowDown
 }
 export interface IconRegistryProps {
 	names: typeof IconName;
@@ -40,10 +39,6 @@ const icons: { readonly [key: string]: JSX.Element[][] | JSX.Element[] } = {
 	[IconName.ArrowDown]: [
 		[<path key="arrow-down" d="M12 15.5l6.06217783-7H5.93782217" />],
 		[<path key="arrow-down" d="M24 31l12.12435565-14h-24.2487113" />]
-	],
-	[IconName.Menu]: [
-		[<g key="menu"><rect x="2" y="7" width="20" height="2"></rect><rect x="2" y="11" width="20" height="2"></rect><rect x="2" y="15" width="20" height="2"></rect></g>],
-		[<g key="menu"><rect x="2" y="7" width="20" height="2"></rect><rect x="2" y="11" width="20" height="2"></rect><rect x="2" y="15" width="20" height="2"></rect></g>]
 	]
 };
 
