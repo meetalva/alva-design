@@ -12,9 +12,12 @@ export interface HeaderProps {
 const StyledMenuItem = styled(Copy)`
 	color: ${colors.white.toString()};
 	margin-left: 32px;
+	cursor: pointer;
+
 	&:first-of-type {
 		margin: 0;
 	}
+
 	@media screen and (max-width: 720px) {
 		display: none;
 	}
