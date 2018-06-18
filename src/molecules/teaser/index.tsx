@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import colors from "../../atoms/colors";
+import { Color } from "../../atoms/colors";
 
 export interface TeaserProps {
 	/** @name Headline*/ headline: React.ReactNode;
@@ -9,8 +9,8 @@ export interface TeaserProps {
 
 const StyledTeaser = styled.div`
 	padding: 30px;
-	background: ${colors.white.toString()};
-	border: 1px solid ${colors.grey90.toString()};
+	background: ${Color.White};
+	border: 1px solid ${Color.Grey90};
 `;
 
 const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {

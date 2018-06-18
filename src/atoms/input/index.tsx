@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Copy, { Size as CopySize } from '../copy';
-import colors from '../colors';
+import { Color } from '../colors';
 
 /*
 * @name Input
@@ -28,7 +28,7 @@ export enum Type {
 
 const StyledLabel = styled.label`
 	display: block;
-	color: ${colors.black.toString()};
+	color: ${Color.Black};
 `;
 
 const StyledLabelText = styled(Copy)`
@@ -39,23 +39,23 @@ const StyledInput = styled.input`
 	box-sizing: border-box;
 	width: 100%;
 	padding: 12px;
-	border: 1px solid ${colors.grey70.toString()};
+	border: 1px solid ${Color.Grey70};
 	border-radius: 3px;
 	font-size: 15px;
-	color: ${colors.black.toString()};
+	color: ${Color.Black};
 
-	${(props: InputProps) => (props.errorText ? `border-color: ${colors.red.toString()};` : '')};
+	${(props: InputProps) => (props.errorText ? `border-color: ${Color.Red};` : '')};
 
 	:focus {
-		border-color: ${colors.blueLight.toString()};
-		box-shadow: 0px 0px 2px 0px ${colors.blueLight.toString()};
+		border-color: ${Color.BlueLight};
+		box-shadow: 0px 0px 2px 0px ${Color.BlueLight};
 		outline: 0;
 	}
 `;
 
 const StyledError = styled(Copy)`
 	padding: 9px 3px 0;
-	color: ${colors.red.toString()};
+	color: ${Color.Red};
 `;
 
 const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {

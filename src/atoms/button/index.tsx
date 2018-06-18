@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import colors from "../colors";
+import { Color } from "../colors";
 import { fonts } from "../fonts";
 
 /**
@@ -26,30 +26,30 @@ const StyledButton = styled.button`
 	${(props: ButtonProps) => {
 		if (props.primary) {
 			return css`
-				background: ${colors.green.toString()};
-				border: 1px solid ${colors.greenDark.toString()};
-				color: ${colors.white.toString()};
+				background: ${Color.Green};
+				border: 1px solid ${Color.GreenDark};
+				color: ${Color.White};
 				&:hover {
-					background-color: ${colors.greenLight.toString()};
-					border-color: ${colors.green.toString()};
+					background-color: ${Color.GreenLight};
+					border-color: ${Color.Green};
 				}
 				&:disabled {
-					border-color: ${colors.grey70.toString()};
-					background-color: ${colors.grey70.toString()};
+					border-color: ${Color.Grey70};
+					background-color: ${Color.Grey70};
 				}
 			`;
 		} else {
 			return css`
-				background: ${colors.white.toString()};
-				border: 1px solid ${colors.green.toString()};
-				color: ${colors.green.toString()};
+				background: ${Color.White};
+				border: 1px solid ${Color.Green};
+				color: ${Color.Green};
 				&:hover {
-					border-color: ${colors.greenLight.toString()};
-					color: ${colors.greenLight.toString()};
+					border-color: ${Color.GreenLight};
+					color: ${Color.GreenLight};
 				}
 				&:disabled {
-					border-color: ${colors.grey70.toString()};
-					color: ${colors.grey70.toString()};
+					border-color: ${Color.Grey70};
+					color: ${Color.Grey70};
 				}
 			`;
 		}
