@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Color } from "../../atoms/colors";
-import Copy, { Size as CopySize } from "../../atoms/copy";
+import Copy from "../../atoms/copy";
 import Headline, { Level, TextAlign } from "../../atoms/headline";
 
 export interface TeaserProps {
@@ -24,7 +24,7 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 			<Headline level={props.headlineLevel} textAlign={props.headlineAlign}>
 				{props.headlineText}
 			</Headline>
-			<Copy size={CopySize.Medium}>{props.copyText}</Copy>
+			<Copy>{props.copyText}</Copy>
 		</StyledHero>
 	);
 };
