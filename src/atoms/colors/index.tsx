@@ -8,5 +8,9 @@ export enum Color {
 	Black = 'rgb(51, 51, 51)',
 	Grey70 = 'rgb(179, 179, 179)',
 	Grey90 = 'rgb(227, 227, 227)',
-	White = 'rgb(255, 255, 255)'
+	White = 'rgb(255, 255, 255)',
+	Pink = 'rgb(236, 3, 97)',
+	PinkLight = 'rgb(236, 52, 126)',
+	VioletDark = 'rgb(81, 0, 77)',
+	Violet = 'rgb(88, 2, 205)'
 }
