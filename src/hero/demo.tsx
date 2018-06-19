@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Level } from "../../atoms/headline";
+import { Level } from "../headline";
 import Hero from "./index";
 
 export default function ButtonDemo() {

@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Color } from "../../atoms/colors";
-import Copy, { Size as CopySize } from "../../atoms/copy";
-import Headline, { Level } from "../../atoms/headline";
+import { Color } from "../colors";
+import Copy, { Size as CopySize } from "../copy";
+import Headline, { Level } from "../headline";
 
 export interface FeatureProps {
 	/** @name Headline level */ headlineLevel: Level;

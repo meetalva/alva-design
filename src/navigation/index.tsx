@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import { Color } from "../../atoms/colors";
-import Image from "../../atoms/image";
+import { Color } from "../colors";
+import Image from "../image";
 var MenuIcon = require('react-feather/dist/icons/menu').default;
 
 /**

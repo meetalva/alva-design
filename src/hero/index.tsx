@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Color } from "../../atoms/colors";
-import Copy from "../../atoms/copy";
-import Headline, { Level, TextAlign } from "../../atoms/headline";
+import { Color } from "../colors";
+import Copy from "../copy";
+import Headline, { Level, TextAlign } from "../headline";
 
 export interface TeaserProps {
 	/** @name Copy text */ copyText: string;

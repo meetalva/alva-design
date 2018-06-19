@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Color } from "../../atoms/colors";
+import { Color } from "../colors";
 
 export interface TeaserProps {
 	/** @name Headline*/ headline: React.ReactNode;
