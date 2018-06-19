@@ -2,19 +2,19 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import colors from "../../atoms/colors";
 import Image from "../../atoms/image";
-import Menu from "../../molecules/menu";
+var MenuIcon = require('react-feather/dist/icons/menu').default;
 
 /**
- * @name Header
+ * @name Navigation
  */
-export interface HeaderProps {
+export interface NavigationProps {
 	/** @asset @name Logo */ logo?: string;
 	/** @name Sticky @default false */ sticky?: boolean;
 
 	children?: React.ReactNode;
 }
 
-const StyledHeader = styled.div`
+const StyledNavigation = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -25,7 +25,7 @@ const StyledHeader = styled.div`
 	text-align: left;
 	width: 100%;
 
-	${(props: HeaderProps) => {
+	${(props: NavigationProps) => {
 		if (props.sticky) {
 			return css`
 				position: sticky;
@@ -42,15 +42,28 @@ const StyledImage = styled(Image)`
 	height: 50px;
 `;
 
-const Header: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
+const StyledMenu = styled.div`
+	display: flex;
+`;
+
+const StyledMenuIcon = styled(MenuIcon) `
+	display: none;
+
+	@media screen and (max-width: 720px){
+		display: block;
+	}
+`;
+
+const Navigation: React.StatelessComponent<NavigationProps> = (props): JSX.Element => {
 	return (
-		<StyledHeader {...props}>
+		<StyledNavigation {...props}>
 			<StyledImage size="50px" src={props.logo} />
-				<Menu>
+				<StyledMenu>
 					{props.children}
-				</Menu>
-		</StyledHeader>
+					<StyledMenuIcon />
+				</StyledMenu>
+		</StyledNavigation>
 	);
 };
 
-export default Header;
+export default Navigation;
