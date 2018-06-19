@@ -15,7 +15,6 @@ const StyledFeature = styled.div`
 	padding: 60px 120px 60px 30px;
 	box-sizing: border-box;
 	color: ${colors.black.toString()};
-	text-align: left;
 	width: 50%;
 `;
 
