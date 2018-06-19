@@ -27,6 +27,7 @@ const StyledNavigation = styled.div`
 		if (props.sticky) {
 			return css`
 				position: sticky;
+				top: 0;
 			`;
 		} else {
 			return css``;
