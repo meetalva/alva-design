@@ -18,6 +18,17 @@ export default function ColorDemo() {
 	return (
 		<div>
 			<StyledList>
+				<ColorSwatch color={colors.pink} />
+				<ColorSwatch color={colors.pinkLight} />
+				<ColorSwatch color={colors.violet} />
+				<ColorSwatch color={colors.violetDark} />
+			</StyledList>
+			<StyledList>
+				<ColorSwatch color={colors.greenDark} />
+				<ColorSwatch color={colors.green} />
+				<ColorSwatch color={colors.greenLight} />
+			</StyledList>
+			<StyledList>
 				<ColorSwatch color={colors.black} />
 				<ColorSwatch color={colors.blue} />
 				<ColorSwatch color={colors.blueLight} />
@@ -25,11 +36,6 @@ export default function ColorDemo() {
 				<ColorSwatch color={colors.grey70} />
 				<ColorSwatch color={colors.grey90} />
 				<ColorSwatch color={colors.white} />
-			</StyledList>
-			<StyledList>
-				<ColorSwatch color={colors.greenDark} />
-				<ColorSwatch color={colors.green} />
-				<ColorSwatch color={colors.greenLight} />
 			</StyledList>
 		</div>
 	);
