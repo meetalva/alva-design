@@ -22,14 +22,11 @@ const StyledNavigation = styled.div`
 	box-sizing: border-box;
 	background-color: ${colors.black.toString()};
 	color: ${colors.white.toString()};
-	text-align: left;
-	width: 100%;
 
 	${(props: NavigationProps) => {
 		if (props.sticky) {
 			return css`
 				position: sticky;
-				top: -1px;
 			`;
 		} else {
 			return css``;
