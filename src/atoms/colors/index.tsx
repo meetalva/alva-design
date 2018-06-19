@@ -52,7 +52,7 @@ const colors = {
 	}),
 	blue: new Color({
 		displayName: 'Blue',
-		rgb: [0, 112, 214]
+		rgb: [83, 3, 204]
 	}),
 	blueLight: new Color({
 		displayName: 'Blue Light',
@@ -85,6 +85,22 @@ const colors = {
 	red: new Color({
 		displayName: 'Red',
 		rgb: [215, 0, 82]
+	}),
+	pink: new Color({
+		displayName: 'Pink',
+		rgb: [236, 3, 97]
+	}),
+	pinkLight: new Color ({
+		displayName: 'Light Pink',
+		rgb: [236, 52, 126]
+	}),
+	violet: new Color({
+		displayName: 'Violet',
+		rgb: [88, 2, 205]
+	}),
+	violetDark: new Color ({
+		displayName: 'Dark Violet',
+		rgb: [81, 0, 77]
 	})
 };
 

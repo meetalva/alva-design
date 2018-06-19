@@ -47,14 +47,14 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 		switch (props.size) {
 			case Size.Small:
 				return css`
-					font-size: 12px;
-					line-height: 15px;
+					font-size: 14px;
+					line-height: 18px;
 				`;
 			case Size.Medium:
 			default:
 				return css`
-					font-size: 18px;
-					line-height: 21px;
+					font-size: 24px;
+					line-height: 36px;
 				`;
 		}
 	}};
