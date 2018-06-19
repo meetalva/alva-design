@@ -20,8 +20,8 @@ interface CopyProxyProps {
 }
 
 export enum Size {
-	Default,
 	Small,
+	Medium,
 	Large
 }
 
@@ -51,7 +51,7 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 					font-size: 12px;
 					line-height: 18px;
 				`;
-			case Size.Default:
+			case Size.Medium:
 			default:
 				return css`
 					font-size: 16px;
