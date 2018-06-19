@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Navigation from './index';
-import MenuItem from "../../molecules/menu-item";
+import MenuItem from "../menu-item";
 
 const NavigationDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (

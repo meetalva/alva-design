@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import colors from "../../atoms/colors";
-import Copy from "../../atoms/copy";
+import colors from "../colors";
+import Copy from "../copy";
 
 export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;

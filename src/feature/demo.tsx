@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Level } from "../../atoms/headline";
+import { Level } from "../headline";
 import Feature from './index';
 
 const FeatureDemo: React.StatelessComponent<void> = (): JSX.Element => {

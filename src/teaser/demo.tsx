@@ -1,5 +1,5 @@
-import Button from "../../atoms/button";
-import Headline, { Level } from "../../atoms/headline";
+import Button from "../button";
+import Headline, { Level } from "../headline";
 import * as React from "react";
 import Teaser from "./index";
 
