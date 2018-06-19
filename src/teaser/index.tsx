@@ -1,10 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-<<<<<<< HEAD:src/teaser/index.tsx
-import colors from "../colors";
-=======
-import { Color } from "../../atoms/colors";
->>>>>>> master:src/molecules/teaser/index.tsx
+import { Color } from "../colors";
 
 export interface TeaserProps {
 	/** @name Headline*/ headline: React.ReactNode;
