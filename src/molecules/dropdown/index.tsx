@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import colors from "../../atoms/colors";
+import { Color } from "../../atoms/colors";
 import { fonts } from "../../atoms/fonts";
 import { Icon, IconName, IconSize } from "../../atoms/icons";
 
@@ -24,11 +24,11 @@ const StyledDropdown = styled.div`
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 400px;
-	border: 1px solid ${colors.grey70.toString()};
+	border: 1px solid ${Color.Grey70};
 	border-radius: 3px;
 	cursor: pointer;
-	background: ${colors.white.toString()};
-	color: ${colors.grey70.toString()};
+	background: ${Color.White};
+	color: ${Color.Grey70};
 	font-family: ${fonts().NORMAL_FONT};
 	font-size: 16px;
 	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
@@ -42,7 +42,7 @@ const StyledText = styled.div`
 `;
 
 const StyledIcon = styled(Icon)`
-	fill: ${colors.greenDark.toString()};
+	fill: ${Color.GreenDark};
 	${(props: StyledIconProps) =>
 		props.open ? "transform: rotate(180deg);" : "transform: rotate(0deg);"};
 `;

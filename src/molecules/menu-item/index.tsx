@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import colors from "../../atoms/colors";
+import { Color } from "../../atoms/colors";
 import Copy from "../../atoms/copy";
 
 export interface MenuItemProps {
@@ -10,7 +10,7 @@ export interface MenuItemProps {
 }
 
 const StyledMenuItem = styled(Copy)`
-	color: ${colors.white.toString()};
+	color: ${Color.White};
 	margin-left: 32px;
 	cursor: pointer;
 

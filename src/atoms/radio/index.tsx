@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import colors from '../colors';
+import { Color } from '../colors';
 import Copy from '../copy';
 
 /**
@@ -35,9 +35,9 @@ const StyledRadioInput = styled.input`
 const StyledLabel = styled.label`
 	display: flex;
 	align-items: center;
-	color: ${colors.black.toString()};
+	color: ${Color.Black};
 
-	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : '')};
+	${(props: StyledLabelProps) => (props.disabled ? `color: ${Color.Grey90};` : '')};
 `;
 
 const StyledRadio = styled.div`
@@ -46,11 +46,11 @@ const StyledRadio = styled.div`
 	justify-content: center;
 	width: 34px;
 	height: 34px;
-	border: 1px solid ${colors.grey70.toString()};
+	border: 1px solid ${Color.Grey70};
 	border-radius: 50%;
 
 	${(props: StyledRadioProps) =>
-		props.disabled ? `border-color: ${colors.grey90.toString()};` : ''};
+		props.disabled ? `border-color: ${Color.Grey90};` : ''};
 
 	/* RadioIndicator */
 	::before {
@@ -59,7 +59,7 @@ const StyledRadio = styled.div`
 		width: 18px;
 		height: 18px;
 		border-radius: 50%;
-		background: ${colors.green.toString()};
+		background: ${Color.Green};
 	}
 `;
 

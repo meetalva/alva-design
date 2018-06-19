@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import colors from "../../atoms/colors";
+import { Color } from "../../atoms/colors";
 import Image from "../../atoms/image";
 var MenuIcon = require('react-feather/dist/icons/menu').default;
 
@@ -20,8 +20,8 @@ const StyledNavigation = styled.div`
 	align-items: center;
 	padding: 20px;
 	box-sizing: border-box;
-	background-color: ${colors.black.toString()};
-	color: ${colors.white.toString()};
+	background-color: ${Color.Black};
+	color: ${Color.White};
 
 	${(props: NavigationProps) => {
 		if (props.sticky) {

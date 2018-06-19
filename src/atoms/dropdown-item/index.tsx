@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import colors from '../colors';
+import { Color } from '../colors';
 import {fonts} from '../fonts';
 
 export interface DropdownItemProps {
@@ -10,11 +10,11 @@ export interface DropdownItemProps {
 const StyledDropdownItem = styled.div`
 	display: flex;
 	padding: 17px 22px;
-	border-top: 1px solid ${colors.grey70.toString() };
+	border-top: 1px solid ${Color.Grey70.toString() };
 	font-family: ${fonts().NORMAL_FONT};
 
 	&:hover {
-		color: ${colors.black.toString()};
+		color: ${Color.Black.toString()};
 	}
 `;
 

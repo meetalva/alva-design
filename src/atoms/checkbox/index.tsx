@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import colors from '../colors';
+import { Color } from '../colors';
 import Copy from '../copy';
 
 /**
@@ -34,9 +34,9 @@ interface StyledCheckmarkProps {
 const StyledLabel = styled.label`
 	display: flex;
 	align-items: center;
-	color: ${colors.black.toString()};
+	color: ${Color.Black};
 
-	${(props: StyledLabelProps) => (props.disabled ? `color: ${colors.grey90.toString()};` : '')};
+	${(props: StyledLabelProps) => (props.disabled ? `color: ${Color.Grey90};` : '')};
 `;
 
 const StyledCheckboxInput = styled.input`
@@ -50,17 +50,17 @@ const StyledCheckbox = styled.div`
 	justify-content: center;
 	width: 34px;
 	height: 34px;
-	border: 1px solid ${colors.grey70.toString()};
+	border: 1px solid ${Color.Grey70};
 	border-radius: 3px;
 
 	${(props: StyledCheckboxProps) =>
-		props.disabled ? `border-color: ${colors.grey90.toString()};` : ''};
+		props.disabled ? `border-color: ${Color.Grey90};` : ''};
 `;
 
 const SyledCheckmark = styled.svg`
 	${(props: StyledCheckmarkProps) => (props.checked ? 'display: block;' : 'display: none;')};
 	${(props: StyledCheckmarkProps) =>
-		props.disabled ? `fill: ${colors.grey90.toString()};` : `fill: ${colors.green.toString()};`};
+		props.disabled ? `fill: ${Color.Grey90};` : `fill: ${Color.Green};`};
 `;
 
 const StyledLabelText = styled(Copy)`
