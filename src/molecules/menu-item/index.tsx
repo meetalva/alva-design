@@ -3,7 +3,7 @@ import styled from "styled-components";
 import colors from "../../atoms/colors";
 import Copy from "../../atoms/copy";
 
-export interface HeaderProps {
+export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;
 	/** @name Link */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	/** @ignore */ onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
@@ -23,7 +23,7 @@ const StyledMenuItem = styled(Copy)`
 	}
 `;
 
-const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
+const MenuItem: React.StatelessComponent<MenuItemProps> = (props): JSX.Element => {
 	return (
 		<StyledMenuItem>
 			{props.linkName}
@@ -31,4 +31,4 @@ const Menu: React.StatelessComponent<HeaderProps> = (props): JSX.Element => {
 	);
 };
 
-export default Menu;
+export default MenuItem;
