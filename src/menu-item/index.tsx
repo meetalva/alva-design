@@ -1,7 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
+<<<<<<< HEAD:src/menu-item/index.tsx
 import colors from "../colors";
 import Copy from "../copy";
+=======
+import { Color } from "../../atoms/colors";
+import Copy from "../../atoms/copy";
+>>>>>>> master:src/molecules/menu-item/index.tsx
 
 export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;
@@ -10,7 +15,7 @@ export interface MenuItemProps {
 }
 
 const StyledMenuItem = styled(Copy)`
-	color: ${colors.white.toString()};
+	color: ${Color.White};
 	margin-left: 32px;
 	cursor: pointer;
 

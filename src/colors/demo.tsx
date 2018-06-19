@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import colors, { Color, RGB } from './index';
+import { Color } from './index';
 
 interface ColorSwatchProps {
 	color: Color;
@@ -18,24 +18,18 @@ export default function ColorDemo() {
 	return (
 		<div>
 			<StyledList>
-				<ColorSwatch color={colors.pink} />
-				<ColorSwatch color={colors.pinkLight} />
-				<ColorSwatch color={colors.violet} />
-				<ColorSwatch color={colors.violetDark} />
+				<ColorSwatch color={Color.Black} />
+				<ColorSwatch color={Color.Blue} />
+				<ColorSwatch color={Color.BlueLight} />
+				<ColorSwatch color={Color.Red} />
+				<ColorSwatch color={Color.Grey70} />
+				<ColorSwatch color={Color.Grey90} />
+				<ColorSwatch color={Color.White} />
 			</StyledList>
 			<StyledList>
-				<ColorSwatch color={colors.greenDark} />
-				<ColorSwatch color={colors.green} />
-				<ColorSwatch color={colors.greenLight} />
-			</StyledList>
-			<StyledList>
-				<ColorSwatch color={colors.black} />
-				<ColorSwatch color={colors.blue} />
-				<ColorSwatch color={colors.blueLight} />
-				<ColorSwatch color={colors.red} />
-				<ColorSwatch color={colors.grey70} />
-				<ColorSwatch color={colors.grey90} />
-				<ColorSwatch color={colors.white} />
+				<ColorSwatch color={Color.GreenDark} />
+				<ColorSwatch color={Color.Green} />
+				<ColorSwatch color={Color.GreenLight} />
 			</StyledList>
 		</div>
 	);
@@ -49,16 +43,12 @@ const InnerStyles = styled.div`
 `;
 
 const ColorSwatch: React.StatelessComponent<ColorSwatchProps> = (props): JSX.Element => {
-	const threshold = 250;
 	const Styles = styled.li`
 		display: flex;
 		margin: 0 48px 48px 0;
-		background: ${props.color.toString('rgb')};
+		background: ${props.color};
 		padding-bottom: 50%;
 		width: 100%;
-		${luminance(props.color.rgb) > threshold
-			? `box-shadow: 0 2px 4px ${colors.grey70.toString()};`
-			: ''} color: ${contrast(props.color.rgb)};
 
 		@media screen and (min-width: 320px) {
 			padding: 0;
@@ -70,30 +60,10 @@ const ColorSwatch: React.StatelessComponent<ColorSwatchProps> = (props): JSX.Ele
 	return (
 		<Styles>
 			<InnerStyles>
-				<div>{props.color.displayName}</div>
 				<div>
-					<div>{props.color.toString('rgb')}</div>
-					<div>{props.color.toString('hex')}</div>
+					<div>{props.color}</div>
 				</div>
 			</InnerStyles>
 		</Styles>
 	);
 };
-
-function contrast(rgb: RGB): string {
-	return isLight(rgb) ? colors.black.toString() : colors.white.toString();
-}
-
-function isLight(rgb: RGB) {
-	const threshold = 100;
-	return luminance(rgb) > threshold;
-}
-
-function luminance(rgb: RGB): number {
-	const [r, g, b] = rgb;
-	const factorR = 0.2126;
-	const factorG = 0.7152;
-	const factorB = 0.0722;
-
-	return factorR * r + factorG * g + factorB * b;
-}

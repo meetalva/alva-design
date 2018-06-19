@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import colors from "../colors";
+import { Color } from "../colors";
 import Copy from "../copy";
 import Headline, { Level, TextAlign } from "../headline";
 
@@ -13,8 +13,8 @@ export interface TeaserProps {
 
 const StyledHero = styled.div`
 	padding: 30px;
-	background: ${colors.blue.toString()};
-	color: ${colors.white.toString()};
+	background: ${Color.Blue};
+	color: ${Color.White};
 	text-align: center;
 `;
 
