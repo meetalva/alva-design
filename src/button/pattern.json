@@ -1,7 +1,7 @@
 {
 	"name": "button",
   "displayName": "Button",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "tags": ["atoms", "button", "link"],
   "flag": "alpha",
   "patterns": {
