@@ -8,7 +8,14 @@ export interface HeadlineProps {
 	/** @name Text align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
+	/** @name Weight @default bold */ fontWeight?: FontWeight;
 	children?: React.ReactNode;
+}
+
+export enum FontWeight {
+	Light,
+	Regular,
+	Bold
 }
 
 export enum Level {
@@ -26,9 +33,26 @@ export enum TextAlign {
 const StyledHeadline = styled.div`
 	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
-	font-weight: 500;
 	color: ${(props: HeadlineProps) => props.color || 'inherit'};
 	line-height: 1.3;
+
+	${(props: HeadlineProps) => {
+		switch (props.fontWeight) {
+			case FontWeight.Light:
+				return css`
+					font-weight: 100;
+				`;
+			case FontWeight.Regular:
+				return css`
+					font-weight: 300;
+				`;
+			case FontWeight.Bold:
+			default:
+				return css`
+					font-weight: 500;
+				`;
+		}
+	}};
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {
