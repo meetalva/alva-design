@@ -22,30 +22,29 @@ const StyledButton = styled.button`
 	font-size: 18px;
 	font-family: ${fonts().NORMAL_FONT};
 	border-radius: 3px;
+	box-sizing: border-box;
 
 	${(props: ButtonProps) => {
 		if (props.primary) {
 			return css`
-				background: ${Color.Green};
-				border: 1px solid ${Color.GreenDark};
+				background: ${Color.Pink};
+				border: none;
 				color: ${Color.White};
 				&:hover {
-					background-color: ${Color.GreenLight};
-					border-color: ${Color.Green};
+					background-color: ${Color.PinkLight};
 				}
 				&:disabled {
-					border-color: ${Color.Grey70};
 					background-color: ${Color.Grey70};
 				}
 			`;
 		} else {
 			return css`
 				background: ${Color.White};
-				border: 1px solid ${Color.Green};
-				color: ${Color.Green};
+				border: 1px solid ${Color.Pink};
+				color: ${Color.Pink};
 				&:hover {
-					border-color: ${Color.GreenLight};
-					color: ${Color.GreenLight};
+					border-color: ${Color.PinkLight};
+					color: ${Color.PinkLight};
 				}
 				&:disabled {
 					border-color: ${Color.Grey70};
