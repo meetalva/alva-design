@@ -8,7 +8,14 @@ export interface HeadlineProps {
 	/** @name Text align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
+	/** @name Weight @default bold */ fontWeight?: FontWeight;
 	children?: React.ReactNode;
+}
+
+export enum FontWeight {
+	Light,
+	Regular,
+	Bold
 }
 
 export enum Level {
@@ -26,26 +33,59 @@ export enum TextAlign {
 const StyledHeadline = styled.div`
 	margin-top: 0;
 	font-family: ${fonts().NORMAL_FONT};
-	font-weight: 500;
 	color: ${(props: HeadlineProps) => props.color || 'inherit'};
+	line-height: 1.3;
+
+	${(props: HeadlineProps) => {
+		switch (props.fontWeight) {
+			case FontWeight.Light:
+				return css`
+					font-weight: 100;
+				`;
+			case FontWeight.Regular:
+				return css`
+					font-weight: 300;
+				`;
+			case FontWeight.Bold:
+			default:
+				return css`
+					font-weight: 500;
+				`;
+		}
+	}};
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {
 			case Level.H3:
 				return css`
-					font-size: 18px;
-					line-height: 24px;
+					font-size: 24px;
+
+					@media screen and (min-width: 960px) {
+						font-size: 32px;
+					}
 				`;
 			case Level.H2:
 				return css`
-					font-size: 42px;
-					line-height: 48px;
+					font-size: 32px;
+
+					@media screen and (min-width: 450px) {
+						font-size: 48px;
+					}
+					@media screen and (min-width: 960px) {
+						font-size: 54px;
+					}
 				`;
 			case Level.H1:
 			default:
 				return css`
-					font-size: 96px;
-					line-height: 132px;
+					font-size: 48px;
+
+					@media screen and (min-width: 450px) {
+						font-size: 64px;
+					}
+					@media screen and (min-width: 960px) {
+						font-size: 96px;
+					}
 				`;
 		}
 	}};
