@@ -17,7 +17,7 @@ const {ComponentDemo} = require("@patternplate/widgets");
 
 module.exports = () => {
   return (
-    <ComponentDemo id="atoms/button"/>
+    <ComponentDemo id="button"/>
   );
 };
 ```
