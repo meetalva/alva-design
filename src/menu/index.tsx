@@ -4,10 +4,7 @@ import { Color } from "../colors";
 import Image from "../image";
 var MenuIcon = require('react-feather/dist/icons/menu').default;
 
-/**
- * @name Navigation
- */
-export interface NavigationProps {
+export interface MenuProps {
 	/** @asset @name Logo */ logo?: string;
 	/** @name Sticky @default false */ sticky?: boolean;
 
@@ -23,7 +20,7 @@ const StyledNavigation = styled.div`
 	background-color: ${Color.Black};
 	color: ${Color.White};
 
-	${(props: NavigationProps) => {
+	${(props: MenuProps) => {
 		if (props.sticky) {
 			return css`
 				position: sticky;
@@ -52,7 +49,7 @@ const StyledMenuIcon = styled(MenuIcon) `
 	}
 `;
 
-const Navigation: React.StatelessComponent<NavigationProps> = (props): JSX.Element => {
+const Navigation: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
 	return (
 		<StyledNavigation {...props}>
 			<StyledImage size="50px" src={props.logo} />
