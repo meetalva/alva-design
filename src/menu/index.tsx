@@ -1,17 +1,20 @@
-import * as React from "react";
-import styled, { css } from "styled-components";
-import { Color } from "../colors";
-import Image from "../image";
+import * as React from 'react';
+import styled, { css } from 'styled-components';
+import { Color } from '../colors';
+import Image from '../image';
 var MenuIcon = require('react-feather/dist/icons/menu').default;
 
 export interface MenuProps {
-	/** @asset @name Logo */ logo?: string;
-	/** @name Sticky @default false */ sticky?: boolean;
+	/** @asset @name Logo */ logo?:
+	string;
+	
+	/** @name Sticky @default false */
+	sticky?: boolean;
 
 	children?: React.ReactNode;
 }
 
-const StyledNavigation = styled.div`
+const StyledMenu = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -37,7 +40,7 @@ const StyledImage = styled(Image)`
 	height: 50px;
 `;
 
-const StyledMenu = styled.div`
+const StyledMenuInner = styled.div`
 	display: flex;
 `;
 
@@ -49,16 +52,16 @@ const StyledMenuIcon = styled(MenuIcon) `
 	}
 `;
 
-const Navigation: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
+const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
 	return (
-		<StyledNavigation {...props}>
+		<StyledMenu {...props}>
 			<StyledImage size="50px" src={props.logo} />
-				<StyledMenu>
+				<StyledMenuInner>
 					{props.children}
 					<StyledMenuIcon />
-				</StyledMenu>
-		</StyledNavigation>
+				</StyledMenuInner>
+		</StyledMenu>
 	);
 };
 
-export default Navigation;
+export default Menu;

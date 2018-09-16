@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled, { css, StyledComponentClass } from 'styled-components';
 import { fonts } from '../fonts';
 import * as Types from '../types';
+import { Color } from '../colors';
 
 export interface HeadlineProps {
 	/** @name CSS class @ignore */ className?: string;
@@ -20,10 +21,14 @@ export enum HeadlineLevel {
 }
 
 const StyledHeadline = styled.div`
-	margin-top: 0;
+	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	color: ${(props: HeadlineProps) => props.color || 'inherit'};
 	line-height: 1.3;
+
+	u {
+    	text-decoration-color: ${Color.Red};
+	}
 
 	${(props: HeadlineProps) => {
 		switch (props.fontWeight) {
