@@ -5,7 +5,7 @@ export enum Color {
 	Green = 'rgb(87, 218, 178)',
 	GreenLight = 'rgb(123, 226, 195)',
 	Red = 'rgb(215, 0, 82)',
-	Black = 'rgb(51, 51, 51)',
+	Black = 'rgb(0, 0, 0)',
 	Grey70 = 'rgb(179, 179, 179)',
 	Grey90 = 'rgb(227, 227, 227)',
 	White = 'rgb(255, 255, 255)',
