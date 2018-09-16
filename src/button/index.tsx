@@ -10,7 +10,10 @@ export interface ButtonProps {
 	/** @name Primary @default true */
 	order?: ButtonOrder;
 
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @name Color */
+	color?: Color;
+
+	onClick?: React.MouseEventHandler<HTMLDivElement>;
 	children?: React.ReactNode;
 }
 
@@ -19,13 +22,14 @@ export enum ButtonOrder {
 	Secondary
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.div`
 	padding: 12px 20px;
 	min-width: 200px;
 	font-size: 18px;
 	font-family: ${fonts().NORMAL_FONT};
 	border-radius: 3px;
 	box-sizing: border-box;
+	display: inline-block;
 
 	@media screen and (min-width: 960px) {
 		padding: 15px 30px;
@@ -35,7 +39,7 @@ const StyledButton = styled.button`
 		switch (props.order) {
 			case ButtonOrder.Primary:
 				return css`
-					background: ${Color.Pink};
+					background: ${(props: ButtonProps) => props.color || Color.Pink};
 					border: none;
 					color: ${Color.White};
 					&:hover {
@@ -48,9 +52,8 @@ const StyledButton = styled.button`
 			case ButtonOrder.Secondary:
 			default:
 				return css`
-				background: ${Color.White};
-				border: 1px solid ${Color.Pink};
-				color: ${Color.Pink};
+				border: 1px solid ${(props: ButtonProps) => props.color || Color.Pink};
+				color: ${(props: ButtonProps) => props.color || Color.Pink};
 				&:hover {
 					border-color: ${Color.PinkLight};
 					color: ${Color.PinkLight};

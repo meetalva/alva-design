@@ -2,27 +2,19 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { Color } from '../colors';
 import Image from '../image';
-var MenuIcon = require('react-feather/dist/icons/menu').default;
+import Layout from '../layout';
 
 export interface MenuProps {
-	/** @asset @name Logo */ logo?:
-	string;
-	
+	/** @asset @name Logo */
+	logo?: string;
+
 	/** @name Sticky @default false */
 	sticky?: boolean;
 
 	children?: React.ReactNode;
 }
 
-const StyledMenu = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: ${Color.Black};
-	color: ${Color.White};
-
+const StyledWrapper = styled(Layout)`
 	${(props: MenuProps) => {
 		if (props.sticky) {
 			return css`
@@ -35,6 +27,15 @@ const StyledMenu = styled.div`
 	}}}
 `;
 
+const StyledMenu = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	box-sizing: border-box;
+	color: ${Color.White};
+`;
+
 const StyledImage = styled(Image)`
 	display: block;
 	height: 50px;
@@ -44,23 +45,18 @@ const StyledMenuInner = styled.div`
 	display: flex;
 `;
 
-const StyledMenuIcon = styled(MenuIcon) `
-	display: none;
-
-	@media screen and (max-width: 720px){
-		display: block;
-	}
-`;
-
 const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
 	return (
-		<StyledMenu {...props}>
-			<StyledImage size="50px" src={props.logo} />
-				<StyledMenuInner>
-					{props.children}
-					<StyledMenuIcon />
-				</StyledMenuInner>
-		</StyledMenu>
+		<StyledWrapper backgroundColor={Color.Black} sticky={props.sticky}>
+			<Layout width="80%" maxWidth="960px" center>
+				<StyledMenu {...props}>
+					<StyledImage size="50px" src={props.logo} />
+						<StyledMenuInner>
+							{props.children}
+						</StyledMenuInner>
+				</StyledMenu>
+			</Layout>
+		</StyledWrapper>
 	);
 };
 

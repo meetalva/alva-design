@@ -30,6 +30,10 @@ const StyledHeadline = styled.div`
     	text-decoration-color: ${Color.Red};
 	}
 
+	b {
+		font-weight: 500;
+	}
+
 	${(props: HeadlineProps) => {
 		switch (props.fontWeight) {
 			case Types.FontWeight.Light:
