@@ -43,24 +43,26 @@ const StyledCopy: StyledComponentClass<CopyProps, {}> = styled(CopyProxy)`
 	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	color: ${(props: CopyProps) => props.color || 'inherit'};
+	line-height: 1.5;
 
 	${(props: CopyProps) => {
 		switch (props.size) {
 			case Size.Small:
 				return css`
 					font-size: 12px;
-					line-height: 18px;
 				`;
 			case Size.Medium:
 			default:
 				return css`
 					font-size: 16px;
-					line-height: 22px;
 				`;
 			case Size.Large:
 				return css`
-					font-size: 24px;
-					line-height: 36px;
+					font-size: 18px;
+
+					@media screen and (min-width: 960px) {
+						font-size: 24px;
+					}
 				`;
 		}
 	}};
