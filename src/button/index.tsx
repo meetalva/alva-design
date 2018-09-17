@@ -30,6 +30,7 @@ const StyledButton = styled.div`
 	border-radius: 3px;
 	box-sizing: border-box;
 	display: inline-block;
+	width: fit-content;
 
 	@media screen and (min-width: 960px) {
 		padding: 15px 30px;

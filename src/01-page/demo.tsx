@@ -9,11 +9,12 @@ import Layout from '../layout';
 import Menu from '../menu';
 import MenuItem from '../menu-item';
 import Feature, { FeatureLevel, Layout as FeatureLayout } from '../feature';
+import Teaser from '../teaser';
 
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
-			<Menu>
+			<Menu logo="https://raw.githubusercontent.com/meetalva/media/master/alva.png">
 				<MenuItem linkName="Get Started" onClick={() => alert('Click!')} />
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
@@ -40,26 +41,32 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
                 headline="Start your design with live code components"
                 copy="Connect to your code library and directly add the components your engineers are working with on live pages to your designs. Immediately try out the responsive behaviour of your page"
                 layout={FeatureLayout.Center}
-				frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
+				frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
 				negativeTop
             />
             <Space size={SpaceSize.XL} />
             <Feature
-                featureLevel={FeatureLevel.Medium}
+                featureLevel={FeatureLevel.Large}
                 headline="Add your freshest design drafts"
                 copy="Add design drafts directly from Sketch (or any other design tool) to Alva, so everybody can have a look at your latest thoughts. And as soon your team is happy, you can start developing a code component out of it."
                 layout={FeatureLayout.Left}
-                frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
+                frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
             />
             <Space size={SpaceSize.XL} />
             <Feature
-                featureLevel={FeatureLevel.Medium}
+                featureLevel={FeatureLevel.Large}
                 headline="Connect everything with interactions"
                 copy="The web is interactive, so we should design interactively, too. We enable you to go beyond static screens and if you want to – you can even create custom interactions with custom code."
                 layout={FeatureLayout.Right}
-                frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
+                frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
             />
 			<Space size={SpaceSize.XL} />
+			<Space size={SpaceSize.XL} />
+
+			<Teaser
+				image="https://images.unsplash.com/photo-1430572786910-927890ae3088?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b07d84a891c5c71dbecb5f981161e043&auto=format&fit=crop&w=2250&q=80"
+				headline="Our mission is to enable designers and engineers to build better products together. Without friction."
+			/>
 
 			<Section backgroundColor={Color.Grey95}>
 				<Headline level={Level.H1} color={Color.Violet} fontWeight={FontWeight.Light}>

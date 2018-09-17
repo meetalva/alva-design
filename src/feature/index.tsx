@@ -8,7 +8,7 @@ import AppFrame from '../app-frame';
 
 export interface FeatureProps {
 	/** @name Layout */
-	layout: Layout;
+	layout?: Layout;
 
 	/** @name Feature level */
 	featureLevel: FeatureLevel;
@@ -20,7 +20,7 @@ export interface FeatureProps {
 	copy: string;
 
 	/** @name Frame */
-	frame: React.ReactNode;
+	frame?: React.ReactNode;
 
 	/** @name NegativeTop */
 	negativeTop?: boolean;
