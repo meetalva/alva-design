@@ -65,12 +65,7 @@ const StyledButton = styled.div`
 			`;
 		}
 	}};
-	}}} ${(props: ButtonProps) =>
-			(props.onClick) && !props.disabled
-				? css`
-						cursor: pointer;
-					`
-				: ""};
+	${(props: ButtonProps) => props.onClick && !props.disabled ? css`cursor: pointer;` : ''};
 `;
 
 const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
