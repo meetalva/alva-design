@@ -1,33 +1,22 @@
 import * as React from 'react';
 import styled, { css, StyledComponentClass } from 'styled-components';
 import { fonts } from '../fonts';
+import * as Types from '../types';
 
 export interface HeadlineProps {
 	/** @name CSS class @ignore */ className?: string;
-	/** @name Level @default H1 */ level: Level;
-	/** @name Text align @default Left */ textAlign?: TextAlign;
+	/** @name Level @default H1 */ level: HeadlineLevel;
+	/** @name Text align @default Left */ textAlign?: Types.TextAlign;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
-	/** @name Weight @default bold */ fontWeight?: FontWeight;
+	/** @name Weight @default bold */ fontWeight?: Types.FontWeight;
 	children?: React.ReactNode;
 }
 
-export enum FontWeight {
-	Light,
-	Regular,
-	Bold
-}
-
-export enum Level {
+export enum HeadlineLevel {
 	H1,
 	H2,
 	H3
-}
-
-export enum TextAlign {
-	Left,
-	Center,
-	Right
 }
 
 const StyledHeadline = styled.div`
@@ -38,15 +27,15 @@ const StyledHeadline = styled.div`
 
 	${(props: HeadlineProps) => {
 		switch (props.fontWeight) {
-			case FontWeight.Light:
+			case Types.FontWeight.Light:
 				return css`
 					font-weight: 100;
 				`;
-			case FontWeight.Regular:
+			case Types.FontWeight.Regular:
 				return css`
 					font-weight: 300;
 				`;
-			case FontWeight.Bold:
+			case Types.FontWeight.Bold:
 			default:
 				return css`
 					font-weight: 500;
@@ -56,7 +45,7 @@ const StyledHeadline = styled.div`
 
 	${(props: HeadlineProps) => {
 		switch (props.level) {
-			case Level.H3:
+			case HeadlineLevel.H3:
 				return css`
 					font-size: 24px;
 
@@ -64,7 +53,7 @@ const StyledHeadline = styled.div`
 						font-size: 32px;
 					}
 				`;
-			case Level.H2:
+			case HeadlineLevel.H2:
 				return css`
 					font-size: 32px;
 
@@ -75,7 +64,7 @@ const StyledHeadline = styled.div`
 						font-size: 54px;
 					}
 				`;
-			case Level.H1:
+			case HeadlineLevel.H1:
 			default:
 				return css`
 					font-size: 48px;
@@ -92,15 +81,15 @@ const StyledHeadline = styled.div`
 
 	${(props: HeadlineProps) => {
 		switch (props.textAlign) {
-			case TextAlign.Center:
+			case Types.TextAlign.Center:
 				return css`
 					text-align: center;
 				`;
-			case TextAlign.Right:
+			case Types.TextAlign.Right:
 				return css`
 					text-align: right;
 				`;
-			case TextAlign.Left:
+			case Types.TextAlign.Left:
 				return css`
 					text-align: left;
 				`;
@@ -130,17 +119,17 @@ const Headline: React.StatelessComponent<HeadlineProps> = props => {
 	);
 };
 
-const getComponent = (level: Level): HeadlineComponent =>  {
+const getComponent = (level: HeadlineLevel): HeadlineComponent =>  {
 	return StyledHeadline.withComponent(getTagName(level));
 }
 
-const getTagName = (level: Level): 'h1' | 'h2' | 'h3' => {
+const getTagName = (level: HeadlineLevel): 'h1' | 'h2' | 'h3' => {
 	switch (level) {
-		case Level.H3:
+		case HeadlineLevel.H3:
 			return 'h3';
-		case Level.H2:
+		case HeadlineLevel.H2:
 			return 'h2';
-		case Level.H1:
+		case HeadlineLevel.H1:
 		default:
 			return 'h1';
 	}

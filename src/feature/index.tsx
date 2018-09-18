@@ -2,10 +2,10 @@ import * as React from "react";
 import styled from "styled-components";
 import { Color } from "../colors";
 import Copy, { Size as CopySize } from "../copy";
-import Headline, { Level } from "../headline";
+import Headline, { HeadlineLevel } from "../headline";
 
 export interface FeatureProps {
-	/** @name Headline level */ headlineLevel: Level;
+	/** @name Headline level */ headlineLevel: HeadlineLevel;
 	/** @name Headline */ headlineText: string;
 	/** @name Copy */ copyText: string;
 }

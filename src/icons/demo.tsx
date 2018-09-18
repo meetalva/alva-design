@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Headline, { Level } from "../headline";
+import Headline, { HeadlineLevel } from "../headline";
 
 import { reduce, Icon, IconName, IconRegistry, IconSize } from "./index";
 
@@ -35,7 +35,7 @@ interface DemoIconsProps {
 const DemoIcons = (props: DemoIconsProps) => {
 	return (
 		<div>
-			<Headline level={Level.H3}>Icons {IconSize[props.size]}</Headline>
+			<Headline level={HeadlineLevel.H3}>Icons {IconSize[props.size]}</Headline>
 			<StyledDemoIconList>
 				{reduce(props.names, (name, id) => [
 					<StyledDemoListItem key={name}>

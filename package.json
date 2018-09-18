@@ -2,7 +2,7 @@
   "name": "meetalva-designkit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
     "build": "tsc",
@@ -28,15 +28,15 @@
     "@patternplate/cli": "^2.5.8",
     "@patternplate/render-styled-components": "^2.5.2",
     "@types/node": "^8.0.53",
-    "@types/react": "15.6.1",
+    "@types/react": "^16.4.14",
     "@types/react-dom": "^15.5.4",
     "concurrently": "^3.5.1",
     "husky": "^0.14.3",
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
     "react-feather": "^1.1.0",
     "styled-components": "^2.1.1",
     "tslib": "^1.7.0"

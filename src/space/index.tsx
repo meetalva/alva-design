@@ -2,10 +2,10 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 
 export interface SpaceProps {
-	/** @name Size @default M */ size?: Size;
+	/** @name Size @default M */ size?: SpaceSize;
 }
 
-export enum Size {
+export enum SpaceSize {
 	XS,
 	S,
 	M,
@@ -18,28 +18,28 @@ const StyledSpace = styled.div`
 
 	${(props: SpaceProps) => {
 		switch (props.size) {
-			case Size.XS:
+			case SpaceSize.XS:
 				return css`
 					height: 8px;
 					width: 8px;
 				`;
-			case Size.S:
+			case SpaceSize.S:
 				return css`
 					height: 16px;
 					width: 16px;
 				`;
-			case Size.M:
+			case SpaceSize.M:
 			default:
 				return css`
 					height: 32px;
 					width: 32px;
 				`;
-			case Size.L:
+			case SpaceSize.L:
 				return css`
 					height: 64px;
 					width: 64px;
 				`;
-			case Size.XL:
+			case SpaceSize.XL:
 				return css`
 					height: 128px;
 					width: 128px;

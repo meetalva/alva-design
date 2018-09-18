@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Input from './index';
-import Space, { Size as SpaceSize } from '../space';
+import Space, { SpaceSize as SpaceSize } from '../space';
 
 const InputDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
