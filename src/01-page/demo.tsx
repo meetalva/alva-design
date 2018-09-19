@@ -78,7 +78,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 				headline="Our mission is to enable designers and engineers to build better products together. Without friction."
 			>
 				<div style={{padding: "56.25% 0 0 0", position: "relative"}}>
-					<iframe src="https://player.vimeo.com/video/253654655?byline=0&portrait=0&title=0" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} allowFullScreen></iframe>
+					<iframe src="https://player.vimeo.com/video/253654655?byline=0&portrait=0&title=0" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderWidth: 0}} allowFullScreen></iframe>
 				</div>
 				<script src="https://player.vimeo.com/api/player.js"></script>
 			</Teaser>
