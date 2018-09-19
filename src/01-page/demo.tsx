@@ -25,7 +25,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
 			<Menu logo="https://media.meetalva.io/alva.svg">
-				<MenuItem linkName="Get Started" onClick={() => window.open("./doc/docs/start?guides-enabled=true","_blank")} />
+				<MenuItem
+					linkName="Get Started"
+					target="_blank"
+					rel="noopener"
+					href="./doc/docs/start?guides-enabled=true"
+					title="Open Getting Started Tutorial"
+					/>
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
 				<Headline level={HeadlineLevel.H1}>
@@ -38,9 +44,11 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<Button order={ButtonOrder.Primary} onClick={() => window.open("https://github.com/meetalva/alva/releases/latest","_blank")}>
-					Download Beta for macOS
-				</Button>
+				<a href="https://github.com/meetalva/alva/releases/latest" target="_blank" rel="noopener">
+					<Button order={ButtonOrder.Primary}>
+						Download Beta for macOS
+					</Button>
+				</a>
 				<Space size={SpaceSize.S} />
 				<Copy color={Color.Grey70} size={CopySize.Small}>Also available for <u>Windows</u> and <u>Linux</u></Copy>
 				<Space size={SpaceSize.XL} />
@@ -137,14 +145,26 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<Button order={ButtonOrder.Secondary} color={Color.Violet} onClick={() => window.open("https://github.com/meetalva/alva/","_blank")}>
-					Contribute to Alva on Github
-				</Button>
+				<a href="https://github.com/meetalva/alva/" target="_blank" rel="noopener">
+					<Button order={ButtonOrder.Secondary} color={Color.Violet}>
+						Contribute to Alva on Github
+					</Button>
+				</a>
 			</Section>
 
 			<Footer copyright="&copy; 2018 Alva">
-				<MenuItem linkName="Legal notice" onClick={() => window.open("./doc/docs/legalnotice?guides-enabled=true","_blank")} />
-				<MenuItem linkName="Privacy Policy" onClick={() => window.open("./doc/docs/privacypolicy?guides-enabled=true","_blank")} />
+				<MenuItem
+					linkName="Legal notice"
+					target="_blank"
+					rel="noopener"
+					href="./doc/docs/legalnotice?guides-enabled=true"
+					/>
+				<MenuItem
+					linkName="Privacy Policy"
+					target="_blank"
+					rel="noopener"
+					href="./doc/docs/privacypolicy?guides-enabled=true"
+					/>
 			</Footer>
 		</div>
 	);

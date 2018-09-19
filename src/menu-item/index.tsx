@@ -6,6 +6,10 @@ import Copy from "../copy";
 export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;
 	/** @name Link */ onClick?: React.MouseEventHandler<HTMLDivElement>;
+	href?: string;
+	target?: string;
+	rel?: string;
+	title?: string;
 }
 
 const StyledMenuItem = styled(Copy)`
@@ -16,11 +20,11 @@ const StyledMenuItem = styled(Copy)`
 
 const MenuItem: React.StatelessComponent<MenuItemProps> = (props): JSX.Element => {
 	return (
-		<div onClick={props.onClick}>
+		<a href={props.href} target={props.target} rel={props.rel} title={props.title}>
 			<StyledMenuItem>
 				{props.linkName}
 			</StyledMenuItem>
-		</div>
+		</a>
 	);
 };
 
