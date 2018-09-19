@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Radio from './index';
-import Space, { Size } from '../space';
+import Space, { SpaceSize } from '../space';
 
 const RadioDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div>
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Radio labelText="Radio" />
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Radio labelText="Radio" checked />
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Radio labelText="Radio" disabled />
 		</div>
 	);

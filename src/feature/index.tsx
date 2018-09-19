@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { Color } from "../colors";
 import Copy, { Size as CopySize } from "../copy";
-import Headline, { Level } from "../headline";
-import Space, { Size as SpaceSize } from '../space';
+import Headline, { HeadlineLevel } from "../headline";
+import Space, { SpaceSize } from '../space';
 import AppFrame from '../app-frame';
 
 export interface FeatureProps {
@@ -124,7 +124,7 @@ const Feature: React.StatelessComponent<FeatureProps> = (props): JSX.Element => 
 					{props.frame}
 				</StyledAppFrame>
 				<StyledBox {...props}>
-					<Headline level={Level.H3}>
+					<Headline level={HeadlineLevel.H3}>
 						{props.headline}
 					</Headline>
 					<Space size={SpaceSize.S} />

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Feature, { FeatureLevel, Layout } from './index';
-import Space, { Size } from '../space';
+import Space, { SpaceSize } from '../space';
 
 const FeatureDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
         <div>
-            <Space size={Size.XL} />
+            <Space size={SpaceSize.XL} />
             <Feature
                 featureLevel={FeatureLevel.Large}
                 headline="Start your design with live code components"
@@ -13,7 +13,7 @@ const FeatureDemo: React.StatelessComponent<void> = (): JSX.Element => {
                 layout={Layout.Center}
                 frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
             />
-            <Space size={Size.XL} />
+            <Space size={SpaceSize.XL} />
             <Feature
                 featureLevel={FeatureLevel.Medium}
                 headline="Add your freshest design drafts"
@@ -21,7 +21,7 @@ const FeatureDemo: React.StatelessComponent<void> = (): JSX.Element => {
                 layout={Layout.Left}
                 frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
             />
-            <Space size={Size.XL} />
+            <Space size={SpaceSize.XL} />
             <Feature
                 featureLevel={FeatureLevel.Medium}
                 headline="Connect everything with interactions"
@@ -29,7 +29,7 @@ const FeatureDemo: React.StatelessComponent<void> = (): JSX.Element => {
                 layout={Layout.Right}
                 frame={ <img src="https://photojoseph.com/sites/default/files/sitegraphics/photomoments/PhotoJosephs_Photo_Moment_2018-04-20_FCPX_Project_NO_TEXT.jpg" /> }
             />
-            <Space size={Size.XL} />
+            <Space size={SpaceSize.XL} />
         </div>
 	);
 };
