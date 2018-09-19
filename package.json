@@ -32,13 +32,14 @@
     "@types/react-dom": "^16.0.7",
     "concurrently": "^3.5.1",
     "husky": "^0.14.3",
+    "tslint": "^5.11.0",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-feather": "^1.1.0",
-    "styled-components": "^2.1.1",
+    "styled-components": "3.2.5",
     "tslib": "^1.7.0"
   }
 }
