@@ -19,10 +19,6 @@ injectGlobal`
 		margin: 0;
 		padding: 0;
 	}
-
-	html {
-		background-color: black;
-	}
 `;
 
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
