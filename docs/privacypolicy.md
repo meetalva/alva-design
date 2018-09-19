@@ -1,4 +1,5 @@
 ---
+displayName: Privacy Policy
 options:
   order: 99
 ---
@@ -9,20 +10,20 @@ As being responsible for this website, we take the protection of your personal d
 Our website may be used without entering personal information. Different rules may apply to certain services on our site, however, and are explained separately below. We collect personal information from you (e.g. name, address, email address, telephone number, etc.) in accordance with the provisions of German data protection statutes. Information is considered personal if it can be associated exclusively to a specific natural person. The legal framework for data protection may be found in the German Federal Data Protection Act (BDSG) and the Telemedia Act (TMG). The provisions below serve to provide information as to the manner, extent and purpose for collecting, using and processing personal information by the provider.
 
 ## Responsible for the website
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group  
-Völckersstraße 38  
-22765 Hamburg  
+SinnerSchrader Deutschland GmbH | SinnerSchrader Group
+Völckersstraße 38
+22765 Hamburg
 Germany
 
-Managing Board:  
+Managing Board:
 Matthias Schrader (CEO), Jürgen Alker, Dr. Axel Averdung, Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner, Peggy Hutchinson
 
 ## Responsible for data protection
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group  
-Data Protection Officer  
-Völckersstraße 38  
-22765 Hamburg  
-Germany  
+SinnerSchrader Deutschland GmbH | SinnerSchrader Group
+Data Protection Officer
+Völckersstraße 38
+22765 Hamburg
+Germany
 datenschutz-ag@sinnerschrader.com
 
 ## Visiting our webiste
