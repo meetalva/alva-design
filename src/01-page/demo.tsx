@@ -66,7 +66,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
             <Feature
                 featureLevel={FeatureLevel.Large}
                 headline="Integrate your visual design drafts"
-				copy="Add your latest design drafts to your prototype and show your team how the next component should look like."
+				copy="Add your latest design drafts from Sketch, Figma or any other design tool to your prototype and show your team how the next component should look like."
                 layout={FeatureLayout.Left}
                 frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
             />
