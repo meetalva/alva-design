@@ -1,17 +1,14 @@
 import * as React from 'react';
-import Menu from './index';
+import Footer from './index';
 import MenuItem from "../menu-item";
 
-const MenuDemo: React.StatelessComponent<void> = (): JSX.Element => {
+const FooterDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
-		<Menu sticky logo="/api/static/alva-small.png">
-			<MenuItem linkName="Story" />
-			<MenuItem linkName="Learn" />
-			<MenuItem linkName="API" />
-			<MenuItem linkName="Github" />
-			<MenuItem linkName="Twitter" />
-		</Menu>
+		<Footer copyright="&copy; 2018 Alva">
+			<MenuItem linkName="Privacy Policy" />
+			<MenuItem linkName="Legal Notice" />
+		</Footer>
 	);
 };
 
-export default MenuDemo;
+export default FooterDemo;
