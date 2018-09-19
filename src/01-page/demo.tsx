@@ -1,15 +1,29 @@
 import * as React from 'react';
 import Section from '../section';
-import Headline, { Level, FontWeight } from '../headline';
+import Headline, { HeadlineLevel } from '../headline';
 import Copy, { Size as CopySize } from '../copy';
-import Space, { Size as SpaceSize} from '../space';
+import Space, { SpaceSize } from '../space';
 import { Color } from '../colors';
 import Button, { ButtonOrder } from '../button';
+import Footer from '../footer';
 import Layout from '../layout';
 import Menu from '../menu';
 import MenuItem from '../menu-item';
 import Feature, { FeatureLevel, Layout as FeatureLayout } from '../feature';
 import Teaser from '../teaser';
+import * as Types from '../types';
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		background-color: black;
+	}
+`;
 
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
@@ -18,7 +32,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 				<MenuItem linkName="Get Started" onClick={() => alert('Click!')} />
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
-				<Headline level={Level.H1}>
+				<Headline level={HeadlineLevel.H1}>
 					Create <u>living prototypes</u> with code components.
 				</Headline>
 				<Space size={SpaceSize.M} />
@@ -69,13 +83,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 			/>
 
 			<Section backgroundColor={Color.Grey95}>
-				<Headline level={Level.H1} color={Color.Violet} fontWeight={FontWeight.Light}>
+				<Headline level={HeadlineLevel.H1} color={Color.Violet} fontWeight={Types.FontWeight.Light}>
 					<b>And wait for it</b> – we are entirely open source.
 				</Headline>
 				<Space size={SpaceSize.M} />
 				<Layout maxWidth="640px">
 					<Copy size={CopySize.Large} color={Color.Grey50}>
-						For the last years most of the design tools have been expensive and proprietary software. We want to give something back to the community and start the next generation of design tools. Open-minded and open-source. 
+						For the last years most of the design tools have been expensive and proprietary software. We want to give something back to the community and start the next generation of design tools. Open-minded and open-source.
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
@@ -83,6 +97,11 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					Contribute to Alva on Github
 				</Button>
 			</Section>
+
+			<Footer copyright="&copy; 2018 Alva">
+				<MenuItem linkName="Legal notice" onClick={() => alert('Click!')} />
+				<MenuItem linkName="Privacy Policy" onClick={() => alert('Click!')} />
+			</Footer>
 		</div>
 	);
 };
