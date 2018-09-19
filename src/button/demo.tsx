@@ -1,17 +1,17 @@
 import * as React from 'react';
 
 import Button from '.';
-import Space, { Size } from '../space';
+import Space, { SpaceSize } from '../space';
 
 const CheckboxDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div>
 			<Button primary>Primary</Button>
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Button>Secondary</Button>
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Button primary disabled>Primary disabled</Button>
-			<Space size={Size.M} />
+			<Space size={SpaceSize.M} />
 			<Button disabled>Secondary disabled</Button>
 		</div>
 	);

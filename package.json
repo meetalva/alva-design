@@ -2,7 +2,7 @@
   "name": "meetalva-designkit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
     "build": "tsc",
@@ -21,22 +21,22 @@
     "url": "https://github.com/meetalva/designkit/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "^5.2.5",
-    "@commitlint/config-conventional": "^5.2.3",
-    "@commitlint/prompt-cli": "^5.2.5",
-    "@commitlint/travis-cli": "^5.2.5",
-    "@patternplate/cli": "^2.5.8",
-    "@patternplate/render-styled-components": "^2.5.2",
+    "@commitlint/cli": "^7.1.2",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@commitlint/prompt-cli": "^7.1.2",
+    "@commitlint/travis-cli": "^7.1.2",
+    "@patternplate/cli": "^3.0.1",
+    "@patternplate/render-styled-components": "^2.5.18",
     "@types/node": "^8.0.53",
-    "@types/react": "15.6.1",
-    "@types/react-dom": "^15.5.4",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
     "concurrently": "^3.5.1",
     "husky": "^0.14.3",
-    "typescript": "^2.6.2"
+    "typescript": "^3.0.3"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
     "react-feather": "^1.1.0",
     "styled-components": "^2.1.1",
     "tslib": "^1.7.0"

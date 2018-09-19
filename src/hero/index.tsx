@@ -2,12 +2,13 @@ import * as React from "react";
 import styled from "styled-components";
 import { Color } from "../colors";
 import Copy from "../copy";
-import Headline, { Level, TextAlign } from "../headline";
+import Headline, { HeadlineLevel } from "../headline";
+import * as Types from '../types';
 
-export interface TeaserProps {
+export interface HeroProps {
 	/** @name Copy text */ copyText: string;
-	/** @name Headline level */ headlineLevel: Level;
-	/** @name Headline align */ headlineAlign?: TextAlign;
+	/** @name Headline level */ headlineLevel: HeadlineLevel;
+	/** @name Headline align */ headlineAlign?: Types.TextAlign;
 	/** @name Headline text */ headlineText: string;
 }
 
@@ -18,7 +19,7 @@ const StyledHero = styled.div`
 	text-align: center;
 `;
 
-const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
+const Teaser: React.StatelessComponent<HeroProps> = (props): JSX.Element => {
 	return (
 		<StyledHero>
 			<Headline level={props.headlineLevel} textAlign={props.headlineAlign}>

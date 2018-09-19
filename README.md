@@ -1,15 +1,16 @@
-# Bulb UI Kit
-
-Bulb is an exemplary UI Kit to showcase the possibilities of Alva.
+# Alva Designkit
 
 See https://github.com/meetalva/alva for details.
 
 Kickstart your idea with Alva and this complementary UI Kit. Get your product out and rapidly iterate your inovations.
 
-## Source-based installation ##
+## Getting started
 
-* Clone this repository.
-* npm i
-* npm run build
+```sh
+git clone git@github.com:meetalva/designkit.git
+cd designkit
+npm install
 
-To start Alva, clone https://github.com/meetalva/alva and follow its build instructions.
+# Start patternplate
+npm start
+```
