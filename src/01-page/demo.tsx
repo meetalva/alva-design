@@ -5,6 +5,7 @@ import Copy, { Size as CopySize } from '../copy';
 import Space, { SpaceSize} from '../space';
 import { Color } from '../colors';
 import Button, { ButtonOrder } from '../button';
+import Footer from '../footer';
 import Layout from '../layout';
 import Menu from '../menu';
 import MenuItem from '../menu-item';
@@ -84,6 +85,11 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					Contribute to Alva on Github
 				</Button>
 			</Section>
+
+			<Footer copyright="&copy; 2018 Alva">
+				<MenuItem linkName="Legal notice" onClick={() => alert('Click!')} />
+				<MenuItem linkName="Privacy Policy" onClick={() => alert('Click!')} />
+			</Footer>
 		</div>
 	);
 };
