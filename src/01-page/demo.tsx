@@ -12,6 +12,18 @@ import MenuItem from '../menu-item';
 import Feature, { FeatureLevel, Layout as FeatureLayout } from '../feature';
 import Teaser from '../teaser';
 import * as Types from '../types';
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		background-color: black;
+	}
+`;
 
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
