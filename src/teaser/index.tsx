@@ -1,10 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Color } from "../colors";
-import Headline, { Level } from '../headline';
+import Headline, { HeadlineLevel } from '../headline';
 import Layout from '../layout';
-import Space, { Size } from '../space';
-import Button from '../button';
+import Space, { SpaceSize } from '../space';
 
 export interface TeaserProps {
 	/** @name Headline*/
@@ -18,11 +17,16 @@ const StyledTeaser = styled.div`
 	background-position: center;
 	background-size: cover;
 	background-image: url('${(props: TeaserProps) => props.image || ''}');
-	min-height: 100vh;
-	min-width: 100vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	position: relative;
+	padding: 100px 0;
+	box-sizing: border-box;
+
+	@media screen and (min-width: 960px) {
+		padding: 200px 0;
+	}
 
 	&:after {
 		content: '';
@@ -48,11 +52,11 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 					<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
 						<path d="M30 60a30 30 0 1 1 0-60 30 30 0 0 1 0 60zm-4-37v15l12-7.5L26 23z" fill="#FFF" fill-rule="evenodd"/>
 					</svg>
-					<Space size={Size.M} />
-					<Headline level={Level.H3} color={Color.White}>{props.headline}</Headline>
-					<Space size={Size.M} />
-					<Button color={Color.White}>Watch our mission film</Button>
+					<Space size={SpaceSize.M} />
+					<Headline level={HeadlineLevel.H3} color={Color.White}>{props.headline}</Headline>
+					<Space size={SpaceSize.XL} />
 				</Layout>
+				{props.children}
 			</StyledLayout>
 		</StyledTeaser>
 	);
