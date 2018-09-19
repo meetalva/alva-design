@@ -4,18 +4,12 @@ import Copy from '../copy';
 import { Color } from '../colors';
 import Layout from '../layout';
 
-export interface MenuProps {
-	/** @asset @name Logo */
-	logo?: string;
-
+export interface FooterProps {
 	/** @copy @name Copyright */
-	copyright?: string;
+	copyright: string;
 
-	children?: React.ReactNode;
+	children: React.ReactNode;
 }
-
-const StyledCopy = styled(Copy)`
-`;
 
 const StyledFooter = styled.div`
 	display: flex;
@@ -26,23 +20,23 @@ const StyledFooter = styled.div`
 	color: ${Color.White};
 `;
 
-const StyledMenuInner = styled.div`
+const StyledFooterInner = styled.div`
 	display: flex;
 `;
 
-const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
+const Footer: React.StatelessComponent<FooterProps> = (props): JSX.Element => {
 	return (
 		<Layout backgroundColor={Color.Black}>
 			<Layout width="80%" maxWidth="960px" center>
 				<StyledFooter {...props}>
-					<StyledCopy color={Color.Grey50}>{props.copyright}</StyledCopy>
-					<StyledMenuInner>
+					<Copy color={Color.Grey50}>{props.copyright}</Copy>
+					<StyledFooterInner>
 						{props.children}
-					</StyledMenuInner>
+					</StyledFooterInner>
 				</StyledFooter>
 			</Layout>
 		</Layout>
 	);
 };
 
-export default Menu;
+export default Footer;
