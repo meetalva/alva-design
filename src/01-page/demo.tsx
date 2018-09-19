@@ -80,7 +80,12 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 			<Teaser
 				image="https://images.unsplash.com/photo-1430572786910-927890ae3088?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b07d84a891c5c71dbecb5f981161e043&auto=format&fit=crop&w=2250&q=80"
 				headline="Our mission is to enable designers and engineers to build better products together. Without friction."
-			/>
+			>
+				<div style={{padding: "56.25% 0 0 0", position: "relative"}}>
+					<iframe src="https://player.vimeo.com/video/253654655?byline=0&portrait=0&title=0" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} allowFullScreen></iframe>
+				</div>
+				<script src="https://player.vimeo.com/api/player.js"></script>
+			</Teaser>
 
 			<Section backgroundColor={Color.Grey95}>
 				<Headline level={HeadlineLevel.H1} color={Color.Violet} fontWeight={Types.FontWeight.Light}>
