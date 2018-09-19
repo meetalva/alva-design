@@ -24,7 +24,7 @@ injectGlobal`
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
-			<Menu logo="https://raw.githubusercontent.com/meetalva/media/master/alva.png">
+			<Menu logo="https://media.meetalva.io/alva.svg">
 				<MenuItem linkName="Get Started" onClick={() => window.open("./doc/docs/start?guides-enabled=true","_blank")} />
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
@@ -123,7 +123,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 						</form>
 					</div>
 				</Layout>
-				
+
 			</Section>
 
 			<Section backgroundColor={Color.Grey95}>
