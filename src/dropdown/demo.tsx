@@ -9,8 +9,8 @@ export interface DropdownDemoState {
 }
 
 export default class DropdownDemo extends React.Component<null, DropdownDemoState> {
-	public constructor() {
-		super();
+	public constructor(props: any) {
+		super(props);
 
 		this.state = { dropdownOpen: false };
 		this.handleDropdownToggle = this.handleDropdownToggle.bind(this);
