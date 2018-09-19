@@ -48,8 +48,8 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 
 			<Feature
                 featureLevel={FeatureLevel.Large}
-                headline="Start your design with live code components"
-                copy="Connect to your code library and directly add the components your engineers are working with on live pages to your designs. Immediately try out the responsive behaviour of your page"
+                headline="Start your prototype with code components"
+                copy="Connect to your compatible React library and start using the components of your developers for your prototype. Without writing a single line of code."
                 layout={FeatureLayout.Center}
 				frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
 				negativeTop
@@ -57,8 +57,8 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
             <Space size={SpaceSize.XL} />
             <Feature
                 featureLevel={FeatureLevel.Large}
-                headline="Add your freshest design drafts"
-                copy="Add design drafts directly from Sketch (or any other design tool) to Alva, so everybody can have a look at your latest thoughts. And as soon your team is happy, you can start developing a code component out of it."
+                headline="Integrate your visual design drafts"
+				copy="Add your latest design drafts to your prototype and show your team how the next component should look like."
                 layout={FeatureLayout.Left}
                 frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
             />
@@ -66,7 +66,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
             <Feature
                 featureLevel={FeatureLevel.Large}
                 headline="Connect everything with interactions"
-                copy="The web is interactive, so we should design interactively, too. We enable you to go beyond static screens and if you want to – you can even create custom interactions with custom code."
+                copy="The web is interactive – so let’s design interactively, too. Go beyond static screens and design with interaction, data and logic in mind."
                 layout={FeatureLayout.Right}
                 frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
             />
