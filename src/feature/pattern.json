@@ -3,11 +3,5 @@
   "displayName": "Feature",
   "version": "1.0.0",
   "tags": ["molecules", "feature"],
-  "flag": "alpha",
-  "patterns": {
-    "colors": "atoms/colors",
-    "copy": "atoms/copy",
-    "headline": "atoms/headline",
-		"space": "atoms/space"
-  }
+  "flag": "alpha"
 }
