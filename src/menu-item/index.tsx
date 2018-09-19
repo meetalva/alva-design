@@ -5,24 +5,22 @@ import Copy from "../copy";
 
 export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;
-	/** @name Link */ onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	/** @name Link */ onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const StyledMenuItem = styled(Copy)`
 	color: ${Color.White};
 	margin-left: 32px;
 	cursor: pointer;
-
-	&:first-of-type {
-		margin: 0;
-	}
 `;
 
 const MenuItem: React.StatelessComponent<MenuItemProps> = (props): JSX.Element => {
 	return (
-		<StyledMenuItem >
-			{props.linkName}
-		</StyledMenuItem>
+		<div onClick={props.onClick}>
+			<StyledMenuItem>
+				{props.linkName}
+			</StyledMenuItem>
+		</div>
 	);
 };
 

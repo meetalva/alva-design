@@ -29,7 +29,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
 			<Menu logo="https://raw.githubusercontent.com/meetalva/media/master/alva.png">
-				<MenuItem linkName="Get Started" onClick={() => alert('Click!')} />
+				<MenuItem linkName="Get Started" onClick={() => window.open("./doc/docs/start?guides-enabled=true","_blank")} />
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
 				<Headline level={HeadlineLevel.H1}>
@@ -42,7 +42,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<Button order={ButtonOrder.Primary} onClick={() => alert('Click!')}>
+				<Button order={ButtonOrder.Primary} onClick={() => window.open("https://github.com/meetalva/alva/releases/latest","_blank")}>
 					Download Beta for macOS
 				</Button>
 				<Space size={SpaceSize.S} />
@@ -93,14 +93,14 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<Button order={ButtonOrder.Secondary} color={Color.Violet} onClick={() => alert('Click!')}>
+				<Button order={ButtonOrder.Secondary} color={Color.Violet} onClick={() => window.open("https://github.com/meetalva/alva/","_blank")}>
 					Contribute to Alva on Github
 				</Button>
 			</Section>
 
 			<Footer copyright="&copy; 2018 Alva">
-				<MenuItem linkName="Legal notice" onClick={() => alert('Click!')} />
-				<MenuItem linkName="Privacy Policy" onClick={() => alert('Click!')} />
+				<MenuItem linkName="Legal notice" onClick={() => window.open("./doc/docs/legalnotice?guides-enabled=true","_blank")} />
+				<MenuItem linkName="Privacy Policy" onClick={() => window.open("./doc/docs/privacypolicy?guides-enabled=true","_blank")} />
 			</Footer>
 		</div>
 	);
