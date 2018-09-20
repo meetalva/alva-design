@@ -40,6 +40,5 @@ Well, because usually when you click on an element in the preview it gets select
 
 ## Next
 
-Get the most out of your interactions by combining them with variables.
-
-* **Next**: [Variables](./doc/docs/guides/variables?guides-enabled=true)
+Learn how to connect a compatible code component library
+* **Next**: [Library](./doc/docs/guides/library?guides-enabled=true)
