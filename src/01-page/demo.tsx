@@ -38,9 +38,9 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 				<meta name="language" content="en" />
 				<meta name="description" content="Create living prototypes with code components. Design with the same components your engineers are using for production." />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"></meta>
-				<link rel="icon" href="https://media.meetalva.io/meta/icon48.png" sizes="48x48" />
-				<link rel="icon" href="https://media.meetalva.io/meta/icon96.png" sizes="96x96" />
-				<link rel="icon" href="https://media.meetalva.io/meta/icon192.png" sizes="192x192" />
+				<link rel="icon" href="https://media.meetalva.io/meta/icon_48.png" sizes="48x48" />
+				<link rel="icon" href="https://media.meetalva.io/meta/icon_96.png" sizes="96x96" />
+				<link rel="icon" href="https://media.meetalva.io/meta/icon_192.png" sizes="192x192" />
 			</Helmet>
 			<Menu logo="https://media.meetalva.io/alva.svg">
 				<MenuItem
