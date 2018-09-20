@@ -15,7 +15,7 @@ export interface InputProps {
 	/** @name Value @default Lorem Ipsum */ value?: string;
 	/** @name Error Text @default Error Ipsum */ errorText?: string;
 	/** @name Placeholder @default Lorem Ipsum */ placeholder?: string;
-	/** @name Handle Change @ignore */ handleChange?: React.EventHandler<
+	/** @name Handle Change @description Add an interaction when the input value changes. Remember to connect the value above to the variable, too. */ handleChange?: React.EventHandler<
 		React.ChangeEvent<HTMLInputElement>
 	>;
 }
