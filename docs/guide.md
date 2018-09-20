@@ -1,4 +1,5 @@
 ---
+name: guides
 displayName: Guides
 options:
   query: tags=guide
