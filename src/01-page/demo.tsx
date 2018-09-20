@@ -62,13 +62,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<a href="https://github.com/meetalva/alva/releases/latest" target="_blank" rel="noopener">
+				<a href="https://github.com/meetalva/alva/releases/download/untagged-05dd1b175685c71c7528/Alva-0.8.0.dmg" target="_blank" rel="noopener">
 					<Button order={ButtonOrder.Primary}>
 						Download Beta for macOS
 					</Button>
 				</a>
 				<Space size={SpaceSize.S} />
-				<Copy color={Color.Grey70} size={CopySize.Small}>Also available for <u>Windows</u> and <u>Linux</u></Copy>
+				<Copy color={Color.Grey70} size={CopySize.Small}>Also available for <a href="https://github.com/meetalva/alva/releases/download/untagged-05dd1b175685c71c7528/Alva-0.8.0.exe" target="_blank" style={{color: '#fff'}}>Windows</a> and <a href="https://github.com/meetalva/alva/releases/latest" target="_blank" style={{color: '#fff'}}>Linux</a></Copy>
 				<Space size={SpaceSize.XL} />
 			</Section>
 
