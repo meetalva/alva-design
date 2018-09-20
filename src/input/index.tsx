@@ -8,16 +8,29 @@ import { Color } from '../colors';
 */
 
 export interface InputProps {
-	/** @name Type @default Text */ type?: Type;
-	/** @name Disabled @default false */ disabled?: boolean;
-	/** @name Label Text @default Lorem Ipsum */ labelText?: string;
-	/** @name Name @default Lorem Ipsum */ name?: string;
-	/** @name Value @default Lorem Ipsum */ value?: string;
-	/** @name Error Text @default Error Ipsum */ errorText?: string;
-	/** @name Placeholder @default Lorem Ipsum */ placeholder?: string;
-	/** @name Handle Change @description Add an interaction when the input value changes. Remember to connect the value above to the variable, too. */ handleChange?: React.EventHandler<
-		React.ChangeEvent<HTMLInputElement>
-	>;
+	/** @name Type @default Text */
+	type?: Type;
+
+	/** @name Disabled @default false */
+	disabled?: boolean;
+
+	/** @name Label Text @default Lorem Ipsum */
+	labelText?: string;
+
+	/** @name Name @default Lorem Ipsum */
+	name?: string;
+
+	/** @name Value @default Lorem Ipsum */
+	value?: string;
+	
+	/** @name Error Text @default Error Ipsum */
+	errorText?: string;
+
+	/** @name Placeholder @default Lorem Ipsum */
+	placeholder?: string;
+
+	/** @name Handle Change @description Add an interaction when the input value changes. Remember to connect the value above to the variable, too. */
+	handleChange?: React.EventHandler<React.ChangeEvent<HTMLInputElement>>;
 }
 
 export enum Type {
