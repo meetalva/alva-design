@@ -20,7 +20,7 @@ const StyledMenuItem = styled(Copy)`
 
 const MenuItem: React.StatelessComponent<MenuItemProps> = (props): JSX.Element => {
 	return (
-		<a href={props.href} target={props.target} rel={props.rel} title={props.title}>
+		<a href={props.href} target={props.target} rel={props.rel} title={props.title} style={{ textDecoration: "none" }}>
 			<StyledMenuItem>
 				{props.linkName}
 			</StyledMenuItem>

@@ -13,6 +13,7 @@ import Feature, { FeatureLevel, Layout as FeatureLayout } from '../feature';
 import Teaser from '../teaser';
 import * as Types from '../types';
 import { injectGlobal } from 'styled-components';
+import { Helmet } from "react-helmet";
 
 injectGlobal`
 	body {
@@ -24,6 +25,23 @@ injectGlobal`
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
+			<Helmet>
+				<title>Meet Alva</title>
+				<meta property="og:type" content="website" />
+				<meta property="og:description" content="Create living prototypes with code components." />
+				<meta property="og:image" content="https://media.meetalva.io/meta/og_image.png" />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@meetalva" />
+				<meta name="twitter:title" content="Meet Alva" />
+				<meta name="twitter:description" content="Create living prototypes with code components." />
+				<meta name="twitter:image" content="https://media.meetalva.io/meta/og_image.png" />
+				<meta name="language" content="en" />
+				<meta name="description" content="Create living prototypes with code components. Design with the same components your engineers are using for production." />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"></meta>
+				<link rel="icon" href="https://media.meetalva.io/meta/icon48.png" sizes="48x48" />
+				<link rel="icon" href="https://media.meetalva.io/meta/icon96.png" sizes="96x96" />
+				<link rel="icon" href="https://media.meetalva.io/meta/icon192.png" sizes="192x192" />
+			</Helmet>
 			<Menu logo="https://media.meetalva.io/alva.svg">
 				<MenuItem
 					linkName="Get Started"
@@ -153,6 +171,12 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 			</Section>
 
 			<Footer copyright="&copy; 2018 Alva">
+				<MenuItem
+					linkName="Proudly powered by SinnerSchrader"
+					target="_blank"
+					rel="noopener"
+					href="https://sinnerschrader.com"
+					/>
 				<MenuItem
 					linkName="Legal notice"
 					target="_blank"
