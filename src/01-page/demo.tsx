@@ -77,7 +77,11 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
                 headline="Start your prototype with code components"
                 copy="Connect to your compatible React library and start using the components of your developers for your prototype. Without writing a single line of code."
                 layout={FeatureLayout.Center}
-				frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
+				frame={ 
+					<video controls autoPlay loop style={{ display: "block", width: "100%"}}>
+  						<source src="https://media.meetalva.io/video/website-01.mp4" type="video/mp4"></source>
+					</video>
+				}
 				negativeTop
             />
             <Space size={SpaceSize.XL} />
