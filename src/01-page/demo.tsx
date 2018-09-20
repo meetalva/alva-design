@@ -22,6 +22,10 @@ injectGlobal`
 	}
 `;
 
+const MACOS_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0-mac.zip";
+const WINDOW_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0.exe";
+const LINUX_RELEASE = "https://github.com/meetalva/alva/releases/latest";
+
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div style={{overflow: "hidden"}}>
@@ -62,13 +66,19 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<a href="https://github.com/meetalva/alva/releases/download/untagged-05dd1b175685c71c7528/Alva-0.8.0.dmg" target="_blank" rel="noopener">
+				<a href={MACOS_RELEASE} target="_blank" rel="noopener">
 					<Button order={ButtonOrder.Primary}>
 						Download Beta for macOS
 					</Button>
 				</a>
 				<Space size={SpaceSize.S} />
-				<Copy color={Color.Grey70} size={CopySize.Small}>Also available for <a href="https://github.com/meetalva/alva/releases/download/untagged-05dd1b175685c71c7528/Alva-0.8.0.exe" target="_blank" style={{color: '#fff'}}>Windows</a> and <a href="https://github.com/meetalva/alva/releases/latest" target="_blank" style={{color: '#fff'}}>Linux</a></Copy>
+				<Copy color={Color.Grey70} size={CopySize.Small}>
+					Also available for <a href={WINDOW_RELEASE} target="_blank" style={{color: '#fff'}}>
+						Windows
+					</a> and <a href={LINUX_RELEASE} target="_blank" style={{color: '#fff'}}>
+						Linux
+					</a>
+				</Copy>
 				<Space size={SpaceSize.XL} />
 			</Section>
 
@@ -77,7 +87,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
                 headline="Start your prototype with code components"
                 copy="Connect to your compatible React library and start using the components of your developers for your prototype. Without writing a single line of code."
                 layout={FeatureLayout.Center}
-				frame={ 
+				frame={
 					<video controls autoPlay loop style={{ display: "block", width: "100%"}}>
   						<source src="https://media.meetalva.io/video/website-01.mp4" type="video/mp4"></source>
 					</video>
