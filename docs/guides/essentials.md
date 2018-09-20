@@ -11,38 +11,55 @@ tags:
 
 ---
 
-In this guide you will learn how Alva works, how to add code components and how to adjust their properties.
+In this guide you'll make yor very first steps with Alva.
 
-### (1) Add a Text Component
-On the left bottom you find the **component libraries**. Drag a the text component from there and **drop it on the element list** above. That’s it – we added your first component to our prototype!
 
-![Text Component to Prototype](https://media.meetalva.io/guides/guide-01-01.gif)
 
-### (2) Adjust a Property
+## 1. Download and install
+
+Download the Alva image appropriate for your platform from the [Releases Page](https://github.com/meetalva/alva/releases). 
+
+We fully support macOS and Window systems and provide untested images for various Linux platforms.
+
+Next, locate the Alva image in your Downloads and double click on the file to start the installation process.
+
+## 2. Start Alva for the first time
+
+Alva should install into your applications folder. Depending on your operating system and
+its configuration the exact location may vary. E.g. for macOS it is `/Applications/Alva`. 
+
+Find the Alva logo and double click it to start it. Alva should greet you with the following screen.
+
+![](/api/static/alva-greeting.png)
+
+
+## 3. Create a new file and add content to it
+
+Click on `Create new Alva File`. You find a list of essential patterns on the bottom left of the next screen.
+Locate the `Text` pattern and drop it onto the element pane right above the patterns list.
+
+![](https://media.meetalva.io/guides/guide-01-01.gif)
+
+That’s it – we added your first component to our prototype!
+
+## 3. Adjust a Property
 After you selected the newly added text component, have a look at the right side of Alva. There are all **properties** – like settings – of the component shown. In this case it’s just a single one – the text value. Let’s **change** that to `Hello Alva!`.
 
-[IMAGE]
+![](https://media.meetalva.io/guides/properties.png)
 
-### (3) Add a Box Component
-Let’s add another component. Besides dragging a component, we just double-click on the **Box Component**. The Box Component has way more properties, it actually is an entire flexbox engine. Let’s change the *height* to `400px` and the **background-color** to `#DA046E`.
+## 4. Add a Box Component
+Let’s add another component. Besides dragging a component, we just double-click on the **Box Component**. The Box Component has way more properties. Let’s change the `height` to `400px` and the **background-color** to `#DA046E`.
 
-[IMAGE]
+![](https://media.meetalva.io/guides/box-color.png)
 
-### (4) Re-Order Elements
+## 5. Re-Order Elements
 As you already may have found out, elements that support children elements have a small arrow on the left side. You can drag and drop elements into them. Let’s **move the text element into the box element**!
 
-[IMAGE]
-
-### (5) Export Prototype
-It’s quite simple – but we already created our first little project. In the era of code-driven design tools we won’t need any static image exports like PNG or PDF anymore. So, let’s step into the new world and export our project as a HTML prototype. Just **click on the Export Button** on the right top and save somewhere you like.
-
-You can now open that HTML file now from every computer or host it somewhere to share it with the world.
-
-[IMAGE]
+![](https://media.meetalva.io/guides/box-nesting.png)
 
 ---
 
 ### Next
 Hooray! You learned the essentials of working with Alva. Let’s jump to the next topic – how to integrate your design drafts into the prototype.
 
-[Guide 2: Connect your Library](./doc/docs/guides/library?guides-enabled=true)
+[Guide 2: Add Design Drafts](./doc/docs/guides/design?guides-enabled=true)
