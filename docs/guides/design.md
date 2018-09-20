@@ -1,11 +1,8 @@
 ---
-displayName: Guide 3 – Design
+displayName: Guide 4 – Design
 
 tags:
   - guide
-
-options:
-  order: 3
 ---
 
 # Design

@@ -1,11 +1,8 @@
 ---
-displayName: Create a custom Library
+displayName: Guide 7 - Create a Library
 
 tags:
   - guide
-
-options:
-  order: 2
 ---
 
 # Create a custom Library

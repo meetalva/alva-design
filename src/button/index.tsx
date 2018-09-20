@@ -7,7 +7,7 @@ export interface ButtonProps {
 	/** @name Disabled @default false */
 	disabled?: boolean;
 
-	/** @name Primary @default true */
+	/** @name Order */
 	order?: ButtonOrder;
 
 	/** @name Color */

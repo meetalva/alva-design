@@ -3,12 +3,14 @@ displayName: Guide 1 – Essentials
 
 tags:
   - guide
-
-options:
-  order: 1
 ---
 
 # Guide 1 – Essentials
+
+:woman_student: **Level**: Beginner
+
+---
+
 In this guide you will learn how Alva works, how to add code components and how to adjust their properties.
 
 ### (1) Add a Text Component
@@ -37,6 +39,8 @@ It’s quite simple – but we already created our first little project. In the 
 You can now open that HTML file now from every computer or host it somewhere to share it with the world.
 
 [IMAGE]
+
+---
 
 ### Next
 Hooray! You learned the essentials of working with Alva. Let’s jump to the next topic – how to integrate your design drafts into the prototype.

@@ -1,11 +1,8 @@
 ---
-displayName: Guide 4 – Interaction
+displayName: Guide 5 – Interaction
 
 tags:
   - guide
-
-options:
-  order: 4
 ---
 
 # Interaction
