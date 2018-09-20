@@ -14,7 +14,9 @@ tags:
 > :information_source: This guide shows how to create code components inside 
 a library compatible with Alva.
 
-(Coming Soon)
+For more information about our library requirements, [see here](https://github.com/meetalva/alva#pattern-library-requirements).
+
+(Guide Coming Soon)
 
 ---
 
