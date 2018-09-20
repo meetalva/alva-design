@@ -90,7 +90,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
                 headline="Integrate your visual design drafts"
 				copy="Add your latest design drafts from Sketch, Figma or any other design tool to your prototype and show your team how the next component should look like."
                 layout={FeatureLayout.Left}
-                frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
+                frame={ <img src="https://media.meetalva.io/video/website-02.png" style={{display: "block"}} /> }
             />
             <Space size={SpaceSize.XL} />
             <Feature
@@ -98,13 +98,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
                 headline="Connect everything with interactions"
                 copy="The web is interactive – so let’s design interactively, too. Go beyond static screens and design with interaction, data and logic in mind."
                 layout={FeatureLayout.Right}
-                frame={ <img src="https://raw.githubusercontent.com/meetalva/media/master/application.png" style={{display: "block"}} /> }
+                frame={ <img src="https://media.meetalva.io/video/website-03.png" style={{display: "block"}} /> }
             />
 			<Space size={SpaceSize.XL} />
 			<Space size={SpaceSize.XL} />
 
 			<Teaser
-				image="https://images.unsplash.com/photo-1430572786910-927890ae3088?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b07d84a891c5c71dbecb5f981161e043&auto=format&fit=crop&w=2250&q=80"
+				image="https://media.meetalva.io/background.jpg"
 				headline="Our mission is to enable designers and engineers to build better products together. Without friction."
 			>
 				<div style={{padding: "56.25% 0 0 0", position: "relative"}}>
