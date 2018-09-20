@@ -1,11 +1,11 @@
 ---
-displayName: Guide 3 - Connect a Library
+displayName: Guide 5 - Connect a Library
 
 tags:
   - guide
 ---
 
-#  Guide 3 - Connect a Pattern Library
+#  Guide 5 - Connect a Pattern Library
 
 :woman_student: **Level**: Intermediate
 
@@ -136,4 +136,4 @@ Your Alva screen should look like this now:
 
 Follow along to create your first custom code pattern:
 
-* **Next**: [Create a Pattern](./doc/docs/guides/create-pattern.md?guides-enabled=true)
+* **Next**: [Create a Pattern](./doc/docs/guides/create-pattern?guides-enabled=true)
