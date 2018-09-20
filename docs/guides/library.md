@@ -3,12 +3,13 @@ displayName: Guide 2 - Connect a Library
 
 tags:
   - guide
-
-options:
-  order: 2
 ---
 
-# Connect a Pattern Library
+#  Guide 2 - Connect a Pattern Library
+
+:woman_student: **Level**: Intermediate
+
+---
 
 > :information_source: This guide teaches how to connect an Alva project to the ready-made Alva Designkit. 
 
@@ -108,3 +109,31 @@ Analysing the DesignKit should take Alva just a few seconds. You can verify ever
 Notice the second library with the green "Connected" indicator? That is the Designkit we just added.
 
 ---
+
+## 4. Put connected Patterns to use
+
+Apart from listing the Designkit in the libraries pane, connecting it had a second more subtle effect. If you scroll down in your patterns list, you can find new patterns:
+
+![](https://media.meetalva.io/pattern-list.png)
+
+Let's put what we learned in the [Essentials](./doc/docs/guides/essentials?guides-enabled=true) guide to use and 
+put a Designkit button element in our prototype. Double click on the button pattern. Alva should render an empty button element on the preview. Change the `Order` property to `Primary` to give it a nice solild background.
+
+![](https://media.meetalva.io/empty-button.png)
+
+Next, let's add some text to the button. Locate the `Text` pattern in the pattern list and drag it onto the
+button. Then change its text property to something, e.g. "Hello there.". 
+
+Your Alva screen should look like this now:
+
+![](https://media.meetalva.io/text-button.png)
+
+:tada: Congratulations! You just used your first third-party code pattern in Alva. 
+
+---
+
+## Next
+
+Follow along to create your first custom code pattern:
+
+* **Next**: [Create a Pattern](./doc/docs/guides/create-pattern.md?guides-enabled=true)

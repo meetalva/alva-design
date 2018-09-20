@@ -1,11 +1,8 @@
 ---
-displayName: Guide 5 – Variables
+displayName: Guide 6 – Variables
 
 tags:
   - guide
-
-options:
-  order: 5
 ---
 
 # Variables
