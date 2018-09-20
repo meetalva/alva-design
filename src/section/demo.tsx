@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Section from './index';
-import Headline, {Level } from '../headline';
+import Headline, { HeadlineLevel } from '../headline';
 import Copy, { Size as CopySize } from '../copy';
-import Space, { Size as SpaceSize} from '../space';
+import Space, { SpaceSize} from '../space';
 import { Color } from '../colors';
 import Button, { ButtonOrder } from '../button';
 import Layout from '../layout';
@@ -10,7 +10,7 @@ import Layout from '../layout';
 const SectionDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<Section backgroundColor={Color.Black} textColor={Color.White}>
-			<Headline level={Level.H1}>
+			<Headline level={HeadlineLevel.H1}>
 				Create <u>living prototypes</u> with code components.
 			</Headline>
 			<Space size={SpaceSize.M} />
