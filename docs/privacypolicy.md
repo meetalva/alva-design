@@ -60,6 +60,11 @@ Cloudflare is a cloud service provider and content delivery network. Here we hos
 
 For more details of Cloudflare’s privacy and security processes, please visit https://www.cloudflare.com/security-policy/.
 
+## Use of YouTube
+Our website uses the YouTube video platform operated by YouTube LLC, 901 Cherry Ave. San Bruno, CA 94066 USA. YouTube is a platform that enables playback of audio and video files. When you load a page on our website, the integrated YouTube player establishes a connection to YouTube in order to ensure the technical transmission of the video or audio file. When the connection to YouTube is established, data is transferred to YouTube.
+
+For information about the scope and purpose of data collection, the further processing and use of the data by YouTube and your rights and the settings you can configure to protect your privacy, please refer to the YouTube Privacy Guidelines: https://www.youtube.com/t/privacy_guidelines.
+
 ## Rights according to legal data protection regulations
 You have the right to request information, correction, deletion or blocking of your personal data. As far as you should request deletion of your personal data stored by us, we will execute your request without undue delay, unless legal duties for documentation or storage apply. You can object to the usage of your personal data for advertising or market research purposes or revoke given opt-ins at any time.
 
