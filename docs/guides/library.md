@@ -1,5 +1,5 @@
 ---
-displayName: Guide 5 - Connect a Library
+displayName: Guide 4 - Connect a Library
 
 tags:
   - guide
@@ -136,4 +136,4 @@ Your Alva screen should look like this now:
 
 Follow along to create your first custom code pattern:
 
-* **Next**: [Create a Pattern](./doc/docs/guides/create-pattern?guides-enabled=true)
+* **Next**: [Variables](./doc/docs/guides/variables?guides-enabled=true)
