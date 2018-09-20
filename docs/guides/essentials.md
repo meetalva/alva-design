@@ -30,7 +30,7 @@ its configuration the exact location may vary. E.g. for macOS it is `/Applicatio
 
 Find the Alva logo and double click it to start it. Alva should greet you with the following screen.
 
-![](/api/static/alva-greeting.png)
+![](https://media.meetalva.io/alva-greeting.png)
 
 
 ## 3. Create a new file and add content to it
