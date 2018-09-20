@@ -15,5 +15,6 @@ export * from './layout';
 export * from './menu-item';
 export * from './navigation';
 export * from './radio';
+export * from './section';
 export * from './space';
 export * from './teaser';
