@@ -1,8 +1,8 @@
 ---
-displayName: Guide 4 – Design
+displayName: Guide 2 – Design Drafts
 
 tags:
   - guide
 ---
 
-# Design
+# Guide 2 - Add Design Drafts

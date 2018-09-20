@@ -1,8 +1,8 @@
 ---
-displayName: Guide 3 - Create a Pattern
+displayName: Guide 4 - Create a Pattern
 
 tags:
   - guide
 ---
 
-# Guide 3 - Create a Pattern
+# Guide 4 - Create a Pattern

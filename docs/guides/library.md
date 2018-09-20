@@ -1,11 +1,11 @@
 ---
-displayName: Guide 2 - Connect a Library
+displayName: Guide 3 - Connect a Library
 
 tags:
   - guide
 ---
 
-#  Guide 2 - Connect a Pattern Library
+#  Guide 3 - Connect a Pattern Library
 
 :woman_student: **Level**: Intermediate
 
