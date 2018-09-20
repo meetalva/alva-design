@@ -5,9 +5,13 @@ tags:
   - guide
 ---
 
-#  Guide 5 - Connect a Pattern Library
+#  Guide 4 - Connect a Pattern Library
 
 :woman_student: **Level**: Intermediate
+
+> If you want to skip this guide, feel free to download our [Playground Alva-File](http://media.meetalva.io/file/Website.alva) with a pre-connected library to proceed.
+
+## 
 
 ---
 
