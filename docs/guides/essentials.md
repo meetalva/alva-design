@@ -45,17 +45,17 @@ That’s it – we added your first component to our prototype!
 ## 3. Adjust a Property
 After you selected the newly added text component, have a look at the right side of Alva. There are all **properties** – like settings – of the component shown. In this case it’s just a single one – the text value. Let’s **change** that to `Hello Alva!`.
 
-![](https://media.meetalva.io/guides/properties.png)
+![](https://media.meetalva.io/properties.png)
 
 ## 4. Add a Box Component
 Let’s add another component. Besides dragging a component, we just double-click on the **Box Component**. The Box Component has way more properties. Let’s change the `height` to `400px` and the **background-color** to `#DA046E`.
 
-![](https://media.meetalva.io/guides/box-color.png)
+![](https://media.meetalva.io/box-color.png)
 
 ## 5. Re-Order Elements
 As you already may have found out, elements that support children elements have a small arrow on the left side. You can drag and drop elements into them. Let’s **move the text element into the box element**!
 
-![](https://media.meetalva.io/guides/box-nesting.png)
+![](https://media.meetalva.io/box-nesting.png)
 
 ---
 
