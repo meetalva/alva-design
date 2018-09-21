@@ -31,4 +31,4 @@ You can adjust the size of your component and even define minimum or maximum siz
 
 Let's learn how to create a prototype from our designs by adding interactions.
 
-* **Next**: [Interaction](./doc/docs/guides/interaction?guides-enabled=true)
+* **Next**: [Library](./doc/docs/guides/library?guides-enabled=true)

@@ -1,5 +1,5 @@
 ---
-displayName: Start
+displayName: Overview
 
 tags:
   - guide
@@ -11,6 +11,9 @@ options:
 # Alva Guides
 With these guides you will learn how Alva works and how you can use it to supercharge your products. Let’s start!
 
+You can also download a [Playground](http://media.meetalva.io/file/Website.alva) File of our Website built in Alva to play around.
+
+## Let’s start
 
 👉 [Guide 1 – Essentials](./doc/docs/guides/essentials?guides-enabled=true) (Let’s start with this!)
 

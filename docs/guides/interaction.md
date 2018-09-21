@@ -1,11 +1,11 @@
 ---
-displayName: Guide 3 – Interaction
+displayName: Guide 4 – Interaction
 
 tags:
   - guide
 ---
 
-# Guide 3 - Interaction
+# Guide 4 - Interaction
 
 :woman_student: **Level**: Beginner
 
@@ -41,4 +41,4 @@ Well, because usually when you click on an element in the preview it gets select
 ## Next
 
 Learn how to connect a compatible code component library
-* **Next**: [Library](./doc/docs/guides/library?guides-enabled=true)
+* **Next**: [Variables](./doc/docs/guides/variables?guides-enabled=true)
