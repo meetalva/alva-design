@@ -80,6 +80,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					href="./doc/docs/start?guides-enabled=true"
 					title="Open Getting Started Tutorial"
 				/>
+				<MenuItem
+					linkName="Twitter"
+					target="_blank"
+					rel="noopener"
+					href="https://twitter.com/meetalva"
+					title="Find us on Twitter"
+				/>
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
 				<Headline level={HeadlineLevel.H1}>
@@ -239,6 +246,19 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 							</div>
 						</form>
 					</div>
+					<Space size={SpaceSize.XL} />
+					<Headline
+						level={HeadlineLevel.H3}
+						color={Color.Violet}
+						fontWeight={Types.FontWeight.Light}
+					>
+						Stay tuned!
+					</Headline>
+					<Space size={SpaceSize.S} />
+					<Copy>
+						Alva is constantly evolving. Sign up with your email to be the first in line when we
+						announce new features.
+					</Copy>
 				</Layout>
 			</Section>
 
@@ -259,6 +279,12 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					<Button order={ButtonOrder.Secondary} color={Color.Violet}>
 						Contribute to Alva on Github
 					</Button>
+				</a>
+				<Space size={SpaceSize.S} />
+				<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmeetalva.io%2F&via=meetalva&text=Create%20living%20prototypes%20with%20code%20components.%20&hashtags=react%2C%20prototype">
+					<Button order={ButtonOrder.Secondary} color={Color.Violet}>
+						Tweet about us
+					</Button>			
 				</a>
 			</Section>
 
