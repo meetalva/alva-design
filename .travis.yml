@@ -3,4 +3,6 @@ language: node_js
 node_js:
   - '8'
 script:
-  - commitlint-travis
+  - npm run build
+  - npm run build:components
+  - ./.ci/decrypt.sh && ./.ci/deploy.sh
