@@ -75,6 +75,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 		<div style={{ overflow: "hidden" }}>
 			<Helmet>
 				<title>Meet Alva</title>
+				<meta charSet="utf-8" />
 				<meta property="og:type" content="website" />
 				<meta property="og:description" content="Create living prototypes with code components." />
 				<meta property="og:image" content="https://media.meetalva.io/meta/og_image.png" />
@@ -108,6 +109,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					rel="noopener"
 					href="https://twitter.com/meetalva"
 					title="Find us on Twitter"
+				/>
+				<MenuItem
+					linkName="Github"
+					target="_blank"
+					rel="noopener"
+					href="https://github.com/meetalva/alva"
+					title="Find us on Github"
 				/>
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
