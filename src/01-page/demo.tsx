@@ -78,7 +78,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					linkName="Get Started"
 					target="_blank"
 					rel="noopener"
-					href="./doc/docs/start?guides-enabled=true"
+					href="./doc/docs/guides/start?guides-enabled=true"
 					title="Open Getting Started Tutorial"
 				/>
 				<MenuItem
@@ -294,6 +294,24 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					<Button order={ButtonOrder.Secondary} color={Color.Violet}>
 						Tweet about us
 					</Button>			
+				</a>
+			</Section>
+
+			<Section backgroundColor={Color.Violet}>
+				<Headline level={HeadlineLevel.H2} color={Color.White} fontWeight={Types.FontWeight.Light}>
+					Getting Started
+				</Headline>
+				<Space size={SpaceSize.M} />
+				<Layout maxWidth="640px">
+					<Copy size={CopySize.Large} color={Color.White}>
+						You’re new to Alva? Follow our easy-to-learn guides and shape a new era of product design.
+					</Copy>
+				</Layout>
+				<Space size={SpaceSize.M} />
+				<a href="./doc/docs/guides/start?guides-enabled=true" target="_blank" rel="noopener">
+					<Button order={ButtonOrder.Secondary} color={Color.White}>
+						Find our Guides
+					</Button>
 				</a>
 			</Section>
 
