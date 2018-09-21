@@ -34,13 +34,17 @@ async function main(cli) {
 
 	if (identity && !(await sander.exists(identity))) {
 		console.log(`--identity ${identity} could not be found from ${process.cwd()}`);
-		console.log(cli.help);
+		cli.log(cli.help);
 		return process.exit(1);
 	}
 
 	await sander.rimraf(cwd, ".git");
 	await git(["init"], { cwd, stdout: "inherit", stderr: "inherit" });
 	await git(["remote", "add", "target", target], { cwd, stdout: "inherit", stderr: "inherit" });
+	await git(["add", "."], { cwd, stderr: "inherit" });
+	await git(["stash"]);
+	await git(["pull"], { cwd, stdout: "inherit", stderr: "inherit" });
+	await git(["stash", "pop"]);
 	await git(["add", "."], { cwd, stderr: "inherit" });
 	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd, stderr: "inherit" });
 
