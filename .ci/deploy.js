@@ -10,11 +10,11 @@ const git = (args, opts) => {
 
 async function main(cli) {
 	const { stdout: hash } = await git(["rev-parse", "--short", "HEAD"], { cwd: process.cwd() });
-	const cwd = cli.flags.source;
+	const source = cli.flags.source;
 	const target = cli.flags.target;
 	const identity = cli.flags.identity ? path.resolve(process.cwd(), cli.flags.identity) : null;
 
-	if (!cwd) {
+	if (!source) {
 		console.log("--source directory deploy is required.");
 		console.log(cli.help);
 		return process.exit(1);
@@ -26,8 +26,8 @@ async function main(cli) {
 		return process.exit(1);
 	}
 
-	if (!(await sander.exists(cwd))) {
-		console.log(`--source ${cwd} could not be found`);
+	if (!(await sander.exists(source))) {
+		console.log(`--source ${source} could not be found`);
 		console.log(cli.help);
 		return process.exit(1);
 	}
@@ -38,15 +38,12 @@ async function main(cli) {
 		return process.exit(1);
 	}
 
-	await sander.rimraf(cwd, ".git");
-	await git(["init"], { cwd, stdout: "inherit", stderr: "inherit" });
-	await git(["remote", "add", "target", target], { cwd, stdout: "inherit", stderr: "inherit" });
-	await git(["add", "."], { cwd, stderr: "inherit" });
-	await git(["stash"]);
-	await git(["pull", "target", "master"], { cwd, stdout: "inherit", stderr: "inherit" });
-	await git(["stash", "pop"]);
-	await git(["add", "."], { cwd, stderr: "inherit" });
-	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd, stderr: "inherit" });
+	const targetDir = Path.basename(target, Path.extname(target));
+
+	await git(["clone", target, targetDir], { stdout: "inherit", stderr: "inherit" });
+	await execa("cp", [`${source}/*`, targetDir], { stdout: "inherit", stderr: "inherit" });
+	await git(["add", "."], { cwd: targetDir, stderr: "inherit" });
+	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd: targetDir, stderr: "inherit" });
 
 	const env = {};
 
@@ -57,7 +54,7 @@ async function main(cli) {
 		await execa.shell(`ssh-add ${identity}`, { stdout: "inherit", stdin: "inherit", env });
 	}
 
-	await git(["push", "--set-upstream", "target", "master"], { cwd, stderr: "inherit", env });
+	await git(["push", "--set-upstream", "origin", "master"], { cwd: targetDir, stderr: "inherit", env });
 
 	if (identity) {
 		await execa("ssh-add", ["-D"], { cwd, stderr: "inherit", env });
