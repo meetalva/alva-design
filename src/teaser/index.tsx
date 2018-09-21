@@ -50,7 +50,7 @@ const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 			<StyledLayout width="80%" maxWidth="960px" center>
 				<Layout maxWidth="480px">
 					<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
-						<path d="M30 60a30 30 0 1 1 0-60 30 30 0 0 1 0 60zm-4-37v15l12-7.5L26 23z" fill="#FFF" fill-rule="evenodd"/>
+						<path d="M30 60a30 30 0 1 1 0-60 30 30 0 0 1 0 60zm-4-37v15l12-7.5L26 23z" fill="#FFF" fillRule="evenodd"/>
 					</svg>
 					<Space size={SpaceSize.M} />
 					<Headline level={HeadlineLevel.H3} color={Color.White}>{props.headline}</Headline>

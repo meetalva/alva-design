@@ -22,12 +22,14 @@ export interface InputProps {
 
 	/** @name Value @default Lorem Ipsum */
 	value?: string;
-	
+
 	/** @name Error Text @default Error Ipsum */
 	errorText?: string;
 
 	/** @name Placeholder @default Lorem Ipsum */
 	placeholder?: string;
+
+	readOnly?: boolean;
 
 	/** @name Handle Change @description Add an interaction when the input value changes. Remember to connect the value above to the variable, too. */
 	handleChange?: React.EventHandler<React.ChangeEvent<HTMLInputElement>>;
@@ -72,7 +74,7 @@ const StyledError = styled(Copy)`
 `;
 
 const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {
-	const { labelText, type, value, name, placeholder, disabled, errorText, handleChange } = props;
+	const { labelText, type, value, name, placeholder, readOnly, disabled, errorText, handleChange } = props;
 	return (
 		<StyledLabel>
 			{labelText && (
@@ -83,6 +85,7 @@ const Input: React.StatelessComponent<InputProps> = (props): JSX.Element => {
 				value={value}
 				name={name}
 				placeholder={placeholder}
+				readOnly={readOnly}
 				disabled={disabled}
 				errorText={errorText}
 				onChange={handleChange}
