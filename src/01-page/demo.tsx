@@ -31,6 +31,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 		<div style={{overflow: "hidden"}}>
 			<Helmet>
 				<title>Meet Alva</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"></meta>
 				<meta property="og:type" content="website" />
 				<meta property="og:description" content="Create living prototypes with code components." />
 				<meta property="og:image" content="https://media.meetalva.io/meta/og_image.png" />
