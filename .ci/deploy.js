@@ -43,7 +43,7 @@ async function main(cli) {
 	await git(["remote", "add", "target", target], { cwd, stdout: "inherit", stderr: "inherit" });
 	await git(["add", "."], { cwd, stderr: "inherit" });
 	await git(["stash"]);
-	await git(["pull"], { cwd, stdout: "inherit", stderr: "inherit" });
+	await git(["pull", "origin", "master"], { cwd, stdout: "inherit", stderr: "inherit" });
 	await git(["stash", "pop"]);
 	await git(["add", "."], { cwd, stderr: "inherit" });
 	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd, stderr: "inherit" });
