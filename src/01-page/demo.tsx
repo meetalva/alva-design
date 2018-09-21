@@ -22,7 +22,7 @@ injectGlobal`
 	}
 `;
 
-const MACOS_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0-mac.zip";
+const MACOS_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0.dmg";
 const WINDOW_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0.exe";
 const LINUX_RELEASE = "https://github.com/meetalva/alva/releases/latest";
 
