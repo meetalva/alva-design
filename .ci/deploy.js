@@ -50,14 +50,14 @@ async function main(cli) {
 	}
 
 	await git(["clone", target, targetDir], { stdout: "inherit", stderr: "inherit", env });
-	await execa("cp", ["-r", `${source}/`, targetDir], { stdout: "inherit", stderr: "inherit" });
+	await execa("cp", ["-r", `${source}/.`, `${targetDir}/`], { stdout: "inherit", stderr: "inherit" });
 	await git(["add", "."], { cwd: targetDir, stderr: "inherit" });
 	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd: targetDir, stderr: "inherit" });
 
 	await git(["push", "--set-upstream", "origin", "master"], { cwd: targetDir, stderr: "inherit", env });
 
 	if (identity) {
-		await execa("ssh-add", ["-D"], { cwd, stderr: "inherit", env });
+		await execa("ssh-add", ["-D"], { stderr: "inherit", env });
 	}
 }
 
