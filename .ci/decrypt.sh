@@ -13,4 +13,4 @@ openssl aes-256-cbc \
   -in .ci/identity.enc \
   -out .ci/identity -d
 
-chmod 400 identity;
+chmod 400 .ci/identity;
