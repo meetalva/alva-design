@@ -22,8 +22,13 @@ export interface FeatureProps {
 	/** @name Frame */
 	frame?: React.ReactNode;
 
+	/** @name Link */
+	link?: React.ReactNode;
+
 	/** @name NegativeTop */
 	negativeTop?: boolean;
+
+	children?: React.ReactNode;
 }
 
 export enum FeatureLevel {
@@ -130,6 +135,8 @@ const Feature: React.StatelessComponent<FeatureProps> = (props): JSX.Element => 
 					<Space size={SpaceSize.S} />
 					<StyledCopy size={CopySize.Medium}>
 						{props.copy}
+						<Space size={SpaceSize.S} />
+						{props.link}
 					</StyledCopy>
 				</StyledBox>
 			</Wrapper>

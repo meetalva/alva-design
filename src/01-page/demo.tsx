@@ -14,6 +14,7 @@ import Teaser from "../teaser";
 import * as Types from "../types";
 import { injectGlobal } from "styled-components";
 import { Helmet } from "react-helmet";
+import Link from '../link';
 
 const renderStyledComponents = require("@patternplate/render-styled-components/render");
 
@@ -128,6 +129,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 						<source src="https://media.meetalva.io/video/website-01.mp4" type="video/mp4" />
 					</video>
 				}
+				link={
+					<a href="./doc/docs/guides/essentials?guides-enabled=true" style={{textDecoration: 'none'}} target="_blank" rel="noopener">
+						<Link color={Color.Violet}>
+							Learn how to prototype with code components
+						</Link>
+					</a>
+				}
 				negativeTop
 			/>
 			<Space size={SpaceSize.XL} />
@@ -139,6 +147,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 				frame={
 					<img src="https://media.meetalva.io/video/website-02.png" style={{ display: "block" }} />
 				}
+				link={
+					<a href="./doc/docs/guides/design?guides-enabled=true" style={{textDecoration: 'none'}} target="_blank" rel="noopener">
+						<Link color={Color.Violet}>
+							Learn how to integrate your designs
+						</Link>
+					</a>
+				}
 			/>
 			<Space size={SpaceSize.XL} />
 			<Feature
@@ -148,6 +163,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 				layout={FeatureLayout.Right}
 				frame={
 					<img src="https://media.meetalva.io/video/website-03.png" style={{ display: "block" }} />
+				}
+				link={
+					<a href="./doc/docs/guides/interaction?guides-enabled=true" style={{textDecoration: 'none'}} target="_blank" rel="noopener">
+						<Link color={Color.Violet}>
+							Learn how to work with interactions
+						</Link>
+					</a>
 				}
 			/>
 			<Space size={SpaceSize.XL} />
@@ -246,19 +268,6 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 							</div>
 						</form>
 					</div>
-					<Space size={SpaceSize.XL} />
-					<Headline
-						level={HeadlineLevel.H3}
-						color={Color.Violet}
-						fontWeight={Types.FontWeight.Light}
-					>
-						Stay tuned!
-					</Headline>
-					<Space size={SpaceSize.S} />
-					<Copy>
-						Alva is constantly evolving. Sign up with your email to be the first in line when we
-						announce new features.
-					</Copy>
 				</Layout>
 			</Section>
 
@@ -289,6 +298,11 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 			</Section>
 
 			<Footer copyright="&copy; 2018 Alva">
+				<MenuItem
+					linkName="hey@meetalva.io"
+					rel="noopener"
+					href="mailto:hey@meetalva.io"
+				/>
 				<MenuItem
 					linkName="Proudly powered by SinnerSchrader"
 					target="_blank"
