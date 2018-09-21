@@ -38,7 +38,7 @@ async function main(cli) {
 		return process.exit(1);
 	}
 
-	const targetDir = Path.basename(target, Path.extname(target));
+	const targetDir = path.basename(target, path.extname(target));
 
 	await git(["clone", target, targetDir], { stdout: "inherit", stderr: "inherit" });
 	await execa("cp", [`${source}/*`, targetDir], { stdout: "inherit", stderr: "inherit" });
