@@ -40,11 +40,6 @@ async function main(cli) {
 
 	const targetDir = path.basename(target, path.extname(target));
 
-	await git(["clone", target, targetDir], { stdout: "inherit", stderr: "inherit" });
-	await execa("cp", [`${source}/*`, targetDir], { stdout: "inherit", stderr: "inherit" });
-	await git(["add", "."], { cwd: targetDir, stderr: "inherit" });
-	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd: targetDir, stderr: "inherit" });
-
 	const env = {};
 
 	if (identity) {
@@ -53,6 +48,11 @@ async function main(cli) {
 		env.SSH_AGENT_PID = cp.stdout.split("SSH_AGENT_PID=")[1].split(";")[0];
 		await execa.shell(`ssh-add ${identity}`, { stdout: "inherit", stdin: "inherit", env });
 	}
+
+	await git(["clone", target, targetDir], { stdout: "inherit", stderr: "inherit", env });
+	await execa("cp", [`${source}/*`, targetDir], { stdout: "inherit", stderr: "inherit" });
+	await git(["add", "."], { cwd: targetDir, stderr: "inherit" });
+	await git(["commit", "-m", `Deploy "${hash}" at ${new Date()}`], { cwd: targetDir, stderr: "inherit" });
 
 	await git(["push", "--set-upstream", "origin", "master"], { cwd: targetDir, stderr: "inherit", env });
 
