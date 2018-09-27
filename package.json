@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
-		"build": "tsc",
-		"build:components": "patternplate build --out=.tmp --base=/",
+    "build": "tsc",
+    "build:components": "patternplate build --out=.tmp --base=/",
     "clean": "rm -rf lib/patterns",
     "clean-build": "npm run clean && npm run build",
     "commit": "commit",
