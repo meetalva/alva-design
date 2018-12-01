@@ -17,7 +17,7 @@ async function main() {
 	const args = process.argv.slice(2);
 	const folder = args[0];
 
-	const safeDomain = `alva-designkit-${API_TARGET.split('/', '-')}.surge.sh`;
+	const safeDomain = `alva-designkit-${API_TARGET.split('/').join('-')}.surge.sh`;
 
 	ChildProcess.spawnSync(SURGE_BIN, [folder, safeDomain], {
 		stdio: 'inherit'
