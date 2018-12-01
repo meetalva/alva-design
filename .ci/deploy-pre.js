@@ -18,8 +18,7 @@ async function main() {
 	const args = process.argv.slice(2);
 	const folder = args[0];
 
-	const subdomain = fragments.slice(0, fragments.length - 2).join('.');
-	const safeDomain = `${base32.encode(subdomain)}.surge.sh`;
+	const safeDomain = `${base32.encode(PR_NUMBER)}.surge.sh`;
 
 	ChildProcess.spawnSync(SURGE_BIN, [folder, safeDomain], {
 		stdio: 'inherit'
