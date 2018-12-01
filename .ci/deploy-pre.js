@@ -25,7 +25,8 @@ async function main() {
 	});
 
 	const planned = `Deployed at: https://${safeDomain}`;
-	const comments = await fetch(`https://${GH_TOKEN}:x-oauth-basic@api.github.com/${TARGET_PATH}`).then(r => r.json());
+	const response = await fetch(`https://${GH_TOKEN}:x-oauth-basic@api.github.com/${TARGET_PATH}`);
+	const comments = (await response.json()) || [];
 	const previous = comments.find(comment => comment.body === planned);
 
 	if (previous) {
