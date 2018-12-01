@@ -26,7 +26,13 @@ async function main() {
 
 	const planned = `Deployed at: https://${safeDomain}`;
 	const response = await fetch(`https://${GH_TOKEN}:x-oauth-basic@api.github.com/${TARGET_PATH}`);
-	const comments = (await response.json()) || [];
+	const comments = (await response.json());
+
+	if (!Array.isArray(comments) && comments.message) {
+		console.error(comments.message);
+		process.exit(1);
+	}
+
 	const previous = comments.find(comment => comment.body === planned);
 
 	if (previous) {
