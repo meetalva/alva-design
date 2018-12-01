@@ -32,10 +32,13 @@
     "@types/node": "^8.0.53",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
+    "base32": "0.0.6",
     "concurrently": "^3.5.1",
     "execa": "^1.0.0",
     "husky": "^0.14.3",
     "meow": "^5.0.0",
+    "node-fetch": "^2.3.0",
+    "surge": "^0.20.1",
     "tslint": "^5.11.0",
     "typescript": "^3.0.3"
   },
