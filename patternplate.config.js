@@ -30,6 +30,5 @@ module.exports = {
 		colorTextDark: "rgb(242, 242, 242)",
 		colorRecessDark: "rgb(153, 153, 153)",
 		colorActive: "rgb(215, 0, 82)",
-		showComponents: false
 	}
 };
