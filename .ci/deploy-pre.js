@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 const ChildProcess = require('child_process');
 const Path = require('path');
-const base32 = require('base32');
 const fetch = require('node-fetch');
 
 const SURGE_BIN = Path.resolve(process.cwd(), 'node_modules', '.bin', 'surge');
 
-const PR_NUMBER = process.env.TRAVIS_PULL_REQUEST ? Path.basename(process.env.TRAVIS_PULL_REQUEST) : '';
+const PR_NUMBER = process.env.TRAVIS_PULL_REQUEST !== 'false' ? Path.basename(process.env.TRAVIS_PULL_REQUEST) : '';
 const REPO_NAME = process.env.TRAVIS_REPO_SLUG;
 const SHA1 = process.env.TRAVIS_COMMIT;
 const GH_TOKEN = process.env.GH_AUTH_TOKEN;
@@ -18,7 +17,7 @@ async function main() {
 	const args = process.argv.slice(2);
 	const folder = args[0];
 
-	const safeDomain = `${base32.encode(PR_NUMBER)}.surge.sh`;
+	const safeDomain = `alva-designkit-${API_TARGET.split('/', '-')}.surge.sh`;
 
 	ChildProcess.spawnSync(SURGE_BIN, [folder, safeDomain], {
 		stdio: 'inherit'
