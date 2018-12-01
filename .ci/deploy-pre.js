@@ -12,7 +12,7 @@ const SHA1 = process.env.TRAVIS_COMMIT;
 const GH_TOKEN = process.env.GH_AUTH_TOKEN;
 
 const API_TARGET = PR_NUMBER ? `issues/${PR_NUMBER}` : `commits/${SHA1}`;
-const TARGET_PATH = `repos/${USER_NAME}/${REPO_NAME}/${API_TARGET}/comments`;
+const TARGET_PATH = `repos/${REPO_NAME}/${API_TARGET}/comments`;
 
 async function main() {
 	const args = process.argv.slice(2);
