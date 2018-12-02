@@ -1,10 +1,11 @@
 # Alva Designkit
 
-See https://github.com/meetalva/alva for details.
+> This is contributor documentation. Refer to links below for user docs.
 
-Kickstart your idea with Alva and this complementary UI Kit. Get your product out and rapidly iterate your inovations.
+## [Getting Started with Alva](https://meetalva.io/doc/docs/guides/start?guides-enabled=true) | [meetalva.io](https://meetalva.io) 
 
-## Getting started
+
+## Contributing to Alva Designkit
 
 ```sh
 git clone git@github.com:meetalva/designkit.git
@@ -14,3 +15,7 @@ npm install
 # Start patternplate
 npm start
 ```
+
+## License
+
+MIT - Copyright (c) 2017 SinnerSchrader Deutschland GmbH
