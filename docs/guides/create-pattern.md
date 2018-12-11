@@ -70,7 +70,30 @@ export * from './teaser';
 export * from './hello-world';
 ```
 
-## 3. Update Designkit in your Alva project
+## 3. Build your changes
+
+For Alva to understand your new code you need to build it with the [TypeScript](https://www.typescriptlang.org/) compiler.
+Let's do that real quick. Execute the following command in your Alva Designkit folder.
+
+```
+npm run build
+```
+
+When TypeScript is done translating your code the terminal window should resemble this:
+
+```
+λ npm run build
+
+> meetalva-designkit@1.0.0 build /Users/marneb/Documents/alva/designkit
+> tsc
+
+~/alva/designkit
+λ
+```
+
+We are all set, let's switch back to Alva.
+
+## 4. Update Designkit in your Alva project
 
 !(video:https://media.meetalva.io/video/update-library.m4v)
 
@@ -79,7 +102,7 @@ Start Alva and open the project you created while working through the [Connect a
 On the `meetalva-designkit` card hit the "Update" button. Wait for the card to switch back from "Connecting" to "Connected".
 
 
-## 4. Use the Hello World component
+## 5. Use the Hello World component
 
 !(video:https://media.meetalva.io/video/use-hello-world.m4v)
 
