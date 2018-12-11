@@ -4,6 +4,7 @@ export const globalCss = `
 body {
 	margin: 0;
 	padding: 0;
+	min-width: 320px;
 }
 
 @font-face {

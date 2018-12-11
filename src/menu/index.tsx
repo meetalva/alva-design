@@ -43,6 +43,35 @@ const StyledImage = styled(Image)`
 
 const StyledMenuInner = styled.div`
 	display: flex;
+	> * {
+		display: none;
+	}
+	> :first-child {
+		display: block;
+	}
+	> :nth-child(2) {
+		display: block;
+	}
+	@media screen and (min-width: 420px) {
+		> :nth-child(3) {
+			display: block;
+		}
+	}
+	@media screen and (min-width: 520px) {
+		> :nth-child(4) {
+			display: block;
+		}
+	}
+	@media screen and (min-width: 620px) {
+		> :nth-child(5) {
+			display: block;
+		}
+	}
+	@media screen and (min-width: 720px) {
+		> :nth-child(6) {
+			display: block;
+		}
+	}
 `;
 
 const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
