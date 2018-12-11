@@ -1,5 +1,5 @@
 ---
-displayName: Guide 7 - Create a Library
+displayName: Guide 8 - Create a Library
 
 tags:
   - guide
