@@ -22,7 +22,13 @@ module.exports = () => <PatternList query="is=doc AND tag=guide AND tag!=entry" 
 
 ## Levels
 
-:information_source: The levels are meant to help you decide how much time you'll need to follow a guide. If you are a beginner: Please tackle the "Expert" level guides! Ask your colleagues for help and [post an issue on GitHub](https://github.com/meetalva/alva/issues/new) if something is hard to understand in our docs. Thank you!
+> :information_source: 
+> The levels are meant to help you decide how much time you'll need to follow a guide. 
+> If you are a beginner: Please tackle the "Expert" level guides! 
+>
+> Join us for a [chat and help on Gitter](https://gitter.im/meetalva/Lobby) when you have trouble with anything.
+> 
+> [Post an issue on GitHub](https://github.com/meetalva/alva/issues/new) if something is hard to understand in our docs. > Thank you!
 
 * Beginner
 * Intermediate

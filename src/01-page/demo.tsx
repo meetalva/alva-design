@@ -87,6 +87,13 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					href="https://github.com/meetalva/alva"
 					title="Find us on Github"
 				/>
+				<MenuItem
+					linkName="Gitter"
+					target="_blank"
+					rel="noopener"
+					href="https://gitter.im/meetalva/Lobby"
+					title="Chat with us on Gitter"
+				/>
 			</Menu>
 			<Section backgroundColor={Color.Black} textColor={Color.White}>
 				<Headline level={HeadlineLevel.H1}>
