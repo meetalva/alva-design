@@ -5,11 +5,13 @@ tags:
   - guide
 ---
 
-# Guide 5 - Variables (coming soon)
+# Guide 5 - Variables
 
 :woman_student: **Level**: Intermediate
 
 ---
+
+Learn how to employ user data provided in your prototype.
 
 ## 1. Add Input
 To show interactivity we need an interactive component. Let's **add an input**.
