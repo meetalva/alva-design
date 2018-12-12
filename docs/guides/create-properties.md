@@ -25,6 +25,8 @@ continuing with step 2.
 
 ## 2. Add a greeting property
 
+!(video:https://media.meetalva.io/video/props-add-greeting.m4v)
+
 Locate the implementation of our `Hello World` component at `~/alva/src/hello-world/index.tsx`.
 Open it with your favourite text editor. We'll use VSCode in our screenshots and screencasts but 
 you are not required to use it.
@@ -41,11 +43,11 @@ export const HelloWorld: React.SFC = () => {
 }
 ```
 
-What if we spiced things up a bit: We'll let users
+Let's take our componen a bit further. We'll let users
 decide on the greeting they want to use.
 
-Let's begin by adding a `HelloWorldProps` TypeScript interface.
-We'll leave it empty for now.
+Let's set a foundation annd add a `HelloWorldProps` TypeScript interface.
+We'll leave it empty for now and fill in our props in the next step.
 
 ```ts{3-5,7}
 import * as React from 'react';
@@ -78,7 +80,7 @@ export interface HelloWorldProps {
 	greeting?: string; 
 }
 
-export const HelloWorld: React.SFC<HelloWorldProps> = () => {
+export const HelloWorld: React.SFC<HelloWorldProps> = (props) => {
 	return (
 		<h1>{props.greeting || 'Hello'}, World!</h1>
 	)
@@ -86,6 +88,8 @@ export const HelloWorld: React.SFC<HelloWorldProps> = () => {
 ```
 
 ## 3. See your new Property in Alva
+
+!(video:https://media.meetalva.io/video/props-use-greeting.m4v)
 
 Remember to execute the TypeScript compiler via `npm run build`.
 
@@ -102,6 +106,8 @@ Let's type something in there, e.g. "Moin" (I am from Hamburg, Germany - sue me.
 See how the preview updates with every keystroke? 
 
 ## 4. More properties
+
+!(video:https://media.meetalva.io/video/props-add-scope.m4v)
 
 That's pretty cool, right? Let's try another one. We'll let the user
 select from a range of scopes for the second word in our greeting. 
@@ -133,14 +139,14 @@ export interface HelloWorldProps {
 	scope?: HelloScope;
 }
 
-export const HelloWorld: React.SFC<HelloWorldProps> = () => {
+export const HelloWorld: React.SFC<HelloWorldProps> = (props) => {
 	return (
-		<h1>{props.greeting || 'Hello'}, ${props.scope || 'World'}!</h1>
+		<h1>{props.greeting || 'Hello'}, {props.scope || 'World'}!</h1>
 	)
 }
 ```
 
-You might ask why we bothered with the additional code for our new when we could have 
+You might ask why we bothered with the additional code for our new `scope` property when we simply could have 
 used a `string` again. 
 
 One nice thing about `enums` is that we now know the **finite**
@@ -149,8 +155,13 @@ set of possibilites for this prop. Alva uses this fact to render a nicer edit UI
 Let's update the designkit in our Alva file again. Then select the HelloWorld element
 you created earlier by clicking on it. Notice the second input in the property pane?
 
-That's an select, the input type Alva choooses for `enums`.
+That's an select, the input type Alva chooses for properties of type `enum`.
 
+You just mastered the fundamentals of making your components configurable and data-driven. Well done! :clap:
+
+> ❔
+> See our [Property Reference](../references/properties) for details on how Alva parses and
+analyzes your React components' interfaces.
 
 ---
 
