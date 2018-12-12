@@ -12,6 +12,7 @@ export interface LinkProps {
 }
 
 const StyledLink = styled.div`
+	display: inline-block;
 	color: ${(props: LinkProps) => props.color || 'inherit'};
 	font-family: ${fonts().NORMAL_FONT};
 `;

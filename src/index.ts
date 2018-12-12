@@ -13,6 +13,7 @@ export * from './image';
 export * from './input';
 export * from './layout';
 export * from './link';
+export * from './menu';
 export * from './menu-item';
 export * from './radio';
 export * from './section';

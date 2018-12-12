@@ -7,7 +7,7 @@ tags:
 
 ## Element
 
-Am instance inside Alvas Element tree. By configuring an Element's [properties](#property) the content, display or behaviour of the element may be controlled. Elements contain the information where which data should be rendered according to which [pattern](#pattern).
+An instance inside Alvas Element tree. By configuring an Element's [properties](#property) the content, display or behaviour of the element may be controlled. Elements contain the information where which data should be rendered according to which [pattern](#pattern).
 
 ## Library
 

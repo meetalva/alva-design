@@ -40,4 +40,3 @@ Alvas static analyzer follows a set of steps and rules when reading your pattern
 - 3. c) Has `.alva:main`. Use `.d.ts` file with same basename (`some/path/lib.js` => `some/path/lib.d.ts`)
 - 3. d) Has `.main`. Use `.d.ts` file with same basename
 - 3. e) None of the above: Use `index.d.ts`
-
