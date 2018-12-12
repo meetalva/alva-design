@@ -115,4 +115,4 @@ Congratulations! :tada:
 
 ## Next
 
-* **Next**: [Create a Pattern Library](./create-library?guides-enabled=true)
+* **Next**: [Create Properties](./create-properties?guides-enabled=true)
