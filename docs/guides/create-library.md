@@ -21,7 +21,7 @@ shortcuts if you want to focus on component creation and use:
 
 - Reuse [Alva Designkit](https://github.com/meetalva/designkit) and change to [Create Pattern Guide](./create-pattern)
 
-- Fetch [Component Library Starter](https://github.com/meetalva/designkit) and skip to [Section 2](#section-2)
+- Fetch [Component Library Starter](https://github.com/meetalva/designkit) and skip to [Section 2](#2.-add-components)
 
 ## Prerequesites
 
@@ -57,7 +57,7 @@ node_modules
 .DS_Store
 ```
 
-If everyhting worked `git status` should create the following output for you:
+If everything worked `git status` should create the following output for you:
 
 ```sh
 λ git status
@@ -74,6 +74,12 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 ## 1b) Add required npm meta data
+
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1b-add-required-npm-meta-data https://github.com/meetalva/component-library-starter.git
+> | ```
 
 Alva uses some meta data commonly found in `npm` packages to distinguish between different libraries. You will also select the `package.json` file used to store this meta data when connecting component libraries to Alva.
 
@@ -102,6 +108,15 @@ After successful init, you should find a new `package.json` in your directory wi
 ```
 
 ### 1c) Add dependencies
+
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1c-add-dependencies https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | ```
+
 
 We'll use some dependencies to create our components. This includes React
 and styled-components. Add and save them to your project like this:
@@ -142,6 +157,15 @@ After successful installation your `package.json` should look like this:
 ```
 
 ### 1d) Add TypeScript
+
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1d-add-typescript https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | ```
+
 
 Alva analyzes your component interfaces to find out which
 data to feed into them. The easiest way to provide those
@@ -233,6 +257,14 @@ via `npm run build`. Notice that we removed the `npm test` placeholder script.
 
 ### 1e) Specify package entry
 
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1e-specify-package-entry https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | ```
+
 Using the configuration above, `tsc` will compile any 
 `.ts` file found in `src` to `lib`. For Alva to pick up
 our code, we need to point it to the correct file - in our case that is `lib/index.js`.  
@@ -268,6 +300,16 @@ from `index.js` to `lib/index.js`. The resulting `package.json` reads:
 ```
 
 ### 1f) Create placeholder files
+
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1f-create-placeholder-files https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | npm run build
+> | ```
+
 
 We place some empty files for `TypeScript` to pick up so we can 
 verfiy your setup. Create a `src` folder first:
@@ -308,6 +350,15 @@ Hello, World
 
 ### 1h) Clean up
 
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 1h-cleanup https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | npm run build
+> | ```
+
 Phew! It was quite a journey from zero to project setup. Congrats you did it! :tada:
 
 There is just one last thing to do before we can start adding components: 
@@ -328,6 +379,16 @@ Afterswar
 > See [Create a Component](./create-pattern) for a dedicated, more detailed guide on creating components. 
 
 ## 2a) Add a HelloWorld component
+
+> [[details | Shortcut]]
+> |
+> | ```
+> | git clone --single-branch --branch 2a-add-a-helloworld-component https://github.com/meetalva/component-library-starter.git
+> | cd component-library-starter
+> | npm install
+> | npm run build
+> | ```
+
 
 Create the following files
 
