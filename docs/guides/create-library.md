@@ -1,11 +1,11 @@
 ---
-displayName: Guide 8 - Create a Library
+displayName: Guide 8 - Create a Component Library
 
 tags:
   - guide
 ---
 
-# Guide 7 - Create a custom Pattern Library
+# Guide 8 - Create a Component Library
 
 :woman_student: **Level**: Expert
 
@@ -54,7 +54,50 @@ keep our commit history clear and meaningful.
 # .gitgnore
 lib
 node_modules
+.DS_Store
 ```
 
+If everyhting worked `git status` should create the following output for you:
 
+```sh
+λ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+## 1b) Package meta data
+
+Alva uses some meta data commonly found in `npm` packages to distinguish between different libraries. You will also select the `package.json` file used to store this meta data when connecting component libraries to Alva.
+
+So let's create a `package.json` file. Luckily `npm` has us covered and
+makes this a matter of one command.
+
+```
+npm init -y
+```
+
+After successful init, you should find a new `package.json` in your directory with content like this:
+
+```json
+{
+  "name": "component-library2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
 ---
