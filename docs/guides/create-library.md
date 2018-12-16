@@ -312,12 +312,92 @@ Phew! It was quite a journey from zero to project setup. Congrats you did it! :t
 
 There is just one last thing to do before we can start adding components: 
 
-Let's remove our debug `console.log` in `src/index.ts`.
+Let's remove our debug `console.log` on the last line in `src/index.ts`.
+
+Afterswar
 
 ```ts
 // src/index.ts
 // placeholder entry file
 // export * from './hello-world';
 ```
+
+## 2. Add components
+
+> :information_source:
+> See [Create a Component](./create-pattern) for a dedicate, more detailed guide on creating components. 
+
+## 2a) Add a HelloWorld component
+
+Create the following files
+
+**src/hello-world.styled.ts**
+
+```tsx
+// src/hello-world.styled.ts
+import styled from 'styled-components';
+
+export enum HelloWorldColors {
+  Pale = 'palevioletred',
+  Whip = 'papayawhip',
+  Black = 'black'
+}
+
+export interface StyledHelloWorldProps {
+  color?: HelloWorldColors;
+}
+
+export const StyledHelloWorld = styled.h1<StyledHelloWorldProps>`
+  font-family: sans-serif;
+  color: ${props => props.color || HelloWorldColors.Black};
+}`;
+```
+
+**src/hello-world.tsx**
+
+```tsx
+import * as React from 'react';
+import * as Styles from './hello-world.styled';
+
+export interface HelloWorldProps {
+    color?: Styles.HelloWorldColors;
+    children?: React.ReactNode;
+}
+
+export const HelloWorld: React.SFC<HelloWorldProps> = props => {
+    return <Styles.StyledHelloWorld color={props.color}>{props.children}</Styles.StyledHelloWorld>
+}
+```
+
+## 2b) Build your component
+
+Execute `npm run build` to create JavaScript from your 
+brand-new React TypeScript component:
+
+```
+npm run build
+```
+
+After a successful build `tree lib` prints a file list like this:
+
+```
+λ tree lib
+lib
+├── hello-world.d.ts
+├── hello-world.js
+├── hello-world.styled.d.ts
+├── hello-world.styled.js
+├── index.d.ts
+└── index.js
+
+0 directories, 6 files
+```
+
+
+
+
+
+
+
 
 ---
