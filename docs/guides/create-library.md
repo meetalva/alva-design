@@ -13,22 +13,22 @@ tags:
 
 ## What to expect
 
-This guide takes you step by step through the process of setting up a component library **from scratch**. 
+This guide takes you step by step through the process of setting up a component library **from scratch**.
 
-Following along is very useful to understand what happens behind the scences. 
-A project setup can be very time consuming though – you might want to have a look at the following 
+Following along is very useful to understand what happens behind the scences.
+A project setup can be very time consuming though – you might want to have a look at the following
 shortcuts if you want to focus on component creation and use:
 
-* Reuse [Alva Designkit](https://github.com/meetalva/designkit) and change to [Create Pattern Guide](./create-pattern)
+- Reuse [Alva Designkit](https://github.com/meetalva/designkit) and change to [Create Pattern Guide](./create-pattern)
 
-* Fetch [Component Library Starter](https://github.com/meetalva/designkit) and skip to [Section 2](#section-2)
+- Fetch [Component Library Starter](https://github.com/meetalva/designkit) and skip to [Section 2](#section-2)
 
 ## Prerequesites
 
-* :evergreen_tree: [git](https://git-scm.com/downloads)
-* :turtle: [Node.js](https://nodejs.org/en/) `>= 8`
-* :computer: A terminal emulator 
-* :globe_with_meridians: Internet connection
+- :evergreen_tree: [git](https://git-scm.com/downloads)
+- :turtle: [Node.js](https://nodejs.org/en/) `>= 8`
+- :computer: A terminal emulator
+- :globe_with_meridians: Internet connection
 
 ## 1. Project setup
 
@@ -88,7 +88,7 @@ After successful init, you should find a new `package.json` in your directory wi
 
 ```json
 {
-  "name": "component-library2",
+  "name": "component-library",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -100,4 +100,224 @@ After successful init, you should find a new `package.json` in your directory wi
   "license": "ISC"
 }
 ```
+
+1c) Add dependencies
+
+We'll use some dependencies to create our components. This includes React
+and styled-components. Add and save them to your project like this:
+
+```
+npm install --save \
+  react@16.6.3 \
+  react-dom@16.6.3 \
+  styled-components@4.1.2 \
+  @types/react@16.7.17 \
+  @types/react-dom@16.0.11 \
+  styled-components@4.1.2
+```
+
+After successful installation your `package.json` should look like this:
+
+```json{13-18}
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.2"
+  }
+}
+```
+
+### 1d) Add TypeScript
+
+Alva analyzes your component interfaces to find out which
+data to feed into them. The easiest way to provide those
+interfaces is to write our components in TypeScript, so we'll do that.
+
+Let's install and configure TypeScript:
+
+```
+npm install --save-dev typescript@3.2.2
+```
+
+Should cause `npm` to add a new `devDependencies` entry:
+
+```json{21}
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+
+On its own TypeScript won't do much, we have to configure it.
+Let' create a `tsconfig.json` for this. The configuration
+values required for Alva to work correctly are highlighted below.
+
+```js{4-6}
+// tsconfig.json
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": ["dom", "es2015"],
+    "module": "es2015",
+    "outDir": "./lib",
+    "target": "es2015",
+  }
+}
+
+```
+
+Finally let's create a shortcut so we can to start the TypeScript compiler
+via `npm run build`. Notice that we removed the `npm test` placeholder script.
+
+```json{7}
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+
+
+### 1e) Specify package entry
+
+Using the configuration above, `tsc` will compile any 
+`.ts` file found in `src` to `lib`. For Alva to pick up
+our code, we need to point it to the correct file - in our case that is `lib/index.js`.  
+
+Luckily npm provides a field designed to do this: `main`. We'll change it 
+from `index.js` to `lib/index.js`. The resulting `package.json` reads:
+
+
+```json{5}
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+
+### 1f) Create placeholder files
+
+We place some empty files for `TypeScript` to pick up so we can 
+verfiy your setup. Create a `src` folder first:
+
+```
+mkdir src
+```
+
+Then add the following to `src/index.ts`
+
+```ts
+// src/index.ts
+// placeholder entry file
+// export * from './hello-world';
+console.log('Hello, World');
+```
+
+### 1g) Verify your setup
+
+Execute `npm run build`, then `tree lib`.
+The output should look like this:
+
+```
+λ tree lib
+lib
+├── index.d.ts
+└── index.js
+
+0 directories, 2 files
+```
+
+Executing our build results with `node` should work, too:
+
+```
+λ node lib/index.js
+Hello, World
+```
+
+### 1h) Clean up
+
+Phew! It was quite a journey from zero to project setup. Congrats you did it! :tada:
+
+There is just one last thing to do before we can start adding components: 
+
+Let's remove our debug `console.log` in `src/index.ts`.
+
+```ts
+// src/index.ts
+// placeholder entry file
+// export * from './hello-world';
+```
+
 ---
