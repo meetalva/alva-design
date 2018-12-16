@@ -1,5 +1,5 @@
 ---
-displayName: Guide 8 - Create a Component Library
+displayName: Guide 8 - Create Library
 
 tags:
   - guide
@@ -73,7 +73,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-## 1b) Package meta data
+## 1b) Add required npm meta data
 
 Alva uses some meta data commonly found in `npm` packages to distinguish between different libraries. You will also select the `package.json` file used to store this meta data when connecting component libraries to Alva.
 
@@ -101,7 +101,7 @@ After successful init, you should find a new `package.json` in your directory wi
 }
 ```
 
-1c) Add dependencies
+### 1c) Add dependencies
 
 We'll use some dependencies to create our components. This includes React
 and styled-components. Add and save them to your project like this:
@@ -153,7 +153,7 @@ Let's install and configure TypeScript:
 npm install --save-dev typescript@3.2.2
 ```
 
-Should cause `npm` to add a new `devDependencies` entry:
+This should cause `npm` to add a new `devDependencies` entry:
 
 ```json{21}
 {
@@ -325,7 +325,7 @@ Afterswar
 ## 2. Add components
 
 > :information_source:
-> See [Create a Component](./create-pattern) for a dedicate, more detailed guide on creating components. 
+> See [Create a Component](./create-pattern) for a dedicated, more detailed guide on creating components. 
 
 ## 2a) Add a HelloWorld component
 
@@ -365,11 +365,19 @@ export interface HelloWorldProps {
 }
 
 export const HelloWorld: React.SFC<HelloWorldProps> = props => {
-    return <Styles.StyledHelloWorld color={props.color}>{props.children}</Styles.StyledHelloWorld>
+    return <Styles.StyledHelloWorld color={props.color}>{props.children || 'Hello, World!'}</Styles.StyledHelloWorld>
 }
 ```
 
-## 2b) Build your component
+## 2b) Export 
+
+Change your entry file at `src/index.ts` to export `src/hello-world.tsx`:
+
+```ts
+export * from './hello-world';
+```
+
+## 2b) Build
 
 Execute `npm run build` to create JavaScript from your 
 brand-new React TypeScript component:
@@ -393,11 +401,31 @@ lib
 0 directories, 6 files
 ```
 
+### 2c) Connect to Alva
+
+> :information_source:
+> See [Connect a Library](./library) for a dedicated guide on connecting libraries.
+
+* Start Alva. 
+* Create a new file (`File > New` or `Cmd+N`)
+* Open connect library dialog (`Library` > `Connect New Library` or `Cmd+Shift+C`)
+* Select `~/alva/component-library/package.json`. Exact location may differ if you chose a different working directory in section 1.
+
+After importing your component library successfully Alva should display your `HelloWorld` component on the bottom of the component list.
+
+[[grid]]
+| [[grid-column | 5 - 13 ]]
+| | ![](https://media.meetalva.io/guides/hello-world-component-list.png)
 
 
+Drag your `HelloWorld` component to the element list above or doubleclick on it. This should add a new `HelloWorld` element and cause Alva to render "Hello World" to the preview.
 
+[[grid]]
+| [[grid-column | 5 - 13 ]]
+| | ![](https://media.meetalva.io/guides/hello-world-component-used.png)
 
+That's it, you just bootstrapped yourself from zero to working Alva component!
 
+## Reference
 
-
----
+* [Library Requirements](../references/library-requirements)
