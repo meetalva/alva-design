@@ -60,7 +60,7 @@ node_modules
 If everything worked `git status` should create the following output for you:
 
 ```sh
-λ git status
+$ git status
 On branch master
 
 No commits yet
@@ -335,7 +335,7 @@ Execute `npm run build`, then `tree lib`.
 The output should look like this:
 
 ```
-λ tree lib
+$ tree lib
 lib
 ├── index.d.ts
 └── index.js
@@ -346,7 +346,7 @@ lib
 Executing our build results with `node` should work, too:
 
 ```
-λ node lib/index.js
+$ node lib/index.js
 Hello, World
 ```
 
@@ -367,7 +367,7 @@ There is just one last thing to do before we can start adding components:
 
 Let's remove our debug `console.log` on the last line in `src/index.ts`.
 
-Afterswar
+Afterwards your file looks like this:
 
 ```ts
 // src/index.ts
@@ -452,7 +452,7 @@ npm run build
 After a successful build `tree lib` prints a file list like this:
 
 ```
-λ tree lib
+$ tree lib
 lib
 ├── hello-world.d.ts
 ├── hello-world.js
