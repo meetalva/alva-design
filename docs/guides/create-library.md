@@ -266,8 +266,10 @@ via `npm run build`. Notice that we removed the `npm test` placeholder script.
 > | ```
 
 Using the configuration above, `tsc` will compile any 
-`.ts` file found in `src` to `lib`. For Alva to pick up
-our code, we need to point it to the correct file - in our case that is `lib/index.js`.  
+`.ts` file found in `src` to `lib`. 
+
+**For Alva to pick up
+our code, we need to point it to the correct file via `main` - in our case that is `lib/index.js`.**
 
 Luckily npm provides a field designed to do this: `main`. We'll change it 
 from `index.js` to `lib/index.js`. The resulting `package.json` reads:
