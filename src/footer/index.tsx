@@ -7,8 +7,6 @@ import Layout from '../layout';
 export interface FooterProps {
 	/** @copy @name Copyright */
 	copyright: string;
-
-	children: React.ReactNode;
 }
 
 const StyledFooter = styled.div`

@@ -7,7 +7,7 @@ export interface LayoutProps {
 	/** @name Maximum width*/ maxWidth?: string;
 	/** @name Background color @default transparent */ backgroundColor?: string;
 	center?: boolean;
-	children?: React.ReactNode;
+	
 }
 
 export enum Direction {
