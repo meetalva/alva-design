@@ -11,9 +11,25 @@ tags:
 
 ---
 
+Component libraries are an important building block of 
+the frontend development process and that's great news!
+
+By breaking an app into reusable parts there is more chance
+for reuse, e.g. by tools like Alva.
+
+This flexibility come at a cost, which often is paid in the increased complexity in tech setups. 
+
+Don't worry though - this guide is designed to take you through the process step by step.
+
 ## What to expect
 
 This guide takes you step by step through the process of setting up a component library **from scratch**.
+
+After completion you will …
+
+* … know how to set up a component library
+* … know hot to add new components to your library
+* … have a full tech setup for development of components compatible with Alva
 
 Following along is very useful to understand what happens behind the scences.
 A project setup can be very time consuming though – you might want to have a look at the following
