@@ -11,9 +11,25 @@ tags:
 
 ---
 
+Component libraries are an important building block of 
+the frontend development process and that's great news!
+
+By breaking an app into reusable parts there is more chance
+for reuse, e.g. by tools like Alva.
+
+This flexibility come at a cost, which often is paid in the increased complexity in tech setups. 
+
+Don't worry though - this guide is designed to take you through the process step by step.
+
 ## What to expect
 
 This guide takes you step by step through the process of setting up a component library **from scratch**.
+
+After completion you will …
+
+* … know how to set up a component library
+* … know how to add new components to your library
+* … have a full tech setup for development of components compatible with Alva
 
 Following along is very useful to understand what happens behind the scences.
 A project setup can be very time consuming though – you might want to have a look at the following
@@ -33,8 +49,7 @@ shortcuts if you don't want to focus on technical setup.
 ## 1. Project setup
 
 Let's dive right in. Start a terminal and change to the directory
-you want to work in. For this tutorial we'll use `~/alva/` in examples,
-screenshots and screencasts but any location on your computer works.
+you want to work in. For this tutorial we'll use `~/alva-guides/` but any location works.
 
 ## 1a) Git initialization
 
@@ -118,8 +133,15 @@ After successful init, you should find a new `package.json` in your directory wi
 > | ```
 
 
-We'll use some dependencies to create our components. This includes React
-and styled-components. Add and save them to your project like this:
+We'll use some dependencies to create our components. This includes [React](https://reactjs.org/)
+and [styled-components](https://www.styled-components.com/). Add and save them to your project like this:
+
+> :information_source:
+> :woman_student: Don't panic! 
+> We encourage you to learn about React and styled-components, but
+> really don't need to be a React programmer to complete this guide.
+> 
+> **Promise :crossed_fingers:**
 
 ```
 npm install --save \
@@ -208,6 +230,8 @@ This should cause `npm` to add a new `devDependencies` entry:
 On its own TypeScript won't do much, we have to configure it.
 Let' create a `tsconfig.json` for this. The configuration
 values required for Alva to work correctly are highlighted below.
+
+Copy the following code and paste it into `tsconfig.json`.
 
 ```js{4-6}
 // tsconfig.json
@@ -335,10 +359,8 @@ Execute `npm run build`, then `tree lib`.
 The output should look like this:
 
 ```
-$ tree lib
-lib
-├── index.d.ts
-└── index.js
+$ ls lib
+index.d.ts    index.js
 
 0 directories, 2 files
 ```
@@ -377,9 +399,6 @@ Afterwards your file looks like this:
 
 ## 2. Add components
 
-> :information_source:
-> See [Create a Component](./create-pattern) for a dedicated, more detailed guide on creating components. 
-
 ## 2a) Add a HelloWorld component
 
 > [[details | Shortcut]]
@@ -395,6 +414,9 @@ Afterwards your file looks like this:
 Create the following files
 
 **src/hello-world.styled.ts**
+
+This file holds the styling and the styling variants
+our component supports.
 
 ```tsx
 // src/hello-world.styled.ts
@@ -418,6 +440,9 @@ export const StyledHelloWorld = styled.h1<StyledHelloWorldProps>`
 
 **src/hello-world.tsx**
 
+This file adds content to our styling components and defines
+its the interface it exposes to the outside world.
+
 ```tsx
 import * as React from 'react';
 import * as Styles from './hello-world.styled';
@@ -434,13 +459,13 @@ export const HelloWorld: React.SFC<HelloWorldProps> = props => {
 
 ## 2b) Export 
 
-Change your entry file at `src/index.ts` to export `src/hello-world.tsx`:
+Change your `src/index.ts` to export `src/hello-world.tsx`:
 
 ```ts
 export * from './hello-world';
 ```
 
-## 2b) Build
+## 2c) Build
 
 Execute `npm run build` to create JavaScript from your 
 brand-new React TypeScript component:
@@ -452,27 +477,19 @@ npm run build
 After a successful build `tree lib` prints a file list like this:
 
 ```
-$ tree lib
-lib
-├── hello-world.d.ts
-├── hello-world.js
-├── hello-world.styled.d.ts
-├── hello-world.styled.js
-├── index.d.ts
-└── index.js
+$ ls lib    
+hello-world.d.ts         hello-world.js    hello-world.styled.d.ts
+hello-world.styled.js    index.d.ts        index.js
 
 0 directories, 6 files
 ```
 
-### 2c) Connect to Alva
-
-> :information_source:
-> See [Connect a Library](./library) for a dedicated guide on connecting libraries.
+### 2d) Connect to Alva
 
 * Start Alva. 
 * Create a new file (`File > New` or `Cmd+N`)
 * Open connect library dialog (`Library` > `Connect New Library` or `Cmd+Shift+C`)
-* Select `~/alva/component-library/package.json`. Exact location may differ if you chose a different working directory in section 1.
+* Select `~/alva-guides/component-library/package.json`. Exact location may differ if you chose a different working directory in section 1.
 
 After importing your component library successfully Alva should display your `HelloWorld` component on the bottom of the component list.
 
@@ -487,7 +504,16 @@ Drag your `HelloWorld` component to the element list above or doubleclick on it.
 | [[grid-column | 5 - 13 ]]
 | | ![](https://media.meetalva.io/guides/hello-world-component-used.png)
 
-That's it, you just bootstrapped yourself from zero to working Alva component!
+
+## Whats next
+
+That's it, you just bootstrapped yourself from zero to working Alva library! I suggest your pat yourself a bit on the back now.
+
+Done? Cool. Here are some suggestions on what to do next.
+
+* Repeat the `Create` - `Build` - `Use` cycle in section 2 and build more components
+* Have a look at our [Create Component Guide](./create-pattern)
+* Have a look at our [Create Properties Guide](./create-properties)
 
 ## Reference
 
