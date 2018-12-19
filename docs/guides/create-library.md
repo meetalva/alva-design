@@ -489,7 +489,7 @@ hello-world.styled.js    index.d.ts        index.js
 * Start Alva. 
 * Create a new file (`File > New` or `Cmd+N`)
 * Open connect library dialog (`Library` > `Connect New Library` or `Cmd+Shift+C`)
-* Select `~/alva/component-library/package.json`. Exact location may differ if you chose a different working directory in section 1.
+* Select `~/alva-guides/component-library/package.json`. Exact location may differ if you chose a different working directory in section 1.
 
 After importing your component library successfully Alva should display your `HelloWorld` component on the bottom of the component list.
 
