@@ -28,7 +28,7 @@ This guide takes you step by step through the process of setting up a component 
 After completion you will …
 
 * … know how to set up a component library
-* … know hot to add new components to your library
+* … know how to add new components to your library
 * … have a full tech setup for development of components compatible with Alva
 
 Following along is very useful to understand what happens behind the scences.
