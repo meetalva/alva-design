@@ -73,4 +73,7 @@ const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
 	return <StyledButton {...props}>{props.children}</StyledButton>;
 };
 
+/**
+ * @icon Image
+*/
 export default Button;

@@ -15,6 +15,7 @@ released yet.
 
 * :evergreen_tree: [git](https://git-scm.com/downloads)
 * :turtle: [Node.js](https://nodejs.org/en/) `>= 8`
+* :cat2: [yarn](https://yarnpkg.com/en/)
 * :computer: A terminal emulator 
 * :globe_with_meridians: Internet connection
 
@@ -26,28 +27,20 @@ Open a terminal and enter
 ```sh
 git clone https://github.com/meetalva/alva.git
 cd alva
-npm install
+yarn
 ```
 
-## Watch TypeScript changes
+## Start the build processes
 
-```sh
-./node_modules/.bin/tsc -w
 ```
-
-## Watch Webpack changes
-
-In a second terminal
-
-```sh
-./node_modules/.bin/webpack -w
+yarn run watch
 ```
 
 ## Start Alva
 
 ```sh
-node build/bin/alva # start electron version
+yarn alva # start electron version
 # alternatively:
-# node build/bin/alva --host=node
-# node build/bin/alva --host=static --serve
+# yarn alva --host=node
+# yarn alva --host=static --serve
 ```
