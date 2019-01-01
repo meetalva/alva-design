@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 export interface AppFrameProps {
-	children?: React.ReactNode;
+	
 }
 
 const StyledFrame = styled.div`

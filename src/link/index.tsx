@@ -8,7 +8,7 @@ export interface LinkProps {
 	color?: Color;
 
 	onClick?: React.MouseEventHandler<HTMLDivElement>;
-	children?: React.ReactNode;
+	
 }
 
 const StyledLink = styled.div`

@@ -14,7 +14,7 @@ export interface ButtonProps {
 	color?: Color;
 
 	onClick?: React.MouseEventHandler<HTMLDivElement>;
-	children?: React.ReactNode;
+
 }
 
 export enum ButtonOrder {

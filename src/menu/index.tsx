@@ -11,7 +11,7 @@ export interface MenuProps {
 	/** @name Sticky @default false */
 	sticky?: boolean;
 
-	children?: React.ReactNode;
+	
 }
 
 const StyledWrapper = styled(Layout)`

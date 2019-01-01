@@ -28,7 +28,7 @@ export interface FeatureProps {
 	/** @name NegativeTop */
 	negativeTop?: boolean;
 
-	children?: React.ReactNode;
+	
 }
 
 export enum FeatureLevel {

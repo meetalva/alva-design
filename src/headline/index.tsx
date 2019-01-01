@@ -11,7 +11,7 @@ export interface HeadlineProps {
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
 	/** @name Weight @default bold */ fontWeight?: Types.FontWeight;
-	children?: React.ReactNode;
+	
 }
 
 export enum HeadlineLevel {

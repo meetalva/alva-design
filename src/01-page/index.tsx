@@ -9,7 +9,7 @@ export interface SectionProps {
 	/** @name Text Color */
 	textColor?: Color;
 
-	children?: React.ReactNode;
+	
 }
 
 
