@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button, { ButtonOrder } from '.';
 import Space, { SpaceSize } from '../space';
 
-const CheckboxDemo: React.StatelessComponent<void> = (): JSX.Element => {
+const ButtonDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
 		<div>
 			<Button order={ButtonOrder.Primary}>Primary</Button>
@@ -17,4 +17,4 @@ const CheckboxDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	);
 };
 
-export default CheckboxDemo;
+export default ButtonDemo;
