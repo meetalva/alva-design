@@ -15,6 +15,7 @@ import * as Types from "../types";
 import { Helmet } from "react-helmet";
 import Link from "../link";
 import { globalCss } from "./global-css";
+import { DownloadButton } from "./download-button";
 
 const renderStyledComponents = require("@patternplate/render-styled-components/render");
 
@@ -35,10 +36,6 @@ export const render = (input: any) => {
 
 	return result;
 };
-
-const MACOS_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0.dmg";
-const WINDOW_RELEASE = "https://github.com/meetalva/alva/releases/download/v0.8.0/Alva-0.8.0.exe";
-const LINUX_RELEASE = "https://github.com/meetalva/alva/releases/latest";
 
 const Page: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
@@ -107,20 +104,7 @@ const Page: React.StatelessComponent<void> = (): JSX.Element => {
 					</Copy>
 				</Layout>
 				<Space size={SpaceSize.L} />
-				<a href={MACOS_RELEASE} target="_blank" rel="noopener">
-					<Button order={ButtonOrder.Primary}>Download Beta for macOS</Button>
-				</a>
-				<Space size={SpaceSize.S} />
-				<Copy color={Color.Grey70} size={CopySize.Small}>
-					Also available for{" "}
-					<a href={WINDOW_RELEASE} target="_blank" style={{ color: "#fff" }}>
-						Windows
-					</a>{" "}
-					and{" "}
-					<a href={LINUX_RELEASE} target="_blank" style={{ color: "#fff" }}>
-						Linux
-					</a>
-				</Copy>
+				<DownloadButton/>
 				<Space size={SpaceSize.XL} />
 			</Section>
 

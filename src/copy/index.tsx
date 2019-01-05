@@ -34,7 +34,7 @@ export enum TextAlign {
 // The proxy component is used to rendering styled componentes with variable
 // tag names.
 const CopyProxy: React.StatelessComponent<CopyProxyProps> = props => {
-	const ProxyComponent = props.tagName;
+	const ProxyComponent = props.tagName as any;
 
 	return <ProxyComponent className={props.className}>{props.children}</ProxyComponent>;
 };

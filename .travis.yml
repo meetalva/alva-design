@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - '8'
 script:
-  - npm run build
-  - NODE_ENV=production npm run build:components
+  - yarn build
+  - NODE_ENV=production yarn build:components
   - ./.ci/deploy-pre.sh
   - ./.ci/decrypt.sh && ./.ci/deploy.sh

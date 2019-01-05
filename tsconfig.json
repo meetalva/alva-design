@@ -6,7 +6,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
 		"keyofStringsOnly": true,
-		"lib": ["dom", "es5", "es2015.core"],
+		"lib": ["dom", "es2015"],
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,

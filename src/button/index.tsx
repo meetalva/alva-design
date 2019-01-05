@@ -46,7 +46,8 @@ const StyledButton = styled.div`
 					&:hover {
 						background-color: ${Color.PinkLight};
 					}
-					&:disabled {
+					&:disabled,
+					&[disabled] {
 						background-color: ${Color.Grey70};
 					}
 				`;
@@ -59,7 +60,8 @@ const StyledButton = styled.div`
 					border-color: ${Color.PinkLight};
 					color: ${Color.PinkLight};
 				}
-				&:disabled {
+				&:disabled,
+				&[disabled] {
 					border-color: ${Color.Grey70};
 					color: ${Color.Grey70};
 				}
