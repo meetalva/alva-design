@@ -1,9 +1,0 @@
-# .travis.yml
-language: node_js
-node_js:
-  - '8'
-script:
-  - npm run build
-  - NODE_ENV=production npm run build:components
-  - ./.ci/deploy-pre.sh
-  - ./.ci/decrypt.sh && ./.ci/deploy.sh

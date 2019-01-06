@@ -12,14 +12,13 @@ const favicon = `<svg width="50" height="50" viewBox="10 10 100 100" xmlns="http
 <path d="M63.95 30a1 1 0 0 0-.83.45L40.2 63.32c-.5.7 0 1.68.84 1.68h22.92c.57 0 1.04-.48 1.04-1.06V31.07c0-.66-.52-1.07-1.05-1.07M60 43.66V60H48.6L60 43.66" fill="#5802CD"/>
 <path d="M65 63.94V55h-5v5h-5v5h8.96c.57 0 1.04-.48 1.04-1.06" fill="#51004D"/>
 </svg>
-`
+`;
 
 module.exports = {
-	docs: ["docs/**/*.md"],
+	docs: ["README.md"],
 	entry: ["lib/**/demo.js"],
 	render: "@patternplate/render-styled-components/render",
 	mount: "@patternplate/render-styled-components/mount",
-	cover: "./lib/01-page/demo.js",
 	ui: {
 		logo,
 		favicon,
@@ -30,6 +29,6 @@ module.exports = {
 		colorTextDark: "rgb(242, 242, 242)",
 		colorRecessDark: "rgb(153, 153, 153)",
 		colorActive: "rgb(215, 0, 82)",
-		showComponents: process.env.NODE_ENV !== 'production'
+		showComponents: process.env.NODE_ENV !== "production"
 	}
 };
