@@ -18,4 +18,4 @@ npm start
 
 ## License
 
-MIT - Copyright (c) 2017 SinnerSchrader Deutschland GmbH
+MIT - Copyright (c) 2017-present SinnerSchrader Deutschland GmbH
