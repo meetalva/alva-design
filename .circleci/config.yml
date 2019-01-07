@@ -50,7 +50,7 @@ jobs:
           command: yarn build
 
       - persist_to_workspace:
-          root: /
+          root: ~/repo
           paths:
               - lib
 
@@ -65,14 +65,14 @@ jobs:
           key: linux
 
       - attach_workspace:
-          at: /
+          at: ~/repo
 
       - run:
           name: Create static site
           command: yarn build:components
 
       - persist_to_workspace:
-          root: /
+          root: ~/repo
           paths:
               - .tmp
 
@@ -87,7 +87,7 @@ jobs:
           key: linux
 
       - attach_workspace:
-          at: /
+          at: ~/repo
 
       - run:
           name: Release
@@ -104,7 +104,7 @@ jobs:
           key: linux
 
       - attach_workspace:
-          at: /
+          at: ~/repo
 
       - run:
           name: Publish to surge
