@@ -91,7 +91,7 @@ jobs:
 
       - run:
           name: Release
-          command: semantic-release --allow-same-version
+          command: semantic-release
 
   surge:
     docker:
