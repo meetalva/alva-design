@@ -1,8 +1,11 @@
 {
-  "name": "meetalva-designkit",
+  "name": "@meetalva/designkit",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
     "build": "tsc",
@@ -16,7 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/meetalva/designkit.git"
   },
-  "author": "",
+  "author": {
+    "email": "hey@meetalva.io",
+    "name": "Meet Alva Team",
+    "url": "https://meetalva.io/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/meetalva/designkit/issues"
@@ -26,23 +33,20 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@commitlint/prompt-cli": "^7.1.2",
     "@commitlint/travis-cli": "^7.1.2",
-    "@marionebl/sander": "^0.6.1",
     "@patternplate/cli": "^3.2.5",
     "@patternplate/render-styled-components": "^2.5.18",
+    "concurrently": "^3.5.1",
+    "husky": "^0.14.3",
+    "node-fetch": "^2.3.0",
+    "semantic-release": "^15.13.2",
+    "surge": "^0.20.1",
+    "typescript": "^3.0.3",
+    "yargs-parser": "^11.1.1"
+  },
+  "dependencies": {
     "@types/node": "^8.0.53",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
-    "base32": "0.0.6",
-    "concurrently": "^3.5.1",
-    "execa": "^1.0.0",
-    "husky": "^0.14.3",
-    "meow": "^5.0.0",
-    "node-fetch": "^2.3.0",
-    "surge": "^0.20.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.3"
-  },
-  "dependencies": {
     "@types/react-helmet": "^5.0.7",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",

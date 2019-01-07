@@ -16,3 +16,6 @@ indent_style = space
 
 [*.yml]
 indent_style = whitespace
+
+[*.json]
+indent_style = whitespace

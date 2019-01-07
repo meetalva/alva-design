@@ -1,0 +1,130 @@
+version: 2.1
+
+commands:
+  setup:
+    description: "Set up the repo to work on"
+
+    parameters:
+      key:
+        default: ""
+        type: string
+
+    steps:
+      - run:
+          name: Install yarn
+          command: yarn global add yarn@1.12.3
+
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v5-dependencies-<< parameters.key >>-{{ checksum "yarn.lock" }}
+            - v5-dependencies-<< parameters.key >>-
+
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v5-dependencies-<< parameters.key >>-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Add npm bin to path
+          command: echo 'export PATH="$(npm bin):$PATH"' >> $BASH_ENV
+
+jobs:
+  compile:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - setup:
+          key: linux
+
+      - run:
+          name: Compile with tsc
+          command: yarn build
+
+      - persist_to_workspace:
+          root: /
+          paths:
+              - .tmp
+
+  site:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - setup:
+          key: linux
+
+      - attach_workspace:
+          at: /
+
+      - run:
+          name: Create static site
+          command: yarn build:components
+
+      - persist_to_workspace:
+          root: /
+          paths:
+              - .tmp
+
+  npm:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - setup:
+          key: linux
+
+      - attach_workspace:
+          at: /
+
+      - run:
+          name: Release
+          command: semantic-release
+
+  surge:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - setup:
+          key: linux
+
+      - attach_workspace:
+          at: /
+
+      - run:
+          name: Publish to surge
+          command: ./.circleci/surge.js --project .
+
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - compile
+      - site:
+          requires:
+            - compile
+      - surge:
+          requires:
+            - site
+      - npm:
+          requires:
+            - compile
+          filters:
+            branches:
+              only: master
