@@ -19,3 +19,5 @@ npm start
 ## License
 
 MIT - Copyright (c) 2017-present SinnerSchrader Deutschland GmbH
+
+<!-- trigger -->
