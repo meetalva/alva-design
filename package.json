@@ -34,7 +34,7 @@
     "@commitlint/prompt-cli": "^7.1.2",
     "@commitlint/travis-cli": "^7.1.2",
     "@patternplate/cli": "^3.2.5",
-    "@patternplate/render-styled-components": "^2.5.18",
+    "@patternplate/render-react": "^3.2.5",
     "concurrently": "^3.5.1",
     "husky": "^0.14.3",
     "node-fetch": "^2.3.0",
@@ -44,6 +44,8 @@
     "yargs-parser": "^11.1.1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
     "@types/node": "^8.0.53",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
@@ -53,7 +55,6 @@
     "react-dom": "^16.5.1",
     "react-feather": "^1.1.0",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.4.9",
     "tslib": "^1.7.0"
   }
 }

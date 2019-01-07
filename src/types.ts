@@ -1,11 +1,11 @@
 export enum FontWeight {
-	Light,
-	Regular,
-	Bold
+	Light = 100,
+	Regular = 300,
+	Bold = 500
 }
 
 export enum TextAlign {
-	Left,
-	Center,
-	Right
+	Left = 'left',
+	Center = 'center',
+	Right = 'right'
 }

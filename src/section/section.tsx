@@ -1,7 +1,7 @@
 import { Color } from '../colors';
 import { Layout } from '../layout';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from "@emotion/styled";
 
 export interface SectionProps {
 	/** @name Background Color */

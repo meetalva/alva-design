@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
 import { Color } from "../colors";
 import { fonts } from "../fonts";
 
@@ -18,11 +18,11 @@ export interface ButtonProps {
 }
 
 export enum ButtonOrder {
-	Primary,
-	Secondary
+	Primary = 'button-primary',
+	Secondary = 'button-secondary'
 }
 
-const StyledButton = styled.div`
+const StyledButton = styled.div<ButtonProps>`
 	padding: 12px 20px;
 	min-width: 200px;
 	font-size: 18px;
@@ -31,49 +31,36 @@ const StyledButton = styled.div`
 	box-sizing: border-box;
 	display: inline-block;
 	width: fit-content;
+	cursor: ${props => (props.onClick && !props.disabled ? "pointer" : "default")};
 
 	@media screen and (min-width: 960px) {
 		padding: 15px 30px;
 	}
+`;
 
-	${(props: ButtonProps) => {
-		switch (props.order) {
-			case ButtonOrder.Primary:
-				return css`
-					background: ${(props: ButtonProps) => props.color || Color.Pink};
-					border: none;
-					color: ${Color.White};
-					&:hover {
-						background-color: ${Color.PinkLight};
-					}
-					&:disabled {
-						background-color: ${Color.Grey70};
-					}
-				`;
-			case ButtonOrder.Secondary:
-			default:
-				return css`
-				border: 1px solid ${(props: ButtonProps) => props.color || Color.Pink};
-				color: ${(props: ButtonProps) => props.color || Color.Pink};
-				&:hover {
-					border-color: ${Color.PinkLight};
-					color: ${Color.PinkLight};
-				}
-				&:disabled {
-					border-color: ${Color.Grey70};
-					color: ${Color.Grey70};
-				}
-			`;
-		}
-	}};
-	${(props: ButtonProps) => props.onClick && !props.disabled ? css`cursor: pointer;` : ''};
+const ButtonPrimary = styled.div<ButtonProps>`
+	background: ${props => props.color || Color.Pink};
+	border: none;
+	color: ${Color.White};
+	background-color: ${props => (props.disabled ? Color.Grey70 : "")};
+	&:hover {
+		background-color: ${props => (props.disabled ? Color.Grey70 : Color.PinkLight)};
+	}
+`;
+
+const ButtonSecondary = styled.div<ButtonProps>`
+	border: 1px solid ${props => props.color || Color.Pink};
+	color: ${props => props.color || Color.Pink};
+	border-color: ${props => (props.disabled ? Color.Grey70 : "")};
+	color: ${props => (props.disabled ? Color.Grey70 : "")};
+	&:hover {
+		border-color: ${props => props.disabled ? Color.Grey70 : Color.PinkLight};
+		color: ${props => props.disabled ? Color.Grey70 : Color.PinkLight};
+	}
 `;
 
 export const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
-	return <StyledButton {...props}>{props.children}</StyledButton>;
+	const button = props.order === ButtonOrder.Primary ? ButtonPrimary : ButtonSecondary;
+	const Component = StyledButton.withComponent(button);
+	return <Component {...props}>{props.children}</Component>;
 };
-
-/**
- * @icon Image
-*/
-export default Button;

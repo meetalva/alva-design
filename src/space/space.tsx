@@ -1,53 +1,19 @@
-import * as React from "react";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
 
 export interface SpaceProps {
 	/** @name Size @default M */ size?: SpaceSize;
 }
 
 export enum SpaceSize {
-	XS,
-	S,
-	M,
-	L,
-	XL
+	XS = 8,
+	S = 16,
+	M = 32,
+	L = 64,
+	XL = 128
 }
 
-const StyledSpace = styled.div`
+export const Space = styled.div<SpaceProps>`
 	display: block;
-
-	${(props: SpaceProps) => {
-		switch (props.size) {
-			case SpaceSize.XS:
-				return css`
-					height: 8px;
-					width: 8px;
-				`;
-			case SpaceSize.S:
-				return css`
-					height: 16px;
-					width: 16px;
-				`;
-			case SpaceSize.M:
-			default:
-				return css`
-					height: 32px;
-					width: 32px;
-				`;
-			case SpaceSize.L:
-				return css`
-					height: 64px;
-					width: 64px;
-				`;
-			case SpaceSize.XL:
-				return css`
-					height: 128px;
-					width: 128px;
-				`;
-		}
-	}};
+	width: ${props => props.size}px;
+	height: ${props => props.size}px;
 `;
-
-export const Space: React.StatelessComponent<SpaceProps> = (props): JSX.Element => (
-	<StyledSpace size={props.size} />
-);

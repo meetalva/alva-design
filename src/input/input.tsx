@@ -1,11 +1,11 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { Copy, CopySize } from '../copy';
-import { Color } from '../colors';
+import * as React from "react";
+import styled from "@emotion/styled";;
+import { Copy, CopySize, CopyProps } from "../copy";
+import { Color } from "../colors";
 
 /*
-* @name Input
-*/
+ * @name Input
+ */
 export interface InputProps {
 	/** @name Type @default Text */
 	type?: Type;
@@ -35,9 +35,9 @@ export interface InputProps {
 }
 
 export enum Type {
-	Text = 'text',
-	Number = 'number',
-	Email = 'email'
+	Text = "text",
+	Number = "number",
+	Email = "email"
 }
 
 const StyledLabel = styled.label`
@@ -45,7 +45,7 @@ const StyledLabel = styled.label`
 	color: ${Color.Black};
 `;
 
-const StyledLabelText = styled(Copy)`
+const StyledLabelText = styled(Copy)<CopyProps>`
 	padding: 0 3px 9px;
 `;
 
@@ -58,7 +58,7 @@ const StyledInput = styled.input`
 	font-size: 15px;
 	color: ${Color.Black};
 
-	${(props: InputProps) => (props.errorText ? `border-color: ${Color.Red};` : '')};
+	${(props: InputProps) => (props.errorText ? `border-color: ${Color.Red};` : "")};
 
 	:focus {
 		border-color: ${Color.BlueLight};
@@ -73,23 +73,30 @@ const StyledError = styled(Copy)`
 `;
 
 export const Input: React.SFC<InputProps> = props => {
-	const { labelText, type, value, name, placeholder, readOnly, disabled, errorText, handleChange } = props;
+	const p = props;
+
 	return (
 		<StyledLabel>
-			{labelText && (
-				<StyledLabelText tagName="div" size={CopySize.Small} uppercase>{labelText}</StyledLabelText>
+			{p.labelText && (
+				<StyledLabelText size={CopySize.Small} uppercase>
+					{p.labelText}
+				</StyledLabelText>
 			)}
 			<StyledInput
-				type={type}
-				value={value}
-				name={name}
-				placeholder={placeholder}
-				readOnly={readOnly}
-				disabled={disabled}
-				errorText={errorText}
-				onChange={handleChange}
+				type={p.type}
+				value={p.value}
+				name={p.name}
+				placeholder={p.placeholder}
+				readOnly={p.readOnly}
+				disabled={p.disabled}
+				errorText={p.errorText}
+				onChange={p.handleChange}
 			/>
-			{errorText && <StyledError tagName="div" size={CopySize.Small}>{errorText}</StyledError>}
+			{p.errorText && (
+				<StyledError size={CopySize.Small}>
+					{p.errorText}
+				</StyledError>
+			)}
 		</StyledLabel>
 	);
 };

@@ -6,8 +6,8 @@ const favicon = fs.readFileSync('./static/favicon.svg', 'utf-8');
 module.exports = {
 	docs: ["README.md"],
 	entry: ["lib/**/*.demo.js"],
-	render: "@patternplate/render-styled-components/render",
-	mount: "@patternplate/render-styled-components/mount",
+	render: "@patternplate/render-react/render",
+	mount: "@patternplate/render-react/mount",
 	ui: {
 		logo,
 		favicon,

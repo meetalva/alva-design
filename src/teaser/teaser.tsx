@@ -1,8 +1,8 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";;
 import { Color } from "../colors";
 import { Headline, HeadlineLevel } from '../headline';
-import { Layout } from '../layout';
+import { Layout, LayoutProps, LayoutDirection } from '../layout';
 import { Space, SpaceSize } from '../space';
 
 export interface TeaserProps {
@@ -40,7 +40,7 @@ const StyledTeaser = styled.div`
 	}
 `;
 
-const StyledLayout = styled(Layout)`
+const StyledLayout = styled(Layout)<LayoutProps>`
 	z-index: 2;
 `;
 
@@ -48,8 +48,8 @@ export const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Elemen
 	return (
 		<StyledTeaser {...props}>
 			<StyledLayout width="80%" maxWidth="960px" center>
-				<Layout maxWidth="480px">
-					<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				<Layout maxWidth="480px" direction={LayoutDirection.Vertical}>
+					<svg style={{ marginBottom: SpaceSize.M }} width="60" height="60" xmlns="http://www.w3.org/2000/svg">
 						<path d="M30 60a30 30 0 1 1 0-60 30 30 0 0 1 0 60zm-4-37v15l12-7.5L26 23z" fill="#FFF" fillRule="evenodd"/>
 					</svg>
 					<Space size={SpaceSize.M} />

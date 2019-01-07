@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";;
 import { Color } from "../colors";
 import { Copy } from "../copy";
 
@@ -13,17 +13,19 @@ export interface MenuItemProps {
 }
 
 const StyledMenuItem = styled(Copy)`
-	color: ${Color.White};
-	margin-left: 32px;
 	cursor: pointer;
 `;
 
-export const MenuItem: React.StatelessComponent<MenuItemProps> = (props): JSX.Element => {
+export const MenuItem: React.StatelessComponent<MenuItemProps> = props => {
 	return (
-		<a href={props.href} target={props.target} rel={props.rel} title={props.title} style={{ textDecoration: "none" }}>
-			<StyledMenuItem>
-				{props.linkName}
-			</StyledMenuItem>
+		<a
+			href={props.href}
+			target={props.target}
+			rel={props.rel}
+			title={props.title}
+			style={{ textDecoration: "none", marginLeft: 32, color: Color.White }}
+		>
+			<StyledMenuItem>{props.linkName}</StyledMenuItem>
 		</a>
 	);
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";;
 import { Color } from "../colors";
 import { Copy, CopySize } from "../copy";
 import { Headline, HeadlineLevel } from "../headline";
@@ -32,14 +32,14 @@ export interface FeatureProps {
 }
 
 export enum FeatureLevel {
-	Large,
-	Medium
+	Large = 'feature-large',
+	Medium = 'feature-medium'
 }
 
 export enum FeatureLayout {
-	Left,
-	Center,
-	Right
+	Left = 'feature-left',
+	Center = 'feature-center',
+	Right = 'feature-right'
 }
 
 const Wrapper = styled.div`

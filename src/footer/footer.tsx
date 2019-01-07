@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from "@emotion/styled";
 import { Copy } from '../copy';
 import { Color } from '../colors';
 import { Layout } from '../layout';
@@ -11,16 +11,11 @@ export interface FooterProps {
 }
 
 const StyledFooter = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding: 20px 0;
 	box-sizing: border-box;
 	color: ${Color.White};
-`;
-
-const StyledFooterInner = styled.div`
 	display: flex;
+	flex-wrap: wrap;
 `;
 
 export const Footer: React.StatelessComponent<FooterProps> = (props): JSX.Element => {
@@ -29,9 +24,7 @@ export const Footer: React.StatelessComponent<FooterProps> = (props): JSX.Elemen
 			<Layout width="80%" maxWidth="960px" center>
 				<StyledFooter {...props}>
 					<Copy color={Color.Grey50}>{props.copyright}</Copy>
-					<StyledFooterInner>
-						{props.children}
-					</StyledFooterInner>
+					{props.children}
 				</StyledFooter>
 			</Layout>
 		</Layout>
