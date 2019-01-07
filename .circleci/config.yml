@@ -108,7 +108,7 @@ jobs:
 
       - run:
           name: Publish to surge
-          command: ./.circleci/surge.js --project .
+          command: ./.circleci/surge.js --project .tmp
 
 
 workflows:
