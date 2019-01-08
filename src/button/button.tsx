@@ -31,7 +31,7 @@ const StyledButton = styled.div<ButtonProps>`
 	box-sizing: border-box;
 	display: inline-block;
 	width: fit-content;
-	cursor: ${props => (props.onClick && !props.disabled ? "pointer" : "default")};
+	cursor: ${props => (!props.disabled ? "pointer" : "default")};
 
 	@media screen and (min-width: 960px) {
 		padding: 15px 30px;
