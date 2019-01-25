@@ -16,6 +16,9 @@ const StyledMenuItem = styled(Copy)`
 	cursor: pointer;
 `;
 
+/**
+ * @icon Menu
+ */
 export const MenuItem: React.StatelessComponent<MenuItemProps> = props => {
 	return (
 		<a

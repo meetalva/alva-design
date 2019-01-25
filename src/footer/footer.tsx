@@ -18,6 +18,9 @@ const StyledFooter = styled.div`
 	flex-wrap: wrap;
 `;
 
+/**
+ * @icon Layout
+ */
 export const Footer: React.StatelessComponent<FooterProps> = (props): JSX.Element => {
 	return (
 		<Layout backgroundColor={Color.Black}>

@@ -66,6 +66,7 @@ const IconRegistrySymbol: React.StatelessComponent<IconRegistrySymbolProps> = pr
 	);
 };
 
+/** @ignore */
 export const IconRegistry: React.StatelessComponent<IconRegistryProps> = (props): JSX.Element => {
 	return (
 		<StyledIconRegistry>
@@ -97,6 +98,7 @@ function getIconRef(name: string, size: IconSize): string {
 	}
 }
 
+/** @ignore */
 export const Icon: React.StatelessComponent<IconProps> = (props): JSX.Element => {
 	const icon = typeof props.name === "number" ? IconName[props.name] : null;
 	return (

@@ -23,6 +23,9 @@ const StyledWrapper = styled.div<{ textColor: Color | 'inherit'; }>`
 	}
 `;
 
+/**
+ * @icon Square
+ */
 export const Section: React.StatelessComponent<SectionProps> = (props): JSX.Element => {
 	return (
 		<Layout backgroundColor={props.backgroundColor || Color.White}>

@@ -9,7 +9,7 @@ export interface TeaserProps {
 	/** @name Headline*/
 	headline: string;
 
-	/** @name Image */
+	/** @name Image @asset */
 	image?: string;
 }
 
@@ -44,6 +44,9 @@ const StyledLayout = styled(Layout)<LayoutProps>`
 	z-index: 2;
 `;
 
+/**
+ * @icon Sidebar
+ */
 export const Teaser: React.StatelessComponent<TeaserProps> = (props): JSX.Element => {
 	return (
 		<StyledTeaser {...props}>
