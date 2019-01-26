@@ -66,6 +66,9 @@ const StyledLabelText = styled(Copy)`
 	padding-left: 12px;
 `;
 
+/**
+ * @icon Disc
+*/
 export const Radio: React.SFC<RadioProps> = props => {
 	const { disabled, groupName, value, handleChange, checked, labelText } = props;
 	return (

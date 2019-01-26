@@ -68,6 +68,9 @@ const StyledMenuInner = styled.div`
 	}
 `;
 
+/**
+ * @icon Menu
+ */
 export const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
 	return (
 		<StyledWrapper backgroundColor={Color.Black} sticky={props.sticky}>

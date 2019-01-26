@@ -67,6 +67,9 @@ const StyledLabelText = styled(Copy)`
 	padding-left: 12px;
 `;
 
+/**
+ * @icon CheckSquare
+ */
 export const Checkbox: React.SFC<CheckboxProps> = (props): JSX.Element => {
 	const { disabled, name, value, handleChange, checked, labelText } = props;
 	return (

@@ -1,7 +1,10 @@
 {
   "name": "@meetalva/designkit",
   "version": "1.0.0",
-  "description": "",
+  "description": "Every component used for the official Alva website",
+  "alva": {
+    "name": "Alva Website UI"
+  },
   "main": "lib/index.js",
   "files": [
     "lib"

@@ -12,6 +12,9 @@ export enum SpaceSize {
 	XL = 128
 }
 
+/**
+ * @icon Maximize
+ */
 export const Space = styled.div<SpaceProps>`
 	display: block;
 	width: ${props => props.size}px;

@@ -59,6 +59,9 @@ const ButtonSecondary = styled.div<ButtonProps>`
 	}
 `;
 
+/**
+ * @icon MinusSquare
+ */
 export const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
 	const button = props.order === ButtonOrder.Primary ? ButtonPrimary : ButtonSecondary;
 	const Component = StyledButton.withComponent(button);

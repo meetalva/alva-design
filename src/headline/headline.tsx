@@ -81,6 +81,9 @@ const StyledHeadline = styled.div`
 			: ""};
 `;
 
+/**
+ * @icon Bold
+ */
 export const Headline: React.StatelessComponent<HeadlineProps> = props => {
 	const as = props.level || 'h1' as any;
 	const Component = StyledHeadline.withComponent(as);

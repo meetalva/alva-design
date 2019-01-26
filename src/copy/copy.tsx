@@ -19,6 +19,9 @@ export enum CopySize {
 	Large = 'copy-large'
 }
 
+/**
+ * @icon Type
+ */
 export const Copy = styled.div<CopyProps>`
 	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};

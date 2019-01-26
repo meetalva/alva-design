@@ -72,6 +72,9 @@ const StyledError = styled(Copy)`
 	color: ${Color.Red};
 `;
 
+/**
+ * @icon MessageSquare
+ */
 export const Input: React.SFC<InputProps> = props => {
 	const p = props;
 
