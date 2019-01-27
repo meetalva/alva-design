@@ -18,8 +18,6 @@ const StyledTeaser = styled.div`
 	background-size: cover;
 	background-image: url('${(props: TeaserProps) => props.image || ''}');
 	width: 100%;
-	display: flex;
-	align-items: center;
 	position: relative;
 	padding: 100px 0;
 	box-sizing: border-box;
