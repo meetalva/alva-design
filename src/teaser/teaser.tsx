@@ -40,6 +40,8 @@ const StyledTeaser = styled.div`
 
 const StyledLayout = styled(Layout)<LayoutProps>`
 	z-index: 2;
+	display: block;
+	position: relative;
 `;
 
 /**
