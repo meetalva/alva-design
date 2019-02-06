@@ -1,14 +1,14 @@
-# Alva Designkit
+# Alva Design UI
 
 > This is contributor documentation. Refer to links below for user docs.
 
 ## [Getting Started with Alva](https://meetalva.io/doc/docs/guides/start?guides-enabled=true) | [meetalva.io](https://meetalva.io) 
 
 
-## Contributing to Alva Designkit
+## Contributing to Alva Website UI
 
 ```sh
-git clone git@github.com:meetalva/designkit.git
+git clone git@github.com:meetalva/alva-design.git
 cd designkit
 npm install
 
