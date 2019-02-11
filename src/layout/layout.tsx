@@ -8,6 +8,7 @@ export interface LayoutProps {
 	/** @name Background color @default transparent */ backgroundColor?: string;
 	center?: boolean;
 	children?: React.ReactNode;
+	className?: string;
 }
 
 export enum LayoutDirection {
@@ -16,10 +17,10 @@ export enum LayoutDirection {
 }
 
 export const Layout = styled.div<LayoutProps>`
-	display: flex;
+	display: ${props => (props.direction === LayoutDirection.Vertical ? "block" : "flex")};
+	position: relative;
 	margin: 0 ${props => (props.center && "auto") || ""};
 	width: ${props => props.width || "auto"};
 	max-width: ${props => props.maxWidth || "none"};
 	background-color: ${props => props.backgroundColor || "none"};
-	flex-direction: ${props => (props.direction === LayoutDirection.Vertical ? "column" : "row")};
 `;
