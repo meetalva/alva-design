@@ -6,9 +6,9 @@ export interface LayoutProps {
 	/** @name Width @default 100% */ width?: string;
 	/** @name Maximum width*/ maxWidth?: string;
 	/** @name Background color @default transparent */ backgroundColor?: string;
-	center?: boolean;
+	/** @name Center */ center?: boolean;
 	children?: React.ReactNode;
-	className?: string;
+	/** @name ignore */ className?: string;
 }
 
 export enum LayoutDirection {
@@ -16,7 +16,7 @@ export enum LayoutDirection {
 	/** @name vertical */ Vertical
 }
 
-export const Layout = styled.div<LayoutProps>`
+const StyledLayout = styled.div<LayoutProps>`
 	display: ${props => (props.direction === LayoutDirection.Vertical ? "block" : "flex")};
 	position: relative;
 	margin: 0 ${props => (props.center && "auto") || ""};
@@ -24,3 +24,12 @@ export const Layout = styled.div<LayoutProps>`
 	max-width: ${props => props.maxWidth || "none"};
 	background-color: ${props => props.backgroundColor || "none"};
 `;
+
+export const Layout: React.StatelessComponent<LayoutProps> = (props): JSX.Element => {
+	return (
+		<StyledLayout {...props}>
+			{props.children}
+		</StyledLayout>
+	);
+};
+

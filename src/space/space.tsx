@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import * as React from 'react';
 
 export interface SpaceProps {
 	/** @name Size @default M */ size?: SpaceSize;
@@ -15,8 +15,14 @@ export enum SpaceSize {
 /**
  * @icon Maximize
  */
-export const Space = styled.div<SpaceProps>`
-	display: block;
-	width: ${props => props.size}px;
-	height: ${props => props.size}px;
-`;
+export const Space: React.StatelessComponent<SpaceProps> = (props): JSX.Element => {
+	return (
+		<div style={{
+			display: 'block',
+			width: `${props.size}px`,
+			height: `${props.size}px`
+		}}>
+			{props.children}
+		</div>
+	);
+};

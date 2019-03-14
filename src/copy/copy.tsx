@@ -9,7 +9,6 @@ export interface CopyProps {
 	/** @name Text Align @default Left */ textAlign?: TextAlign;
 	/** @name Color @default #000000 */ color?: string;
 	/** @name Uppercase @default false */ uppercase?: boolean;
-
 	children?: React.ReactNode;
 }
 
@@ -19,10 +18,7 @@ export enum CopySize {
 	Large = 'copy-large'
 }
 
-/**
- * @icon Type
- */
-export const Copy = styled.div<CopyProps>`
+const StyledCopy = styled.div<CopyProps>`
 	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	color: ${(props: CopyProps) => props.color || 'inherit'};
@@ -65,3 +61,14 @@ export const Copy = styled.div<CopyProps>`
 				text-transform: uppercase;`
 			: ''};
 `;
+
+/**
+ * @icon Type
+ */
+export const Copy: React.StatelessComponent<CopyProps> = (props): JSX.Element => {
+	return (
+		<StyledCopy {...props}>
+			{props.children}
+		</StyledCopy>
+	);
+};

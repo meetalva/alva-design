@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "@emotion/styled";;
 import { Color } from "../colors";
 import { fonts } from '../fonts';
 
@@ -11,8 +10,15 @@ export interface LinkProps {
 	children?: React.ReactNode;
 }
 
-export const Link = styled.div<LinkProps>`
-	display: inline-block;
-	color: ${props => props.color || 'inherit'};
-	font-family: ${fonts().NORMAL_FONT};
-`;
+export const Link: React.StatelessComponent<LinkProps> = (props): JSX.Element => {
+	return (
+		<div onClick={props.onClick} style={{
+			display: 'inline-block',
+			color: props.color || 'inherit',
+			fontFamily: fonts().NORMAL_FONT
+		}}>
+			{props.children}
+		</div>
+	);
+};
+
