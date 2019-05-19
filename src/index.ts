@@ -1,6 +1,7 @@
 export * from "./button";
 export * from "./checkbox";
 export * from "./colors";
+export * from './cookie-notice';
 export * from "./copy";
 export * from "./dropdown";
 export * from "./dropdown-item";

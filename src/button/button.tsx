@@ -32,6 +32,7 @@ const StyledButton = styled.div<ButtonProps>`
 	display: inline-block;
 	width: fit-content;
 	cursor: ${props => (!props.disabled ? "pointer" : "default")};
+	text-align: center;
 
 	@media screen and (min-width: 960px) {
 		padding: 15px 30px;
@@ -39,8 +40,9 @@ const StyledButton = styled.div<ButtonProps>`
 `;
 
 const ButtonPrimary = styled.div<ButtonProps>`
+	border: 1px solid ${props => props.color || Color.Pink};
+	border-color: ${props => (props.disabled ? Color.Grey70 : "")};
 	background: ${props => props.color || Color.Pink};
-	border: none;
 	color: ${Color.White};
 	background-color: ${props => (props.disabled ? Color.Grey70 : "")};
 	&:hover {
