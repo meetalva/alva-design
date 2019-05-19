@@ -22,6 +22,7 @@ const StyledBox = styled.div`
 	right: ${SpaceSize.M}px;
 	bottom: ${SpaceSize.M}px;
 	padding: ${SpaceSize.S}px;
+	z-index: 1000;
 
 	@media screen and (max-width: 450px) {
 		text-align: center;
