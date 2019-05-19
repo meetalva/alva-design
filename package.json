@@ -1,6 +1,6 @@
 {
   "name": "@meetalva/alva-design",
-  "version": "1.6.0",
+  "version": "1.6.2",
   "description": "Every component used for the official Alva website",
   "alva": {
     "name": "Alva Website Design",

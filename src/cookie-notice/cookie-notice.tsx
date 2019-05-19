@@ -4,7 +4,6 @@ import { Color } from "../colors";
 import { Button, ButtonOrder } from "../button";
 import { Copy, CopySize } from "../copy";
 import { Space, SpaceSize } from '../space';
-import { Link } from '../link';
 
 export interface CookieNoticeProps {
 	text: string;
@@ -35,7 +34,7 @@ const StyledBox = styled.div`
 export const CookieNotice: React.StatelessComponent<CookieNoticeProps> = (props): JSX.Element => {
 	return (
 		<StyledBox>
-			<Copy size={CopySize.Medium} color={Color.White}>{props.text} <Link href={props.linkHref} color={Color.Grey70}>{props.linkText}</Link></Copy>
+			<Copy size={CopySize.Medium} color={Color.White}>{props.text} <Copy color={Color.Grey70}><a href={props.linkHref} target="_blank" style={{ textDecoration: 'none', color: 'inherit'}}>{props.linkText}</a></Copy></Copy>
 			<Space size={SpaceSize.S} />
 			<Button order={ButtonOrder.Primary} onClick={props.buttonOnClick}>{props.buttonText}</Button>
 		</StyledBox>
