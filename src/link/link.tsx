@@ -6,23 +6,21 @@ export interface LinkProps {
 	/** @name Color */
 	color?: Color;
 
-	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+	onClick?: React.MouseEventHandler<HTMLDivElement>;
 	children?: React.ReactNode;
 	href?: string;
 }
 
 export const Link: React.StatelessComponent<LinkProps> = (props): JSX.Element => {
 	return (
-		<a onClick={props.onClick} style={{
+		<div onClick={props.onClick} style={{
 			display: 'inline-block',
 			color: props.color || 'inherit',
 			fontFamily: fonts().NORMAL_FONT,
-			cursor: 'pointer',
-			href: props.href,
-			textDecoration: 'none'
+			cursor: 'pointer'
 		}}>
 			{props.children}
-		</a>
+		</div>
 	);
 };
 
