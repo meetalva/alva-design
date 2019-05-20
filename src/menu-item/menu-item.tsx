@@ -5,7 +5,7 @@ import { Copy } from "../copy";
 
 export interface MenuItemProps {
 	/** @name Copy */ linkName?: string;
-	/** @name Link */ onClick?: React.MouseEventHandler<HTMLDivElement>;
+	/** @name Link */ onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 	href?: string;
 	target?: string;
 	rel?: string;
@@ -27,6 +27,7 @@ export const MenuItem: React.StatelessComponent<MenuItemProps> = props => {
 			rel={props.rel}
 			title={props.title}
 			style={{ textDecoration: "none", marginLeft: 32, color: Color.White }}
+			onClick={props.onClick}
 		>
 			<StyledMenuItem>{props.linkName}</StyledMenuItem>
 		</a>
