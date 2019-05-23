@@ -10,7 +10,8 @@
   },
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "alva.json"
   ],
   "scripts": {
     "analyze": "alva-analyze --in package.json --out alva.json --format json",
