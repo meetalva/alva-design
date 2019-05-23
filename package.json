@@ -3,6 +3,7 @@
   "version": "1.6.3",
   "description": "Every component used for the official Alva website",
   "alva": {
+    "analysis": "alva.json",
     "name": "Alva Website Design",
     "color": "#1E2024",
     "image": "https://media.meetalva.io/library/alva-design/image.svg"
@@ -12,6 +13,7 @@
     "lib"
   ],
   "scripts": {
+    "analyze": "alva-analyze --in package.json --out alva.json --format json",
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
     "build": "tsc",
     "build:components": "patternplate build --out=.tmp --base=/",
