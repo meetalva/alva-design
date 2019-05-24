@@ -1,17 +1,20 @@
 {
   "name": "@meetalva/alva-design",
-  "version": "1.6.3",
+  "version": "1.6.5",
   "description": "Every component used for the official Alva website",
   "alva": {
+    "analysis": "alva.json",
     "name": "Alva Website Design",
     "color": "#1E2024",
     "image": "https://media.meetalva.io/library/alva-design/image.svg"
   },
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "alva.json"
   ],
   "scripts": {
+    "analyze": "alva-analyze --in package.json --out alva.json --format json",
     "start": "npm run build && concurrently 'npm run build -- -w' 'patternplate start'",
     "build": "tsc",
     "build:components": "patternplate build --out=.tmp --base=/",
@@ -38,6 +41,7 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@commitlint/prompt-cli": "^7.1.2",
     "@commitlint/travis-cli": "^7.1.2",
+    "@meetalva/analyzer-cli": "^1.0.1-alpha.2",
     "@patternplate/cli": "^3.2.5",
     "@patternplate/render-react": "^3.2.5",
     "concurrently": "^3.5.1",
