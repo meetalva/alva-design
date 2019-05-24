@@ -41,6 +41,7 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@commitlint/prompt-cli": "^7.1.2",
     "@commitlint/travis-cli": "^7.1.2",
+    "@meetalva/analyzer-cli": "^1.0.1-alpha.2",
     "@patternplate/cli": "^3.2.5",
     "@patternplate/render-react": "^3.2.5",
     "concurrently": "^3.5.1",
