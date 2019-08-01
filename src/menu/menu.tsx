@@ -25,14 +25,15 @@ const StyledMenu = styled.div`
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0;
+	padding: 20px 40px;
 	box-sizing: border-box;
-	color: ${Color.White};
+	color: ${Color.Black};
 `;
 
 const StyledImage = styled(Image)`
 	display: block;
-	height: 50px;
+	width: 55px;
+	height: 20px;
 `;
 
 const StyledMenuInner = styled.div`
@@ -73,10 +74,10 @@ const StyledMenuInner = styled.div`
  */
 export const Menu: React.StatelessComponent<MenuProps> = (props): JSX.Element => {
 	return (
-		<StyledWrapper backgroundColor={Color.Black} sticky={props.sticky}>
-			<Layout width="80%" maxWidth="960px" center>
+		<StyledWrapper backgroundColor={Color.White} sticky={props.sticky}>
+			<Layout width="100%" maxWidth="1280px" center>
 				<StyledMenu {...props}>
-					<StyledImage size="50px" src={props.logo} />
+					<StyledImage src={props.logo} />
 					<StyledMenuInner>{props.children}</StyledMenuInner>
 				</StyledMenu>
 			</Layout>

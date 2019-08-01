@@ -14,6 +14,7 @@ export interface MenuItemProps {
 
 const StyledMenuItem = styled(Copy)`
 	cursor: pointer;
+	font-weight: 500;
 `;
 
 /**
@@ -26,7 +27,7 @@ export const MenuItem: React.StatelessComponent<MenuItemProps> = props => {
 			target={props.target}
 			rel={props.rel}
 			title={props.title}
-			style={{ textDecoration: "none", marginLeft: 32, color: Color.White }}
+			style={{ textDecoration: "none", marginLeft: 32, color: Color.Black }}
 			onClick={props.onClick}
 		>
 			<StyledMenuItem>{props.linkName}</StyledMenuItem>
