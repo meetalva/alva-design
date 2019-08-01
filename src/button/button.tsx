@@ -34,10 +34,11 @@ const StyledButton = styled.div<ButtonProps>`
 	font-family: ${fonts().NORMAL_FONT};
 	font-weight: 500;
 	cursor: ${props => (!props.disabled ? "pointer" : "default")};
+	padding: 5px;
 `;
 
 const ButtonPrimary = styled.div<ButtonProps>`
-	color: ${Color.Pink};
+	color: ${props => props.color};
 `;
 
 const ButtonSecondary = styled.div<ButtonProps>`
