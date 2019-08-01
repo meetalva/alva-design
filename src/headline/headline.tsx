@@ -24,7 +24,7 @@ const StyledHeadline = styled.div`
 	margin: 0;
 	font-family: ${fonts().NORMAL_FONT};
 	color: ${(props: HeadlineProps) => props.color || "inherit"};
-	line-height: 1.3;
+	line-height: 1.2;
 
 	u {
 		text-decoration-color: ${Color.Red};
@@ -40,33 +40,36 @@ const StyledHeadline = styled.div`
 		switch (props.level) {
 			case HeadlineLevel.H3:
 				return `
-					font-size: 24px;
+					font-size: 20px;
 
 					@media screen and (min-width: 960px) {
-						font-size: 32px;
+						font-size: 25px;
+					}
+					@media screen and (min-width: 12000px) {
+						font-size: 30px;
 					}
 				`;
 			case HeadlineLevel.H2:
 				return `
-					font-size: 32px;
+					font-size: 20px;
 
-					@media screen and (min-width: 450px) {
-						font-size: 48px;
+					@media screen and (min-width: 960px) {
+						font-size: 40px;
 					}
 					@media screen and (min-width: 960px) {
-						font-size: 54px;
+						font-size: 60px;
 					}
 				`;
 			case HeadlineLevel.H1:
 			default:
 				return `
-					font-size: 48px;
+					font-size: 30px;
 
 					@media screen and (min-width: 450px) {
-						font-size: 64px;
+						font-size: 45px;
 					}
 					@media screen and (min-width: 960px) {
-						font-size: 96px;
+						font-size: 60px;
 					}
 				`;
 		}
