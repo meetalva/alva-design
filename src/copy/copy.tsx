@@ -23,6 +23,8 @@ const StyledCopy = styled.div<CopyProps>`
 	font-family: ${fonts().NORMAL_FONT};
 	color: ${(props: CopyProps) => props.color || 'inherit'};
 	line-height: 1.5;
+	font-weight: 400;
+
 
 	${props => {
 		switch (props.size) {
@@ -30,13 +32,20 @@ const StyledCopy = styled.div<CopyProps>`
 				return 'font-size: 12px;'
 			case CopySize.Medium:
 			default:
-				return 'font-size: 16px';
+				return `
+					font-size: 15px
+
+					@media screen and (min-width: 110px) {
+						font-size: 20px;
+					}
+				`;
 			case CopySize.Large:
 				return `
-					font-size: 18px;
+					font-size: 24px;
+					font-weight: 300;
 
-					@media screen and (min-width: 960px) {
-						font-size: 24px;
+					@media screen and (min-width: 1100px) {
+						font-size: 30px;
 					}
 				`;
 		}
