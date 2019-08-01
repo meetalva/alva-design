@@ -17,19 +17,13 @@ const StyledList = styled.ul`
 export default function ColorDemo() {
 	return (
 		<div>
+
 			<StyledList>
 				<ColorSwatch color={Color.Black} />
-				<ColorSwatch color={Color.Blue} />
-				<ColorSwatch color={Color.BlueLight} />
-				<ColorSwatch color={Color.Red} />
-				<ColorSwatch color={Color.Grey70} />
-				<ColorSwatch color={Color.Grey90} />
 				<ColorSwatch color={Color.White} />
-			</StyledList>
-			<StyledList>
-				<ColorSwatch color={Color.GreenDark} />
-				<ColorSwatch color={Color.Green} />
-				<ColorSwatch color={Color.GreenLight} />
+				<ColorSwatch color={Color.Pink} />
+				<ColorSwatch color={Color.Purple} />
+				<ColorSwatch color={Color.gPurplePink} />
 			</StyledList>
 		</div>
 	);
