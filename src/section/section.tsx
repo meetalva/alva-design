@@ -15,12 +15,8 @@ export interface SectionProps {
 
 const StyledWrapper = styled.div<{ textColor: Color | 'inherit'; }>`
 	margin: 0 auto;
+	padding: 0 40px;
 	color: ${props => props.textColor};
-	padding: 100px 0;
-
-	@media screen and (min-width: 960px) {
-		padding: 200px 0;
-	}
 `;
 
 /**
@@ -29,7 +25,7 @@ const StyledWrapper = styled.div<{ textColor: Color | 'inherit'; }>`
 export const Section: React.StatelessComponent<SectionProps> = (props): JSX.Element => {
 	return (
 		<Layout background={props.backgroundColor || Color.White}>
-			<Layout width="80%" maxWidth="960px" center>
+			<Layout width="100%" maxWidth="1280px" center>
 				<StyledWrapper textColor={props.textColor || 'inherit'}>
 					{props.children}
 				</StyledWrapper>
