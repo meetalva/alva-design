@@ -8,6 +8,9 @@ const HeadlineDemo: React.StatelessComponent<void> = (): JSX.Element => {
 			<Headline level={HeadlineLevel.H1}>Headline Order 1</Headline>
 			<Headline level={HeadlineLevel.H2}>Headline Order 2</Headline>
 			<Headline level={HeadlineLevel.H3}>Headline Order 3</Headline>
+			<br />
+			<hr />
+			<br />
 			<Headline level={HeadlineLevel.H1} uppercase>
 				Headline Order 1
 			</Headline>

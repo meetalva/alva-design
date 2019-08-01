@@ -1,7 +1,7 @@
 export enum FontWeight {
-	Light = 100,
-	Regular = 300,
-	Bold = 500
+	Light = 200,
+	Regular = 400,
+	Bold = 600
 }
 
 export enum TextAlign {
