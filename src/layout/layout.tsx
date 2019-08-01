@@ -5,7 +5,7 @@ export interface LayoutProps {
 	/** @name Direction @default vertical */ direction?: LayoutDirection;
 	/** @name Width @default 100% */ width?: string;
 	/** @name Maximum width*/ maxWidth?: string;
-	/** @name Background color @default transparent */ backgroundColor?: string;
+	/** @name Background color @default transparent */ background?: string;
 	/** @name Center */ center?: boolean;
 	children?: React.ReactNode;
 	/** @name ignore */ className?: string;
@@ -22,7 +22,7 @@ const StyledLayout = styled.div<LayoutProps>`
 	margin: 0 ${props => (props.center && "auto") || ""};
 	width: ${props => props.width || "auto"};
 	max-width: ${props => props.maxWidth || "none"};
-	background-color: ${props => props.backgroundColor || "none"};
+	background: ${props => props.background || "none"};
 `;
 
 export const Layout: React.StatelessComponent<LayoutProps> = (props): JSX.Element => {

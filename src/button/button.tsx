@@ -2,6 +2,8 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import { Color } from "../colors";
 import { fonts } from "../fonts";
+import { Image } from "../image";
+
 
 export interface ButtonProps {
 	/** @name Disabled @default false */
@@ -13,6 +15,9 @@ export interface ButtonProps {
 	/** @name Color */
 	color?: Color;
 
+	/** @asset @name Icon */
+	icon?: string;
+
 	onClick?: React.MouseEventHandler<HTMLDivElement>;
 	children?: React.ReactNode;
 }
@@ -23,42 +28,28 @@ export enum ButtonOrder {
 }
 
 const StyledButton = styled.div<ButtonProps>`
-	padding: 12px 20px;
-	min-width: 200px;
-	font-size: 18px;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
 	font-family: ${fonts().NORMAL_FONT};
-	border-radius: 3px;
-	box-sizing: border-box;
-	display: inline-block;
-	width: fit-content;
+	font-weight: 500;
 	cursor: ${props => (!props.disabled ? "pointer" : "default")};
-	text-align: center;
-
-	@media screen and (min-width: 960px) {
-		padding: 15px 30px;
-	}
+	padding: 5px;
 `;
 
 const ButtonPrimary = styled.div<ButtonProps>`
-	border: 1px solid ${props => props.color || Color.Pink};
-	border-color: ${props => (props.disabled ? Color.Grey70 : "")};
-	background: ${props => props.color || Color.Pink};
-	color: ${Color.White};
-	background-color: ${props => (props.disabled ? Color.Grey70 : "")};
-	&:hover {
-		background-color: ${props => (props.disabled ? Color.Grey70 : Color.PinkLight)};
-	}
+	color: ${props => props.color};
 `;
 
 const ButtonSecondary = styled.div<ButtonProps>`
-	border: 1px solid ${props => props.color || Color.Pink};
-	color: ${props => props.color || Color.Pink};
-	border-color: ${props => (props.disabled ? Color.Grey70 : "")};
-	color: ${props => (props.disabled ? Color.Grey70 : "")};
-	&:hover {
-		border-color: ${props => props.disabled ? Color.Grey70 : Color.PinkLight};
-		color: ${props => props.disabled ? Color.Grey70 : Color.PinkLight};
-	}
+`;
+
+const StyledImage = styled(Image)`
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	padding-right: 8px;
+
 `;
 
 /**
@@ -67,5 +58,5 @@ const ButtonSecondary = styled.div<ButtonProps>`
 export const Button: React.StatelessComponent<ButtonProps> = (props): JSX.Element => {
 	const button = props.order === ButtonOrder.Primary ? ButtonPrimary : ButtonSecondary;
 	const Component = StyledButton.withComponent(button);
-	return <Component {...props}>{props.children}</Component>;
+	return <Component {...props}><StyledImage src={props.icon} />{props.children}</Component>;
 };

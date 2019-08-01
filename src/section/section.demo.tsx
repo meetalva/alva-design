@@ -9,22 +9,17 @@ import { Layout } from '../layout';
 
 const SectionDemo: React.StatelessComponent<void> = (): JSX.Element => {
 	return (
-		<Section backgroundColor={Color.Black} textColor={Color.White}>
-			<Headline level={HeadlineLevel.H1}>
-				Create <u>living prototypes</u> with code components.
+		<Section backgroundColor={Color.White}>
+			<Headline level={HeadlineLevel.H1} color={Color.gPurplePink}>
+			Create better products together
 			</Headline>
-			<Space size={SpaceSize.M} />
-			<Layout maxWidth="640px">
-				<Copy size={CopySize.Large}>
-					Alva lets you to design interactive products based on the same components your developers are using for production websites. And guess what – we are entirely open source.
-				</Copy>
-			</Layout>
 			<Space size={SpaceSize.L} />
-			<Button order={ButtonOrder.Primary} onClick={() => alert('Click!')}>
-				Download Beta for macOS
-			</Button>
-			<Space size={SpaceSize.S} />
-			<Copy color={Color.Grey70} size={CopySize.Small}>Also available for <u>Windows</u> and <u>Linux</u></Copy>
+			<Layout maxWidth="440px">
+				<Copy size={CopySize.Medium} color={Color.Grey50}>
+				Alva is a product design tool for the 21st century, enabling cross-functional teams to co-create delightful, consistent experiences blazingly fast.				</Copy>
+			</Layout>
+			<Space size={SpaceSize.M} />
+			<Button order={ButtonOrder.Primary} color={Color.Pink} icon="/api/static/arrow.svg" onClick={() => alert('Click!')}>Request early access</Button>
 		</Section>
 	);
 };

@@ -1,4 +1,7 @@
 export enum Color {
+	Purple = 'rgb(91, 47, 226)',
+	Pink = 'rgb(245, 81, 170)',
+	gPurplePink = 'linear-gradient( to bottom right, rgb(91, 47, 226), rgb(245, 81, 170))',
 	Blue = 'rgb(0, 112, 214)',
 	BlueLight = 'rgb(0, 112, 214)',
 	GreenDark = 'rgb(30, 205, 151)',
@@ -11,7 +14,6 @@ export enum Color {
 	Grey90 = 'rgb(227, 227, 227)',
 	Grey95 = 'rgb(242, 242, 242)',
 	White = 'rgb(255, 255, 255)',
-	Pink = 'rgb(236, 3, 97)',
 	PinkLight = 'rgb(236, 52, 126)',
 	VioletDark = 'rgb(81, 0, 77)',
 	Violet = 'rgb(88, 2, 205)'
