@@ -28,7 +28,7 @@ const StyledWrapper = styled.div<{ textColor: Color | 'inherit'; }>`
  */
 export const Section: React.StatelessComponent<SectionProps> = (props): JSX.Element => {
 	return (
-		<Layout backgroundColor={props.backgroundColor || Color.White}>
+		<Layout background={props.backgroundColor || Color.White}>
 			<Layout width="80%" maxWidth="960px" center>
 				<StyledWrapper textColor={props.textColor || 'inherit'}>
 					{props.children}

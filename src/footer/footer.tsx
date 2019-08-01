@@ -23,7 +23,7 @@ const StyledFooter = styled.div`
  */
 export const Footer: React.StatelessComponent<FooterProps> = (props): JSX.Element => {
 	return (
-		<Layout backgroundColor={Color.Black}>
+		<Layout background={Color.Black}>
 			<Layout width="80%" maxWidth="960px" center>
 				<StyledFooter {...props}>
 					<Copy color={Color.Grey50}>{props.copyright}</Copy>
